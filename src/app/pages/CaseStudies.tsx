@@ -1,0 +1,161 @@
+import { Link } from 'react-router';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { Button } from '../components/Button';
+
+export function CaseStudies() {
+  const studies = [
+    {
+      title: 'Supply Chain Technology Expansion',
+      client: 'Global RFID Solutions Provider',
+      challenge: 'Expanding into North America with zero brand awareness and no sales infrastructure',
+      solution: 'Full revenue system including positioning, demand generation, and sales team buildout',
+      results: [
+        { metric: '300%', label: 'Pipeline Growth' },
+        { metric: '42%', label: 'Revenue Increase' },
+        { metric: '$4.2M', label: 'New Pipeline' },
+        { metric: '8X', label: 'ROI' },
+      ],
+      testimonial: 'Sage built our entire North American revenue engine. Their expertise was invaluable.',
+      author: 'VP Sales, North America',
+    },
+    {
+      title: 'ERP Solutions Growth Breakthrough',
+      client: 'Mid-Market ERP Provider',
+      challenge: 'Three-year revenue plateau despite strong product-market fit',
+      solution: 'Sales acceleration and revenue intelligence with targeted demand generation',
+      results: [
+        { metric: '2X', label: 'Sales Efficiency' },
+        { metric: '22%', label: 'Shorter Cycles' },
+        { metric: '45%', label: 'Higher Win Rate' },
+        { metric: '$2.1M', label: 'Incremental Revenue' },
+      ],
+      testimonial: 'For the first time in years, we can accurately forecast revenue.',
+      author: 'Chief Revenue Officer',
+    },
+    {
+      title: 'Cybersecurity Startup Scaling',
+      client: 'Threat Detection Platform',
+      challenge: 'Rapid hiring without consistent processes, unable to forecast accurately',
+      solution: 'Revenue operations infrastructure with standardized processes and systems',
+      results: [
+        { metric: '60%', label: 'Faster Ramp' },
+        { metric: '85%', label: 'Conversion Rate' },
+        { metric: '4X', label: 'Pipeline Velocity' },
+        { metric: '3X', label: 'Revenue Growth' },
+      ],
+      testimonial: 'Sage gave us the revenue infrastructure we needed to scale.',
+      author: 'CEO & Founder',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen pt-20 bg-white">
+      {/* Hero */}
+      <section
+        className="relative py-32 min-h-[70vh] flex items-center border-b border-border"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
+
+        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">
+              Client Success
+            </p>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
+              Success Stories
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              Real revenue transformation results from B2B companies
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Overview */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-border">
+        <div className="max-w-7xl mx-auto pl-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: '300%', label: 'Avg Pipeline Growth' },
+              { value: '42%', label: 'Revenue Increase' },
+              { value: '2X', label: 'Sales Efficiency' },
+              { value: '8X', label: 'Average ROI' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-5xl font-black text-accent mb-2">{stat.value}</div>
+                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto pl-4 space-y-24">
+          {studies.map((study) => (
+            <div key={study.title} className="border-l-4 border-accent pl-12">
+              <div className="grid lg:grid-cols-3 gap-12">
+                <div className="lg:col-span-2 space-y-8">
+                  <div>
+                    <h2 className="text-3xl font-black text-primary mb-2">{study.title}</h2>
+                    <p className="text-lg text-muted-foreground">{study.client}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-3">Challenge</h3>
+                    <p className="text-foreground leading-relaxed">{study.challenge}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-3">Solution</h3>
+                    <p className="text-foreground leading-relaxed">{study.solution}</p>
+                  </div>
+
+                  <div className="pt-6 border-t border-border">
+                    <p className="text-lg text-foreground italic mb-2">"{study.testimonial}"</p>
+                    <p className="text-sm text-muted-foreground font-semibold">— {study.author}</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Results</h3>
+                  {study.results.map((result) => (
+                    <div key={result.label} className="bg-gray-50 p-6">
+                      <div className="text-4xl font-black text-accent mb-2">{result.metric}</div>
+                      <div className="text-sm text-foreground font-semibold">{result.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-accent">
+        <div className="max-w-7xl mx-auto pl-4 text-center">
+          <p className="text-sm uppercase tracking-wider text-white mb-4 font-semibold">
+            Get Started
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
+            Ready to Write Your <span className="text-white">Success Story?</span>
+          </h2>
+          <div className="w-32 h-1 bg-white mx-auto mb-6"></div>
+          <p className="text-xl text-white/90 mb-10">
+            Let's build a revenue system that delivers results
+          </p>
+          <Button to="/contact" className="!bg-white !text-accent hover:!bg-gray-100">
+            Get Started
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}
