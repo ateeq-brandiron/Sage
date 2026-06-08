@@ -139,19 +139,19 @@ export function CaseStudies() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-accent">
-        <div className="max-w-7xl mx-auto pl-4 text-center">
-          <p className="text-sm uppercase tracking-wider text-white mb-4 font-semibold">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-border">
+        <div className="max-w-7xl mx-auto pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
-            Ready to Write Your <span className="text-white">Success Story?</span>
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+            Ready to Write Your <span className="text-accent">Success Story?</span>
           </h2>
-          <div className="w-32 h-1 bg-white mx-auto mb-6"></div>
-          <p className="text-xl text-white/90 mb-10">
+          <div className="w-32 h-1 bg-accent mb-6"></div>
+          <p className="text-xl text-muted-foreground mb-10 max-w-xl">
             Let's build a revenue system that delivers results
           </p>
-          <Button to="/contact" className="!bg-white !text-accent hover:!bg-gray-100">
+          <Button to="/contact">
             Get Started
           </Button>
         </div>
