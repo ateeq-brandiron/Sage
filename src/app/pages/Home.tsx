@@ -28,13 +28,11 @@ export function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.05]">
               Revenue Growth
               <br />
-              Shouldn't Be
-              <br />
-              Guesswork
+              Shouldn't Be Guesswork
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl">
-              We build revenue systems that align strategy, marketing, sales, and execution to generate predictable growth for B2B companies.
+            <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-2xl">
+              SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start">
