@@ -25,7 +25,7 @@ export function Home() {
               Revenue Growth Solutions
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-[1.05]">
+            <h1 className="text-5xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-[1.05]">
               Revenue Growth
               <br />
               Shouldn't Be Guesswork
