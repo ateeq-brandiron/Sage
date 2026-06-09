@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide-react';
-import heroChartImg from '../../imports/sage-1.png';
+import heroChartImg from '../../imports/hero-chart.svg';
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
