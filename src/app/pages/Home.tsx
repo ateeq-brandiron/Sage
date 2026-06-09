@@ -8,48 +8,60 @@ import { Button } from '../components/Button';
 export function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Minimalist with Background Image */}
-      <section
-        className="relative pt-32 pb-24 min-h-[90vh] flex items-center"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1767150145058-367fb68021f2?w=1920&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/85 to-transparent" />
+      {/* Hero Section - Split Layout */}
+      <section className="pt-32 pb-20 bg-white min-h-[90vh] flex items-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] pr-4 sm:pr-6 lg:pr-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">
-              Revenue Growth Solutions
-            </p>
+            {/* Left — Text Content */}
+            <div>
+              <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">
+                Revenue Growth Solutions
+              </p>
 
-            <h1 className="text-5xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-[1.05]">
-              Revenue Growth
-              <br />
-              Shouldn't Be Guesswork
-            </h1>
+              <h1 className="text-5xl md:text-5xl lg:text-6xl font-black text-primary mb-8 leading-[1.05]">
+                Revenue Growth
+                <br />
+                Shouldn't Be Guesswork
+              </h1>
 
-            <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-2xl">
-              SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
-            </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
+                SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-10 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-lg group hover:brightness-110 hover:shadow-lg"
-              >
-                Book Revenue Evaluation
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center justify-center px-10 py-2.5 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition-all duration-300 font-semibold text-lg hover:shadow-lg"
-              >
-                View Success Stories
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-10 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-lg group hover:brightness-110 hover:shadow-lg"
+                >
+                  Book Revenue Evaluation
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="inline-flex items-center justify-center px-10 py-2.5 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-lg hover:shadow-lg"
+                >
+                  View Success Stories
+                </Link>
+              </div>
             </div>
+
+            {/* Right — Visual Card */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                {/* Decorative background card offset */}
+                <div className="absolute -bottom-4 -right-4 w-full h-full bg-[#E8F5EE] rounded-2xl" />
+                {/* Main image card */}
+                <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-border">
+                  <img
+                    src={revenueSystemImg}
+                    alt="Revenue Growth Visualization"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
