@@ -20,11 +20,11 @@ export function Button({
   className = '',
   type = 'button'
 }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98] group";
+  const baseStyles = "inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg active:scale-[0.98] group";
 
   const variants = {
-    primary: "bg-gradient-to-r from-[#00A344] to-[#00C853] text-white hover:from-[#00C853] hover:to-[#00A344] hover:brightness-110",
-    secondary: "border-2 border-primary text-primary hover:bg-primary hover:text-white"
+    primary: "bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white",
+    secondary: "border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white"
   };
 
   const buttonContent = (

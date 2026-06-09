@@ -38,14 +38,14 @@ export function Home() {
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-10 py-2.5 bg-accent text-white font-bold hover:bg-accent/90 transition-all duration-300 text-lg group hover:scale-105 hover:shadow-2xl hover:brightness-110"
+                className="inline-flex items-center justify-center px-10 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-lg group hover:brightness-110 hover:shadow-lg"
               >
                 Book Revenue Evaluation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </Link>
               <Link
                 to="/case-studies"
-                className="inline-flex items-center justify-center px-10 py-2.5 border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 font-bold text-lg hover:scale-105 hover:shadow-2xl"
+                className="inline-flex items-center justify-center px-10 py-2.5 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition-all duration-300 font-semibold text-lg hover:shadow-lg"
               >
                 View Success Stories
               </Link>

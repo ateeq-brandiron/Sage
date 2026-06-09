@@ -234,7 +234,7 @@ export function ServiceDetail() {
               <div className="mt-10">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-accent text-white font-bold hover:brightness-110 transition-all duration-300 hover:scale-105 group"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 group"
                 >
                   {service.cta}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

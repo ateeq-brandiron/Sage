@@ -50,7 +50,7 @@ export function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00A344] to-[#00C853] text-white font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 hover:from-[#00C853] hover:to-[#00A344] hover:brightness-110 group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group"
             >
               Get Free Assessment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -86,7 +86,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block mx-4 mt-4 px-6 py-2.5 bg-accent text-accent-foreground text-center text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110"
+              className="block mx-4 mt-4 px-6 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white text-center text-sm font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg"
             >
               Book Revenue Evaluation
             </Link>
