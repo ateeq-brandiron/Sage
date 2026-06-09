@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide-react';
+import heroChartImg from '../../imports/sage-1.png';
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -54,7 +55,7 @@ export function Home() {
                 {/* Main image card */}
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-border">
                   <img
-                    src={revenueSystemImg}
+                    src={heroChartImg}
                     alt="Revenue Growth Visualization"
                     className="w-full h-full object-cover"
                   />
