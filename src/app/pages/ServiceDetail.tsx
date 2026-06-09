@@ -290,19 +290,19 @@ export function ServiceDetail() {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto pl-4">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How We Work</p>
-            <h2 className="text-4xl font-black text-white mb-3">Our Process</h2>
+            <h2 className="text-4xl font-black text-primary mb-3">Our Process</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-accent/20">
             {service.process.map((step) => (
-              <div key={step.step} className="bg-primary p-10 hover:bg-primary/80 transition-colors">
+              <div key={step.step} className="bg-[#E8F5EE] p-10 hover:bg-[#D4EFE0] transition-colors">
                 <div className="text-5xl font-black text-accent/40 mb-4">{step.step}</div>
-                <h3 className="text-xl font-black text-white mb-3">{step.title}</h3>
-                <p className="text-white/70 leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl font-black text-primary mb-3">{step.title}</h3>
+                <p className="text-primary/70 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>

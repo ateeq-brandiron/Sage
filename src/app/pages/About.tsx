@@ -145,7 +145,7 @@ export function About() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -156,7 +156,7 @@ export function About() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-5xl font-black text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-white/80 font-semibold uppercase tracking-wide">{stat.label}</div>
+                <div className="text-sm text-primary/70 font-semibold uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
           </div>

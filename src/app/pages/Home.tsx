@@ -101,7 +101,7 @@ export function Home() {
               { title: 'Missed Opportunities', desc: 'Qualified leads slipping through cracks' },
               { title: 'Stalled Growth', desc: 'Revenue plateau despite investment' },
             ].map((problem) => (
-              <div key={problem.title} className="bg-white p-8 border-l-4 border-destructive">
+              <div key={problem.title} className="bg-white p-8 border-l-4 border-accent">
                 <h3 className="text-xl font-bold text-primary mb-3">{problem.title}</h3>
                 <p className="text-muted-foreground">{problem.desc}</p>
               </div>
@@ -111,17 +111,17 @@ export function Home() {
       </section>
 
       {/* Why Sage - With Revenue System Image */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-primary">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto pl-4">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Why Choose Us
             </p>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Why <span className="text-accent">SAGE</span>
             </h2>
             <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-primary/70">
               We're different from traditional agencies and consultants
             </p>
           </div>
@@ -163,8 +163,8 @@ export function Home() {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
-                      <p className="text-lg text-white/80">{item.desc}</p>
+                      <h3 className="text-2xl font-bold text-primary mb-2">{item.title}</h3>
+                      <p className="text-lg text-primary/70">{item.desc}</p>
                     </div>
                   </div>
                 );

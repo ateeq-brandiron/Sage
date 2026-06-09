@@ -178,16 +178,16 @@ export function Solutions() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto pl-4 text-center">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-black mb-3">
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Transform Your Revenue?</span>
           </h2>
           <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-xl mb-10 text-white/90">
+          <p className="text-xl mb-10 text-primary/70">
             Get a free assessment—no commitment required
           </p>
           <Button to="/contact">
