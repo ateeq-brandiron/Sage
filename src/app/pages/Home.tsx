@@ -4,7 +4,46 @@ import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import heroChart from '../../imports/hero-chart.svg';
+import wavePattern from '../../imports/wave-pattern.svg';
 import { Button } from '../components/Button';
+
+const BAR_WIDTH = 76;
+const BAR_GAP = 12;
+const BAR_HEIGHTS = [90, 150, 210, 270, 340];
+const STRIP_TOTAL_WIDTH = BAR_HEIGHTS.length * BAR_WIDTH + (BAR_HEIGHTS.length - 1) * BAR_GAP;
+
+function BarChart() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'flex-end',
+        gap: BAR_GAP,
+        padding: '24px 24px 0 24px',
+      }}
+      role="img"
+      aria-label="Revenue growth bar chart"
+    >
+      {BAR_HEIGHTS.map((height, i) => (
+        <div
+          key={i}
+          style={{
+            width: BAR_WIDTH,
+            height,
+            flexShrink: 0,
+            borderRadius: 4,
+            overflow: 'hidden',
+            backgroundImage: `url(${heroChart})`,
+            backgroundSize: `${STRIP_TOTAL_WIDTH}px auto`,
+            backgroundPosition: `-${i * (BAR_WIDTH + BAR_GAP)}px center`,
+            backgroundRepeat: 'no-repeat',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export function Home() {
   return (
@@ -48,13 +87,13 @@ export function Home() {
             </div>
 
             {/* Right — Bar Chart Visual */}
-            <div className="hidden lg:flex justify-center overflow-hidden">
-              <div className="relative w-full max-w-[500px] pb-4 pr-4">
-                {/* Offset decoration */}
+            <div className="hidden lg:flex justify-center">
+              <div className="relative pb-4 pr-4" style={{ width: STRIP_TOTAL_WIDTH + 48 }}>
+                {/* Offset shadow card */}
                 <div className="absolute -bottom-2 -right-2 w-full h-full bg-[#E8F5EE] rounded-xl" />
-                {/* Chart container */}
-                <div className="relative bg-[#F2F3EE] rounded-xl p-6 overflow-hidden">
-                  <img src={heroChart} alt="Revenue growth bar chart" className="w-full h-auto block" />
+                {/* Chart card */}
+                <div className="relative bg-[#F2F3EE] rounded-xl pb-6" style={{ minHeight: 340 + 24 }}>
+                  <BarChart />
                 </div>
               </div>
             </div>
@@ -271,20 +310,16 @@ export function Home() {
       </section>
 
       {/* Latest Insights - Minimalist */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-border overflow-hidden">
-        {/* Wavy hill background — absolutely positioned, low opacity so text stays readable */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: `url(${wavePattern})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.18,
-          }}
-        />
-        {/* Light overlay to further soften */}
-        <div className="absolute inset-0 bg-white/60 pointer-events-none" />
+      <section
+        className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url(${wavePattern})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#ffffff',
+        }}
+      >
 
         <div className="relative z-10 max-w-7xl mx-auto pl-4">
           <div className="text-center mb-12">
