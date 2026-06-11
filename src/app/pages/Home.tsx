@@ -273,9 +273,9 @@ export function Home() {
         aria-label="Latest Insights"
         className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)), url(${wavePattern})`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.74), rgba(255,255,255,0.74)), url(${wavePattern})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
           backgroundColor: '#ffffff',
         }}
@@ -319,11 +319,11 @@ export function Home() {
                 date: 'February 28, 2026',
                 slug: 'ai-revenue-operations-hype-vs-reality',
               },
-            ].map((article) => (
+            ].map((article, idx, arr) => (
               <Link
                 key={article.slug}
                 to={`/insights/${article.slug}`}
-                className="group flex-1 bg-white rounded-lg p-6 shadow-sm border border-border hover:shadow-md hover:border-accent transition-all duration-300"
+                className={`group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col${idx < arr.length - 1 ? ' border-r border-gray-200' : ''}`}
                 aria-label={article.title}
               >
                 {/* Category + read time */}
@@ -335,12 +335,12 @@ export function Home() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors mb-4 leading-snug">
+                <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors mb-4 leading-snug flex-1">
                   {article.title}
                 </h3>
 
                 {/* Date + arrow */}
-                <div className="flex items-center justify-between text-sm text-muted-foreground mt-auto">
+                <div className="flex items-center justify-between text-sm text-muted-foreground">
                   <span>{article.date}</span>
                   <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
