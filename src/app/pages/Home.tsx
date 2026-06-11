@@ -7,44 +7,6 @@ import heroChart from '../../imports/hero-chart.svg';
 import wavePattern from '../../imports/wave-pattern.svg';
 import { Button } from '../components/Button';
 
-const BAR_WIDTH = 76;
-const BAR_GAP = 12;
-const BAR_HEIGHTS = [90, 150, 210, 270, 340];
-const STRIP_TOTAL_WIDTH = BAR_HEIGHTS.length * BAR_WIDTH + (BAR_HEIGHTS.length - 1) * BAR_GAP;
-
-function BarChart() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'flex-end',
-        gap: BAR_GAP,
-        padding: '24px 24px 0 24px',
-      }}
-      role="img"
-      aria-label="Revenue growth bar chart"
-    >
-      {BAR_HEIGHTS.map((height, i) => (
-        <div
-          key={i}
-          style={{
-            width: BAR_WIDTH,
-            height,
-            flexShrink: 0,
-            borderRadius: 4,
-            overflow: 'hidden',
-            backgroundImage: `url(${heroChart})`,
-            backgroundSize: `${STRIP_TOTAL_WIDTH}px auto`,
-            backgroundPosition: `-${i * (BAR_WIDTH + BAR_GAP)}px center`,
-            backgroundRepeat: 'no-repeat',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -86,16 +48,13 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — Bar Chart Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="relative pb-4 pr-4" style={{ width: STRIP_TOTAL_WIDTH + 48 }}>
-                {/* Offset shadow card */}
-                <div className="absolute -bottom-2 -right-2 w-full h-full bg-[#E8F5EE] rounded-xl" />
-                {/* Chart card */}
-                <div className="relative bg-[#F2F3EE] rounded-xl pb-6" style={{ minHeight: 340 + 24 }}>
-                  <BarChart />
-                </div>
-              </div>
+            {/* Right — Hero Chart Image */}
+            <div className="hidden lg:flex items-center justify-end pr-0">
+              <img
+                src={heroChart}
+                alt="Revenue growth chart"
+                className="w-full max-w-[560px] h-auto object-contain"
+              />
             </div>
 
           </div>
@@ -313,7 +272,7 @@ export function Home() {
       <section
         className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url(${wavePattern})`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)), url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
