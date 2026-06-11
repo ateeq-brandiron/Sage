@@ -268,19 +268,20 @@ export function Home() {
         </div>
       </section>
 
-      {/* Latest Insights - Minimalist */}
+      {/* Latest Insights */}
       <section
-        className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
+        aria-label="Latest Insights"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)), url(${wavePattern})`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)), url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundColor: '#ffffff',
         }}
       >
-
-        <div className="relative z-10 max-w-7xl mx-auto pl-4">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Heading */}
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Knowledge Hub
@@ -288,51 +289,58 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Latest <span className="text-accent">Insights</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            <div className="w-32 h-1 bg-accent mx-auto mb-4" />
             <p className="text-xl text-muted-foreground">
               Strategic thinking on revenue growth
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Cards */}
+          <div className="flex flex-col md:flex-row justify-between gap-6 mb-12">
             {[
               {
                 category: 'Revenue Growth',
+                readTime: '8 min',
                 title: 'The Revenue System Problem: Why B2B Companies Struggle to Scale',
                 date: 'March 15, 2026',
-                readTime: '8 min',
                 slug: 'revenue-system-problem-b2b-scale',
               },
               {
                 category: 'Sales Strategy',
+                readTime: '6 min',
                 title: 'Building Sales Playbooks That Actually Get Used',
                 date: 'March 10, 2026',
-                readTime: '6 min',
                 slug: 'building-sales-playbooks-that-get-used',
               },
               {
                 category: 'AI & Automation',
+                readTime: '7 min',
                 title: 'AI in Revenue Operations: Hype vs Reality',
                 date: 'February 28, 2026',
-                readTime: '7 min',
                 slug: 'ai-revenue-operations-hype-vs-reality',
               },
             ].map((article) => (
               <Link
                 key={article.slug}
                 to={`/insights/${article.slug}`}
-                className="group border-l-4 border-border hover:border-accent transition-all duration-300 pl-6 pr-4 py-6"
+                className="group flex-1 bg-white rounded-lg p-6 shadow-sm border border-border hover:shadow-md hover:border-accent transition-all duration-300"
+                aria-label={article.title}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-bold text-accent uppercase tracking-wider">
+                {/* Category + read time */}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">
                     {article.category}
                   </span>
                   <span className="text-xs text-muted-foreground">{article.readTime}</span>
                 </div>
-                <h3 className="text-xl font-black text-primary group-hover:text-accent transition-colors mb-3 leading-tight">
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors mb-4 leading-snug">
                   {article.title}
                 </h3>
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
+
+                {/* Date + arrow */}
+                <div className="flex items-center justify-between text-sm text-muted-foreground mt-auto">
                   <span>{article.date}</span>
                   <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
@@ -340,6 +348,7 @@ export function Home() {
             ))}
           </div>
 
+          {/* CTA Button */}
           <div className="text-center">
             <Button to="/insights">
               View All Insights
