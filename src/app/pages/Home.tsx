@@ -11,49 +11,50 @@ export function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="pt-32 pb-20 bg-white min-h-[90vh] flex items-center">
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] pr-4 sm:pr-6 lg:pr-12">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="pt-28 pb-16 bg-white min-h-[90vh] flex items-center overflow-hidden">
+        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
             {/* Left — Text Content */}
-            <div>
-              <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">
+            <div className="flex flex-col justify-center">
+              <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
                 Revenue Growth Solutions
               </p>
 
-              <h1 className="text-5xl md:text-5xl lg:text-6xl font-black text-primary mb-8 leading-[1.05]">
-                Revenue Growth Shouldn't Be
-                <br />
-                Guesswork
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-primary mb-6 leading-[1.08]">
+                Revenue Growth<br />Shouldn't Be Guesswork
               </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
+              <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
                 SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-10 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-lg group hover:brightness-110 hover:shadow-lg"
+                  aria-label="Book a Revenue Evaluation"
+                  className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
                 >
                   Book Revenue Evaluation
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
                   to="/case-studies"
-                  className="inline-flex items-center justify-center px-10 py-2.5 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-lg hover:shadow-lg"
+                  aria-label="View Success Stories"
+                  className="inline-flex items-center justify-center px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg whitespace-nowrap"
                 >
                   View Success Stories
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
 
-            {/* Right — Hero Chart Image */}
-            <div className="hidden lg:flex items-center justify-end pr-0">
+            {/* Right — Bar Chart */}
+            <div className="hidden lg:flex items-center justify-center overflow-hidden">
               <img
                 src={heroChart}
-                alt="Revenue growth chart"
-                className="w-full max-w-[560px] h-auto object-contain"
+                alt="Wealth over time bar chart with five ascending bars"
+                className="w-full max-w-[500px] h-auto object-contain"
               />
             </div>
 
