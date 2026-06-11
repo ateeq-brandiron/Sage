@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import fs from 'fs'
 
 
 function figmaAssetResolver() {
@@ -16,9 +17,19 @@ function figmaAssetResolver() {
   }
 }
 
+function netlifyRedirects() {
+  return {
+    name: 'netlify-redirects',
+    closeBundle() {
+      fs.writeFileSync(path.resolve(__dirname, 'dist/_redirects'), '/*    /index.html   200\n')
+    },
+  }
+}
+
 export default defineConfig({
   plugins: [
     figmaAssetResolver(),
+    netlifyRedirects(),
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
     react(),
