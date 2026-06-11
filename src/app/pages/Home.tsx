@@ -1,10 +1,61 @@
 import { Link } from 'react-router';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide-react';
-import heroChartImg from '../../imports/hero-chart.svg';
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import { Button } from '../components/Button';
+
+const CHART_IMAGE = 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&q=80';
+
+const bars = [
+  { heightPct: 16 },
+  { heightPct: 29 },
+  { heightPct: 46 },
+  { heightPct: 63 },
+  { heightPct: 82 },
+];
+
+function BarChart() {
+  const containerH = 340;
+  const totalBars = bars.length;
+  const gap = 10;
+  // Each bar takes equal share of width minus gaps
+  // We use % so it's responsive
+  const barWidthPct = (100 - gap * (totalBars - 1) / 4) / totalBars;
+
+  return (
+    <div
+      className="relative w-full"
+      style={{ height: containerH }}
+      role="img"
+      aria-label="Revenue growth bar chart"
+    >
+      <div className="absolute inset-0 flex items-end gap-[10px]">
+        {bars.map((bar, i) => {
+          const barH = Math.round((bar.heightPct / 100) * containerH);
+          // Each bar's background-position-x shifts so together they show the full image
+          // bar left offset in the 100%-wide container
+          const leftPct = i * (barWidthPct + gap / 4);
+          return (
+            <div
+              key={i}
+              className="flex-1 rounded-[4px] overflow-hidden"
+              style={{
+                height: barH,
+                backgroundImage: `url(${CHART_IMAGE})`,
+                backgroundSize: `${100 * totalBars}% auto`,
+                backgroundPositionX: `${-(i * 100)}%`,
+                backgroundPositionY: 'center',
+                backgroundRepeat: 'no-repeat',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+              }}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export function Home() {
   return (
@@ -47,18 +98,14 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — Visual Card */}
+            {/* Right — Bar Chart Visual */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg">
-                {/* Decorative background card offset */}
-                <div className="absolute -bottom-4 -right-4 w-full h-full bg-[#E8F5EE] rounded-2xl" />
-                {/* Main image card */}
-                <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-border">
-                  <img
-                    src={heroChartImg}
-                    alt="Revenue Growth Visualization"
-                    className="w-full h-full object-cover"
-                  />
+              <div className="relative w-full max-w-[520px] pb-4 pr-4">
+                {/* Offset decoration */}
+                <div className="absolute -bottom-2 -right-2 w-full h-full bg-[#E8F5EE] rounded-xl" />
+                {/* Chart container */}
+                <div className="relative bg-[#F2F3EE] rounded-xl p-8 pt-10">
+                  <BarChart />
                 </div>
               </div>
             </div>
