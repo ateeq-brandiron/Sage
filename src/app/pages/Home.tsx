@@ -50,11 +50,11 @@ export function Home() {
             </div>
 
             {/* Right — Bar Chart */}
-            <div className="hidden lg:flex items-center justify-center overflow-hidden">
+            <div className="hidden lg:flex items-end justify-center h-full">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
-                className="w-full max-w-[500px] h-auto object-contain"
+                className="w-full max-w-[480px] h-auto object-contain object-bottom"
               />
             </div>
 
