@@ -21,9 +21,9 @@ export function Home() {
               </p>
 
               <h1 className="text-5xl md:text-5xl lg:text-6xl font-black text-primary mb-8 leading-[1.05]">
-                Revenue Growth
+                Revenue Growth Shouldn't Be
                 <br />
-                Shouldn't Be Guesswork
+                Guesswork
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-xl">
@@ -48,13 +48,13 @@ export function Home() {
             </div>
 
             {/* Right — Bar Chart Visual */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[520px] pb-4 pr-4">
+            <div className="hidden lg:flex justify-center overflow-hidden">
+              <div className="relative w-full max-w-[500px] pb-4 pr-4">
                 {/* Offset decoration */}
                 <div className="absolute -bottom-2 -right-2 w-full h-full bg-[#E8F5EE] rounded-xl" />
                 {/* Chart container */}
-                <div className="relative bg-[#F2F3EE] rounded-xl p-8 pt-10">
-                  <img src={heroChart} alt="Revenue growth bar chart" className="w-full h-auto" />
+                <div className="relative bg-[#F2F3EE] rounded-xl p-6 overflow-hidden">
+                  <img src={heroChart} alt="Revenue growth bar chart" className="w-full h-auto block" />
                 </div>
               </div>
             </div>
