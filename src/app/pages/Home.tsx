@@ -322,8 +322,22 @@ export function Home() {
       </section>
 
       {/* Latest Insights - Minimalist */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-border">
-        <div className="max-w-7xl mx-auto pl-4">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-border overflow-hidden">
+        {/* Wavy hill background — absolutely positioned, low opacity so text stays readable */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `url(${wavePattern})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.18,
+          }}
+        />
+        {/* Light overlay to further soften */}
+        <div className="absolute inset-0 bg-white/60 pointer-events-none" />
+
+        <div className="relative z-10 max-w-7xl mx-auto pl-4">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Knowledge Hub
