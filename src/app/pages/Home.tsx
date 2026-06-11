@@ -271,10 +271,10 @@ export function Home() {
       {/* Latest Insights */}
       <section
         aria-label="Latest Insights"
-        className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border overflow-hidden"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.74), rgba(255,255,255,0.74)), url(${wavePattern})`,
-          backgroundSize: 'cover',
+          backgroundImage: `url(${wavePattern})`,
+          backgroundSize: '100% 100%',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
           backgroundColor: '#ffffff',
