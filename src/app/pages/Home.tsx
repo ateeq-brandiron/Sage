@@ -323,7 +323,7 @@ export function Home() {
               <Link
                 key={article.slug}
                 to={`/insights/${article.slug}`}
-                className={`group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col${idx < arr.length - 1 ? ' border-r border-gray-200' : ''}`}
+                className={`group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col border-l-4 border-gray-200 hover:border-accent`}
                 aria-label={article.title}
               >
                 {/* Category + read time */}
