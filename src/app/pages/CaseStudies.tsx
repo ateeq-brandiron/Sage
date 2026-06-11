@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
+import wavePattern from '../../imports/wave-pattern.svg';
 import { Button } from '../components/Button';
 
 export function CaseStudies() {
@@ -139,7 +140,16 @@ export function CaseStudies() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-border">
+      <section
+        className="py-24 px-4 sm:px-6 lg:px-8 relative border-t border-border"
+        style={{
+          backgroundImage: `url(${wavePattern})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#ffffff',
+        }}
+      >
         <div className="max-w-7xl mx-auto pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started

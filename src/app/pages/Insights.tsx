@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
+import wavePattern from '../../imports/wave-pattern.svg';
 import { Button } from '../components/Button';
 
 export function Insights() {
@@ -183,7 +184,16 @@ export function Insights() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section
+        className="py-24 px-4 sm:px-6 lg:px-8 relative"
+        style={{
+          backgroundImage: `url(${wavePattern})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#ffffff',
+        }}
+      >
         <div className="max-w-7xl mx-auto pl-4 text-center">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Take Action
