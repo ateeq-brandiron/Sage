@@ -49,12 +49,12 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — chart stretches to exactly match left column height */}
+            {/* Right — chart centred in column */}
             <div className="hidden lg:block relative">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
-                className="absolute inset-0 w-full h-full object-cover object-left-bottom"
+                className="absolute inset-0 w-full h-full object-contain object-center"
                 style={{ mixBlendMode: 'multiply' }}
               />
             </div>
