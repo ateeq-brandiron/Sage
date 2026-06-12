@@ -3,7 +3,7 @@ import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
-import heroChart from '../../imports/hero-graph.jpg';
+import heroChart from '../../imports/sage-hero-graph.png';
 import wavePattern from '../../imports/sage-wavy-hill.png';
 import { Button } from '../components/Button';
 
@@ -50,12 +50,12 @@ export function Home() {
             </div>
 
             {/* Right — Bar Chart */}
-            <div className="hidden lg:flex items-end justify-center self-stretch">
+            <div className="hidden lg:flex items-end justify-end self-stretch overflow-hidden">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
-                className="w-full max-w-[460px] h-full max-h-[75vh] object-contain object-bottom"
-                style={{ mixBlendMode: 'multiply' }}
+                className="w-full h-full object-contain object-right-bottom"
+                style={{ mixBlendMode: 'multiply', maxHeight: '80vh' }}
               />
             </div>
 
