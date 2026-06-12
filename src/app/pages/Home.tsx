@@ -49,13 +49,13 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — chart centred in column */}
+            {/* Right — chart with balanced padding for top/bottom/horizontal spacing */}
             <div className="hidden lg:block relative">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
-                className="absolute inset-0 w-full h-full object-contain object-center"
-                style={{ mixBlendMode: 'multiply' }}
+                className="absolute inset-0 w-full h-full object-contain object-bottom"
+                style={{ mixBlendMode: 'multiply', padding: '32px 48px 0 48px' }}
               />
             </div>
 
