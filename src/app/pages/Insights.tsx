@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
-import wavePattern from '../../imports/wave-pattern.svg';
+import wavePattern from '../../imports/sage-wavy-hill.png';
 import { Button } from '../components/Button';
 
 export function Insights() {

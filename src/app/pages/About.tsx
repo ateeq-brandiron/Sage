@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import wavePattern from '../../imports/wave-pattern.svg';
+import wavePattern from '../../imports/sage-wavy-hill.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';

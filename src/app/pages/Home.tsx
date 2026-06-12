@@ -3,8 +3,8 @@ import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
-import heroChart from '../../imports/hero-chart.svg';
-import wavePattern from '../../imports/wave-pattern.svg';
+import heroChart from '../../imports/hero-graph.jpg';
+import wavePattern from '../../imports/sage-wavy-hill.png';
 import { Button } from '../components/Button';
 
 export function Home() {
