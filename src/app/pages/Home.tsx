@@ -11,12 +11,12 @@ export function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="pt-28 pb-16 bg-white min-h-[90vh] flex items-center overflow-hidden">
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <section className="pt-28 pb-16 bg-white min-h-[90vh] flex items-center">
+        <div className="w-full">
+          <div className="grid lg:grid-cols-2 items-center min-h-[calc(90vh-7rem)]">
 
             {/* Left — Text Content */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
                 Revenue Growth Solutions
               </p>
@@ -49,13 +49,13 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — Bar Chart */}
-            <div className="hidden lg:flex items-end justify-end self-stretch overflow-hidden">
+            {/* Right — Bar Chart: no padding, fills to viewport edge */}
+            <div className="hidden lg:flex items-end justify-end self-stretch h-full">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
-                className="w-full h-full object-contain object-right-bottom"
-                style={{ mixBlendMode: 'multiply', maxHeight: '80vh' }}
+                className="w-full h-full object-cover object-left-bottom"
+                style={{ mixBlendMode: 'multiply', maxHeight: '90vh' }}
               />
             </div>
 
