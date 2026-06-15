@@ -275,7 +275,7 @@ export function Home() {
         aria-label="Latest Insights"
         className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
         style={{
-          backgroundImage: `url(${wavePattern})`,
+          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
           backgroundSize: '100% 100%',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',

@@ -168,7 +168,7 @@ export function About() {
       <section
         className="py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
-          backgroundImage: `url(${wavePattern})`,
+          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
