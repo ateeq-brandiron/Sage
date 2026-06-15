@@ -223,7 +223,7 @@ export function Home() {
               ].map((step) => (
                 <div key={step.step} className="group">
                   <div className="flex items-start gap-8 p-8 border-b border-border hover:bg-gray-50 transition-colors">
-                    <div className="text-6xl font-black text-accent/20 group-hover:text-accent/40 transition-colors">
+                    <div className="text-6xl font-black text-primary/40 group-hover:text-primary/70 transition-colors">
                       {step.step}
                     </div>
                     <div className="flex-1 pt-2">
