@@ -4,7 +4,7 @@ import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import heroChart from '../../imports/sage-hero-graph.png';
-import wavePattern from '../../imports/sage-wavy-hill.png';
+import wavePattern from '../../imports/sage-wavy-hill-green.png';
 import { Button } from '../components/Button';
 
 export function Home() {
@@ -275,7 +275,7 @@ export function Home() {
         aria-label="Latest Insights"
         className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
+          backgroundImage: `url(${wavePattern})`,
           backgroundSize: '100% 100%',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',

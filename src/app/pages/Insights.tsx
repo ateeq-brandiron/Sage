@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
-import wavePattern from '../../imports/sage-wavy-hill.png';
+import wavePattern from '../../imports/sage-wavy-hill-green.png';
 import { Button } from '../components/Button';
 
 export function Insights() {
@@ -187,7 +187,7 @@ export function Insights() {
       <section
         className="py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
+          backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

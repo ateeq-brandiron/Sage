@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import wavePattern from '../../imports/sage-wavy-hill.png';
+import wavePattern from '../../imports/sage-wavy-hill-green.png';
 import { Button } from '../components/Button';
 
 export function CaseStudies() {
@@ -143,7 +143,7 @@ export function CaseStudies() {
       <section
         className="py-24 px-4 sm:px-6 lg:px-8 relative border-t border-border"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
+          backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

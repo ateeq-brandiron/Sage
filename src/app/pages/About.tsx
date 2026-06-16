@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import wavePattern from '../../imports/sage-wavy-hill.png';
+import wavePattern from '../../imports/sage-wavy-hill-green.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -168,7 +168,7 @@ export function About() {
       <section
         className="py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 120, 50, 0.18), rgba(0, 120, 50, 0.18)), url(${wavePattern})`,
+          backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
