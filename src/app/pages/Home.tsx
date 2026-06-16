@@ -50,7 +50,7 @@ export function Home() {
             </div>
 
             {/* Right — chart with balanced padding for top/bottom/horizontal spacing */}
-            <div className="hidden lg:block relative">
+            <div className="hidden lg:block relative bg-white">
               <img
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
