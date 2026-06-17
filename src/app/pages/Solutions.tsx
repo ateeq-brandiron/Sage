@@ -100,7 +100,6 @@ export function Solutions() {
                 </Link>
               </div>
             </div>
-            </div>
           </div>
         </div>
       </section>

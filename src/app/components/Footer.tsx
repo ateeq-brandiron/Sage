@@ -75,8 +75,8 @@ export function Footer() {
             © 2026 SAGE Professional Services
           </p>
           <div className="flex items-center space-x-6">
-            <Link to="#" className="text-small text-white/60 hover:text-accent transition-colors">Privacy</Link>
-            <Link to="#" className="text-small text-white/60 hover:text-accent transition-colors">Terms</Link>
+            <Link to="/contact" className="text-small text-white/60 hover:text-accent transition-colors">Privacy</Link>
+            <Link to="/contact" className="text-small text-white/60 hover:text-accent transition-colors">Terms</Link>
           </div>
         </div>
       </div>

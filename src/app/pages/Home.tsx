@@ -9,7 +9,7 @@ import { Button } from '../components/Button';
 
 export function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pt-20 bg-white">
       {/* Hero Section - Split Layout */}
       <section className="bg-white min-h-[90vh] flex items-center">
         <div className="w-full">
