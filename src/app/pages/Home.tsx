@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Users, Brain, BadgeDollarSign } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -77,6 +77,52 @@ export function Home() {
                 <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose SAGE - Icon Cards */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-b border-border">
+        <div className="max-w-7xl mx-auto pl-4">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why Choose Us</p>
+            <h2 className="text-4xl md:text-5xl font-black text-primary">What Makes SAGE <span className="text-accent">Different</span></h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Target,
+                title: 'Top-Tier Closers Most Companies Can\'t Reach',
+                body: 'Some say experience is too expensive. We say you can\'t afford inexperience. Our team are proven sales leaders with decades of wins behind them. You get their expertise on-demand, without the full-time cost.',
+                highlight: false,
+              },
+              {
+                icon: Brain,
+                title: 'Fully Aligned For Results, Start To Finish',
+                body: 'Most Sales and marketing teams hand things off. We don\'t. Our marketing and sales experts work as one highly interactive team from the RevenueStorm to winning revenues—so your message, materials, branding and sales team are all rowing pulling in the same direction from day one.',
+                highlight: false,
+              },
+              {
+                icon: BadgeDollarSign,
+                title: 'We Close Deals – Or We Don\'t Get Paid',
+                body: 'Our sales model is 100% commission-based. No salaries. No overhead. No wasted spend. We only win when you do, so you can bet we\'re going to close. You don\'t pay for effort, but for outcomes.',
+                highlight: true,
+              },
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className={`bg-white rounded-2xl p-8 flex flex-col gap-5 border-2 transition-all duration-300 hover:shadow-lg ${card.highlight ? 'border-accent' : 'border-border hover:border-accent'}`}
+                >
+                  <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center">
+                    <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-black text-primary leading-snug">{card.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm flex-1">{card.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
