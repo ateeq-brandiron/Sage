@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight } from 'lucide-react';
+import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -140,11 +141,16 @@ export function Solutions() {
       </section>
 
       {/* Process */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden">
-        {/* Decorative Pattern */}
-        <div className="absolute bottom-0 left-0 w-96 h-96 opacity-10">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
-        </div>
+      <section
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `url(${leavesBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Screened-back overlay — light so content stays readable */}
+        <div className="absolute inset-0 bg-white/88" />
 
         <div className="max-w-7xl mx-auto pl-4 relative z-10">
           <div className="text-center mb-16">
