@@ -71,7 +71,22 @@ export function Solutions() {
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">Integrated revenue operations that deliver predictable, scalable growth.</p>
-              <Button to="/contact">Get a Free Assessment</Button>
+              <div className="flex flex-row flex-wrap gap-3 items-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
+                >
+                  Get a Free Assessment
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="inline-flex items-center justify-center px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg whitespace-nowrap"
+                >
+                  View Success Stories
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
             </div>
             {/* Right */}
             <div className="hidden lg:flex items-center justify-center lg:min-h-[60vh]">
