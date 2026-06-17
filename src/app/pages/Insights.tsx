@@ -131,7 +131,7 @@ export function Insights() {
                         {article.date}
                       </div>
                       <Link
-                        to={`/insights/${article.slug}`}
+                        to="/insights"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all duration-300 group"
                       >
                         Read more
