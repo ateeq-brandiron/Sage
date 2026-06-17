@@ -41,7 +41,7 @@ export function Home() {
                 <Link
                   to="/case-studies"
                   aria-label="View Success Stories"
-                  className="inline-flex items-center justify-center px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg whitespace-nowrap"
+                  className="inline-flex items-center justify-center px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg whitespace-nowrap group"
                 >
                   View Success Stories
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -199,7 +199,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* RevenueStorm Graphic */}
             <div className="flex justify-center order-2 lg:order-1">
-              <img src={revenueStormImg} alt="RevenueStorm" className="w-full max-w-lg" />
+              <img src={revenueStormImg} alt="SAGE revenue growth framework diagram" className="w-full max-w-lg" />
             </div>
 
             {/* Process Steps */}
@@ -321,10 +321,10 @@ export function Home() {
                 date: 'February 28, 2026',
                 slug: 'ai-revenue-operations-hype-vs-reality',
               },
-            ].map((article, idx, arr) => (
+            ].map((article) => (
               <Link
                 key={article.slug}
-                to={`/insights/${article.slug}`}
+                to="/insights"
                 className={`group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col border-l-4 border-gray-200 hover:border-accent`}
                 aria-label={article.title}
               >

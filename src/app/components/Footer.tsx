@@ -43,6 +43,8 @@ export function Footer() {
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Demand Generation</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Sales Enablement</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Revenue Intelligence</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Marketing Automation</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Executive Advisory</Link></li>
             </ul>
           </div>
 
