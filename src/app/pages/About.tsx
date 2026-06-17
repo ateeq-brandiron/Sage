@@ -25,19 +25,25 @@ export function About() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left */}
-            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">About Us</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">About SAGE</h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">We Build Revenue Systems That Turn Strategy Into Predictable Growth</p>
-            </div>
-            {/* Right */}
-            <div className="hidden lg:flex items-center justify-center lg:min-h-[60vh]">
-              <img src={revenueSystemImg} alt="SAGE Revenue System" className="w-full h-full object-contain" style={{ padding: '40px' }} />
-            </div>
+      <section
+        className="relative py-32 min-h-[70vh] flex items-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
+        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">Our Story</p>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">About SAGE</h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              We Build Revenue Systems That Turn Strategy Into Predictable Growth
+            </p>
+            <p className="text-lg text-white/80 leading-relaxed">
+              Founded in 1995, we've spent three decades helping B2B organizations transform their revenue operations. We're revenue growth partners who build complete, integrated systems.
+            </p>
           </div>
         </div>
       </section>

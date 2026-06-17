@@ -67,23 +67,22 @@ export function Insights() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left */}
-            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Expert Insights</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Insights</h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
-            </div>
-            {/* Right */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
-              <div className="flex flex-col items-center justify-center text-center">
-                <p className="text-8xl font-black text-accent">30+</p>
-                <p className="text-xl font-bold text-primary mt-2">Years of Revenue Expertise</p>
-                <p className="text-sm text-muted-foreground mt-2">Strategic insights from the field</p>
-              </div>
-            </div>
+      <section
+        className="relative py-32 min-h-[70vh] flex items-center border-b border-border"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
+        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">Knowledge & Expertise</p>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">Insights</h1>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              Strategic insights on revenue growth from 30+ years of experience
+            </p>
           </div>
         </div>
       </section>
