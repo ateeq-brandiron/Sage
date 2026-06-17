@@ -1,17 +1,17 @@
 import { Link } from 'react-router';
 import wavePattern from '../../imports/sage-wavy-hill-green.png';
-import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight } from 'lucide-react';
+import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import { Button } from '../components/Button';
 
 export function About() {
   const values = [
-    { title: 'Results', description: 'We measure success by revenue impact, not deliverables' },
-    { title: 'Accountability', description: 'Shared accountability through performance-based models' },
-    { title: 'Partnership', description: 'We work as an extension of your team' },
-    { title: 'Innovation', description: 'Continuous evolution based on what drives growth' },
-    { title: 'Integrity', description: 'We tell you what you need to hear' },
+    { icon: BarChart3, title: 'Results', description: 'We measure success by revenue impact, not deliverables' },
+    { icon: ShieldCheck, title: 'Accountability', description: 'Shared accountability through performance-based models' },
+    { icon: Handshake, title: 'Partnership', description: 'We work as an extension of your team' },
+    { icon: Lightbulb, title: 'Innovation', description: 'Continuous evolution based on what drives growth' },
+    { icon: CheckCircle2, title: 'Integrity', description: 'We tell you what you need to hear' },
   ];
 
   const leaders = [
@@ -93,19 +93,23 @@ export function About() {
               What Drives Us
             </p>
             <h2 className="text-4xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
             <p className="text-xl text-muted-foreground">
               Principles that guide every client engagement
             </p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-px bg-border">
-            {values.map((value) => (
+            {values.map((value) => {
+              const Icon = value.icon;
+              return (
               <div key={value.title} className="bg-white p-8 text-center">
+                <Icon className="w-10 h-10 text-accent mx-auto mb-4" />
                 <h3 className="text-xl font-black text-primary mb-3">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </div>
-            ))}
+            );})}
+
           </div>
         </div>
       </section>
@@ -118,7 +122,7 @@ export function About() {
               Our Team
             </p>
             <h2 className="text-4xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
             <p className="text-xl text-muted-foreground">
               30+ years of enterprise revenue leadership
             </p>
@@ -182,7 +186,7 @@ export function About() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Let's Build Your <span className="text-accent">Revenue Engine</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+          
           <p className="text-xl text-muted-foreground mb-10">
             Work with a team that has 30+ years of proven experience
           </p>

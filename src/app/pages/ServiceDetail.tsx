@@ -347,7 +347,7 @@ export function ServiceDetail() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Get Started?</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-6" />
+          
           <p className="text-xl text-muted-foreground mb-10">
             Book a free assessment — no commitment required
           </p>

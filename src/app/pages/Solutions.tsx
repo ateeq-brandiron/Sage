@@ -81,7 +81,7 @@ export function Solutions() {
               Complete Revenue Solutions
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Integrated revenue operations that deliver predictable, scalable growth
+              Integrated revenue operations that deliver predictable, scalable growth.
             </p>
           </div>
         </div>
@@ -95,7 +95,9 @@ export function Solutions() {
               const Icon = solution.icon;
               return (
                 <div key={solution.title} className="bg-white p-12 hover:bg-gray-50 transition-colors group">
-                  <Icon className="w-12 h-12 text-accent mb-6" />
+                  <div className="w-20 h-20 rounded-2xl border-2 border-border flex items-center justify-center mb-6 group-hover:border-accent transition-colors duration-300">
+                    <Icon className="w-10 h-10 text-accent" />
+                  </div>
 
                   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">
                     {solution.tagline}
@@ -143,7 +145,7 @@ export function Solutions() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               The <span className="text-accent">Framework</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
             <p className="text-xl text-muted-foreground">
               Five phases to predictable revenue
             </p>
@@ -186,7 +188,7 @@ export function Solutions() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Transform Your Revenue?</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+          
           <p className="text-xl mb-10 text-primary/70">
             Get a free assessment—no commitment required
           </p>

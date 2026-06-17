@@ -160,7 +160,7 @@ export function Insights() {
           <h2 className="text-4xl font-black text-primary mb-3">
             Get Weekly <span className="text-accent">Insights</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+          
           <p className="text-xl text-muted-foreground mb-8">
             Revenue growth strategies delivered to your inbox
           </p>
@@ -201,7 +201,7 @@ export function Insights() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Need More Than <span className="text-accent">Insights?</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+          
           <p className="text-xl text-muted-foreground mb-10">
             Work directly with our team to transform your revenue
           </p>

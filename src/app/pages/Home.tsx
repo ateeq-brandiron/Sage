@@ -35,7 +35,7 @@ export function Home() {
                   aria-label="Book a Revenue Evaluation"
                   className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
                 >
-                  Book Revenue Evaluation
+                  Book a Revenue Evaluation
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
@@ -96,7 +96,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Your Revenue Team Is <span className="text-accent">Working Against Itself</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+            
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Marketing generates leads. Sales chases deals. Leadership expects growth.
               <br />
@@ -129,7 +129,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Why <span className="text-accent">SAGE</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
             <p className="text-xl text-primary/70">
               We're different from traditional agencies and consultants
             </p>
@@ -193,7 +193,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Three Steps to <span className="text-accent">Predictable Revenue Growth</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
@@ -248,7 +248,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Results That <span className="text-accent">Matter</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4"></div>
+            
             <p className="text-xl text-muted-foreground">
               Average outcomes from integrated revenue systems
             </p>
@@ -291,7 +291,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
               Latest <span className="text-accent">Insights</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-4" />
+            
             <p className="text-xl text-muted-foreground">
               Strategic thinking on revenue growth
             </p>
@@ -377,7 +377,7 @@ export function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-3">
               Let's Fix Your <span className="text-accent">Revenue System</span>
             </h2>
-            <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+            
 
             <p className="text-xl text-foreground mb-4">
               Get a Free RevenueStorm™ Assessment

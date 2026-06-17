@@ -153,7 +153,7 @@ export function Industries() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Accelerate Growth?</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto mb-6"></div>
+          
           <p className="text-xl text-muted-foreground mb-10">
             Schedule a Revenue Evaluation for your industry
           </p>

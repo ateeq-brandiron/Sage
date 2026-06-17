@@ -157,7 +157,7 @@ export function CaseStudies() {
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to Write Your <span className="text-accent">Success Story?</span>
           </h2>
-          <div className="w-32 h-1 bg-accent mb-6"></div>
+          
           <p className="text-xl text-muted-foreground mb-10 max-w-xl">
             Let's build a revenue system that delivers results
           </p>
