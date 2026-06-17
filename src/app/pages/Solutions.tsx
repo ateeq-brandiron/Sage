@@ -95,8 +95,8 @@ export function Solutions() {
               const Icon = solution.icon;
               return (
                 <div key={solution.title} className="bg-white p-12 hover:bg-gray-50 transition-colors group">
-                  <div className="w-20 h-20 rounded-2xl border-2 border-border flex items-center justify-center mb-6 group-hover:border-accent transition-colors duration-300">
-                    <Icon className="w-10 h-10 text-accent" />
+                  <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent transition-colors duration-300">
+                    <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
                   </div>
 
                   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">

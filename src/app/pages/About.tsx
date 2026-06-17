@@ -104,12 +104,13 @@ export function About() {
               const Icon = value.icon;
               return (
               <div key={value.title} className="bg-white p-8 text-center">
-                <Icon className="w-10 h-10 text-accent mx-auto mb-4" />
+                <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mx-auto mb-5">
+                  <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-xl font-black text-primary mb-3">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </div>
             );})}
-
           </div>
         </div>
       </section>
