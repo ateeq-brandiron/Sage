@@ -64,15 +64,26 @@ export function Solutions() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
+      <section className="bg-white min-h-[90vh] flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left */}
-            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">Integrated revenue operations that deliver predictable, scalable growth.</p>
-              <div className="flex flex-row flex-wrap gap-3 items-center">
+            {/* Left — graph fills exact bounds set by right column padding */}
+            <div className="hidden lg:block relative">
+              <img
+                src={moneyChart}
+                alt="Revenue growth chart"
+                className="absolute inset-0 w-full h-full object-contain"
+                style={{ padding: '80px 16px 64px 48px', imageRendering: 'crisp-edges' }}
+              />
+            </div>
+            {/* Right — padding top aligns heading with graph top, padding bottom aligns CTAs with graph bottom */}
+            <div className="flex flex-col justify-between pt-20 pb-16 px-4 sm:px-6 lg:px-8 pr-[calc(1rem+45px)] sm:pr-[calc(1.5rem+45px)] lg:pr-[calc(2rem+45px)]">
+              <div>
+                <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
+                <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Integrated revenue operations that deliver predictable, scalable growth.</p>
+              </div>
+              <div className="flex flex-row flex-wrap gap-3 items-center mt-8">
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
@@ -89,9 +100,6 @@ export function Solutions() {
                 </Link>
               </div>
             </div>
-            {/* Right */}
-            <div className="hidden lg:flex items-center justify-center lg:min-h-[60vh]">
-              <img src={moneyChart} alt="Revenue growth chart" className="w-full h-full object-contain" style={{ padding: '40px' }} />
             </div>
           </div>
         </div>
