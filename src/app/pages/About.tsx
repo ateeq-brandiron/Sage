@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import wavePattern from '../../imports/sage-wavy-hill-green.png';
+import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -42,25 +43,26 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Decorative Pattern */}
-        <div className="absolute top-0 right-0 w-96 h-96 opacity-10">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
-        </div>
+      <section
+        className="animate-slow-pan relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{ backgroundImage: `url(${leavesBackground})` }}
+      >
+        {/* Dark green overlay */}
+        <div className="absolute inset-0 bg-primary/80" />
 
         <div className="max-w-7xl mx-auto pl-4 relative z-10">
           <div className="grid lg:grid-cols-3 gap-16 items-center">
             {/* Mission & Vision */}
             <div className="lg:col-span-2 space-y-12">
               <div className="border-l-4 border-accent pl-8">
-                <h2 className="text-3xl font-black text-primary mb-6">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h2 className="text-3xl font-black text-white mb-6">Our Mission</h2>
+                <p className="text-lg text-white/80 leading-relaxed">
                   To align strategy, marketing, sales, and execution into one measurable revenue system that delivers predictable, scalable growth for B2B organizations.
                 </p>
               </div>
-              <div className="border-l-4 border-primary pl-8">
-                <h2 className="text-3xl font-black text-primary mb-6">Our Vision</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+              <div className="border-l-4 border-white/40 pl-8">
+                <h2 className="text-3xl font-black text-white mb-6">Our Vision</h2>
+                <p className="text-lg text-white/80 leading-relaxed">
                   To become the most trusted revenue growth partner for technology and growth-focused businesses, known for delivering measurable results.
                 </p>
               </div>
@@ -68,7 +70,7 @@ export function About() {
 
             {/* Revenue System Image */}
             <div className="flex justify-center">
-              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-sm" />
+              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-sm opacity-90" />
             </div>
           </div>
         </div>
