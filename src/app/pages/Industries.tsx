@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
+import sageLogo from '../../imports/sage-logo.png';
 import { Button } from '../components/Button';
 
 export function Industries() {
@@ -97,12 +98,22 @@ export function Industries() {
                 </div>
 
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="aspect-square overflow-hidden">
+                  {/* Styled image frame — green border, logo accent */}
+                  <div className="relative p-4">
+                    {/* Logo accent top-left */}
                     <img
-                      src={industry.image}
-                      alt={industry.name}
-                      className="w-full h-full object-cover"
+                      src={sageLogo}
+                      alt=""
+                      className="absolute top-0 left-0 w-14 h-14 object-contain z-10 opacity-80"
                     />
+                    {/* Green border frame */}
+                    <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
+                      <img
+                        src={industry.image}
+                        alt={industry.name}
+                        className="w-full aspect-[4/3] object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
