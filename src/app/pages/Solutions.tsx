@@ -157,7 +157,6 @@ export function Solutions() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-primary/75" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Heading */}
