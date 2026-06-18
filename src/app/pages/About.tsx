@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
-import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
+import sageLogo from '../../imports/sage-logo.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -49,34 +49,47 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section
-        className="animate-slow-pan relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-        style={{ backgroundImage: `url(${leavesBackground})` }}
-      >
-        {/* Dark green overlay */}
-        <div className="absolute inset-0 bg-primary/80" />
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
+        {/* Animated logo watermark */}
+        <div
+          className="animate-slow-pan absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url(${sageLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '120px',
+            filter: 'brightness(0) invert(1)',
+          }}
+        />
 
-        <div className="max-w-7xl mx-auto pl-4 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-16 items-center">
-            {/* Mission & Vision */}
-            <div className="lg:col-span-2 space-y-12">
-              <div className="border-l-4 border-accent pl-8">
-                <h2 className="text-3xl font-black text-white mb-6">Our Mission</h2>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  To align strategy, marketing, sales, and execution into one measurable revenue system that delivers predictable, scalable growth for B2B organizations.
-                </p>
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-wider text-white/60 mb-4 font-semibold">Who We Are</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
+              Our <span style={{ color: '#7ED9A8' }}>Purpose</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Mission */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10">
+              <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/30 flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
-              <div className="border-l-4 border-white/40 pl-8">
-                <h2 className="text-3xl font-black text-white mb-6">Our Vision</h2>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  To become the most trusted revenue growth partner for technology and growth-focused businesses, known for delivering measurable results.
-                </p>
-              </div>
+              <h3 className="text-2xl font-black text-white mb-4">Our Mission</h3>
+              <p className="text-lg text-white/80 leading-relaxed">
+                To align strategy, marketing, sales, and execution into one measurable revenue system that delivers predictable, scalable growth for B2B organizations.
+              </p>
             </div>
 
-            {/* Revenue System Image */}
-            <div className="flex justify-center">
-              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-sm opacity-90" />
+            {/* Vision */}
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10">
+              <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/30 flex items-center justify-center mb-6">
+                <TrendingUp className="w-7 h-7 text-white" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-2xl font-black text-white mb-4">Our Vision</h3>
+              <p className="text-lg text-white/80 leading-relaxed">
+                To become the most trusted revenue growth partner for technology and growth-focused businesses, known for delivering measurable results.
+              </p>
             </div>
           </div>
         </div>
