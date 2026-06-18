@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
 import sageLogo from '../../imports/sage-logo.png';
-import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck } from 'lucide-react';
+import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, CircleDollarSign } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import { Button } from '../components/Button';
@@ -16,10 +16,10 @@ export function About() {
   ];
 
   const leaders = [
-    { name: 'Mitchell Chi', role: 'CEO & Co-Founder', expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
-    { name: 'Michael Doyle', role: 'CRO & Co-Founder', expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
-    { name: 'Paul Sievers', role: 'VP Sales Enablement', expertise: ['Sales Coaching', 'Playbook Development', 'Performance Optimization'] },
-    { name: 'Valeria Rodriguez', role: 'VP Revenue Intelligence', expertise: ['Revenue Analytics', 'Forecasting', 'Business Intelligence'] },
+    { name: 'Mitchell Chi',      initials: 'MC', role: 'CEO & Co-Founder',        color: 'bg-[#1B6B3A]', expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
+    { name: 'Michael Doyle',     initials: 'MD', role: 'CRO & Co-Founder',        color: 'bg-[#2D7A4F]', expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
+    { name: 'Paul Sievers',      initials: 'PS', role: 'VP Sales Enablement',     color: 'bg-[#00A344]', expertise: ['Sales Coaching', 'Playbook Development', 'Performance Optimization'] },
+    { name: 'Valeria Rodriguez', initials: 'VR', role: 'VP Revenue Intelligence', color: 'bg-[#0B1F35]', expertise: ['Revenue Analytics', 'Forecasting', 'Business Intelligence'] },
   ];
 
   return (
@@ -193,8 +193,8 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
               <div key={leader.name} className="bg-white p-12">
-                <div className="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mb-6">
-                  <Users className="w-10 h-10 text-accent" />
+                <div className={`w-20 h-20 rounded-2xl ${leader.color} flex items-center justify-center mb-6 shadow-md`}>
+                  <span className="text-2xl font-black text-white tracking-wide">{leader.initials}</span>
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
                 <p className="text-accent font-semibold mb-6">{leader.role}</p>
@@ -216,14 +216,17 @@ export function About() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '30+', label: 'Years' },
-              { value: '500+', label: 'Clients' },
-              { value: '$100M+', label: 'Revenue' },
-              { value: '8X', label: 'Avg ROI' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-5xl font-black text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-primary/70 font-semibold uppercase tracking-wide">{stat.label}</div>
+              { icon: CalendarClock,    value: '30+',    label: 'Years Experience' },
+              { icon: Building2,        value: '500+',   label: 'Clients Served' },
+              { icon: CircleDollarSign, value: '$100M+', label: 'Revenue Influenced' },
+              { icon: Award,            value: '8X',     label: 'Avg ROI' },
+            ].map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                </div>
+                <div className="text-5xl font-black text-accent mb-1">{value}</div>
+                <div className="text-sm text-primary/70 font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>
