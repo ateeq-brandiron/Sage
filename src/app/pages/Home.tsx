@@ -3,7 +3,7 @@ import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, Ca
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
-import heroChart from '../../imports/sage-header.png';
+import heroChart from '../../imports/sage-hero-original.svg';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
 import { Button } from '../components/Button';
 
@@ -55,7 +55,7 @@ export function Home() {
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
                 className="absolute inset-0 w-full h-full object-contain object-bottom"
-                style={{ padding: '80px 16px 48px 16px', imageRendering: 'crisp-edges' }}
+                style={{ padding: '80px 16px 48px 16px' }}
               />
             </div>
 
