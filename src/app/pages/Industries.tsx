@@ -42,11 +42,11 @@ export function Industries() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
+      <section className="bg-white min-h-[50vh] flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Industry Expertise</p>
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Industries We Serve</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>

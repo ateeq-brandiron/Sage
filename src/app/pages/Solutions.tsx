@@ -65,11 +65,11 @@ export function Solutions() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[90vh] flex items-center border-b border-border">
+      <section className="bg-white min-h-[80vh] flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-between pt-20 pb-16 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-between pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <div>
                 <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
                 <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
