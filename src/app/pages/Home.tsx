@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Users } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, CircleDollarSign } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
@@ -68,9 +68,9 @@ export function Home() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-3 gap-12 text-center">
             {[
-              { value: '500+', label: 'Businesses Supported', icon: Users },
-              { value: '30+',  label: 'Years Experience',     icon: Award },
-              { value: '$100M+', label: 'Revenue Influenced', icon: TrendingUp },
+              { value: '500+',   label: 'Businesses Supported', icon: Building2 },
+              { value: '30+',    label: 'Years Experience',     icon: CalendarClock },
+              { value: '$100M+', label: 'Revenue Influenced',   icon: CircleDollarSign },
             ].map(({ value, label, icon: Icon }) => (
               <div key={label} className="flex flex-col items-center">
                 <div className="flex items-center gap-3 mb-2">
