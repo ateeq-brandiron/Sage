@@ -155,7 +155,8 @@ export function Industries() {
           backgroundColor: '#ffffff',
         }}
       >
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-white/80" />
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>

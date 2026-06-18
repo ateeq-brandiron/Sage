@@ -358,6 +358,7 @@ export function Home() {
 
       {/* CTA - Clean */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
+        <div className="absolute inset-0 bg-white/80" />
         {/* Decorative Pattern */}
         <div className="absolute top-0 left-0 w-64 h-64 opacity-5">
           <img src={vectorPattern} alt="" className="w-full h-full object-contain" />

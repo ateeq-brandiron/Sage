@@ -155,7 +155,8 @@ export function CaseStudies() {
           backgroundColor: '#ffffff',
         }}
       >
-        <div className="max-w-7xl mx-auto pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+        <div className="absolute inset-0 bg-white/80" />
+        <div className="max-w-7xl mx-auto pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
