@@ -11,12 +11,12 @@ export function Home() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="bg-white min-h-[90vh] flex items-center">
+      <section className="bg-white min-h-[80vh] flex items-center">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
 
             {/* Left — Text Content (padding defines the chart's top/bottom bounds) */}
-            <div className="flex flex-col justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
                 Revenue Growth Solutions
               </p>
