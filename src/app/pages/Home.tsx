@@ -68,13 +68,16 @@ export function Home() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-3 gap-12 text-center">
             {[
-              { value: '500+', label: 'Businesses Supported' },
-              { value: '30+', label: 'Years Experience' },
-              { value: '$100M+', label: 'Revenue Influenced' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-5xl md:text-6xl font-black text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{stat.label}</div>
+              { value: '500+', label: 'Businesses Supported', icon: Users },
+              { value: '30+',  label: 'Years Experience',     icon: Award },
+              { value: '$100M+', label: 'Revenue Influenced', icon: TrendingUp },
+            ].map(({ value, label, icon: Icon }) => (
+              <div key={label} className="flex flex-col items-center">
+                <div className="flex items-center gap-3 mb-2">
+                  <Icon className="w-9 h-9 text-accent" strokeWidth={1.5} />
+                  <div className="text-5xl md:text-6xl font-black text-primary">{value}</div>
+                </div>
+                <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>
