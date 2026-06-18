@@ -88,7 +88,7 @@ export function Home() {
           <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
         </div>
 
-        <div className="max-w-7xl mx-auto pl-4 relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               The Problem
@@ -273,16 +273,10 @@ export function Home() {
       {/* Latest Insights */}
       <section
         aria-label="Latest Insights"
-        className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
-        style={{
-          backgroundImage: `url(${wavePattern})`,
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'top center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#ffffff',
-        }}
+        className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
+
       >
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
@@ -360,7 +354,7 @@ export function Home() {
       </section>
 
       {/* CTA - Clean */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
         {/* Decorative Pattern */}
         <div className="absolute top-0 left-0 w-64 h-64 opacity-5">
           <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
@@ -369,7 +363,7 @@ export function Home() {
           <img src={vectorPattern} alt="" className="w-full h-full object-contain transform rotate-180" />
         </div>
 
-        <div className="max-w-7xl mx-auto pl-4 relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Get Started
