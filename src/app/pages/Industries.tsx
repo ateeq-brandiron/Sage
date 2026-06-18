@@ -1,7 +1,6 @@
 import { Link } from 'react-router';
 import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
-import sageLogo from '../../imports/sage-logo.png';
 import { Button } from '../components/Button';
 
 export function Industries() {
@@ -9,7 +8,7 @@ export function Industries() {
     {
       icon: Cpu,
       name: 'Technology',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80',
       sectors: ['Enterprise Software', 'SaaS', 'AI', 'Cybersecurity', 'Cloud Solutions'],
       challenge: 'Complex sales cycles with multiple stakeholders and difficulty articulating technical value to business buyers',
       solution: 'Enterprise messaging, multi-threaded sales strategies, and account-based marketing for target accounts',
@@ -17,7 +16,7 @@ export function Industries() {
     {
       icon: Factory,
       name: 'Manufacturing',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
       sectors: ['Industrial Automation', 'RFID', 'Supply Chain', 'Equipment'],
       challenge: 'Long sales cycles, limited digital presence, and heavy dependence on trade shows',
       solution: 'Digital demand generation programs, technical content marketing, and sales enablement',
@@ -25,7 +24,7 @@ export function Industries() {
     {
       icon: Briefcase,
       name: 'Professional Services',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
       sectors: ['Consulting', 'Engineering', 'Accounting', 'Legal'],
       challenge: 'Revenue dependent on individual relationships with inconsistent new business development',
       solution: 'Thought leadership programs, systematic business development, and partner enablement',
@@ -33,7 +32,7 @@ export function Industries() {
     {
       icon: TrendingUp,
       name: 'Investors',
-      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&q=80',
       sectors: ['Private Equity', 'Venture Capital', 'Portfolio Companies'],
       challenge: 'Portfolio company underperformance and need for rapid growth post-acquisition',
       solution: 'Revenue assessment, interim leadership, and performance monitoring',
@@ -98,22 +97,12 @@ export function Industries() {
                 </div>
 
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  {/* Styled image frame — green border, logo accent */}
-                  <div className="relative p-4">
-                    {/* Logo accent top-left */}
+                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
                     <img
-                      src={sageLogo}
-                      alt=""
-                      className="absolute top-0 left-0 w-14 h-14 object-contain z-10 opacity-80"
+                      src={industry.image}
+                      alt={industry.name}
+                      className="w-full aspect-[4/3] object-cover"
                     />
-                    {/* Green border frame */}
-                    <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
-                      <img
-                        src={industry.image}
-                        alt={industry.name}
-                        className="w-full aspect-[4/3] object-cover"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
