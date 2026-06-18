@@ -61,21 +61,47 @@ export function CaseStudies() {
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Success Stories</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies</p>
             </div>
-            {/* Right — light green panel with result stats */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
-              <div className="flex flex-col gap-10 px-16">
-                <div>
-                  <p className="text-5xl font-black text-primary">37%</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">More Qualified Opportunities</p>
-                </div>
-                <div>
-                  <p className="text-5xl font-black text-primary">22%</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Decrease in Sales Cycle</p>
-                </div>
-                <div>
-                  <p className="text-5xl font-black text-primary">59%</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Pipeline Velocity Increase</p>
-                </div>
+            {/* Right — results bar chart */}
+            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-10 py-10">
+              <div className="w-full max-w-sm">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Average Client Results</p>
+                <svg viewBox="0 0 300 210" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="barGrad1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.4"/>
+                    </linearGradient>
+                    <linearGradient id="barGrad2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#2D7A4F" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#2D7A4F" stopOpacity="0.4"/>
+                    </linearGradient>
+                  </defs>
+                  {/* Horizontal grid */}
+                  {[{ y: 10 }, { y: 50 }, { y: 90 }, { y: 130 }].map(({ y }) => (
+                    <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
+                  ))}
+                  {/* Bars — ascending left to right */}
+                  {[
+                    { label: 'Shorter\nCycles',   metric: '22%',  barH: 50,  x: 10,  grad: 'url(#barGrad2)' },
+                    { label: 'More\nOpps',         metric: '37%',  barH: 80,  x: 80,  grad: 'url(#barGrad2)' },
+                    { label: 'Pipeline\nGrowth',   metric: '59%',  barH: 112, x: 150, grad: 'url(#barGrad1)' },
+                    { label: 'Avg\nROI',           metric: '8X',   barH: 140, x: 220, grad: 'url(#barGrad1)' },
+                  ].map(({ label, metric, barH, x, grad }) => {
+                    const baseY = 165;
+                    const topY = baseY - barH;
+                    return (
+                      <g key={label}>
+                        <rect x={x} y={topY} width="55" height={barH} rx="3" fill={grad}/>
+                        <text x={x + 27.5} y={topY - 6} textAnchor="middle" fontSize="12" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">{metric}</text>
+                        {label.split('\n').map((line, li) => (
+                          <text key={li} x={x + 27.5} y={baseY + 14 + li * 13} textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.5">{line}</text>
+                        ))}
+                      </g>
+                    );
+                  })}
+                  {/* Baseline */}
+                  <line x1="0" y1="165" x2="300" y2="165" stroke="#0B1F35" strokeOpacity="0.15" strokeWidth="1.5"/>
+                </svg>
               </div>
             </div>
           </div>

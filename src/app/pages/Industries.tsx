@@ -51,25 +51,28 @@ export function Industries() {
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Industries We Serve</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
             </div>
-            {/* Right — light green panel with industry icons */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
-              <div className="grid grid-cols-2 gap-8 px-12">
-                <div className="flex flex-col items-center gap-2">
-                  <Cpu className="w-8 h-8 text-accent" />
-                  <p className="text-sm font-bold text-primary">Technology</p>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <Factory className="w-8 h-8 text-accent" />
-                  <p className="text-sm font-bold text-primary">Manufacturing</p>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <Briefcase className="w-8 h-8 text-accent" />
-                  <p className="text-sm font-bold text-primary">Professional Services</p>
-                </div>
-                <div className="flex flex-col items-center gap-2">
-                  <TrendingUp className="w-8 h-8 text-accent" />
-                  <p className="text-sm font-bold text-primary">Investors</p>
-                </div>
+            {/* Right — horizontal bar chart */}
+            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-12 py-10">
+              <div className="w-full max-w-sm">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-5">Client Mix by Industry</p>
+                <svg viewBox="0 0 300 220" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {[
+                    { Icon: Cpu,       label: 'Technology',            pct: 85, y: 14  },
+                    { Icon: Factory,   label: 'Manufacturing',         pct: 60, y: 68  },
+                    { Icon: Briefcase, label: 'Professional Services', pct: 75, y: 122 },
+                    { Icon: TrendingUp,label: 'Investors',             pct: 50, y: 176 },
+                  ].map(({ label, pct, y }) => (
+                    <g key={label}>
+                      <text x="0" y={y} fontSize="11" fill="#0B1F35" fillOpacity="0.65" fontWeight="600">{label}</text>
+                      {/* Track */}
+                      <rect x="0" y={y + 8} width="300" height="16" rx="3" fill="#0B1F35" fillOpacity="0.07"/>
+                      {/* Bar */}
+                      <rect x="0" y={y + 8} width={300 * pct / 100} height="16" rx="3" fill="#00C853" fillOpacity="0.7"/>
+                      {/* Percentage label */}
+                      <text x={300 * pct / 100 + 6} y={y + 20} fontSize="10" fill="#0B1F35" fillOpacity="0.5" fontWeight="700">{pct}%</text>
+                    </g>
+                  ))}
+                </svg>
               </div>
             </div>
           </div>

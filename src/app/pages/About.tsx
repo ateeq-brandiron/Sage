@@ -34,20 +34,64 @@ export function About() {
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">About SAGE</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">We Build Revenue Systems That Turn Strategy Into Predictable Growth</p>
             </div>
-            {/* Right — light green panel with stats */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
-              <div className="flex flex-col gap-10 px-16">
-                <div>
-                  <p className="text-5xl font-black text-primary">30+</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Years of Experience</p>
-                </div>
-                <div>
-                  <p className="text-5xl font-black text-primary">500+</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Clients Served</p>
-                </div>
-                <div>
-                  <p className="text-5xl font-black text-primary">$100M+</p>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Revenue Influenced</p>
+            {/* Right — growth chart */}
+            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-12 py-10">
+              <div className="w-full max-w-sm">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced — 30 Year Journey</p>
+                <svg viewBox="0 0 320 190" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="aboutAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.22"/>
+                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.01"/>
+                    </linearGradient>
+                  </defs>
+                  {/* Grid lines */}
+                  {[{ y: 18 }, { y: 58 }, { y: 98 }, { y: 138 }].map(({ y }) => (
+                    <line key={y} x1="44" y1={y} x2="312" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
+                  ))}
+                  {/* Y-axis labels */}
+                  {[
+                    { label: '$100M+', y: 18 },
+                    { label: '$75M',   y: 58 },
+                    { label: '$50M',   y: 98 },
+                    { label: '$25M',   y: 138 },
+                  ].map(({ label, y }) => (
+                    <text key={label} x="40" y={y} textAnchor="end" fontSize="9" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
+                  ))}
+                  {/* Area fill */}
+                  <path d="M44,158 Q110,152 176,134 T280,64 L312,18 L312,158 L44,158 Z" fill="url(#aboutAreaGrad)"/>
+                  {/* Line */}
+                  <path d="M44,158 Q110,152 176,134 T280,64 L312,18" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  {/* Data points */}
+                  {[
+                    { cx: 44,  cy: 158 },
+                    { cx: 140, cy: 142 },
+                    { cx: 220, cy: 96  },
+                    { cx: 312, cy: 18  },
+                  ].map(({ cx, cy }) => (
+                    <circle key={cx} cx={cx} cy={cy} r="4" fill="#00C853" stroke="white" strokeWidth="2"/>
+                  ))}
+                  {/* X-axis labels */}
+                  {[
+                    { label: '1995', x: 44  },
+                    { label: '2005', x: 140 },
+                    { label: '2015', x: 230 },
+                    { label: '2025', x: 312 },
+                  ].map(({ label, x }) => (
+                    <text key={label} x={x} y="178" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.42">{label}</text>
+                  ))}
+                </svg>
+                <div className="flex gap-8 mt-4 border-t border-primary/10 pt-4">
+                  {[
+                    { value: '30+',   label: 'Years' },
+                    { value: '500+',  label: 'Clients' },
+                    { value: '$100M+',label: 'Revenue' },
+                  ].map(({ value, label }) => (
+                    <div key={label}>
+                      <p className="text-xl font-black text-primary">{value}</p>
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-wide mt-0.5">{label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
