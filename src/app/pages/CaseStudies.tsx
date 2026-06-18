@@ -52,22 +52,32 @@ export function CaseStudies() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section
-        className="relative py-32 min-h-[70vh] flex items-center border-b border-border"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">Client Success</p>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">Success Stories</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Real revenue transformation results from B2B companies
-            </p>
+      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
+        <div className="w-full">
+          <div className="grid lg:grid-cols-2 items-stretch">
+            {/* Left — text */}
+            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Client Success</p>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Success Stories</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies</p>
+            </div>
+            {/* Right — light green panel with result stats */}
+            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
+              <div className="flex flex-col gap-10 px-16">
+                <div>
+                  <p className="text-5xl font-black text-primary">37%</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">More Qualified Opportunities</p>
+                </div>
+                <div>
+                  <p className="text-5xl font-black text-primary">22%</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Decrease in Sales Cycle</p>
+                </div>
+                <div>
+                  <p className="text-5xl font-black text-primary">59%</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">Pipeline Velocity Increase</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

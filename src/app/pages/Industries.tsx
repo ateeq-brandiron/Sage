@@ -42,22 +42,36 @@ export function Industries() {
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero */}
-      <section
-        className="relative py-32 min-h-[70vh] flex items-center"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80" />
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-wider text-accent mb-6 font-semibold">Industry Expertise</p>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">Industries We Serve</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Deep expertise in growth-focused B2B organizations across multiple sectors
-            </p>
+      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
+        <div className="w-full">
+          <div className="grid lg:grid-cols-2 items-stretch">
+            {/* Left — text */}
+            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Industry Expertise</p>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Industries We Serve</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
+            </div>
+            {/* Right — light green panel with industry icons */}
+            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
+              <div className="grid grid-cols-2 gap-8 px-12">
+                <div className="flex flex-col items-center gap-2">
+                  <Cpu className="w-8 h-8 text-accent" />
+                  <p className="text-sm font-bold text-primary">Technology</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Factory className="w-8 h-8 text-accent" />
+                  <p className="text-sm font-bold text-primary">Manufacturing</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Briefcase className="w-8 h-8 text-accent" />
+                  <p className="text-sm font-bold text-primary">Professional Services</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <TrendingUp className="w-8 h-8 text-accent" />
+                  <p className="text-sm font-bold text-primary">Investors</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
