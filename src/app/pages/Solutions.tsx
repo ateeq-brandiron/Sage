@@ -148,65 +148,48 @@ export function Solutions() {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2">
-          {/* Left — leaves background with phase icons */}
-          <div
-            className="relative min-h-[560px] flex items-center justify-center p-16"
-            style={{
-              backgroundImage: `url(${leavesBackground})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
-            <div className="absolute inset-0 bg-primary/60" />
-            <div className="relative z-10 grid grid-cols-2 gap-6 w-full max-w-sm">
-              {[
-                { icon: Search, label: 'Assess' },
-                { icon: Target, label: 'Position' },
-                { icon: Megaphone, label: 'Generate' },
-                { icon: Zap, label: 'Accelerate' },
-                { icon: BarChart2, label: 'Measure' },
-              ].map(({ icon: Icon, label }, i) => (
-                <div
-                  key={label}
-                  className={`flex flex-col items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center${i === 4 ? ' col-span-2' : ''}`}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-white" strokeWidth={1.5} />
-                  </div>
-                  <span className="text-white font-bold text-sm uppercase tracking-wider">{label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* The Framework */}
+      <section
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `url(${leavesBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/75" />
 
-          {/* Right — step cards on white */}
-          <div className="bg-white py-24 px-8 lg:px-16">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Our Approach</p>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
               The <span className="text-accent">Framework</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-12">Five phases to predictable revenue</p>
+            <p className="text-xl text-white/70">Five phases to predictable revenue</p>
+          </div>
 
-            <div className="space-y-px bg-border">
-              {[
-                { phase: '01', title: 'RevenueStorm™ Assessment', desc: 'Analyze current state and identify opportunities' },
-                { phase: '02', title: 'Market Positioning', desc: 'Nail messaging and competitive positioning' },
-                { phase: '03', title: 'Demand Generation', desc: 'Build campaigns that fill pipeline' },
-                { phase: '04', title: 'Sales Acceleration', desc: 'Equip teams with playbooks and tools' },
-                { phase: '05', title: 'Revenue Intelligence', desc: 'Deploy dashboards and analytics' },
-              ].map((step) => (
-                <div key={step.phase} className="bg-white p-8 hover:bg-gray-50 transition-colors flex items-start gap-8">
-                  <div className="text-5xl font-black text-accent/30">{step.phase}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.desc}</p>
-                  </div>
+          {/* Phase cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { phase: '01', icon: Search,    title: 'RevenueStorm™ Assessment', desc: 'Analyze current state and identify opportunities' },
+              { phase: '02', icon: Target,    title: 'Market Positioning',        desc: 'Nail messaging and competitive positioning' },
+              { phase: '03', icon: Megaphone, title: 'Demand Generation',         desc: 'Build campaigns that fill pipeline' },
+              { phase: '04', icon: Zap,       title: 'Sales Acceleration',        desc: 'Equip teams with playbooks and tools' },
+              { phase: '05', icon: BarChart2, title: 'Revenue Intelligence',      desc: 'Deploy dashboards and analytics' },
+            ].map(({ phase, icon: Icon, title, desc }) => (
+              <div
+                key={phase}
+                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+              >
+                <div className="text-3xl font-black text-accent/60 mb-4">{phase}</div>
+                <div className="w-14 h-14 rounded-2xl bg-accent/25 border border-accent/40 flex items-center justify-center mb-5">
+                  <Icon className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-base font-bold text-white mb-3 leading-snug">{title}</h3>
+                <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
