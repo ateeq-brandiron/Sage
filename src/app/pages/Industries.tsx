@@ -52,7 +52,7 @@ export function Industries() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
             </div>
             {/* Right — horizontal bar chart */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-12 py-10">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-12 py-10">
               <div className="w-full max-w-sm">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-5">Client Mix by Industry</p>
                 <svg viewBox="0 0 300 220" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">

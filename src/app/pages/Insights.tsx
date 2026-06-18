@@ -77,7 +77,7 @@ export function Insights() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
             </div>
             {/* Right — multi-line trend chart */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-12 py-10">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-12 py-10">
               <div className="w-full max-w-sm">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics — Readership Growth</p>
                 <svg viewBox="0 0 320 200" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">

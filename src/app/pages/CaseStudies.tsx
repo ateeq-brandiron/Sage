@@ -62,7 +62,7 @@ export function CaseStudies() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies</p>
             </div>
             {/* Right — results bar chart */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh] px-10 py-10">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-10 py-10">
               <div className="w-full max-w-sm">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Average Client Results</p>
                 <svg viewBox="0 0 300 210" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
