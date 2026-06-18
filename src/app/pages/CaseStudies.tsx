@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import wavePattern from '../../imports/sage-wavy-hill-green.png';
+import wavePattern from '../../imports/Sage wavy background more solid.png';
 import { Button } from '../components/Button';
 
 export function CaseStudies() {

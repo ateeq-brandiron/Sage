@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight } from 'lucide-react';
 import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
+import wavePattern from '../../imports/Sage wavy background more solid.png';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -202,8 +203,8 @@ export function Solutions() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
-        <div className="max-w-7xl mx-auto pl-4 text-center">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
+        <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>

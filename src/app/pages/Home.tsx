@@ -4,7 +4,7 @@ import revenueSystemImg from '../../imports/sage-2.png';
 import revenueStormImg from '../../imports/sage-1.png';
 import vectorPattern from '../../imports/Vector-1.png';
 import heroChart from '../../imports/sage-hero-graph.png';
-import wavePattern from '../../imports/sage-wavy-hill-green.png';
+import wavePattern from '../../imports/Sage wavy background more solid.png';
 import { Button } from '../components/Button';
 
 export function Home() {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import wavePattern from '../../imports/sage-wavy-hill-green.png';
+import wavePattern from '../../imports/Sage wavy background more solid.png';
 import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
@@ -177,7 +177,7 @@ export function About() {
           backgroundColor: '#ffffff',
         }}
       >
-        <div className="max-w-7xl mx-auto pl-4 text-center relative z-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Partner With Us
           </p>

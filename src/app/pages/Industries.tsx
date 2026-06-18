@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
-import wavePattern from '../../imports/sage-wavy-hill-green.png';
+import wavePattern from '../../imports/Sage wavy background more solid.png';
 import { Button } from '../components/Button';
 
 export function Industries() {
@@ -141,7 +141,7 @@ export function Industries() {
           backgroundColor: '#ffffff',
         }}
       >
-        <div className="max-w-7xl mx-auto pl-4 text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
