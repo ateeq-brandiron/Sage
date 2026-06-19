@@ -69,13 +69,11 @@ export function Solutions() {
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-between pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <div>
-                <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
-                <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Integrated revenue operations that deliver predictable, scalable growth.</p>
-              </div>
-              <div className="flex flex-row flex-wrap gap-3 items-center mt-8">
+            <div className="flex flex-col justify-center pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
+              <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
