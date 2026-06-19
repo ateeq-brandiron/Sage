@@ -35,10 +35,10 @@ export function About() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">We Build Revenue Systems That Turn Strategy Into Predictable Growth</p>
             </div>
             {/* Right — growth chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-12 py-10">
-              <div className="w-full max-w-sm">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced — 30 Year Journey</p>
-                <svg viewBox="0 0 320 190" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
+              <div className="w-full">
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced — 30 Year Journey</p>
+                <svg viewBox="0 0 420 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="aboutAreaGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#00C853" stopOpacity="0.22"/>
@@ -46,50 +46,50 @@ export function About() {
                     </linearGradient>
                   </defs>
                   {/* Grid lines */}
-                  {[{ y: 18 }, { y: 58 }, { y: 98 }, { y: 138 }].map(({ y }) => (
-                    <line key={y} x1="44" y1={y} x2="312" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
+                  {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
+                    <line key={y} x1="54" y1={y} x2="415" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
                   ))}
                   {/* Y-axis labels */}
                   {[
-                    { label: '$100M+', y: 18 },
-                    { label: '$75M',   y: 58 },
-                    { label: '$50M',   y: 98 },
-                    { label: '$25M',   y: 138 },
+                    { label: '$100M+', y: 20  },
+                    { label: '$75M',   y: 75  },
+                    { label: '$50M',   y: 130 },
+                    { label: '$25M',   y: 185 },
                   ].map(({ label, y }) => (
-                    <text key={label} x="40" y={y} textAnchor="end" fontSize="9" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
+                    <text key={label} x="50" y={y} textAnchor="end" fontSize="11" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
                   ))}
                   {/* Area fill */}
-                  <path d="M44,158 Q110,152 176,134 T280,64 L312,18 L312,158 L44,158 Z" fill="url(#aboutAreaGrad)"/>
+                  <path d="M54,215 Q150,208 230,184 T360,88 L415,20 L415,215 L54,215 Z" fill="url(#aboutAreaGrad)"/>
                   {/* Line */}
-                  <path d="M44,158 Q110,152 176,134 T280,64 L312,18" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M54,215 Q150,208 230,184 T360,88 L415,20" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                   {/* Data points */}
                   {[
-                    { cx: 44,  cy: 158 },
-                    { cx: 140, cy: 142 },
-                    { cx: 220, cy: 96  },
-                    { cx: 312, cy: 18  },
+                    { cx: 54,  cy: 215 },
+                    { cx: 185, cy: 194 },
+                    { cx: 300, cy: 128 },
+                    { cx: 415, cy: 20  },
                   ].map(({ cx, cy }) => (
-                    <circle key={cx} cx={cx} cy={cy} r="4" fill="#00C853" stroke="white" strokeWidth="2"/>
+                    <circle key={cx} cx={cx} cy={cy} r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
                   ))}
                   {/* X-axis labels */}
                   {[
-                    { label: '1995', x: 44  },
-                    { label: '2005', x: 140 },
-                    { label: '2015', x: 230 },
-                    { label: '2025', x: 312 },
+                    { label: '1995', x: 54  },
+                    { label: '2005', x: 185 },
+                    { label: '2015', x: 300 },
+                    { label: '2025', x: 415 },
                   ].map(({ label, x }) => (
-                    <text key={label} x={x} y="178" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.42">{label}</text>
+                    <text key={label} x={x} y="240" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.42">{label}</text>
                   ))}
                 </svg>
-                <div className="flex gap-8 mt-4 border-t border-primary/10 pt-4">
+                <div className="flex gap-10 mt-4 border-t border-primary/10 pt-4">
                   {[
-                    { value: '30+',   label: 'Years' },
-                    { value: '500+',  label: 'Clients' },
-                    { value: '$100M+',label: 'Revenue' },
+                    { value: '30+',    label: 'Years' },
+                    { value: '500+',   label: 'Clients' },
+                    { value: '$100M+', label: 'Revenue' },
                   ].map(({ value, label }) => (
                     <div key={label}>
-                      <p className="text-xl font-black text-primary">{value}</p>
-                      <p className="text-[10px] text-muted-foreground uppercase tracking-wide mt-0.5">{label}</p>
+                      <p className="text-2xl font-black text-primary">{value}</p>
+                      <p className="text-[11px] text-muted-foreground uppercase tracking-wide mt-0.5">{label}</p>
                     </div>
                   ))}
                 </div>

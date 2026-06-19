@@ -62,10 +62,10 @@ export function CaseStudies() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies</p>
             </div>
             {/* Right — results bar chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-10 py-10">
-              <div className="w-full max-w-sm">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Average Client Results</p>
-                <svg viewBox="0 0 300 210" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
+              <div className="w-full">
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Average Client Results</p>
+                <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="barGrad1" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#00C853" stopOpacity="0.9"/>
@@ -76,31 +76,30 @@ export function CaseStudies() {
                       <stop offset="100%" stopColor="#2D7A4F" stopOpacity="0.4"/>
                     </linearGradient>
                   </defs>
-                  {/* Horizontal grid */}
-                  {[{ y: 10 }, { y: 50 }, { y: 90 }, { y: 130 }].map(({ y }) => (
-                    <line key={y} x1="0" y1={y} x2="300" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
+                  {/* Grid */}
+                  {[{ y: 10 }, { y: 65 }, { y: 120 }, { y: 175 }].map(({ y }) => (
+                    <line key={y} x1="0" y1={y} x2="420" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
                   ))}
                   {/* Bars — ascending left to right */}
                   {[
-                    { label: 'Shorter\nCycles',   metric: '22%',  barH: 50,  x: 10,  grad: 'url(#barGrad2)' },
-                    { label: 'More\nOpps',         metric: '37%',  barH: 80,  x: 80,  grad: 'url(#barGrad2)' },
-                    { label: 'Pipeline\nGrowth',   metric: '59%',  barH: 112, x: 150, grad: 'url(#barGrad1)' },
-                    { label: 'Avg\nROI',           metric: '8X',   barH: 140, x: 220, grad: 'url(#barGrad1)' },
+                    { label: 'Shorter\nCycles',  metric: '22%', barH: 70,  x: 10,  grad: 'url(#barGrad2)' },
+                    { label: 'More\nOpps',        metric: '37%', barH: 112, x: 115, grad: 'url(#barGrad2)' },
+                    { label: 'Pipeline\nGrowth',  metric: '59%', barH: 158, x: 220, grad: 'url(#barGrad1)' },
+                    { label: 'Avg\nROI',          metric: '8X',  barH: 200, x: 325, grad: 'url(#barGrad1)' },
                   ].map(({ label, metric, barH, x, grad }) => {
-                    const baseY = 165;
+                    const baseY = 225;
                     const topY = baseY - barH;
                     return (
                       <g key={label}>
-                        <rect x={x} y={topY} width="55" height={barH} rx="3" fill={grad}/>
-                        <text x={x + 27.5} y={topY - 6} textAnchor="middle" fontSize="12" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">{metric}</text>
+                        <rect x={x} y={topY} width="80" height={barH} rx="5" fill={grad}/>
+                        <text x={x + 40} y={topY - 10} textAnchor="middle" fontSize="16" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">{metric}</text>
                         {label.split('\n').map((line, li) => (
-                          <text key={li} x={x + 27.5} y={baseY + 14 + li * 13} textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.5">{line}</text>
+                          <text key={li} x={x + 40} y={baseY + 18 + li * 16} textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.5">{line}</text>
                         ))}
                       </g>
                     );
                   })}
-                  {/* Baseline */}
-                  <line x1="0" y1="165" x2="300" y2="165" stroke="#0B1F35" strokeOpacity="0.15" strokeWidth="1.5"/>
+                  <line x1="0" y1="225" x2="420" y2="225" stroke="#0B1F35" strokeOpacity="0.15" strokeWidth="1.5"/>
                 </svg>
               </div>
             </div>
@@ -182,15 +181,15 @@ export function CaseStudies() {
         }}
       >
         <div className="absolute inset-0 bg-white/80" />
-        <div className="max-w-7xl mx-auto pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Ready to Write Your <span className="text-accent">Success Story?</span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground mb-10 max-w-xl">
+
+          <p className="text-xl text-muted-foreground mb-10">
             Let's build a revenue system that delivers results
           </p>
           <Button to="/contact">

@@ -52,24 +52,21 @@ export function Industries() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
             </div>
             {/* Right — horizontal bar chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-12 py-10">
-              <div className="w-full max-w-sm">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-5">Client Mix by Industry</p>
-                <svg viewBox="0 0 300 220" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
+              <div className="w-full">
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Client Mix by Industry</p>
+                <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   {[
-                    { Icon: Cpu,       label: 'Technology',            pct: 85, y: 14  },
-                    { Icon: Factory,   label: 'Manufacturing',         pct: 60, y: 68  },
-                    { Icon: Briefcase, label: 'Professional Services', pct: 75, y: 122 },
-                    { Icon: TrendingUp,label: 'Investors',             pct: 50, y: 176 },
+                    { label: 'Technology',            pct: 85, y: 16  },
+                    { label: 'Manufacturing',         pct: 60, y: 88  },
+                    { label: 'Professional Services', pct: 75, y: 160 },
+                    { label: 'Investors',             pct: 50, y: 232 },
                   ].map(({ label, pct, y }) => (
                     <g key={label}>
-                      <text x="0" y={y} fontSize="11" fill="#0B1F35" fillOpacity="0.65" fontWeight="600">{label}</text>
-                      {/* Track */}
-                      <rect x="0" y={y + 8} width="300" height="16" rx="3" fill="#0B1F35" fillOpacity="0.07"/>
-                      {/* Bar */}
-                      <rect x="0" y={y + 8} width={300 * pct / 100} height="16" rx="3" fill="#00C853" fillOpacity="0.7"/>
-                      {/* Percentage label */}
-                      <text x={300 * pct / 100 + 6} y={y + 20} fontSize="10" fill="#0B1F35" fillOpacity="0.5" fontWeight="700">{pct}%</text>
+                      <text x="0" y={y} fontSize="14" fill="#0B1F35" fillOpacity="0.65" fontWeight="700">{label}</text>
+                      <rect x="0" y={y + 10} width="420" height="22" rx="4" fill="#0B1F35" fillOpacity="0.07"/>
+                      <rect x="0" y={y + 10} width={420 * pct / 100} height="22" rx="4" fill="#00C853" fillOpacity="0.7"/>
+                      <text x={420 * pct / 100 + 8} y={y + 26} fontSize="13" fill="#0B1F35" fillOpacity="0.55" fontWeight="700">{pct}%</text>
                     </g>
                   ))}
                 </svg>

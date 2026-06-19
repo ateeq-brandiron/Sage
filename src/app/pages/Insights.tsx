@@ -77,53 +77,53 @@ export function Insights() {
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
             </div>
             {/* Right — multi-line trend chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-12 py-10">
-              <div className="w-full max-w-sm">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics — Readership Growth</p>
-                <svg viewBox="0 0 320 200" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
+              <div className="w-full">
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics — Readership Growth</p>
+                <svg viewBox="0 0 420 270" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="trendGrad1" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.18"/>
+                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.2"/>
                       <stop offset="100%" stopColor="#00C853" stopOpacity="0"/>
                     </linearGradient>
                   </defs>
                   {/* Grid */}
-                  {[{ y: 16 }, { y: 56 }, { y: 96 }, { y: 136 }].map(({ y }) => (
-                    <line key={y} x1="0" y1={y} x2="310" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
+                  {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
+                    <line key={y} x1="0" y1={y} x2="415" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
                   ))}
                   {/* X axis labels */}
                   {[
-                    { label: 'Jan', x: 10  },
-                    { label: 'Mar', x: 72  },
-                    { label: 'May', x: 134 },
-                    { label: 'Jul', x: 196 },
-                    { label: 'Sep', x: 248 },
-                    { label: 'Now', x: 306 },
+                    { label: 'Jan', x: 14  },
+                    { label: 'Mar', x: 97  },
+                    { label: 'May', x: 180 },
+                    { label: 'Jul', x: 263 },
+                    { label: 'Sep', x: 332 },
+                    { label: 'Now', x: 408 },
                   ].map(({ label, x }) => (
-                    <text key={label} x={x} y="188" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.38">{label}</text>
+                    <text key={label} x={x} y="255" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.38">{label}</text>
                   ))}
                   {/* Revenue Growth area + line */}
-                  <path d="M10,148 L72,134 L134,112 L196,88 L248,68 L306,38 L306,160 L10,160 Z" fill="url(#trendGrad1)"/>
-                  <polyline points="10,148 72,134 134,112 196,88 248,68 306,38" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M14,200 L97,182 L180,152 L263,118 L332,90 L408,50 L408,215 L14,215 Z" fill="url(#trendGrad1)"/>
+                  <polyline points="14,200 97,182 180,152 263,118 332,90 408,50" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                   {/* Sales Strategy line */}
-                  <polyline points="10,142 72,130 134,118 196,106 248,96 306,82" stroke="#2D7A4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="5 3" fill="none"/>
+                  <polyline points="14,192 97,176 180,160 263,144 332,130 408,112" stroke="#2D7A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="7 4" fill="none"/>
                   {/* AI & Automation line */}
-                  <polyline points="10,156 72,150 134,138 196,110 248,76 306,28" stroke="#0B1F35" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.35" fill="none"/>
+                  <polyline points="14,210 97,202 180,186 263,148 332,102 408,38" stroke="#0B1F35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.35" fill="none"/>
                   {/* End dots */}
-                  <circle cx="306" cy="38" r="4" fill="#00C853" stroke="white" strokeWidth="2"/>
-                  <circle cx="306" cy="82" r="3.5" fill="#2D7A4F" stroke="white" strokeWidth="2"/>
-                  <circle cx="306" cy="28" r="3.5" fill="#0B1F35" fillOpacity="0.4" stroke="white" strokeWidth="2"/>
+                  <circle cx="408" cy="50"  r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
+                  <circle cx="408" cy="112" r="5"   fill="#2D7A4F" stroke="white" strokeWidth="2.5"/>
+                  <circle cx="408" cy="38"  r="5"   fill="#0B1F35" fillOpacity="0.4" stroke="white" strokeWidth="2.5"/>
                 </svg>
                 {/* Legend */}
-                <div className="flex gap-5 mt-2">
+                <div className="flex gap-6 mt-3">
                   {[
-                    { color: 'bg-accent',          label: 'Revenue Growth'  },
-                    { color: 'bg-[#2D7A4F]',        label: 'Sales Strategy'  },
-                    { color: 'bg-primary/30',        label: 'AI & Automation' },
+                    { color: 'bg-accent',    label: 'Revenue Growth'  },
+                    { color: 'bg-[#2D7A4F]', label: 'Sales Strategy'  },
+                    { color: 'bg-primary/30', label: 'AI & Automation' },
                   ].map(({ color, label }) => (
-                    <div key={label} className="flex items-center gap-1.5">
-                      <span className={`w-3 h-1.5 rounded-full ${color}`}/>
-                      <span className="text-[9px] text-primary/50 font-semibold uppercase tracking-wide">{label}</span>
+                    <div key={label} className="flex items-center gap-2">
+                      <span className={`w-4 h-2 rounded-full ${color}`}/>
+                      <span className="text-[10px] text-primary/50 font-semibold uppercase tracking-wide">{label}</span>
                     </div>
                   ))}
                 </div>
