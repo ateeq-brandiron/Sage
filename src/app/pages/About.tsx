@@ -4,6 +4,10 @@ import sageLogo from '../../imports/sage-logo.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, CircleDollarSign } from 'lucide-react';
 import revenueSystemImg from '../../imports/sage-2.png';
 import vectorPattern from '../../imports/Vector-1.png';
+import mitchellImg from '../../imports/Mitchell-Chi-1.svg';
+import paulImg from '../../imports/Paul-Sievers.svg';
+import michaelImg from '../../imports/michael.png';
+import valeriaImg from '../../imports/valeria.png';
 import { Button } from '../components/Button';
 
 export function About() {
@@ -16,10 +20,10 @@ export function About() {
   ];
 
   const leaders = [
-    { name: 'Mitchell Chi',      initials: 'MC', role: 'CEO & Co-Founder',        color: 'bg-[#1B6B3A]', expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
-    { name: 'Michael Doyle',     initials: 'MD', role: 'CRO & Co-Founder',        color: 'bg-[#2D7A4F]', expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
-    { name: 'Paul Sievers',      initials: 'PS', role: 'VP Sales Enablement',     color: 'bg-[#00A344]', expertise: ['Sales Coaching', 'Playbook Development', 'Performance Optimization'] },
-    { name: 'Valeria Rodriguez', initials: 'VR', role: 'VP Revenue Intelligence', color: 'bg-[#0B1F35]', expertise: ['Revenue Analytics', 'Forecasting', 'Business Intelligence'] },
+    { name: 'Mitchell Chi',      photo: mitchellImg, role: 'CEO & Co-Founder',        expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
+    { name: 'Michael Doyle',     photo: michaelImg,  role: 'CRO & Co-Founder',        expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
+    { name: 'Paul Sievers',      photo: paulImg,     role: 'VP Sales Enablement',     expertise: ['Sales Coaching', 'Playbook Development', 'Performance Optimization'] },
+    { name: 'Valeria Rodriguez', photo: valeriaImg,  role: 'VP Revenue Intelligence', expertise: ['Revenue Analytics', 'Forecasting', 'Business Intelligence'] },
   ];
 
   return (
@@ -181,8 +185,8 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
               <div key={leader.name} className="bg-white p-12">
-                <div className={`w-20 h-20 rounded-2xl ${leader.color} flex items-center justify-center mb-6 shadow-md`}>
-                  <span className="text-2xl font-black text-white tracking-wide">{leader.initials}</span>
+                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-6 border border-border">
+                  <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
                 <p className="text-accent font-semibold mb-6">{leader.role}</p>
