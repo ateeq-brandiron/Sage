@@ -57,7 +57,7 @@ export function Home() {
                 src={heroChart}
                 alt="Wealth over time bar chart with five ascending bars"
                 className="absolute inset-0 w-full h-full object-contain object-top"
-                style={{ padding: '48px 8px 16px 8px' }}
+                style={{ padding: '48px 4px 4px 0px' }}
               />
             </div>
 
