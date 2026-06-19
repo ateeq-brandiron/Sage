@@ -38,7 +38,7 @@ export function About() {
             <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced — 30 Year Journey</p>
-                <svg viewBox="0 0 420 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 460 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="aboutAreaGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="#00C853" stopOpacity="0.22"/>
@@ -47,7 +47,7 @@ export function About() {
                   </defs>
                   {/* Grid lines */}
                   {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
-                    <line key={y} x1="54" y1={y} x2="415" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
+                    <line key={y} x1="60" y1={y} x2="440" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
                   ))}
                   {/* Y-axis labels */}
                   {[
@@ -56,27 +56,27 @@ export function About() {
                     { label: '$50M',   y: 130 },
                     { label: '$25M',   y: 185 },
                   ].map(({ label, y }) => (
-                    <text key={label} x="50" y={y} textAnchor="end" fontSize="11" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
+                    <text key={label} x="56" y={y} textAnchor="end" fontSize="11" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
                   ))}
-                  {/* Area fill */}
-                  <path d="M54,215 Q150,208 230,184 T360,88 L415,20 L415,215 L54,215 Z" fill="url(#aboutAreaGrad)"/>
-                  {/* Line */}
-                  <path d="M54,215 Q150,208 230,184 T360,88 L415,20" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  {/* Data points */}
+                  {/* Area fill — matches polyline exactly */}
+                  <polygon points="60,215 190,195 315,130 440,20 440,215" fill="url(#aboutAreaGrad)"/>
+                  {/* Line through all 4 points */}
+                  <polyline points="60,215 190,195 315,130 440,20" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  {/* Data points — all on the line */}
                   {[
-                    { cx: 54,  cy: 215 },
-                    { cx: 185, cy: 194 },
-                    { cx: 300, cy: 128 },
-                    { cx: 415, cy: 20  },
+                    { cx: 60,  cy: 215 },
+                    { cx: 190, cy: 195 },
+                    { cx: 315, cy: 130 },
+                    { cx: 440, cy: 20  },
                   ].map(({ cx, cy }) => (
                     <circle key={cx} cx={cx} cy={cy} r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
                   ))}
                   {/* X-axis labels */}
                   {[
-                    { label: '1995', x: 54  },
-                    { label: '2005', x: 185 },
-                    { label: '2015', x: 300 },
-                    { label: '2025', x: 415 },
+                    { label: '1995', x: 60  },
+                    { label: '2005', x: 190 },
+                    { label: '2015', x: 315 },
+                    { label: '2025', x: 440 },
                   ].map(({ label, x }) => (
                     <text key={label} x={x} y="240" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.42">{label}</text>
                   ))}
