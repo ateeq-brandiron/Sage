@@ -81,18 +81,6 @@ export function About() {
                     <text key={label} x={x} y="240" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.42">{label}</text>
                   ))}
                 </svg>
-                <div className="flex gap-10 mt-4 border-t border-primary/10 pt-4">
-                  {[
-                    { value: '30+',    label: 'Years' },
-                    { value: '500+',   label: 'Clients' },
-                    { value: '$100M+', label: 'Revenue' },
-                  ].map(({ value, label }) => (
-                    <div key={label}>
-                      <p className="text-2xl font-black text-primary">{value}</p>
-                      <p className="text-[11px] text-muted-foreground uppercase tracking-wide mt-0.5">{label}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
