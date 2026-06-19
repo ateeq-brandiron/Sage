@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight, Building2, CalendarClock, CircleDollarSign, BarChart3 } from 'lucide-react';
 import wavePattern from '../../imports/Sage wavy background more solid.png';
 import { Button } from '../components/Button';
 
@@ -130,14 +130,17 @@ export function Industries() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '500+', label: 'Businesses' },
-              { value: '30+', label: 'Years' },
-              { value: '$100M+', label: 'Revenue' },
-              { value: '37%', label: 'Avg Growth' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-5xl font-black text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
+              { icon: Building2,        value: '500+',   label: 'Businesses' },
+              { icon: CalendarClock,    value: '30+',    label: 'Years' },
+              { icon: CircleDollarSign, value: '$100M+', label: 'Revenue' },
+              { icon: BarChart3,        value: '37%',    label: 'Avg Growth' },
+            ].map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                </div>
+                <div className="text-5xl font-black text-accent mb-2">{value}</div>
+                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>
