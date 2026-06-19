@@ -185,7 +185,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
               <div key={leader.name} className="bg-white p-12">
-                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-6 border border-border">
+                <div className="w-28 h-28 overflow-hidden mb-6">
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
