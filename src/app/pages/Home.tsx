@@ -15,19 +15,21 @@ export function Home() {
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
 
-            {/* Left — Text Content (padding defines the chart's top/bottom bounds) */}
-            <div className="flex flex-col justify-center pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
-                Revenue Growth Solutions
-              </p>
+            {/* Left — Text Content */}
+            <div className="flex flex-col justify-between pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+              <div>
+                <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
+                  Revenue Growth Solutions
+                </p>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-primary mb-6 leading-[1.08]">
-                Revenue Growth<br />Shouldn't Be Guesswork
-              </h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-primary mb-6 leading-[1.08]">
+                  Revenue Growth<br />Shouldn't Be Guesswork
+                </h1>
 
-              <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
-                SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
-              </p>
+                <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
+                  SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing operations, automation, and sales execution to build stronger pipeline and drive measurable revenue growth.
+                </p>
+              </div>
 
               <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
