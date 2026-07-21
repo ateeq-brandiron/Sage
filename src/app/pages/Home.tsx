@@ -19,29 +19,29 @@ export function Home() {
             <div className="flex flex-col justify-between pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <div>
                 <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
-                  Revenue Growth Solutions
+                  AI · GTM · Revenue · Performance
                 </p>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-primary mb-6 leading-[1.08]">
-                  Align the Strategy. Engineer the Pipeline. Move the Needle.
+                  Turn Your Go-To-Market Into a Revenue Engine.
                 </h1>
 
                 <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed max-w-lg">
-                  SAGE aligns go-to-market strategy, demand generation, AI-enabled marketing, automation, and sales execution into one connected revenue engine — built for measurable growth.
+                  Human expertise meets AI execution — built into one system designed to drive pipeline, scale performance, and deliver measurable growth.
                 </p>
 
-                <p className="text-base text-muted-foreground leading-relaxed max-w-lg">
-                  30+ years riding shotgun with B2B leaders who are tired of fragmented activity and ready for revenue outcomes. Through our RevenueStorm™ process and Tactical Results™ approach, we don't just point at the map — we engineer the route and ride it with you.
+                <p className="text-sm text-accent font-semibold tracking-wide max-w-lg">
+                  3X pipeline growth. 60% less wasted effort. 100% revenue visibility.
                 </p>
               </div>
 
               <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
                   to="/contact"
-                  aria-label="Book a Free RevenueStorm Assessment"
+                  aria-label="Book Your AI Strategy Session"
                   className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg whitespace-nowrap"
                 >
-                  Book a Free RevenueStorm™ Assessment
+                  Book Your AI Strategy Session
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
@@ -103,19 +103,20 @@ export function Home() {
               The Problem
             </p>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
-              Plenty of Horsepower. <span className="text-accent">No Alignment.</span>
+              The Problem Isn't Your Team. <span className="text-accent">It's Your System.</span>
             </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Most growth-stage B2B companies don't have a revenue problem. They have an alignment problem. Smart people, strong products, real budgets — pulling in different directions.
+              You're running campaigns. You're deploying AI. You're hiring salespeople. But pipeline isn't growing — because nothing is connected. AI layered on top of a broken system doesn't fix it. It scales the dysfunction.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {[
-              { title: 'Strategy Never Reaches Execution', desc: 'Plans get built and shelved — never connected to daily commercial activity.' },
-              { title: 'Marketing Generating Activity, Not Pipeline', desc: 'Impressions, clicks, and leads that don\'t convert to real opportunities.' },
-              { title: 'AI Experiments That Don\'t Move Revenue', desc: 'Tech investments and AI pilots that sit outside the revenue engine.' },
+              { title: 'Disconnected Execution', desc: 'Marketing, sales, and strategy operating in separate orbits with no shared accountability.' },
+              { title: 'No Unified System', desc: 'Tools, tactics, and teams that don\'t talk to each other — generating noise instead of pipeline.' },
+              { title: 'AI Without Strategy', desc: 'AI pilots that look impressive in demos but never connect to revenue outcomes.' },
+              { title: 'Unpredictable Pipeline', desc: 'No visibility into what\'s working, what\'s wasted, or what to fix first.' },
             ].map((problem) => (
               <div key={problem.title} className="bg-white p-8 border-l-4 border-accent">
                 <h3 className="text-xl font-bold text-primary mb-3">{problem.title}</h3>
@@ -125,7 +126,7 @@ export function Home() {
           </div>
 
           <p className="text-center text-lg font-semibold text-primary">
-            Disconnected parts stall growth. Engineered together, they compound it.
+            Disconnected parts drain resources. Engineered into one system, they compound revenue.
           </p>
         </div>
       </section>
@@ -138,11 +139,11 @@ export function Home() {
               Why Choose Us
             </p>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
-              We Engineer Revenue Engines — <span className="text-accent">Not Siloed Deliverables.</span>
+              This Isn't Theory. <span className="text-accent">It's Execution.</span>
             </h2>
 
             <p className="text-xl text-primary/70 max-w-3xl mx-auto">
-              SAGE doesn't sell campaigns, AI workshops, or sales placements as standalone services. We engineer a single, performance-driven revenue system that connects every part of your go-to-market motion.
+              30+ years. 500+ B2B companies. $100M+ revenue influenced. SAGE doesn't sell campaigns or standalone AI pilots — we build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
             </p>
           </div>
 
@@ -157,23 +158,23 @@ export function Home() {
               {[
                 {
                   icon: Target,
-                  title: 'GTM Engineering Mindset',
-                  desc: 'Structure, sequencing, systems, and accountability — not just advice.',
+                  title: 'Human Strategy. AI Execution.',
+                  desc: 'Senior GTM experts define the strategy. AI amplifies and scales the execution. Neither works without the other.',
                 },
                 {
                   icon: Zap,
-                  title: 'RevenueStorm™ Methodology',
-                  desc: 'A named, ownable front-end process clients can act on immediately.',
+                  title: 'One System. Not a Stack of Tools.',
+                  desc: 'The RevenueStorm™ process integrates marketing, sales, and AI into a single connected revenue engine — no more siloed sprints.',
                 },
                 {
                   icon: TrendingUp,
-                  title: 'Performance-Driven Execution',
-                  desc: 'Aligned-incentive activation tied to outcomes. We win when you win.',
+                  title: 'Outcomes Over Deliverables.',
+                  desc: 'We measure success in pipeline, win rates, and revenue — not reports, clicks, or activity metrics.',
                 },
                 {
                   icon: Award,
-                  title: 'On-Demand Senior Expertise',
-                  desc: 'Seasoned CxOs, GTM leaders, and analysts without the full in-house overhead.',
+                  title: 'Senior Expertise. No Bench Warm-Ups.',
+                  desc: 'Seasoned CxOs and GTM leaders working directly on your business — not handed off to juniors after the kickoff.',
                 },
               ].map((item) => {
                 const Icon = item.icon;
@@ -276,13 +277,13 @@ export function Home() {
                 AI RevGen Advisory
               </p>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-                AI That <span className="text-accent">Generates Revenue</span> — Not Just Reports
+                AI Alone Isn't the Advantage. <span className="text-accent">How You Use It Is.</span>
               </h2>
               <p className="text-lg text-white/75 leading-relaxed mb-6">
-                Most companies are experimenting with AI in isolation. SAGE embeds AI directly into your revenue engine — connecting your data, your team's workflows, and your buyer journey to produce real pipeline outcomes.
+                Anyone can buy an AI tool. Very few know how to wire it into a revenue system that actually performs. SAGE's AI RevGen Advisory practice embeds AI where it moves the needle — demand generation, pipeline qualification, sales velocity, and forecasting accuracy.
               </p>
               <p className="text-lg text-white/75 leading-relaxed mb-10">
-                Our AI RevGen Advisory practice works alongside your GTM team to identify, implement, and operationalize AI capabilities that directly impact demand generation, sales velocity, and revenue forecasting.
+                We don't run AI experiments. We build AI-powered GTM systems. Human expertise guiding the strategy. AI scaling the execution. Revenue as the metric that matters.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mb-10">
                 {[
@@ -381,19 +382,19 @@ export function Home() {
               Proven Outcomes
             </p>
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
-              What an Engineered Revenue System <span className="text-accent">Actually Delivers</span>
+              When the System Works, <span className="text-accent">the Numbers Show It.</span>
             </h2>
 
             <p className="text-xl text-muted-foreground">
-              Average client results after 90 days of integrated execution
+              Average client outcomes from SAGE-engineered revenue systems
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { metric: '37%',  label: 'More Qualified Opportunities', desc: 'From aligned ICP targeting and AI-scored demand generation' },
-              { metric: '59%',  label: 'Faster Pipeline Growth',        desc: 'By removing friction between marketing and sales motion' },
-              { metric: '22%',  label: 'Shorter Sales Cycles',          desc: 'Through structured playbooks and buyer-stage enablement' },
+              { metric: '3X',   label: 'Pipeline Growth',               desc: 'More qualified opportunities from aligned ICP targeting and AI-powered demand generation' },
+              { metric: '60%',  label: 'Less Wasted Effort',            desc: 'Eliminating disconnected activity and replacing it with sequenced, accountable execution' },
+              { metric: '22%',  label: 'Shorter Sales Cycles',          desc: 'Through structured playbooks, buyer-stage enablement, and AI-assisted deal intelligence' },
               { metric: '8X',   label: 'Average Client ROI',            desc: 'Measured across pipeline influenced, deals closed, and revenue retained' },
             ].map((result) => (
               <div key={result.label} className="bg-white p-8 border-l-4 border-accent">
@@ -503,10 +504,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
-              Ready to Move the Needle?
+              Build Your Revenue Engine
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-3">
-              Stop Patching. Start <span className="text-accent">Engineering.</span>
+              Ready to Move <span className="text-accent">the Needle?</span>
             </h2>
 
             <p className="text-xl text-foreground mb-4">
@@ -514,7 +515,7 @@ export function Home() {
             </p>
 
             <p className="text-lg text-muted-foreground mb-12">
-              One conversation. Clear diagnosis. A path to predictable revenue growth.
+              One conversation. Honest diagnosis. A clear path from fragmented activity to predictable revenue.
             </p>
           </div>
 
