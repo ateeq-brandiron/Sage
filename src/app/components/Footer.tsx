@@ -23,7 +23,7 @@ export function Footer() {
               <img src={sageLogo} alt="SAGE Professional Services" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-small text-white/80 mb-6 max-w-md">
-              We Build Revenue Systems That Turn Strategy Into Predictable Growth.
+              200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI — as your fractional AI Officer.
             </p>
             <div className="flex items-center space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
@@ -42,9 +42,11 @@ export function Footer() {
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Revenue Strategy</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Demand Generation</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Sales Enablement</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Revenue Intelligence</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Marketing Automation</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Executive Advisory</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">AI RevGen Advisory</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Bellwether Intel</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Expower AI 365</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Aio</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Boxsy</Link></li>
             </ul>
           </div>
 
@@ -63,6 +65,7 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Company</h5>
             <ul className="space-y-3">
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Offerings</Link></li>
               <li><Link to="/case-studies" className="text-small text-white/70 hover:text-accent transition-colors">Case Studies</Link></li>
               <li><Link to="/insights" className="text-small text-white/70 hover:text-accent transition-colors">Insights</Link></li>
               <li><Link to="/about" className="text-small text-white/70 hover:text-accent transition-colors">About</Link></li>
@@ -74,7 +77,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-small text-white/60">
-            © 2026 SAGE Professional Services
+            © 2026 SAGE PRO.AI
           </p>
           <div className="flex items-center space-x-6">
             <Link to="/contact" className="text-small text-white/60 hover:text-accent transition-colors">Privacy</Link>

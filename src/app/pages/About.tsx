@@ -36,7 +36,7 @@ export function About() {
             <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">About SAGE</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">We Build Revenue Systems That Turn Strategy Into Predictable Growth</p>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI.</p>
             </div>
             {/* Right — growth chart */}
             <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
@@ -208,10 +208,10 @@ export function About() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: CalendarClock,    value: '30+',    label: 'Years Experience' },
-              { icon: Building2,        value: '500+',   label: 'Clients Served' },
-              { icon: CircleDollarSign, value: '$100M+', label: 'Revenue Influenced' },
-              { icon: Award,            value: '8X',     label: 'Avg ROI' },
+              { icon: CalendarClock,    value: '30+',  label: 'Years of Trust' },
+              { icon: Building2,        value: '200+', label: 'Businesses Served' },
+              { icon: CircleDollarSign, value: '$1B+', label: 'Delivered' },
+              { icon: Award,            value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">

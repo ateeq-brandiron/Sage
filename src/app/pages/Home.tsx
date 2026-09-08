@@ -74,9 +74,9 @@ export function Home() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-3 gap-12 text-center">
             {[
-              { value: '500+',   label: 'Businesses Supported', icon: Building2 },
-              { value: '30+',    label: 'Years Experience',     icon: CalendarClock },
-              { value: '$100M+', label: 'Revenue Influenced',   icon: CircleDollarSign },
+              { value: '200+',  label: 'Businesses Served',   icon: Building2 },
+              { value: '30+',   label: 'Years of Trust',       icon: CalendarClock },
+              { value: '$1B+',  label: 'Delivered',            icon: CircleDollarSign },
             ].map(({ value, label, icon: Icon }) => (
               <div key={label} className="flex flex-col items-center">
                 <div className="flex items-center gap-3 mb-2">

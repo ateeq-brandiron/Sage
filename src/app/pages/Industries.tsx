@@ -130,10 +130,10 @@ export function Industries() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: Building2,        value: '500+',   label: 'Businesses' },
-              { icon: CalendarClock,    value: '30+',    label: 'Years' },
-              { icon: CircleDollarSign, value: '$100M+', label: 'Revenue' },
-              { icon: BarChart3,        value: '37%',    label: 'Avg Growth' },
+              { icon: Building2,        value: '200+', label: 'Businesses' },
+              { icon: CalendarClock,    value: '30+',  label: 'Years' },
+              { icon: CircleDollarSign, value: '$1B+', label: 'Delivered' },
+              { icon: BarChart3,        value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">

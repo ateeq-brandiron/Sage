@@ -8,6 +8,7 @@ import { Industries } from './pages/Industries';
 import { CaseStudies } from './pages/CaseStudies';
 import { Insights } from './pages/Insights';
 import { About } from './pages/About';
+import { Offerings } from './pages/Offerings';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
+            <Route path="/offerings" element={<Offerings />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

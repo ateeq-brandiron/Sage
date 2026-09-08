@@ -10,6 +10,7 @@ export function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Solutions', href: '/solutions' },
+    { name: 'Offerings', href: '/offerings' },
     { name: 'Industries', href: '/industries' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Insights', href: '/insights' },
@@ -52,7 +53,7 @@ export function Header() {
               to="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group"
             >
-              Get Free Assessment
+              Get AI ROI Assessment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
@@ -88,7 +89,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="block mx-4 mt-4 px-6 py-2.5 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white text-center text-sm font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg"
             >
-              Book Revenue Evaluation
+              Get AI ROI Assessment
             </Link>
           </div>
         )}
