@@ -208,11 +208,6 @@ export function Home() {
             </p>
           </div>
 
-          {/* RevenueStorm Graphic — full width, prominent */}
-          <div className="flex justify-center mb-16">
-            <img src={revenueStormImg} alt="SAGE RevenueStorm™ framework diagram" className="w-full max-w-3xl" />
-          </div>
-
           {/* Process Steps — 2-column grid */}
           <div className="grid md:grid-cols-2 gap-0 border-t border-border">
             {[
