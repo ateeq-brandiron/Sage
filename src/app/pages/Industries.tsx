@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight, Building2, CalendarClock, CircleDollarSign, BarChart3 } from 'lucide-react';
-import wavePattern from '../../imports/Sage wavy background more solid.png';
+import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
 
 export function Industries() {

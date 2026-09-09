@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2 } from 'lucide-react';
-import leavesBackground from '../../imports/Sage all leaves background copy.jpg';
-import wavePattern from '../../imports/Sage wavy background more solid.png';
+import leavesBackground from '../../assets/brand/leaves-bg.jpg';
+import wavePattern from '../../assets/brand/wave-bg.png';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -11,9 +11,8 @@ const slugMap: Record<string, string> = {
   'Marketing Automation': 'marketing-automation',
   'Executive Advisory': 'executive-advisory',
 };
-import revenueSystemImg from '../../imports/sage-2.png';
-import vectorPattern from '../../imports/Vector-1.png';
-import moneyChart from '../../imports/Sage money and arrow chart.png';
+import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
+import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 
 export function Solutions() {

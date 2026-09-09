@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import sageLogo from '../../imports/sage-logo.png';
-import footerBg from '../../imports/shutterstock_2549319721.jpg';
+import sageLogo from '../../assets/brand/sage-logo.png';
+import footerBg from '../../assets/brand/footer-bg.jpg';
 
 export function Footer() {
   return (

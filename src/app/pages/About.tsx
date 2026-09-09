@@ -1,13 +1,13 @@
 import { Link } from 'react-router';
-import wavePattern from '../../imports/Sage wavy background more solid.png';
-import sageLogo from '../../imports/sage-logo.png';
+import wavePattern from '../../assets/brand/wave-bg.png';
+import sageLogo from '../../assets/brand/sage-logo.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, CircleDollarSign } from 'lucide-react';
-import revenueSystemImg from '../../imports/sage-2.png';
-import vectorPattern from '../../imports/Vector-1.png';
-import mitchellImg from '../../imports/Mitchell-Chi-1.svg';
-import paulImg from '../../imports/Paul-Sievers.svg';
-import michaelImg from '../../imports/michael.png';
-import valeriaImg from '../../imports/valeria.png';
+import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
+import vectorPattern from '../../assets/brand/vector-pattern.png';
+import mitchellImg from '../../assets/team/mitchell-chi.svg';
+import paulImg from '../../assets/team/paul-sievers.svg';
+import michaelImg from '../../assets/team/michael-doyle.png';
+import valeriaImg from '../../assets/team/valeria-rodriguez.png';
 import { Button } from '../components/Button';
 
 export function About() {

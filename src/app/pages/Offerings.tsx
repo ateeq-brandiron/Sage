@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucide-react';
-import wavePattern from '../../imports/Sage wavy background more solid.png';
-import vectorPattern from '../../imports/Vector-1.png';
+import wavePattern from '../../assets/brand/wave-bg.png';
+import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 
 export function Offerings() {

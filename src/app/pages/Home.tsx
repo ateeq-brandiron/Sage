@@ -1,10 +1,10 @@
 import { Link } from 'react-router';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, CircleDollarSign, Brain, BarChart3, Users, Cpu } from 'lucide-react';
-import revenueSystemImg from '../../imports/sage-2.png';
-import revenueStormImg from '../../imports/sage-1.png';
-import vectorPattern from '../../imports/Vector-1.png';
-import heroChart from '../../imports/sage-hero-original.svg';
-import wavePattern from '../../imports/Sage wavy background more solid.png';
+import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
+import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
+import vectorPattern from '../../assets/brand/vector-pattern.png';
+import heroChart from '../../assets/pages/home/hero-chart.svg';
+import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
 
 export function Home() {
