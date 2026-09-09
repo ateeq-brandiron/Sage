@@ -39,10 +39,10 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Solutions</h5>
             <ul className="space-y-3">
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Revenue Strategy</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Demand Generation</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Sales Enablement</Link></li>
-              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">AI RevGen Advisory</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Revenue Strategy</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Demand Generation</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Sales Enablement</Link></li>
+              <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AI RevGen Advisory</Link></li>
             </ul>
           </div>
 
@@ -50,10 +50,10 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Offerings</h5>
             <ul className="space-y-3">
-              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Bellwether Intel</Link></li>
-              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Expower AI 365</Link></li>
-              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Aio</Link></li>
-              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Boxsy</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Expower AI 365</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Aio</Link></li>
+              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Boxsy</Link></li>
             </ul>
           </div>
 
@@ -61,10 +61,10 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Industries</h5>
             <ul className="space-y-3">
-              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent transition-colors">Technology</Link></li>
-              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent transition-colors">Manufacturing</Link></li>
-              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent transition-colors">Professional Services</Link></li>
-              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent transition-colors">Investors</Link></li>
+              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Technology</Link></li>
+              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Manufacturing</Link></li>
+              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Professional Services</Link></li>
+              <li><Link to="/industries" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Investors</Link></li>
             </ul>
           </div>
 
@@ -72,10 +72,10 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Company</h5>
             <ul className="space-y-3">
-              <li><Link to="/case-studies" className="text-small text-white/70 hover:text-accent transition-colors">Case Studies</Link></li>
-              <li><Link to="/insights" className="text-small text-white/70 hover:text-accent transition-colors">Insights</Link></li>
-              <li><Link to="/about" className="text-small text-white/70 hover:text-accent transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-small text-white/70 hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link to="/case-studies" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Case Studies</Link></li>
+              <li><Link to="/insights" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Insights</Link></li>
+              <li><Link to="/about" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">About</Link></li>
+              <li><Link to="/contact" className="text-small text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Contact</Link></li>
             </ul>
           </div>
         </div>
