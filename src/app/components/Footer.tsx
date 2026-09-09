@@ -16,7 +16,7 @@ export function Footer() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-4">
@@ -43,6 +43,13 @@ export function Footer() {
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Demand Generation</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">Sales Enablement</Link></li>
               <li><Link to="/solutions" className="text-small text-white/70 hover:text-accent transition-colors">AI RevGen Advisory</Link></li>
+            </ul>
+          </div>
+
+          {/* Offerings */}
+          <div>
+            <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Offerings</h5>
+            <ul className="space-y-3">
               <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Bellwether Intel</Link></li>
               <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Expower AI 365</Link></li>
               <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Aio</Link></li>
@@ -65,7 +72,6 @@ export function Footer() {
           <div>
             <h5 className="mb-4 text-white uppercase tracking-wider text-sm">Company</h5>
             <ul className="space-y-3">
-              <li><Link to="/offerings" className="text-small text-white/70 hover:text-accent transition-colors">Offerings</Link></li>
               <li><Link to="/case-studies" className="text-small text-white/70 hover:text-accent transition-colors">Case Studies</Link></li>
               <li><Link to="/insights" className="text-small text-white/70 hover:text-accent transition-colors">Insights</Link></li>
               <li><Link to="/about" className="text-small text-white/70 hover:text-accent transition-colors">About</Link></li>

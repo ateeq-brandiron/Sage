@@ -156,11 +156,11 @@ export function About() {
             {values.map((value) => {
               const Icon = value.icon;
               return (
-              <div key={value.title} className="bg-white p-8 text-center">
-                <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mx-auto mb-5">
-                  <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+              <div key={value.title} className="group bg-white p-8 text-center hover:shadow-md transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-accent/10 group-hover:border-accent/50 group-hover:scale-105">
+                  <Icon className="w-8 h-8 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-black text-primary mb-3">{value.title}</h3>
+                <h3 className="text-xl font-black text-primary mb-3 transition-colors duration-300 group-hover:text-accent">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </div>
             );})}
@@ -184,8 +184,8 @@ export function About() {
 
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
-              <div key={leader.name} className="bg-white p-12">
-                <div className="w-28 h-28 overflow-hidden mb-6">
+              <div key={leader.name} className="group bg-white p-12 hover:shadow-md transition-all duration-300">
+                <div className="w-28 h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>

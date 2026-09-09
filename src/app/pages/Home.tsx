@@ -76,10 +76,10 @@ export function Home() {
               { value: '30+',   label: 'Years of Trust',       icon: CalendarClock },
               { value: '$1B+',  label: 'Delivered',            icon: CircleDollarSign },
             ].map(({ value, label, icon: Icon }) => (
-              <div key={label} className="flex flex-col items-center">
+              <div key={label} className="group flex flex-col items-center cursor-default">
                 <div className="flex items-center gap-3 mb-2">
-                  <Icon className="w-9 h-9 text-accent" strokeWidth={1.5} />
-                  <div className="text-5xl md:text-6xl font-black text-primary">{value}</div>
+                  <Icon className="w-9 h-9 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
+                  <div className="text-5xl md:text-6xl font-black text-primary transition-colors duration-300 group-hover:text-accent">{value}</div>
                 </div>
                 <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{label}</div>
               </div>
@@ -116,8 +116,8 @@ export function Home() {
               { title: 'AI Without Strategy', desc: 'AI pilots that look impressive in demos but never connect to revenue outcomes.' },
               { title: 'Unpredictable Pipeline', desc: 'No visibility into what\'s working, what\'s wasted, or what to fix first.' },
             ].map((problem) => (
-              <div key={problem.title} className="bg-white p-8 border-l-4 border-accent">
-                <h3 className="text-xl font-bold text-primary mb-3">{problem.title}</h3>
+              <div key={problem.title} className="group bg-white p-8 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">{problem.title}</h3>
                 <p className="text-muted-foreground">{problem.desc}</p>
               </div>
             ))}
@@ -177,9 +177,9 @@ export function Home() {
               ].map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  <div key={item.title} className="group flex items-start gap-6">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/10 group-hover:border-accent/50 group-hover:scale-105">
+                      <Icon className="w-8 h-8 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-primary mb-2">{item.title}</h3>
@@ -288,9 +288,9 @@ export function Home() {
                   'Conversational AI for Buyer Engagement',
                   'Revenue Intelligence & Reporting',
                 ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-white/80 font-medium text-sm">{item}</span>
+                  <div key={item} className="group/item flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 transition-transform duration-300 group-hover/item:scale-110" />
+                    <span className="text-white/80 font-medium text-sm transition-colors duration-300 group-hover/item:text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -391,8 +391,8 @@ export function Home() {
               { metric: '22%',  label: 'Shorter Sales Cycles',          desc: 'Through structured playbooks, buyer-stage enablement, and AI-assisted deal intelligence' },
               { metric: '8X',   label: 'Average Client ROI',            desc: 'Measured across pipeline influenced, deals closed, and revenue retained' },
             ].map((result) => (
-              <div key={result.label} className="bg-white p-8 border-l-4 border-accent">
-                <div className="text-5xl font-black text-accent mb-3">{result.metric}</div>
+              <div key={result.label} className="group bg-white p-8 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div className="text-5xl font-black text-accent mb-3 transition-transform duration-300 group-hover:scale-105 origin-left">{result.metric}</div>
                 <div className="text-sm text-foreground font-semibold uppercase tracking-wide mb-3">{result.label}</div>
                 <p className="text-sm text-muted-foreground leading-relaxed">{result.desc}</p>
               </div>
