@@ -102,45 +102,43 @@ export function Offerings() {
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Platform Coverage</p>
                 <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Quadrant grid */}
-                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  {/* Labels */}
-                  <text x="99"  y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Bellwether Intel</text>
-                  <text x="99"  y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
-                  <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Expower AI 365</text>
-                  <text x="314" y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
-                  <text x="99"  y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Aio</text>
-                  <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
-                  <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
-                  <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
-                  {/* Icon boxes */}
-                  <rect x="74"  y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="289" y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  {/* Bellwether Intel logo */}
-                  <image href={bellwetherLogo} x="78" y="60" width="42" height="42" preserveAspectRatio="xMidYMid meet"/>
-                  {/* Expower AI 365 logo */}
-                  <image href={expowerLogo} x="293" y="60" width="42" height="42" preserveAspectRatio="xMidYMid meet"/>
-                  {/* Aio — AI brain mark */}
-                  <g transform="translate(87,207)">
-                    <ellipse cx="12" cy="11" rx="9" ry="8" stroke="#00C853" strokeWidth="1.8" fill="none"/>
-                    <line x1="12" y1="19" x2="12" y2="22" stroke="#00C853" strokeWidth="1.8" strokeLinecap="round"/>
-                    <line x1="8"  y1="22" x2="16" y2="22" stroke="#00C853" strokeWidth="1.8" strokeLinecap="round"/>
-                    <circle cx="8.5" cy="9"  r="1.5" fill="#00C853"/>
-                    <circle cx="15.5" cy="9"  r="1.5" fill="#00C853"/>
-                    <path d="M8.5 13 Q12 16 15.5 13" stroke="#00C853" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                    <line x1="3"  y1="8"  x2="3"  y2="14" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
-                    <line x1="21" y1="8"  x2="21" y2="14" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
+                  <defs>
+                    <clipPath id="clip-bw"><rect x="0"   y="0"   width="198" height="128" rx="6"/></clipPath>
+                    <clipPath id="clip-ex"><rect x="208" y="0"   width="212" height="128" rx="6"/></clipPath>
+                    <clipPath id="clip-ai"><rect x="0"   y="138" width="198" height="130" rx="6"/></clipPath>
+                    <clipPath id="clip-bx"><rect x="208" y="138" width="212" height="130" rx="6"/></clipPath>
+                  </defs>
+
+                  {/* Quadrant backgrounds */}
+                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
+                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
+                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
+                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
+
+                  {/* Bellwether Intel — logo fills card */}
+                  <image href={bellwetherLogo} x="10" y="8" width="178" height="112" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-bw)"/>
+
+                  {/* Expower AI 365 — logo fills card, multiply blends white bg away */}
+                  <image href={expowerLogo} x="218" y="8" width="192" height="112" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-ex)" style={{mixBlendMode:'multiply'}}/>
+
+                  {/* Aio — large AI brain mark centered in card */}
+                  <g transform="translate(59,148)">
+                    <ellipse cx="40" cy="36" rx="30" ry="26" stroke="#00C853" strokeWidth="2.5" fill="none"/>
+                    <line x1="40" y1="62" x2="40" y2="72" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round"/>
+                    <line x1="26" y1="72" x2="54" y2="72" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round"/>
+                    <circle cx="28" cy="30" r="5" fill="#00C853" fillOpacity="0.8"/>
+                    <circle cx="52" cy="30" r="5" fill="#00C853" fillOpacity="0.8"/>
+                    <path d="M28 44 Q40 54 52 44" stroke="#00C853" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+                    <line x1="10" y1="26" x2="10" y2="46" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round"/>
+                    <line x1="70" y1="26" x2="70" y2="46" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round"/>
                   </g>
-                  {/* Boxsy logo */}
-                  <image href={boxsyLogo} x="293" y="198" width="42" height="42" preserveAspectRatio="xMidYMid meet"/>
+
+                  {/* Boxsy — logo fills card */}
+                  <image href={boxsyLogo} x="218" y="146" width="192" height="114" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-bx)"/>
+
                   {/* Connector dashes */}
                   <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="198" y1="203" x2="208" y2="203" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="99"  y1="128" x2="99"  y2="138" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="3 2"/>
                 </svg>
