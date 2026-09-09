@@ -247,7 +247,7 @@ export function Home() {
                 desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves, with SAGE monitoring every lever.',
               },
             ].map((step, i) => (
-              <div key={step.step} className={`group flex items-start gap-6 p-8 border-b border-border hover:bg-gray-50 transition-colors ${i % 2 === 0 ? 'md:border-r' : ''}`}>
+              <div key={step.step} className={`group flex items-start gap-6 p-8 border-b border-border hover:bg-gray-50 transition-colors ${i === 6 ? 'md:col-span-2 md:max-w-xl md:mx-auto md:border-r-0 w-full' : i % 2 === 0 ? 'md:border-r' : ''}`}>
                 <div className="text-5xl font-black text-primary/25 group-hover:text-accent/60 transition-colors leading-none pt-1 min-w-[3rem]">
                   {step.step}
                 </div>
