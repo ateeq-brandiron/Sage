@@ -10,7 +10,7 @@ const services = [
     tagline: 'RevenueStorm™',
     heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80',
     summary: 'A proven framework to diagnose revenue bottlenecks, sharpen your market position, and build a clear roadmap to predictable, scalable growth.',
-    overview: 'Most B2B companies struggle with revenue not because they lack effort, but because they lack alignment. Our RevenueStorm™ framework brings strategy, marketing, and sales into a single unified system — giving your leadership team a clear picture of where growth is stalling and exactly how to fix it.',
+    overview: 'Most B2B companies struggle with revenue not because they lack effort, but because they lack alignment. Our RevenueStorm™ framework brings strategy, marketing, and sales into a single unified system, giving your leadership team a clear picture of where growth is stalling and exactly how to fix it.',
     benefits: [
       'Pinpoint the exact bottlenecks holding back revenue growth',
       'Build a compelling market position that differentiates you from competitors',
@@ -69,8 +69,8 @@ const services = [
     title: 'Sales Enablement',
     tagline: 'Turn Reps Into Revenue',
     heroImage: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80',
-    summary: 'Equip your sales team with the playbooks, tools, coaching, and systems they need to win more deals, faster — and do it consistently.',
-    overview: 'Great salespeople rarely fail because of effort. They fail because they lack the right tools, messaging, and process. Our sales enablement programmes close that gap — from building world-class playbooks to coaching reps on value selling and optimising your CRM so your pipeline is always clean and accurate.',
+    summary: 'Equip your sales team with the playbooks, tools, coaching, and systems they need to win more deals, faster, and do it consistently.',
+    overview: 'Great salespeople rarely fail because of effort. They fail because they lack the right tools, messaging, and process. Our sales enablement programmes close that gap, from building world-class playbooks to coaching reps on value selling and optimising your CRM so your pipeline is always clean and accurate.',
     benefits: [
       'Higher win rates through consistent, value-driven sales conversations',
       'Faster ramp time for new sales hires',
@@ -79,7 +79,7 @@ const services = [
       'Sales and marketing aligned on messaging and handoff process',
     ],
     includes: [
-      { title: 'Sales Playbooks', desc: 'Documented frameworks for discovery, objection handling, and closing — tailored to your buyers and competitive landscape.' },
+      { title: 'Sales Playbooks', desc: 'Documented frameworks for discovery, objection handling, and closing, tailored to your buyers and competitive landscape.' },
       { title: 'Coaching Programs', desc: 'Structured 1:1 and group coaching sessions that build repeatable selling skills across the team.' },
       { title: 'Pipeline Management', desc: 'Define stage criteria, inspection cadences, and deal review processes that keep your pipeline healthy.' },
       { title: 'CRM Optimisation', desc: 'Audit and overhaul your CRM setup so reps spend time selling, not updating records.' },
@@ -130,7 +130,7 @@ const services = [
     tagline: 'Scale Without Chaos',
     heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80',
     summary: 'Optimise and scale your marketing technology stack so your team spends less time on manual tasks and more time on high-impact growth activities.',
-    overview: 'Marketing teams waste enormous time on repetitive manual tasks that should be automated. Our Marketing Automation service audits your current mar-tech stack, eliminates the waste, and builds intelligent workflows that nurture leads, trigger timely follow-ups, and keep your CRM clean — all without adding headcount.',
+    overview: 'Marketing teams waste enormous time on repetitive manual tasks that should be automated. Our Marketing Automation service audits your current mar-tech stack, eliminates the waste, and builds intelligent workflows that nurture leads, trigger timely follow-ups, and keep your CRM clean, all without adding headcount.',
     benefits: [
       'Dramatically reduce time spent on manual marketing tasks',
       'Nurture more leads simultaneously without losing personalisation',
@@ -159,8 +159,8 @@ const services = [
     title: 'Executive Advisory',
     tagline: 'Strategic Counsel',
     heroImage: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80',
-    summary: 'On-demand access to 30+ years of revenue leadership expertise — strategic counsel that helps CEOs and revenue leaders navigate complexity and accelerate growth.',
-    overview: 'Sometimes you need a trusted thought partner who has been in your shoes. Our Executive Advisory service gives CEOs, CROs, and CMOs direct access to senior revenue expertise — whether you\'re navigating a growth plateau, preparing for a fundraise, integrating an acquisition, or simply need a sounding board for your biggest decisions.',
+    summary: 'On-demand access to 30+ years of revenue leadership expertise, strategic counsel that helps CEOs and revenue leaders navigate complexity and accelerate growth.',
+    overview: 'Sometimes you need a trusted thought partner who has been in your shoes. Our Executive Advisory service gives CEOs, CROs, and CMOs direct access to senior revenue expertise. Whether you\'re navigating a growth plateau, preparing for a fundraise, integrating an acquisition, or simply need a sounding board for your biggest decisions.',
     benefits: [
       'Objective outside perspective from an experienced revenue leader',
       'Faster, more confident decision-making on complex strategic issues',
@@ -349,7 +349,7 @@ export function ServiceDetail() {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-10">
-            Book a free assessment — no commitment required
+            Book a free assessment, no commitment required
           </p>
           <Button to="/contact">{service.cta}</Button>
         </div>

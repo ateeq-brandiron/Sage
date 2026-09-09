@@ -16,8 +16,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 items-stretch">
 
             {/* Left — Text Content */}
-            <div className="flex flex-col justify-between pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
-              <div>
+            <div className="flex flex-col justify-center pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
                 <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
                   AI · GTM · Revenue · Performance
                 </p>
@@ -26,14 +25,13 @@ export function Home() {
                   Turn Your Go-To-Market Into a Revenue Engine.
                 </h1>
 
-                <p className="text-base md:text-lg text-muted-foreground mb-4 leading-relaxed max-w-lg">
-                  Human expertise meets AI execution — built into one system designed to drive pipeline, scale performance, and deliver measurable growth.
+                <p className="text-base md:text-lg text-muted-foreground mb-5 leading-relaxed max-w-lg">
+                  Human expertise meets AI execution, built into one system designed to drive pipeline, scale performance, and deliver measurable growth.
                 </p>
 
-                <p className="text-sm text-accent font-semibold tracking-wide max-w-lg">
+                <p className="text-sm text-accent font-semibold tracking-wide max-w-lg mb-8">
                   3X pipeline growth. 60% less wasted effort. 100% revenue visibility.
                 </p>
-              </div>
 
               <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
@@ -107,14 +105,14 @@ export function Home() {
             </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              You're running campaigns. You're deploying AI. You're hiring salespeople. But pipeline isn't growing — because nothing is connected. AI layered on top of a broken system doesn't fix it. It scales the dysfunction.
+              You're running campaigns. You're deploying AI. You're hiring salespeople. But pipeline isn't growing because nothing is connected. AI layered on top of a broken system doesn't fix it. It scales the dysfunction.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {[
               { title: 'Disconnected Execution', desc: 'Marketing, sales, and strategy operating in separate orbits with no shared accountability.' },
-              { title: 'No Unified System', desc: 'Tools, tactics, and teams that don\'t talk to each other — generating noise instead of pipeline.' },
+              { title: 'No Unified System', desc: 'Tools, tactics, and teams that don\'t talk to each other, generating noise instead of pipeline.' },
               { title: 'AI Without Strategy', desc: 'AI pilots that look impressive in demos but never connect to revenue outcomes.' },
               { title: 'Unpredictable Pipeline', desc: 'No visibility into what\'s working, what\'s wasted, or what to fix first.' },
             ].map((problem) => (
@@ -143,7 +141,7 @@ export function Home() {
             </h2>
 
             <p className="text-xl text-primary/70 max-w-3xl mx-auto">
-              200+ businesses. 30 years of trust. $1B+ delivered. SAGE doesn't sell campaigns or standalone AI pilots — we build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
+              200+ businesses. 30 years of trust. $1B+ delivered. SAGE doesn't sell campaigns or standalone AI pilots. We build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
             </p>
           </div>
 
@@ -164,17 +162,17 @@ export function Home() {
                 {
                   icon: Zap,
                   title: 'One System. Not a Stack of Tools.',
-                  desc: 'The RevenueStorm™ process integrates marketing, sales, and AI into a single connected revenue engine — no more siloed sprints.',
+                  desc: 'The RevenueStorm™ process integrates marketing, sales, and AI into a single connected revenue engine, no more siloed sprints.',
                 },
                 {
                   icon: TrendingUp,
                   title: 'Outcomes Over Deliverables.',
-                  desc: 'We measure success in pipeline, win rates, and revenue — not reports, clicks, or activity metrics.',
+                  desc: 'We measure success in pipeline, win rates, and revenue. Not reports, clicks, or activity metrics.',
                 },
                 {
                   icon: Award,
                   title: 'Senior Expertise. No Bench Warm-Ups.',
-                  desc: 'Seasoned CxOs and GTM leaders working directly on your business — not handed off to juniors after the kickoff.',
+                  desc: 'Seasoned CxOs and GTM leaders working directly on your business, not handed off to juniors after the kickoff.',
                 },
               ].map((item) => {
                 const Icon = item.icon;
@@ -222,37 +220,37 @@ export function Home() {
                 {
                   step: '01',
                   title: 'RevenueStorm™ Strategic Planning Session',
-                  desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start — not discovered after.',
+                  desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start, not discovered after.',
                 },
                 {
                   step: '02',
                   title: 'Current Systems & Process Review',
-                  desc: 'A structured diagnostic of your existing revenue motion — technology, data, workflows, team structure — to identify what\'s working, what\'s broken, and what\'s missing.',
+                  desc: 'A structured diagnostic of your existing revenue motion: technology, data, workflows, team structure, to identify what\'s working, what\'s broken, and what\'s missing.',
                 },
                 {
                   step: '03',
                   title: 'AI Optimization Plan',
-                  desc: 'We map which AI capabilities apply to your specific gaps and goals — no generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
+                  desc: 'We map which AI capabilities apply to your specific gaps and goals. No generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
                 },
                 {
                   step: '04',
                   title: 'Tool & Platform Selection',
-                  desc: 'We evaluate and recommend the right vetted AI platforms for your stack — from our pre-integrated partner suite — so you don\'t spend months researching and testing.',
+                  desc: 'We evaluate and recommend the right vetted AI platforms for your stack, from our pre-integrated partner suite, so you don\'t spend months researching and testing.',
                 },
                 {
                   step: '05',
                   title: 'Managed Execution',
-                  desc: 'SAGE deploys and manages the implementation alongside your team — campaigns, sales plays, automation sequences, and AI tooling — all tied to pipeline outcomes.',
+                  desc: 'SAGE deploys and manages the implementation alongside your team: campaigns, sales plays, automation sequences, and AI tooling, all tied to pipeline outcomes.',
                 },
                 {
                   step: '06',
                   title: 'Testing for Effectiveness',
-                  desc: 'We run structured tests across channels, messages, and workflows — measuring what\'s converting and cutting what isn\'t before scaling anything.',
+                  desc: 'We run structured tests across channels, messages, and workflows, measuring what\'s converting and cutting what isn\'t before scaling anything.',
                 },
                 {
                   step: '07',
                   title: 'Implementation, Stabilizing & Optimization',
-                  desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves — with SAGE monitoring every lever.',
+                  desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves, with SAGE monitoring every lever.',
                 },
               ].map((step) => (
                 <div key={step.step} className="group">
@@ -285,7 +283,7 @@ export function Home() {
                 AI Alone Isn't the Advantage. <span className="text-accent">How You Use It Is.</span>
               </h2>
               <p className="text-lg text-white/75 leading-relaxed mb-6">
-                Anyone can buy an AI tool. Very few know how to wire it into a revenue system that actually performs. SAGE's AI RevGen Advisory practice embeds AI where it moves the needle — demand generation, pipeline qualification, sales velocity, and forecasting accuracy.
+                Anyone can buy an AI tool. Very few know how to wire it into a revenue system that actually performs. SAGE's AI RevGen Advisory practice embeds AI where it moves the needle: demand generation, pipeline qualification, sales velocity, and forecasting accuracy.
               </p>
               <p className="text-lg text-white/75 leading-relaxed mb-10">
                 We don't run AI experiments. We build AI-powered GTM systems. Human expertise guiding the strategy. AI scaling the execution. Revenue as the metric that matters.

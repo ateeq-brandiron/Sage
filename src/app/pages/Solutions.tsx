@@ -255,7 +255,7 @@ export function Solutions() {
           </h2>
           
           <p className="text-xl mb-10 text-primary/70">
-            Get a free assessment—no commitment required
+            Get a free assessment, no commitment required
           </p>
           <Button to="/contact">
             Get Free Assessment

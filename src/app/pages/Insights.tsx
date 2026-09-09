@@ -25,7 +25,7 @@ export function Insights() {
     {
       category: 'Sales Strategy',
       title: 'Building Sales Playbooks That Actually Get Used',
-      description: 'Sales playbooks gather dust because they\'re built wrong. Discover the framework for creating playbooks that sales teams actually use—and that drive measurable revenue growth.',
+      description: 'Sales playbooks gather dust because they\'re built wrong. Discover the framework for creating playbooks that sales teams actually use, and that drive measurable revenue growth.',
       date: 'March 10, 2026',
       readTime: '6 min',
       slug: 'building-sales-playbooks-that-get-used',
@@ -79,7 +79,7 @@ export function Insights() {
             {/* Right — multi-line trend chart */}
             <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
               <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics — Readership Growth</p>
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics: Readership Growth</p>
                 <svg viewBox="0 0 420 270" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="trendGrad1" x1="0" y1="0" x2="0" y2="1">

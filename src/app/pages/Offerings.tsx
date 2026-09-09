@@ -11,7 +11,7 @@ export function Offerings() {
       icon: BarChart3,
       tagline: 'Your top-of-funnel signal engine and content creator.',
       description:
-        'Bellwether Intel drives market demand and builds brand awareness through AI-powered content generation, market intelligence, and always-on top-of-funnel activity — giving your brand the presence and signal it needs to pull buyers into your pipeline before competitors do.',
+        'Bellwether Intel drives market demand and builds brand awareness through AI-powered content generation, market intelligence, and always-on top-of-funnel activity, giving your brand the presence and signal it needs to pull buyers into your pipeline before competitors do.',
       capabilities: [
         'AI-driven content creation at scale',
         'Market demand and buyer signal monitoring',
@@ -27,9 +27,9 @@ export function Offerings() {
     {
       name: 'Expower AI 365',
       icon: Zap,
-      tagline: 'SMB funnel and pipeline management — running always-on.',
+      tagline: 'SMB funnel and pipeline management, running always-on.',
       description:
-        'Expower AI 365 is an always-on revenue engine built specifically for established SMBs. It manages your full funnel and pipeline with AI automation, keeping leads moving, follow-ups consistent, and revenue opportunities from falling through the cracks — 365 days a year.',
+        'Expower AI 365 is an always-on revenue engine built specifically for established SMBs. It manages your full funnel and pipeline with AI automation, keeping leads moving, follow-ups consistent, and revenue opportunities from falling through the cracks, 365 days a year.',
       capabilities: [
         'Always-on lead nurturing and follow-up',
         'AI-powered pipeline management',
@@ -47,7 +47,7 @@ export function Offerings() {
       icon: Shield,
       tagline: 'AI integration, structure, guardrails, and provable ROI.',
       description:
-        'Aio is the engine room behind AI that actually performs. It handles AI integration, system architecture, compliance guardrails, and ROI optimization — turning disconnected AI experiments into a structured, measurable revenue capability your leadership team can trust and your board can see.',
+        'Aio is the engine room behind AI that actually performs. It handles AI integration, system architecture, compliance guardrails, and ROI optimization, turning disconnected AI experiments into a structured, measurable revenue capability your leadership team can trust and your board can see.',
       capabilities: [
         'AI platform selection and integration',
         'System architecture and data structure',
@@ -63,9 +63,9 @@ export function Offerings() {
     {
       name: 'Boxsy',
       icon: Package,
-      tagline: '"COO in a box" — fundraising, outreach, and revenue in one platform.',
+      tagline: '"COO in a box": fundraising, outreach, and revenue in one platform.',
       description:
-        'Boxsy is a COO-in-a-box platform combining a fundraising CRM, investor and donor outreach system, and a revenue pipeline tool — built for owner-operators who need enterprise-grade capability without enterprise overhead. Manage relationships, track funding, and drive outreach from one place.',
+        'Boxsy is a COO-in-a-box platform combining a fundraising CRM, investor and donor outreach system, and a revenue pipeline tool, built for owner-operators who need enterprise-grade capability without enterprise overhead. Manage relationships, track funding, and drive outreach from one place.',
       capabilities: [
         'Fundraising CRM and relationship management',
         'Investor and donor outreach automation',
@@ -91,7 +91,7 @@ export function Offerings() {
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">AI Revenue Platforms</p>
               <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Our Offerings</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Four pre-integrated AI platforms — selected, configured, and managed by SAGE — so you get proven tools driving revenue from day one, not a build-it-yourself science project.
+                Four pre-integrated AI platforms, selected, configured, and managed by SAGE, so you get proven tools driving revenue from day one, not a build-it-yourself science project.
               </p>
             </div>
             {/* Right — platform quadrant chart */}
@@ -134,7 +134,7 @@ export function Offerings() {
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE] border-b border-border">
         <div className="max-w-7xl mx-auto pl-4 text-center">
           <p className="text-lg text-primary font-semibold max-w-3xl mx-auto">
-            We evaluate the technology, build a showcase demo for your team, then deploy and manage it as part of your revenue system — not handed off as a DIY project.
+            We evaluate the technology, build a showcase demo for your team, then deploy and manage it as part of your revenue system, not handed off as a DIY project.
           </p>
         </div>
       </section>
@@ -191,13 +191,13 @@ export function Offerings() {
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How It Works</p>
             <h2 className="text-3xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every platform goes through a structured fit assessment before deployment — so you see exactly what it does for your business before it goes live.
+              Every platform goes through a structured fit assessment before deployment, so you see exactly what it does for your business before it goes live.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {[
               { step: '01', title: 'RevenueStorm™ Assessment', desc: 'We map your current systems, goals, and gaps to identify which platforms will move the needle fastest.' },
-              { step: '02', title: 'Showcase Demo', desc: 'We run a customised demo for your team — showing exactly how each platform performs in your context, not a generic sales pitch.' },
+              { step: '02', title: 'Showcase Demo', desc: 'We run a customised demo for your team, showing exactly how each platform performs in your context, not a generic sales pitch.' },
               { step: '03', title: 'Managed Deployment', desc: 'SAGE deploys, integrates, and manages the platform alongside your team. No DIY. No guesswork. No ramp-up time wasted.' },
             ].map((s) => (
               <div key={s.step} className="bg-white p-8">
@@ -233,7 +233,7 @@ export function Offerings() {
             See What AI Can <span className="text-accent">Actually Do for Your Revenue</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Book a complimentary AI ROI Assessment — we'll show you exactly which platforms fit your business and what results to expect.
+            Book a complimentary AI ROI Assessment. We'll show you exactly which platforms fit your business and what results to expect.
           </p>
           <Button to="/contact">
             Get Your Complimentary AI ROI Assessment

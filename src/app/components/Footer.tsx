@@ -23,7 +23,7 @@ export function Footer() {
               <img src={sageLogo} alt="SAGE Professional Services" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-small text-white/80 mb-6 max-w-md">
-              200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI — as your fractional AI Officer.
+              200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI, as your fractional AI Officer.
             </p>
             <div className="flex items-center space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">

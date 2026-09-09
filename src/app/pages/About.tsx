@@ -41,7 +41,7 @@ export function About() {
             {/* Right — growth chart */}
             <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
               <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced — 30 Year Journey</p>
+                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced: 30 Year Journey</p>
                 <svg viewBox="0 0 460 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="aboutAreaGrad" x1="0" y1="0" x2="0" y2="1">
