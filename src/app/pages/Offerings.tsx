@@ -195,7 +195,7 @@ export function Offerings() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-border">
-            [
+            {[
               { step: '01', title: 'RevenueStorm™ Assessment', desc: 'We map your current systems, goals, and gaps to identify which platforms will move the needle fastest.' },
               { step: '02', title: 'Showcase Demo', desc: 'We run a customised demo for your team, showing exactly how each platform performs in your context, not a generic sales pitch.' },
               { step: '03', title: 'Managed Deployment', desc: 'SAGE deploys, integrates, and manages the platform alongside your team. No DIY. No guesswork. No ramp-up time wasted.' },
