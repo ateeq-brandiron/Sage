@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, CircleDollarSign, Brain, BarChart3, Users, Cpu } from 'lucide-react';
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
@@ -7,7 +8,38 @@ import heroChart from '../../assets/pages/home/hero-chart.svg';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
 
+function useCountUp(target: number, duration = 1800, started = false) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!started) return;
+    let start = 0;
+    const step = Math.ceil(target / (duration / 16));
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { setCount(target); clearInterval(timer); }
+      else setCount(start);
+    }, 16);
+    return () => clearInterval(timer);
+  }, [started, target, duration]);
+  return count;
+}
+
 export function Home() {
+  const statsRef = useRef<HTMLDivElement>(null);
+  const [statsStarted, setStatsStarted] = useState(false);
+  useEffect(() => {
+    const el = statsRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setStatsStarted(true); observer.disconnect(); }
+    }, { threshold: 0.3 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  const count200 = useCountUp(200, 1600, statsStarted);
+  const count30  = useCountUp(30,  1200, statsStarted);
+  const count1   = useCountUp(1,   1000, statsStarted);
+
   return (
     <div className="min-h-screen pt-20 bg-white">
       {/* Hero Section - Split Layout */}
@@ -68,18 +100,18 @@ export function Home() {
       </section>
 
       {/* Stats Bar - Clean */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-border">
+      <section ref={statsRef} className="py-16 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-3 gap-12 text-center">
             {[
-              { value: '200+',  label: 'Businesses Served',   icon: Building2 },
-              { value: '30+',   label: 'Years of Trust',       icon: CalendarClock },
-              { value: '$1B+',  label: 'Delivered',            icon: CircleDollarSign },
-            ].map(({ value, label, icon: Icon }) => (
+              { display: `${count200}+`,  label: 'Businesses Served',  icon: Building2        },
+              { display: `${count30}+`,   label: 'Years of Trust',      icon: CalendarClock    },
+              { display: `$${count1}B+`,  label: 'Delivered',           icon: CircleDollarSign },
+            ].map(({ display, label, icon: Icon }) => (
               <div key={label} className="group flex flex-col items-center cursor-default">
                 <div className="flex items-center gap-3 mb-2">
                   <Icon className="w-9 h-9 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                  <div className="text-5xl md:text-6xl font-black text-primary transition-colors duration-300 group-hover:text-accent">{value}</div>
+                  <div className="text-5xl md:text-6xl font-black text-primary transition-colors duration-300 group-hover:text-accent">{display}</div>
                 </div>
                 <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{label}</div>
               </div>
