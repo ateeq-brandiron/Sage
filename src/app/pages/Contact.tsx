@@ -156,9 +156,9 @@ export function Contact() {
                     'Custom Growth Roadmap',
                     'Honest Recommendations',
                   ].map((item) => (
-                    <li key={item} className="flex items-start">
-                      <CheckCircle2 className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-lg text-foreground">{item}</span>
+                    <li key={item} className="flex items-start group/item">
+                      <CheckCircle2 className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300" />
+                      <span className="text-lg text-foreground group-hover/item:text-accent transition-colors duration-300">{item}</span>
                     </li>
                   ))}
                 </ul>

@@ -149,7 +149,7 @@ export function Offerings() {
               <div key={offering.name} className={`grid lg:grid-cols-2 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 {/* Text side */}
                 <div className={isEven ? '' : 'lg:col-start-2'}>
-                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 mb-5">
+                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 mb-5 hover:bg-accent/20 transition-colors duration-200">
                     {offering.badge}
                   </span>
                   <div className="flex items-center gap-4 mb-4">
@@ -160,9 +160,9 @@ export function Offerings() {
                   <p className="text-muted-foreground leading-relaxed mb-8">{offering.description}</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {offering.capabilities.map((cap) => (
-                      <div key={cap} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{cap}</span>
+                      <div key={cap} className="flex items-start gap-3 group/item">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300" />
+                        <span className="text-sm text-foreground group-hover/item:text-accent transition-colors duration-300">{cap}</span>
                       </div>
                     ))}
                   </div>
@@ -195,13 +195,13 @@ export function Offerings() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-border">
-            {[
+            [
               { step: '01', title: 'RevenueStorm™ Assessment', desc: 'We map your current systems, goals, and gaps to identify which platforms will move the needle fastest.' },
               { step: '02', title: 'Showcase Demo', desc: 'We run a customised demo for your team, showing exactly how each platform performs in your context, not a generic sales pitch.' },
               { step: '03', title: 'Managed Deployment', desc: 'SAGE deploys, integrates, and manages the platform alongside your team. No DIY. No guesswork. No ramp-up time wasted.' },
             ].map((s) => (
-              <div key={s.step} className="bg-white p-8">
-                <div className="text-5xl font-black text-primary/20 mb-4">{s.step}</div>
+              <div key={s.step} className="bg-white p-8 group hover:shadow-md transition-all duration-300">
+                <div className="text-5xl font-black text-primary/20 mb-4 group-hover:text-accent/60 transition-colors duration-300">{s.step}</div>
                 <h3 className="text-lg font-bold text-primary mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>

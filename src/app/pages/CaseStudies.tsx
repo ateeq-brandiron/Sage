@@ -117,8 +117,8 @@ export function CaseStudies() {
               { value: '2X', label: 'Sales Efficiency' },
               { value: '8X', label: 'Average ROI' },
             ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-5xl font-black text-accent mb-2">{stat.value}</div>
+              <div key={stat.label} className="group cursor-default">
+                <div className="text-5xl font-black text-accent mb-2 group-hover:text-accent transition-colors duration-300">{stat.value}</div>
                 <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
@@ -130,11 +130,11 @@ export function CaseStudies() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto pl-4 space-y-24">
           {studies.map((study) => (
-            <div key={study.title} className="border-l-4 border-accent pl-12">
+            <div key={study.title} className="border-l-4 border-accent pl-12 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-8">
                   <div>
-                    <h2 className="text-3xl font-black text-primary mb-2">{study.title}</h2>
+                    <h2 className="text-3xl font-black text-primary mb-2 group-hover:text-accent transition-colors duration-300">{study.title}</h2>
                     <p className="text-lg text-muted-foreground">{study.client}</p>
                   </div>
 
@@ -157,7 +157,7 @@ export function CaseStudies() {
                 <div className="space-y-4">
                   <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Results</h3>
                   {study.results.map((result) => (
-                    <div key={result.label} className="bg-gray-50 p-6">
+                    <div key={result.label} className="bg-gray-50 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                       <div className="text-4xl font-black text-accent mb-2">{result.metric}</div>
                       <div className="text-sm text-foreground font-semibold">{result.label}</div>
                     </div>

@@ -192,7 +192,7 @@ export function About() {
                 <p className="text-accent font-semibold mb-6">{leader.role}</p>
                 <div className="flex flex-wrap gap-2">
                   {leader.expertise.map((area) => (
-                    <span key={area} className="px-3 py-1 bg-gray-100 text-xs font-semibold text-foreground">
+                    <span key={area} className="px-3 py-1 bg-gray-100 text-xs font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
                       {area}
                     </span>
                   ))}
@@ -213,11 +213,11 @@ export function About() {
               { icon: CircleDollarSign, value: '$1B+', label: 'Delivered' },
               { icon: Award,            value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex flex-col items-center">
+              <div key={label} className="flex flex-col items-center group cursor-default">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                  <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <div className="text-5xl font-black text-accent mb-1">{value}</div>
+                <div className="text-5xl font-black text-accent mb-1 group-hover:text-accent transition-colors duration-300">{value}</div>
                 <div className="text-sm text-primary/70 font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}

@@ -163,8 +163,8 @@ export function Solutions() {
               const Icon = solution.icon;
               return (
                 <div key={solution.title} className="bg-white p-12 hover:bg-gray-50 transition-colors group">
-                  <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent transition-colors duration-300">
-                    <Icon className="w-8 h-8 text-accent" strokeWidth={1.5} />
+                  <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mb-6 group-hover:border-accent group-hover:bg-accent/10 group-hover:scale-105 transition-all duration-300">
+                    <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
 
                   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">
@@ -179,9 +179,9 @@ export function Solutions() {
 
                   <ul className="space-y-2 mb-8">
                     {solution.includes.map((item) => (
-                      <li key={item} className="flex items-start text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-accent mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{item}</span>
+                      <li key={item} className="flex items-start text-sm group/item">
+                        <CheckCircle2 className="w-4 h-4 text-accent mr-2 flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300" />
+                        <span className="text-muted-foreground group-hover/item:text-accent transition-colors duration-300">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -229,9 +229,9 @@ export function Solutions() {
             ].map(({ phase, icon: Icon, title, desc }) => (
               <div
                 key={phase}
-                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
+                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group"
               >
-                <div className="text-3xl font-black text-accent/60 mb-4">{phase}</div>
+                <div className="text-3xl font-black text-accent/60 mb-4 group-hover:text-accent/80 transition-colors duration-300">{phase}</div>
                 <div className="w-14 h-14 rounded-2xl bg-accent/25 border border-accent/40 flex items-center justify-center mb-5">
                   <Icon className="w-7 h-7 text-white" strokeWidth={1.5} />
                 </div>

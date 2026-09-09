@@ -91,7 +91,7 @@ export function Industries() {
 
                   <div className="flex flex-wrap gap-2 mb-8">
                     {industry.sectors.map((sector) => (
-                      <span key={sector} className="px-4 py-2 bg-gray-100 text-sm font-semibold text-foreground">
+                      <span key={sector} className="px-4 py-2 bg-gray-100 text-sm font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
                         {sector}
                       </span>
                     ))}
@@ -135,11 +135,11 @@ export function Industries() {
               { icon: CircleDollarSign, value: '$1B+', label: 'Delivered' },
               { icon: BarChart3,        value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex flex-col items-center">
+              <div key={label} className="flex flex-col items-center group cursor-default">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                  <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <div className="text-5xl font-black text-accent mb-2">{value}</div>
+                <div className="text-5xl font-black text-accent mb-2 group-hover:text-accent transition-colors duration-300">{value}</div>
                 <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}

@@ -258,9 +258,9 @@ export function ServiceDetail() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {service.benefits.map((benefit, i) => (
-              <div key={i} className="bg-white p-8 flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
-                <p className="text-foreground font-medium leading-relaxed">{benefit}</p>
+              <div key={i} className="bg-white p-8 flex items-start gap-4 group/item hover:shadow-md transition-all duration-300">
+                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300" />
+                <p className="text-foreground font-medium leading-relaxed group-hover/item:text-accent transition-colors duration-300">{benefit}</p>
               </div>
             ))}
           </div>
@@ -277,10 +277,10 @@ export function ServiceDetail() {
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {service.includes.map((item) => (
-              <div key={item.title} className="bg-white p-10">
+              <div key={item.title} className="bg-white p-10 group hover:shadow-md transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <Icon className="w-8 h-8 text-accent" />
-                  <h3 className="text-xl font-black text-primary">{item.title}</h3>
+                  <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-xl font-black text-primary group-hover:text-accent transition-colors duration-300">{item.title}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
@@ -299,8 +299,8 @@ export function ServiceDetail() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-accent/20">
             {service.process.map((step) => (
-              <div key={step.step} className="bg-[#E8F5EE] p-10 hover:bg-[#D4EFE0] transition-colors">
-                <div className="text-5xl font-black text-accent/40 mb-4">{step.step}</div>
+              <div key={step.step} className="bg-[#E8F5EE] p-10 hover:bg-[#D4EFE0] transition-colors group">
+                <div className="text-5xl font-black text-accent/40 mb-4 group-hover:text-accent/60 transition-colors duration-300">{step.step}</div>
                 <h3 className="text-xl font-black text-primary mb-3">{step.title}</h3>
                 <p className="text-primary/70 leading-relaxed">{step.desc}</p>
               </div>
