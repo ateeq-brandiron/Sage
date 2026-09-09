@@ -118,6 +118,27 @@ export function Offerings() {
                   <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="74"  y="194" width="50" height="50" rx="10" fill="#0B1F35" fillOpacity="0.07"/>
                   <rect x="289" y="194" width="50" height="50" rx="10" fill="#0B1F35" fillOpacity="0.07"/>
+                  {/* Bellwether Intel — BarChart3 icon, centered in box at (74,56) size 50x50 */}
+                  <g transform="translate(86,68)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                    <rect x="0" y="10" width="6" height="16" rx="1"/>
+                    <rect x="9" y="4"  width="6" height="22" rx="1"/>
+                    <rect x="18" y="0" width="6" height="26" rx="1"/>
+                  </g>
+                  {/* Expower AI 365 — Zap icon, centered in box at (289,56) size 50x50 */}
+                  <g transform="translate(301,65)" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                    <polyline points="14,0 8,13 14,13 8,26 22,10 14,10 20,0"/>
+                  </g>
+                  {/* Aio — Shield icon, centered in box at (74,194) size 50x50 */}
+                  <g transform="translate(86,206)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                    <path d="M13 0 L26 5 L26 14 C26 21 13 26 13 26 C13 26 0 21 0 14 L0 5 Z"/>
+                  </g>
+                  {/* Boxsy — Package icon, centered in box at (289,194) size 50x50 */}
+                  <g transform="translate(301,206)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
+                    <path d="M22 8 L13 13 L13 26 L24 20 L24 7 Z"/>
+                    <path d="M4 8  L13 13 L13 26 L2  20 L2  7 Z"/>
+                    <path d="M2 7  L13 1  L24 7  L13 13 Z"/>
+                    <line x1="8" y1="10" x2="19" y2="4"/>
+                  </g>
                   {/* Connector dashes */}
                   <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
