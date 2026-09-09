@@ -143,7 +143,7 @@ export function Home() {
             </h2>
 
             <p className="text-xl text-primary/70 max-w-3xl mx-auto">
-              30+ years. 500+ B2B companies. $100M+ revenue influenced. SAGE doesn't sell campaigns or standalone AI pilots — we build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
+              200+ businesses. 30 years of trust. $1B+ delivered. SAGE doesn't sell campaigns or standalone AI pilots — we build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
             </p>
           </div>
 
@@ -206,7 +206,7 @@ export function Home() {
               The RevenueStorm™ <span className="text-accent">Process</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Six steps from broken alignment to a compounding revenue engine
+              Seven steps from broken alignment to a compounding revenue engine
             </p>
           </div>
 
@@ -221,33 +221,38 @@ export function Home() {
               {[
                 {
                   step: '01',
-                  title: 'RevenueStorm™ Assessment',
-                  desc: 'A structured diagnostic of your entire revenue system — strategy, pipeline, marketing, sales, and technology — to identify gaps and growth levers.',
+                  title: 'RevenueStorm™ Strategic Planning Session',
+                  desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start — not discovered after.',
                 },
                 {
                   step: '02',
-                  title: 'Revenue Architecture',
-                  desc: 'We design the full-funnel structure: ICP definition, positioning, channel strategy, sales process, and the metrics framework that holds it all together.',
+                  title: 'Current Systems & Process Review',
+                  desc: 'A structured diagnostic of your existing revenue motion — technology, data, workflows, team structure — to identify what\'s working, what\'s broken, and what\'s missing.',
                 },
                 {
                   step: '03',
-                  title: 'GTM Alignment',
-                  desc: 'Marketing, sales, and leadership aligned around the same priorities, personas, pipeline stages, and success metrics — no more siloed execution.',
+                  title: 'AI Optimization Plan',
+                  desc: 'We map which AI capabilities apply to your specific gaps and goals — no generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
                 },
                 {
                   step: '04',
-                  title: 'AI & Automation Integration',
-                  desc: 'Embedding AI-enabled tools and automation into your revenue workflows — from demand generation to forecasting — so your team scales without headcount.',
+                  title: 'Tool & Platform Selection',
+                  desc: 'We evaluate and recommend the right vetted AI platforms for your stack — from our pre-integrated partner suite — so you don\'t spend months researching and testing.',
                 },
                 {
                   step: '05',
-                  title: 'Tactical Results™ Execution',
-                  desc: 'We implement alongside your team: campaigns, sales plays, content, enablement, and outbound motion — all tied to pipeline and revenue outcomes.',
+                  title: 'Managed Execution',
+                  desc: 'SAGE deploys and manages the implementation alongside your team — campaigns, sales plays, automation sequences, and AI tooling — all tied to pipeline outcomes.',
                 },
                 {
                   step: '06',
-                  title: 'Performance Optimization',
-                  desc: 'Ongoing measurement, reporting, and iteration. We monitor what\'s working, double down on winners, and continuously tune the system for compounding growth.',
+                  title: 'Testing for Effectiveness',
+                  desc: 'We run structured tests across channels, messages, and workflows — measuring what\'s converting and cutting what isn\'t before scaling anything.',
+                },
+                {
+                  step: '07',
+                  title: 'Implementation, Stabilizing & Optimization',
+                  desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves — with SAGE monitoring every lever.',
                 },
               ].map((step) => (
                 <div key={step.step} className="group">
