@@ -548,9 +548,9 @@ export function Home() {
           <div className="bg-white border border-border p-8 mb-12 max-w-2xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 text-left">
               {['Revenue Gap Analysis', 'GTM Alignment Review', 'Pipeline Health Check', 'AI Opportunity Audit', 'Growth Roadmap', 'Actionable Recommendations'].map((item) => (
-                <div key={item} className="flex items-center text-foreground">
-                  <CheckCircle2 className="w-5 h-5 mr-3 flex-shrink-0 text-accent" />
-                  <span className="font-medium">{item}</span>
+                <div key={item} className="group/item flex items-center text-foreground">
+                  <CheckCircle2 className="w-5 h-5 mr-3 flex-shrink-0 text-accent transition-transform duration-300 group-hover/item:scale-110" />
+                  <span className="font-medium transition-colors duration-300 group-hover/item:text-accent">{item}</span>
                 </div>
               ))}
             </div>
