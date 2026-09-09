@@ -118,26 +118,34 @@ export function Offerings() {
                   <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="74"  y="194" width="50" height="50" rx="10" fill="#0B1F35" fillOpacity="0.07"/>
                   <rect x="289" y="194" width="50" height="50" rx="10" fill="#0B1F35" fillOpacity="0.07"/>
-                  {/* Bellwether Intel — BarChart3 icon, centered in box at (74,56) size 50x50 */}
-                  <g transform="translate(86,68)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
-                    <rect x="0" y="10" width="6" height="16" rx="1"/>
-                    <rect x="9" y="4"  width="6" height="22" rx="1"/>
-                    <rect x="18" y="0" width="6" height="26" rx="1"/>
+                  {/* Bellwether Intel — signal broadcast mark (demand generation) */}
+                  <g transform="translate(87,69)">
+                    <circle cx="12" cy="18" r="2.5" fill="#0B1F35" fillOpacity="0.55"/>
+                    <path d="M7 13 A7 7 0 0 1 17 13" stroke="#0B1F35" strokeOpacity="0.55" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                    <path d="M3.5 9.5 A11 11 0 0 1 20.5 9.5" stroke="#0B1F35" strokeOpacity="0.35" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                    <path d="M0.5 6 A14 14 0 0 1 23.5 6" stroke="#0B1F35" strokeOpacity="0.18" strokeWidth="2" fill="none" strokeLinecap="round"/>
                   </g>
-                  {/* Expower AI 365 — Zap icon, centered in box at (289,56) size 50x50 */}
-                  <g transform="translate(301,65)" stroke="#00C853" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
-                    <polyline points="14,0 8,13 14,13 8,26 22,10 14,10 20,0"/>
+                  {/* Expower AI 365 — lightning in circle (always-on pipeline) */}
+                  <g transform="translate(302,69)">
+                    <circle cx="12" cy="12" r="10" stroke="#00C853" strokeWidth="2" fill="none"/>
+                    <path d="M14 3 L7.5 13 L12 13 L10 21 L16.5 11 L12 11 Z" fill="#00C853"/>
                   </g>
-                  {/* Aio — Shield icon, centered in box at (74,194) size 50x50 */}
-                  <g transform="translate(86,206)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
-                    <path d="M13 0 L26 5 L26 14 C26 21 13 26 13 26 C13 26 0 21 0 14 L0 5 Z"/>
+                  {/* Aio — connected node triangle (AI infrastructure) */}
+                  <g transform="translate(87,207)">
+                    <circle cx="12" cy="4"  r="2.5" fill="#0B1F35" fillOpacity="0.55"/>
+                    <circle cx="3"  cy="19" r="2.5" fill="#0B1F35" fillOpacity="0.55"/>
+                    <circle cx="21" cy="19" r="2.5" fill="#0B1F35" fillOpacity="0.55"/>
+                    <line x1="12" y1="4"  x2="3"  y2="19" stroke="#0B1F35" strokeOpacity="0.35" strokeWidth="1.5" strokeLinecap="round"/>
+                    <line x1="12" y1="4"  x2="21" y2="19" stroke="#0B1F35" strokeOpacity="0.35" strokeWidth="1.5" strokeLinecap="round"/>
+                    <line x1="3"  y1="19" x2="21" y2="19" stroke="#0B1F35" strokeOpacity="0.35" strokeWidth="1.5" strokeLinecap="round"/>
+                    <circle cx="12" cy="12" r="1.5" fill="#0B1F35" fillOpacity="0.3"/>
                   </g>
-                  {/* Boxsy — Package icon, centered in box at (289,194) size 50x50 */}
-                  <g transform="translate(301,206)" stroke="#0B1F35" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none">
-                    <path d="M22 8 L13 13 L13 26 L24 20 L24 7 Z"/>
-                    <path d="M4 8  L13 13 L13 26 L2  20 L2  7 Z"/>
-                    <path d="M2 7  L13 1  L24 7  L13 13 Z"/>
-                    <line x1="8" y1="10" x2="19" y2="4"/>
+                  {/* Boxsy — open box with upward arrow (revenue operations) */}
+                  <g transform="translate(302,207)">
+                    <path d="M3 11 L3 21 L21 21 L21 11" stroke="#0B1F35" strokeOpacity="0.55" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 11 L12 6 L21 11" stroke="#0B1F35" strokeOpacity="0.55" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 19 L12 13" stroke="#0B1F35" strokeOpacity="0.45" strokeWidth="1.8" strokeLinecap="round"/>
+                    <path d="M9.5 15 L12 13 L14.5 15" stroke="#0B1F35" strokeOpacity="0.45" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </g>
                   {/* Connector dashes */}
                   <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
