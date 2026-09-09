@@ -167,11 +167,11 @@ export function Solutions() {
                     <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
 
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold transition-colors duration-300 group-hover:text-accent/70">
                     {solution.tagline}
                   </div>
 
-                  <h3 className="text-2xl font-black text-primary mb-3">{solution.title}</h3>
+                  <h3 className="text-2xl font-black text-primary mb-3 transition-colors duration-300 group-hover:text-accent">{solution.title}</h3>
 
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {solution.description}
