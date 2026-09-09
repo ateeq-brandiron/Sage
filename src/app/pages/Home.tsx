@@ -208,64 +208,60 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            {/* RevenueStorm Graphic */}
-            <div className="flex justify-center order-2 lg:order-1">
-              <img src={revenueStormImg} alt="SAGE revenue growth framework diagram" className="w-full max-w-lg" />
-            </div>
+          {/* RevenueStorm Graphic — full width, prominent */}
+          <div className="flex justify-center mb-16">
+            <img src={revenueStormImg} alt="SAGE RevenueStorm™ framework diagram" className="w-full max-w-3xl" />
+          </div>
 
-            {/* Process Steps */}
-            <div className="space-y-1 order-1 lg:order-2">
-              {[
-                {
-                  step: '01',
-                  title: 'RevenueStorm™ Strategic Planning Session',
-                  desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start, not discovered after.',
-                },
-                {
-                  step: '02',
-                  title: 'Current Systems & Process Review',
-                  desc: 'A structured diagnostic of your existing revenue motion: technology, data, workflows, team structure, to identify what\'s working, what\'s broken, and what\'s missing.',
-                },
-                {
-                  step: '03',
-                  title: 'AI Optimization Plan',
-                  desc: 'We map which AI capabilities apply to your specific gaps and goals. No generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
-                },
-                {
-                  step: '04',
-                  title: 'Tool & Platform Selection',
-                  desc: 'We evaluate and recommend the right vetted AI platforms for your stack, from our pre-integrated partner suite, so you don\'t spend months researching and testing.',
-                },
-                {
-                  step: '05',
-                  title: 'Managed Execution',
-                  desc: 'SAGE deploys and manages the implementation alongside your team: campaigns, sales plays, automation sequences, and AI tooling, all tied to pipeline outcomes.',
-                },
-                {
-                  step: '06',
-                  title: 'Testing for Effectiveness',
-                  desc: 'We run structured tests across channels, messages, and workflows, measuring what\'s converting and cutting what isn\'t before scaling anything.',
-                },
-                {
-                  step: '07',
-                  title: 'Implementation, Stabilizing & Optimization',
-                  desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves, with SAGE monitoring every lever.',
-                },
-              ].map((step) => (
-                <div key={step.step} className="group">
-                  <div className="flex items-start gap-8 p-8 border-b border-border hover:bg-gray-50 transition-colors">
-                    <div className="text-6xl font-black text-primary/40 group-hover:text-primary/70 transition-colors">
-                      {step.step}
-                    </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="text-2xl font-bold text-primary mb-3">{step.title}</h3>
-                      <p className="text-lg text-muted-foreground">{step.desc}</p>
-                    </div>
-                  </div>
+          {/* Process Steps — 2-column grid */}
+          <div className="grid md:grid-cols-2 gap-0 border-t border-border">
+            {[
+              {
+                step: '01',
+                title: 'RevenueStorm™ Strategic Planning Session',
+                desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start, not discovered after.',
+              },
+              {
+                step: '02',
+                title: 'Current Systems & Process Review',
+                desc: 'A structured diagnostic of your existing revenue motion: technology, data, workflows, team structure, to identify what\'s working, what\'s broken, and what\'s missing.',
+              },
+              {
+                step: '03',
+                title: 'AI Optimization Plan',
+                desc: 'We map which AI capabilities apply to your specific gaps and goals. No generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
+              },
+              {
+                step: '04',
+                title: 'Tool & Platform Selection',
+                desc: 'We evaluate and recommend the right vetted AI platforms for your stack, from our pre-integrated partner suite, so you don\'t spend months researching and testing.',
+              },
+              {
+                step: '05',
+                title: 'Managed Execution',
+                desc: 'SAGE deploys and manages the implementation alongside your team: campaigns, sales plays, automation sequences, and AI tooling, all tied to pipeline outcomes.',
+              },
+              {
+                step: '06',
+                title: 'Testing for Effectiveness',
+                desc: 'We run structured tests across channels, messages, and workflows, measuring what\'s converting and cutting what isn\'t before scaling anything.',
+              },
+              {
+                step: '07',
+                title: 'Implementation, Stabilizing & Optimization',
+                desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves, with SAGE monitoring every lever.',
+              },
+            ].map((step, i) => (
+              <div key={step.step} className={`group flex items-start gap-6 p-8 border-b border-border hover:bg-gray-50 transition-colors ${i % 2 === 0 ? 'md:border-r' : ''}`}>
+                <div className="text-5xl font-black text-primary/25 group-hover:text-accent/60 transition-colors leading-none pt-1 min-w-[3rem]">
+                  {step.step}
                 </div>
-              ))}
-            </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-primary mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
