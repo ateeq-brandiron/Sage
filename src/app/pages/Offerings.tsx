@@ -99,50 +99,59 @@ export function Offerings() {
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Platform Coverage</p>
                 <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Quadrant backgrounds */}
-                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
-                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
-                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
-                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
-
-                  {/* Bellwether Intel — signal broadcast arcs */}
-                  <rect x="16" y="16" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
-                  <circle cx="39" cy="46" r="4" fill="#00C853"/>
-                  <path d="M27 54 Q39 36 51 54" stroke="#00C853" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                  <path d="M20 60 Q39 28 58 60" stroke="#00C853" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeOpacity="0.5"/>
-                  <text x="99" y="58" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Bellwether Intel</text>
-                  <text x="99" y="74" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
-
-                  {/* Expower AI 365 — lightning bolt */}
-                  <rect x="220" y="16" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
-                  <path d="M249 20 L238 38 h8 L235 62 L252 40 h-8 Z" fill="#00C853" fillOpacity="0.9"/>
-                  <text x="314" y="58" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Expower AI 365</text>
-                  <text x="314" y="74" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
-
-                  {/* Aio — connected node triangle */}
-                  <rect x="16" y="154" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
-                  <circle cx="39" cy="164" r="4" fill="#00C853"/>
-                  <circle cx="28" cy="186" r="4" fill="#00C853"/>
-                  <circle cx="50" cy="186" r="4" fill="#00C853"/>
-                  <line x1="39" y1="168" x2="28" y2="182" stroke="#00C853" strokeWidth="1.5"/>
-                  <line x1="39" y1="168" x2="50" y2="182" stroke="#00C853" strokeWidth="1.5"/>
-                  <line x1="32" y1="186" x2="46" y2="186" stroke="#00C853" strokeWidth="1.5"/>
-                  <text x="99" y="190" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Aio</text>
-                  <text x="99" y="206" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
-
-                  {/* Boxsy — open box with upward arrow */}
-                  <rect x="220" y="154" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="228" y="172" width="30" height="22" rx="2" stroke="#00C853" strokeWidth="2" fill="none"/>
-                  <line x1="243" y1="172" x2="243" y2="158" stroke="#00C853" strokeWidth="2" strokeLinecap="round"/>
-                  <polyline points="237,164 243,158 249,164" stroke="#00C853" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  <text x="314" y="190" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Boxsy</text>
-                  <text x="314" y="206" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
-
+                  {/* Quadrant grid */}
+                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
+                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
+                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
+                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
+                  {/* Labels */}
+                  <text x="99"  y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Bellwether Intel</text>
+                  <text x="99"  y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
+                  <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Expower AI 365</text>
+                  <text x="314" y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
+                  <text x="99"  y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Aio</text>
+                  <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
+                  <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
+                  <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
+                  {/* Icon boxes */}
+                  <rect x="74"  y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
+                  <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
+                  <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
+                  <rect x="289" y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
+                  {/* Bellwether Intel — signal broadcast mark (demand generation) */}
+                  <g transform="translate(87,69)">
+                    <circle cx="12" cy="18" r="2.5" fill="#00C853"/>
+                    <path d="M7 13 A7 7 0 0 1 17 13" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                    <path d="M3.5 9.5 A11 11 0 0 1 20.5 9.5" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                    <path d="M0.5 6 A14 14 0 0 1 23.5 6" stroke="#00C853" strokeOpacity="0.25" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  </g>
+                  {/* Expower AI 365 — lightning in circle (always-on pipeline) */}
+                  <g transform="translate(302,69)">
+                    <circle cx="12" cy="12" r="10" stroke="#00C853" strokeWidth="2" fill="none"/>
+                    <path d="M14 3 L7.5 13 L12 13 L10 21 L16.5 11 L12 11 Z" fill="#00C853"/>
+                  </g>
+                  {/* Aio — connected node triangle (AI infrastructure) */}
+                  <g transform="translate(87,207)">
+                    <circle cx="12" cy="4"  r="2.5" fill="#00C853"/>
+                    <circle cx="3"  cy="19" r="2.5" fill="#00C853"/>
+                    <circle cx="21" cy="19" r="2.5" fill="#00C853"/>
+                    <line x1="12" y1="4"  x2="3"  y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
+                    <line x1="12" y1="4"  x2="21" y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
+                    <line x1="3"  y1="19" x2="21" y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
+                    <circle cx="12" cy="12" r="1.5" fill="#00C853" fillOpacity="0.6"/>
+                  </g>
+                  {/* Boxsy — open box with upward arrow (revenue operations) */}
+                  <g transform="translate(302,207)">
+                    <path d="M3 11 L3 21 L21 21 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 11 L12 6 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 19 L12 13" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" strokeLinecap="round"/>
+                    <path d="M9.5 15 L12 13 L14.5 15" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  </g>
                   {/* Connector dashes */}
-                  <line x1="198" y1="64"  x2="208" y2="64"  stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="198" y1="203" x2="208" y2="203" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="99"  y1="128" x2="99"  y2="138" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="99"  y1="128" x2="99"  y2="138" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="3 2"/>
                 </svg>
               </div>
             </div>
