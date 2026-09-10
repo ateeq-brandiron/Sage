@@ -2,9 +2,6 @@ import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
-import bellwetherLogo from '../../assets/pages/offerings/bellwether-logo.png';
-import expowerLogo from '../../assets/pages/offerings/expower-logo.jpg';
-import boxsyLogo from '../../assets/pages/offerings/boxsy-logo.svg';
 import { Button } from '../components/Button';
 
 export function Offerings() {
@@ -102,45 +99,50 @@ export function Offerings() {
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Platform Coverage</p>
                 <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <clipPath id="clip-bw"><rect x="0"   y="0"   width="198" height="128" rx="6"/></clipPath>
-                    <clipPath id="clip-ex"><rect x="208" y="0"   width="212" height="128" rx="6"/></clipPath>
-                    <clipPath id="clip-ai"><rect x="0"   y="138" width="198" height="130" rx="6"/></clipPath>
-                    <clipPath id="clip-bx"><rect x="208" y="138" width="212" height="130" rx="6"/></clipPath>
-                  </defs>
-
                   {/* Quadrant backgrounds */}
-                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
-                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
-                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
-                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2" strokeWidth="1"/>
+                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
+                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
+                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
+                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.08" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1"/>
 
-                  {/* Bellwether Intel — logo fills card */}
-                  <image href={bellwetherLogo} x="10" y="8" width="178" height="112" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-bw)"/>
+                  {/* Bellwether Intel — signal broadcast arcs */}
+                  <rect x="16" y="16" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
+                  <circle cx="39" cy="46" r="4" fill="#00C853"/>
+                  <path d="M27 54 Q39 36 51 54" stroke="#00C853" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <path d="M20 60 Q39 28 58 60" stroke="#00C853" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeOpacity="0.5"/>
+                  <text x="99" y="58" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Bellwether Intel</text>
+                  <text x="99" y="74" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
 
-                  {/* Expower AI 365 — logo fills card, multiply blends white bg away */}
-                  <image href={expowerLogo} x="218" y="8" width="192" height="112" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-ex)" style={{mixBlendMode:'multiply'}}/>
+                  {/* Expower AI 365 — lightning bolt */}
+                  <rect x="220" y="16" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
+                  <path d="M249 20 L238 38 h8 L235 62 L252 40 h-8 Z" fill="#00C853" fillOpacity="0.9"/>
+                  <text x="314" y="58" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Expower AI 365</text>
+                  <text x="314" y="74" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
 
-                  {/* Aio — large AI brain mark centered in card */}
-                  <g transform="translate(59,148)">
-                    <ellipse cx="40" cy="36" rx="30" ry="26" stroke="#00C853" strokeWidth="2.5" fill="none"/>
-                    <line x1="40" y1="62" x2="40" y2="72" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round"/>
-                    <line x1="26" y1="72" x2="54" y2="72" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round"/>
-                    <circle cx="28" cy="30" r="5" fill="#00C853" fillOpacity="0.8"/>
-                    <circle cx="52" cy="30" r="5" fill="#00C853" fillOpacity="0.8"/>
-                    <path d="M28 44 Q40 54 52 44" stroke="#00C853" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
-                    <line x1="10" y1="26" x2="10" y2="46" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round"/>
-                    <line x1="70" y1="26" x2="70" y2="46" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round"/>
-                  </g>
+                  {/* Aio — connected node triangle */}
+                  <rect x="16" y="154" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
+                  <circle cx="39" cy="164" r="4" fill="#00C853"/>
+                  <circle cx="28" cy="186" r="4" fill="#00C853"/>
+                  <circle cx="50" cy="186" r="4" fill="#00C853"/>
+                  <line x1="39" y1="168" x2="28" y2="182" stroke="#00C853" strokeWidth="1.5"/>
+                  <line x1="39" y1="168" x2="50" y2="182" stroke="#00C853" strokeWidth="1.5"/>
+                  <line x1="32" y1="186" x2="46" y2="186" stroke="#00C853" strokeWidth="1.5"/>
+                  <text x="99" y="190" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Aio</text>
+                  <text x="99" y="206" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
 
-                  {/* Boxsy — logo fills card */}
-                  <image href={boxsyLogo} x="218" y="146" width="192" height="114" preserveAspectRatio="xMidYMid meet" clipPath="url(#clip-bx)"/>
+                  {/* Boxsy — open box with upward arrow */}
+                  <rect x="220" y="154" width="46" height="46" rx="8" fill="#00C853" fillOpacity="0.18"/>
+                  <rect x="228" y="172" width="30" height="22" rx="2" stroke="#00C853" strokeWidth="2" fill="none"/>
+                  <line x1="243" y1="172" x2="243" y2="158" stroke="#00C853" strokeWidth="2" strokeLinecap="round"/>
+                  <polyline points="237,164 243,158 249,164" stroke="#00C853" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                  <text x="314" y="190" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">Boxsy</text>
+                  <text x="314" y="206" textAnchor="middle" fontSize="9" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
 
                   {/* Connector dashes */}
-                  <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="198" y1="203" x2="208" y2="203" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="99"  y1="128" x2="99"  y2="138" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="198" y1="64"  x2="208" y2="64"  stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="198" y1="203" x2="208" y2="203" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="99"  y1="128" x2="99"  y2="138" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
+                  <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="3 2"/>
                 </svg>
               </div>
             </div>
