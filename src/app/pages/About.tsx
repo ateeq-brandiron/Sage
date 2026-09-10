@@ -5,9 +5,7 @@ import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, 
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
-import paulImg from '../../assets/team/paul-sievers.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
-import valeriaImg from '../../assets/team/valeria-rodriguez.png';
 import { Button } from '../components/Button';
 
 export function About() {
@@ -20,10 +18,8 @@ export function About() {
   ];
 
   const leaders = [
-    { name: 'Mitchell Chi',      photo: mitchellImg, role: 'CEO & Co-Founder',        expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
-    { name: 'Michael Doyle',     photo: michaelImg,  role: 'CRO & Co-Founder',        expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
-    { name: 'Paul Sievers',      photo: paulImg,     role: 'VP Sales Enablement',     expertise: ['Sales Coaching', 'Playbook Development', 'Performance Optimization'] },
-    { name: 'Valeria Rodriguez', photo: valeriaImg,  role: 'VP Revenue Intelligence', expertise: ['Revenue Analytics', 'Forecasting', 'Business Intelligence'] },
+    { name: 'Mitchell Chi',  photo: mitchellImg, role: 'CEO & Co-Founder', expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
+    { name: 'Michael Doyle', photo: michaelImg,  role: 'CRO & Co-Founder', expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
   ];
 
   return (
