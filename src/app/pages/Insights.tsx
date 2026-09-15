@@ -188,7 +188,7 @@ export function Insights() {
       {/* Newsletter */}
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-border">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Newsletter
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
@@ -205,7 +205,7 @@ export function Insights() {
               placeholder="Enter your email"
               className="flex-1 px-5 md:px-6 py-4 border-2 border-border focus:outline-none focus:border-accent transition-all duration-300"
             />
-            <button className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 group whitespace-nowrap">
+            <button className="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:brightness-110 group whitespace-nowrap">
               Subscribe
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
@@ -230,7 +230,7 @@ export function Insights() {
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Take Action
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">

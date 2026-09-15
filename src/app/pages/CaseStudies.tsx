@@ -182,7 +182,7 @@ export function CaseStudies() {
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Get Started
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">

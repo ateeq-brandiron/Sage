@@ -227,7 +227,7 @@ export function ServiceDetail() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Overview</p>
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Overview</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-5 md:mb-6">What We Do</h2>
               <div className="w-16 h-1 bg-accent mb-6 md:mb-8" />
               <p className="text-lg text-muted-foreground leading-relaxed">{service.overview}</p>
@@ -241,8 +241,8 @@ export function ServiceDetail() {
                 </Link>
               </div>
             </div>
-            <div className="overflow-hidden">
-              <img src={service.image} alt={service.title} className="w-full h-[240px] sm:h-[360px] lg:h-[480px] object-cover" />
+            <div className="rounded-2xl overflow-hidden">
+              <img src={service.image} alt={service.title} className="w-full h-[240px] sm:h-[360px] lg:h-[480px] object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export function ServiceDetail() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Why It Works</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why It Works</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Key Benefits</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
@@ -271,7 +271,7 @@ export function ServiceDetail() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Deliverables</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Deliverables</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">What's Included</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
@@ -293,7 +293,7 @@ export function ServiceDetail() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How We Work</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">How We Work</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Our Process</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
@@ -313,7 +313,7 @@ export function ServiceDetail() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Explore More</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Explore More</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Other Solutions</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
@@ -343,7 +343,7 @@ export function ServiceDetail() {
       {/* CTA */}
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Get Started</p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get Started</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Get Started?</span>
           </h2>

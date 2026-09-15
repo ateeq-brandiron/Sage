@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 import sageLogo from '../../assets/brand/sage-logo.png';
 import footerBg from '../../assets/brand/footer-bg.jpg';
 
@@ -26,11 +26,11 @@ export function Footer() {
               200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI, as your fractional AI Officer.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="SAGE on LinkedIn" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
+                <Linkedin className="w-5 h-5" strokeWidth={1.5} />
               </a>
-              <a href="mailto:hello@sageprosrvs.com" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
-                <Mail className="w-5 h-5" />
+              <a href="mailto:hello@sageprosrvs.com" aria-label="Email SAGE" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
+                <Mail className="w-5 h-5" strokeWidth={1.5} />
               </a>
             </div>
           </div>

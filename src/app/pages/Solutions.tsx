@@ -74,14 +74,14 @@ export function Solutions() {
               <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-90 hover:shadow-lg"
+                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
                 >
                   Get a Free Assessment
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
                   to="/case-studies"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg"
+                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
                 >
                   View Success Stories
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -204,7 +204,7 @@ export function Solutions() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Our Approach</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Approach</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
               The <span className="text-accent">Framework</span>
             </h2>
@@ -240,7 +240,7 @@ export function Solutions() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Get Started
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">

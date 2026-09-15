@@ -12,7 +12,7 @@ export function NotFound() {
         </p>
         <Link
           to="/"
-          className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 group hover:brightness-90 hover:shadow-lg"
+          className="inline-flex items-center justify-center px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 group hover:brightness-110 hover:shadow-lg"
         >
           Back to Home
           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

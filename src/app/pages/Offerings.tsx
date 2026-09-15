@@ -196,6 +196,7 @@ export function Offerings() {
                       src={offering.image}
                       alt={offering.imageAlt}
                       className="w-full aspect-[4/3] object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -209,7 +210,7 @@ export function Offerings() {
       <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How It Works</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">How It Works</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Every platform goes through a structured fit assessment before deployment, so you see exactly what it does for your business before it goes live.
@@ -247,7 +248,7 @@ export function Offerings() {
           <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Get Started
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">

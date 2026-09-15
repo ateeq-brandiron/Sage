@@ -91,7 +91,7 @@ export function Industries() {
 
                   <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
                     {industry.sectors.map((sector) => (
-                      <span key={sector} className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 text-sm font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
+                      <span key={sector} className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 rounded text-sm font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
                         {sector}
                       </span>
                     ))}
@@ -116,6 +116,7 @@ export function Industries() {
                       src={industry.image}
                       alt={industry.name}
                       className="w-full aspect-[4/3] object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -160,7 +161,7 @@ export function Industries() {
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Get Started
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">

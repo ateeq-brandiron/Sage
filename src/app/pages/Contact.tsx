@@ -10,7 +10,7 @@ export function Contact() {
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left */}
             <div className="flex flex-col justify-center py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get In Touch</p>
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get in Touch</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Let's Build Your Revenue Engine</h1>
               <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free RevenueStorm™ assessment, no commitment required</p>
             </div>
@@ -46,64 +46,69 @@ export function Contact() {
               <form className="space-y-5 md:space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
-                    <label className="block text-sm font-bold text-foreground mb-2">
+                    <label htmlFor="first-name" className="block text-sm font-bold text-foreground mb-2">
                       First Name *
                     </label>
                     <input
+                      id="first-name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors"
+                      className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-bold text-foreground mb-2">
+                    <label htmlFor="last-name" className="block text-sm font-bold text-foreground mb-2">
                       Last Name *
                     </label>
                     <input
+                      id="last-name"
                       type="text"
                       required
-                      className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors"
+                      className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2">
+                  <label htmlFor="work-email" className="block text-sm font-bold text-foreground mb-2">
                     Work Email *
                   </label>
                   <input
+                    id="work-email"
                     type="email"
                     required
-                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2">
+                  <label htmlFor="phone" className="block text-sm font-bold text-foreground mb-2">
                     Phone
                   </label>
                   <input
+                    id="phone"
                     type="tel"
-                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2">
+                  <label htmlFor="company" className="block text-sm font-bold text-foreground mb-2">
                     Company *
                   </label>
                   <input
+                    id="company"
                     type="text"
                     required
-                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2">
+                  <label htmlFor="annual-revenue" className="block text-sm font-bold text-foreground mb-2">
                     Annual Revenue
                   </label>
-                  <select className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors">
+                  <select id="annual-revenue" className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors">
                     <option>Select range</option>
                     <option>Under $1M</option>
                     <option>$1M - $5M</option>
@@ -115,12 +120,13 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-bold text-foreground mb-2">
+                  <label htmlFor="challenge" className="block text-sm font-bold text-foreground mb-2">
                     What's your biggest revenue challenge?
                   </label>
                   <textarea
+                    id="challenge"
                     rows={4}
-                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent transition-colors resize-none"
+                    className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors resize-none"
                   />
                 </div>
 
@@ -142,7 +148,7 @@ export function Contact() {
             <div className="space-y-10 md:space-y-12">
               {/* What You Get */}
               <div>
-                <p className="text-xs uppercase tracking-wider text-accent mb-3 font-semibold">
+                <p className="text-xs uppercase tracking-widest text-accent mb-3 font-semibold">
                   Your Assessment
                 </p>
                 <h3 className="text-2xl font-black text-primary mb-2">What You'll <span className="text-accent">Receive</span></h3>

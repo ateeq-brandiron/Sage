@@ -94,7 +94,7 @@ export function About() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-white/60 mb-4 font-semibold">Who We Are</p>
+            <p className="text-xs uppercase tracking-widest text-white/60 mb-4 font-semibold">Who We Are</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
               Our <span style={{ color: '#7ED9A8' }}>Purpose</span>
             </h2>
@@ -130,7 +130,7 @@ export function About() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
               What Drives Us
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
@@ -160,7 +160,7 @@ export function About() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
               Our Team
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
@@ -173,14 +173,14 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
               <div key={leader.name} className="group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300">
-                <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
-                  <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" />
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
+                  <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
                 <p className="text-accent font-semibold mb-6">{leader.role}</p>
                 <div className="flex flex-wrap gap-2">
                   {leader.expertise.map((area) => (
-                    <span key={area} className="px-3 py-1 bg-gray-100 text-xs font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
+                    <span key={area} className="px-3 py-1 bg-gray-100 rounded text-xs font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
                       {area}
                     </span>
                   ))}
@@ -226,7 +226,7 @@ export function About() {
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
+          <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Partner With Us
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
