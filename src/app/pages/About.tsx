@@ -1,7 +1,26 @@
 import { Link } from 'react-router';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import sageLogo from '../../assets/brand/sage-logo.png';
-import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, PiggyBank } from 'lucide-react';
+import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2 } from 'lucide-react';
+
+function PiggyBankIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <rect x="17" y="1" width="10" height="2.5" rx="1.25" fill="currentColor" opacity="0.5"/>
+      <ellipse cx="21" cy="20" rx="14" ry="12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+      <ellipse cx="35" cy="21" rx="4" ry="3" stroke="currentColor" strokeWidth="1.8"/>
+      <circle cx="33.8" cy="21" r="0.8" fill="currentColor"/>
+      <circle cx="36.2" cy="21" r="0.8" fill="currentColor"/>
+      <circle cx="26" cy="15" r="1.2" fill="currentColor"/>
+      <path d="M24 9 C23 6 19 6 18 9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+      <path d="M13 30 L11 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M17 31.5 L16 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M25 31.5 L24 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M29 30 L31 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <path d="M7 19 C4 17 3 13 6 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+    </svg>
+  );
+}
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
@@ -196,14 +215,17 @@ export function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
-              { icon: CalendarClock,    value: '30+',  label: 'Years of Trust' },
-              { icon: Building2,        value: '200+', label: 'Businesses Served' },
-              { icon: PiggyBank, value: '$1B+', label: 'Delivered' },
-              { icon: Award,            value: '8X',   label: 'Avg ROI' },
-            ].map(({ icon: Icon, value, label }) => (
+              { icon: CalendarClock, value: '30+',  label: 'Years of Trust',    custom: false },
+              { icon: Building2,    value: '200+', label: 'Businesses Served', custom: false },
+              { icon: null,         value: '$1B+', label: 'Delivered',         custom: true  },
+              { icon: Award,        value: '8X',   label: 'Avg ROI',           custom: false },
+            ].map(({ icon: Icon, value, label, custom }) => (
               <div key={label} className="flex flex-col items-center group cursor-default">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  {custom
+                    ? <PiggyBankIcon className="w-6 h-5 md:w-7 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" />
+                    : Icon && <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  }
                 </div>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-1">{value}</div>
                 <div className="text-xs sm:text-sm text-primary/70 font-semibold uppercase tracking-wide">{label}</div>
