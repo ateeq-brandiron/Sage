@@ -3,32 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu } from 'lucide-react';
 import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 
-function PiggyBankIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
-      {/* Coin slot on top */}
-      <rect x="17" y="1" width="10" height="2.5" rx="1.25" fill="currentColor" opacity="0.5"/>
-      {/* Body */}
-      <ellipse cx="21" cy="20" rx="14" ry="12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-      {/* Snout */}
-      <ellipse cx="35" cy="21" rx="4" ry="3" stroke="currentColor" strokeWidth="1.8"/>
-      <circle cx="33.8" cy="21" r="0.8" fill="currentColor"/>
-      <circle cx="36.2" cy="21" r="0.8" fill="currentColor"/>
-      {/* Eye */}
-      <circle cx="26" cy="15" r="1.2" fill="currentColor"/>
-      {/* Ear */}
-      <path d="M24 9 C23 6 19 6 18 9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-      {/* Front leg */}
-      <path d="M13 30 L11 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M17 31.5 L16 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      {/* Back leg */}
-      <path d="M25 31.5 L24 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      <path d="M29 30 L31 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-      {/* Tail */}
-      <path d="M7 19 C4 17 3 13 6 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-    </svg>
-  );
-}
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
@@ -134,14 +108,11 @@ export function Home() {
             {[
               { display: `${count200}+`,  label: 'Businesses Served',  icon: Building2,     custom: false },
               { display: `${count30}+`,   label: 'Years of Trust',      icon: CalendarClock, custom: false },
-              { display: `$${count1}B+`,  label: 'Delivered',           icon: null,          custom: true  },
-            ].map(({ display, label, icon: Icon, custom }) => (
+              { display: `$${count1}B+`,  label: 'Delivered',           icon: TrendingUp,    custom: false },
+            ].map(({ display, label, icon: Icon }) => (
               <div key={label} className="group flex flex-col items-center cursor-default">
                 <div className="flex items-center gap-3 mb-2">
-                  {custom
-                    ? <PiggyBankIcon className="w-9 h-7 sm:w-11 sm:h-9 text-accent transition-transform duration-300 group-hover:scale-110" />
-                    : Icon && <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                  }
+                  {Icon && <Icon className="w-7 h-7 sm:w-9 sm:h-9 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />}
                   <div className="text-4xl sm:text-5xl md:text-6xl font-black text-primary transition-colors duration-300 group-hover:text-accent">{display}</div>
                 </div>
                 <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">{label}</div>
