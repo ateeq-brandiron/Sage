@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucid
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
+import { renderTM } from '../components/RevenueStorm';
 
 export function Offerings() {
   const offerings = [
@@ -224,7 +225,7 @@ export function Offerings() {
             ].map((s) => (
               <div key={s.step} className="bg-white p-6 md:p-8 group hover:shadow-md transition-all duration-300">
                 <div className="text-5xl font-black text-primary/20 mb-4 group-hover:text-accent/60 transition-colors duration-300">{s.step}</div>
-                <h3 className="text-lg font-bold text-primary mb-2">{s.title}</h3>
+                <h3 className="text-lg font-bold text-primary mb-2">{renderTM(s.title)}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
             ))}

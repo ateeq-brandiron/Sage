@@ -1,0 +1,7 @@
+sup.tm {
+  font-size: 0.5em;
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.05em;
+  font-weight: inherit;
+}

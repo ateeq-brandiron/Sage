@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2 } from 'lucide-react';
+import { renderTM } from '../components/RevenueStorm';
 import leavesBackground from '../../assets/brand/leaves-bg.jpg';
 import wavePattern from '../../assets/brand/wave-bg.png';
 
@@ -162,7 +163,7 @@ export function Solutions() {
                   </div>
 
                   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold transition-colors duration-300 group-hover:text-accent/70">
-                    {solution.tagline}
+                    {renderTM(solution.tagline)}
                   </div>
 
                   <h3 className="text-xl md:text-2xl font-black text-primary mb-3 transition-colors duration-300 group-hover:text-accent">{solution.title}</h3>
@@ -228,7 +229,7 @@ export function Solutions() {
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-accent/25 border border-accent/40 flex items-center justify-center mb-4 md:mb-5">
                   <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-base font-bold text-white mb-3 leading-snug">{title}</h3>
+                <h3 className="text-base font-bold text-white mb-3 leading-snug">{renderTM(title)}</h3>
                 <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
               </div>
             ))}

@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from '../components/Button';
+import { RevenueStorm } from '../components/RevenueStorm';
 
 export function Contact() {
   return (
@@ -12,7 +13,7 @@ export function Contact() {
             <div className="flex flex-col justify-center py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get in Touch</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Let's Build Your Revenue Engine</h1>
-              <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free RevenueStorm™ assessment, no commitment required</p>
+              <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free <RevenueStorm /> assessment, no commitment required</p>
             </div>
             {/* Right */}
             <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">

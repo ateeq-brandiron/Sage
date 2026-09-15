@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, ChevronRight } from 'lucide-react';
 import { Button } from '../components/Button';
+import { renderTM } from '../components/RevenueStorm';
 
 const services = [
   {
@@ -215,7 +216,7 @@ export function ServiceDetail() {
               <ChevronRight className="w-4 h-4" />
               <span className="text-white">{service.title}</span>
             </div>
-            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">{service.tagline}</p>
+            <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">{renderTM(service.tagline)}</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">{service.title}</h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">{service.summary}</p>
           </div>
@@ -230,7 +231,7 @@ export function ServiceDetail() {
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Overview</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-5 md:mb-6">What We Do</h2>
               <div className="w-16 h-1 bg-accent mb-6 md:mb-8" />
-              <p className="text-lg text-muted-foreground leading-relaxed">{service.overview}</p>
+              <p className="text-lg text-muted-foreground leading-relaxed">{renderTM(service.overview)}</p>
               <div className="mt-8 md:mt-10">
                 <Link
                   to="/contact"

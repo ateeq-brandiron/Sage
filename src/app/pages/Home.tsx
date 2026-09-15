@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu } from 'lucide-react';
+import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 
 function PiggyBankIcon({ className }: { className?: string }) {
   return (
@@ -244,7 +245,7 @@ export function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
-                      <p className="text-base text-primary/70">{item.desc}</p>
+                      <p className="text-base text-primary/70">{renderTM(item.desc)}</p>
                     </div>
                   </div>
                 );
@@ -262,7 +263,7 @@ export function Home() {
               How It Works
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
-              The RevenueStorm™ <span className="text-accent">Process</span>
+              <RevenueStorm /> <span className="text-accent">Process</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Seven steps from broken alignment to a compounding revenue engine
@@ -313,7 +314,7 @@ export function Home() {
                   {step.step}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base sm:text-lg font-bold text-primary mb-2">{step.title}</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-primary mb-2">{renderTM(step.title)}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               </div>
@@ -551,7 +552,7 @@ export function Home() {
             </h2>
 
             <p className="text-lg text-foreground mb-4">
-              Book a Free RevenueStorm™ Assessment
+              Book a Free <RevenueStorm /> Assessment
             </p>
 
             <p className="text-base text-muted-foreground mb-8 md:mb-12">
@@ -575,7 +576,7 @@ export function Home() {
               to="/contact"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
             >
-              Book Your RevenueStorm™ Assessment
+              Book Your <RevenueStorm /> Assessment
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             <Link
