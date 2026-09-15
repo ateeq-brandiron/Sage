@@ -1,4 +1,4 @@
-import { Mail, Phone, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
 
