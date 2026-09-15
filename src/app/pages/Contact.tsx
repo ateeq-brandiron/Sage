@@ -11,7 +11,7 @@ export function Contact() {
             {/* Left */}
             <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get In Touch</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Let's Build Your Revenue Engine</h1>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Let's Build Your Revenue Engine</h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">Get a free RevenueStorm™ assessment, no commitment required</p>
             </div>
             {/* Right */}

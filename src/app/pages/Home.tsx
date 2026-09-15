@@ -302,7 +302,7 @@ export function Home() {
               <p className="text-xs uppercase tracking-widest text-accent mb-5 font-semibold">
                 AI RevGen Advisory
               </p>
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-[1.08]">
                 AI Alone Isn't the Advantage. <span className="text-accent">How You Use It Is.</span>
               </h2>
               <p className="text-lg text-white/75 leading-relaxed mb-6">

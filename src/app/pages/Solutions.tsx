@@ -70,7 +70,7 @@ export function Solutions() {
             {/* Left — text */}
             <div className="flex flex-col justify-center pt-12 pb-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Complete Revenue Solutions</h1>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Complete Revenue Solutions</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
               <div className="flex flex-row flex-wrap gap-3 items-center">
                 <Link
