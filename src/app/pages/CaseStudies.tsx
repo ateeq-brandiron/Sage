@@ -50,15 +50,15 @@ export function CaseStudies() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[50vh] flex items-center border-b border-border">
+      <section className="bg-white flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Client Success</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Success Stories</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Success Stories</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies</p>
             </div>
             {/* Right — results bar chart */}
@@ -76,11 +76,9 @@ export function CaseStudies() {
                       <stop offset="100%" stopColor="#2D7A4F" stopOpacity="0.4"/>
                     </linearGradient>
                   </defs>
-                  {/* Grid */}
                   {[{ y: 10 }, { y: 65 }, { y: 120 }, { y: 175 }].map(({ y }) => (
                     <line key={y} x1="0" y1={y} x2="420" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
                   ))}
-                  {/* Bars — ascending left to right */}
                   {[
                     { label: 'Shorter\nCycles',  metric: '22%', barH: 70,  x: 10,  grad: 'url(#barGrad2)' },
                     { label: 'More\nOpps',        metric: '37%', barH: 112, x: 115, grad: 'url(#barGrad2)' },
@@ -108,9 +106,9 @@ export function CaseStudies() {
       </section>
 
       {/* Results Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-border">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               { value: '300%', label: 'Avg Pipeline Growth' },
               { value: '42%', label: 'Revenue Increase' },
@@ -118,8 +116,8 @@ export function CaseStudies() {
               { value: '8X', label: 'Average ROI' },
             ].map((stat) => (
               <div key={stat.label} className="group cursor-default">
-                <div className="text-5xl font-black text-accent mb-2 group-hover:text-accent transition-colors duration-300">{stat.value}</div>
-                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,14 +125,14 @@ export function CaseStudies() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4 space-y-24">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {studies.map((study) => (
-            <div key={study.title} className="border-l-4 border-accent pl-12 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
-              <div className="grid lg:grid-cols-3 gap-12">
-                <div className="lg:col-span-2 space-y-8">
+            <div key={study.title} className="border-l-4 border-accent pl-4 sm:pl-8 lg:pl-12 hover:shadow-md hover:-translate-y-1 transition-all duration-300 group">
+              <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
+                <div className="lg:col-span-2 space-y-6 md:space-y-8">
                   <div>
-                    <h2 className="text-3xl font-black text-primary mb-2 group-hover:text-accent transition-colors duration-300">{study.title}</h2>
+                    <h2 className="text-2xl sm:text-3xl font-black text-primary mb-2 group-hover:text-accent transition-colors duration-300">{study.title}</h2>
                     <p className="text-lg text-muted-foreground">{study.client}</p>
                   </div>
 
@@ -154,14 +152,16 @@ export function CaseStudies() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6">Results</h3>
-                  {study.results.map((result) => (
-                    <div key={result.label} className="bg-gray-50 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                      <div className="text-4xl font-black text-accent mb-2">{result.metric}</div>
-                      <div className="text-sm text-foreground font-semibold">{result.label}</div>
-                    </div>
-                  ))}
+                <div className="space-y-3 md:space-y-4">
+                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4 md:mb-6">Results</h3>
+                  <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
+                    {study.results.map((result) => (
+                      <div key={result.label} className="bg-gray-50 p-4 md:p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                        <div className="text-3xl md:text-4xl font-black text-accent mb-2">{result.metric}</div>
+                        <div className="text-sm text-foreground font-semibold">{result.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ export function CaseStudies() {
 
       {/* CTA */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8 relative border-t border-border"
+        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative border-t border-border"
         style={{
           backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
@@ -185,11 +185,11 @@ export function CaseStudies() {
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             Ready to Write Your <span className="text-accent">Success Story?</span>
           </h2>
 
-          <p className="text-xl text-muted-foreground mb-10">
+          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
             Let's build a revenue system that delivers results
           </p>
           <Button to="/contact">

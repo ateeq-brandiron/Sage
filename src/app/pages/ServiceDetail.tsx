@@ -196,10 +196,10 @@ export function ServiceDetail() {
   const otherServices = services.filter((_, i) => i !== currentIndex);
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section
-        className="relative py-32 min-h-[70vh] flex items-center"
+        className="relative py-16 md:py-24 lg:py-32 flex items-center"
         style={{
           backgroundImage: `url(${service.heroImage})`,
           backgroundSize: 'cover',
@@ -207,34 +207,34 @@ export function ServiceDetail() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/70" />
-        <div className="w-full px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)] relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
+            <div className="flex items-center gap-2 text-white/60 text-sm mb-5 md:mb-6">
               <Link to="/solutions" className="hover:text-white transition-colors">Solutions</Link>
               <ChevronRight className="w-4 h-4" />
               <span className="text-white">{service.title}</span>
             </div>
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">{service.tagline}</p>
-            <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-[1.08]">{service.title}</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">{service.summary}</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">{service.title}</h1>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed">{service.summary}</p>
           </div>
         </div>
       </section>
 
       {/* Overview */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Overview</p>
-              <h2 className="text-4xl font-black text-primary mb-6">What We Do</h2>
-              <div className="w-16 h-1 bg-accent mb-8" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-5 md:mb-6">What We Do</h2>
+              <div className="w-16 h-1 bg-accent mb-6 md:mb-8" />
               <p className="text-lg text-muted-foreground leading-relaxed">{service.overview}</p>
-              <div className="mt-10">
+              <div className="mt-8 md:mt-10">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 group"
+                  className="inline-flex items-center gap-2 px-6 md:px-8 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 group"
                 >
                   {service.cta}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -242,23 +242,23 @@ export function ServiceDetail() {
               </div>
             </div>
             <div className="overflow-hidden">
-              <img src={service.image} alt={service.title} className="w-full h-[480px] object-cover" />
+              <img src={service.image} alt={service.title} className="w-full h-[240px] sm:h-[360px] lg:h-[480px] object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Why It Works</p>
-            <h2 className="text-4xl font-black text-primary mb-3">Key Benefits</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Key Benefits</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {service.benefits.map((benefit, i) => (
-              <div key={i} className="bg-white p-8 flex items-start gap-4 group/item hover:shadow-md transition-all duration-300">
+              <div key={i} className="bg-white p-6 md:p-8 flex items-start gap-4 group/item hover:shadow-md transition-all duration-300">
                 <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300" />
                 <p className="text-foreground font-medium leading-relaxed group-hover/item:text-accent transition-colors duration-300">{benefit}</p>
               </div>
@@ -268,19 +268,19 @@ export function ServiceDetail() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Deliverables</p>
-            <h2 className="text-4xl font-black text-primary mb-3">What's Included</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">What's Included</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 gap-px bg-border">
+          <div className="grid sm:grid-cols-2 gap-px bg-border">
             {service.includes.map((item) => (
-              <div key={item.title} className="bg-white p-10 group hover:shadow-md transition-all duration-300">
+              <div key={item.title} className="bg-white p-7 md:p-10 group hover:shadow-md transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
-                  <Icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-xl font-black text-primary group-hover:text-accent transition-colors duration-300">{item.title}</h3>
+                  <Icon className="w-7 h-7 md:w-8 md:h-8 text-accent group-hover:scale-110 transition-transform duration-300" />
+                  <h3 className="text-lg md:text-xl font-black text-primary group-hover:text-accent transition-colors duration-300">{item.title}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
@@ -290,18 +290,18 @@ export function ServiceDetail() {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How We Work</p>
-            <h2 className="text-4xl font-black text-primary mb-3">Our Process</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Our Process</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-accent/20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-accent/20">
             {service.process.map((step) => (
-              <div key={step.step} className="bg-[#E8F5EE] p-10 hover:bg-[#D4EFE0] transition-colors group">
-                <div className="text-5xl font-black text-accent/40 mb-4 group-hover:text-accent/60 transition-colors duration-300">{step.step}</div>
-                <h3 className="text-xl font-black text-primary mb-3">{step.title}</h3>
+              <div key={step.step} className="bg-[#E8F5EE] p-7 md:p-10 hover:bg-[#D4EFE0] transition-colors group">
+                <div className="text-4xl md:text-5xl font-black text-accent/40 mb-4 group-hover:text-accent/60 transition-colors duration-300">{step.step}</div>
+                <h3 className="text-lg md:text-xl font-black text-primary mb-3">{step.title}</h3>
                 <p className="text-primary/70 leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -310,25 +310,25 @@ export function ServiceDetail() {
       </section>
 
       {/* Other Services */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Explore More</p>
-            <h2 className="text-4xl font-black text-primary mb-3">Other Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">Other Solutions</h2>
             <div className="w-16 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {otherServices.slice(0, 3).map((s) => {
               const SIcon = s.icon;
               return (
                 <Link
                   key={s.slug}
                   to={`/solutions/${s.slug}`}
-                  className="bg-white p-10 hover:bg-gray-50 transition-colors group"
+                  className="bg-white p-7 md:p-10 hover:bg-gray-50 transition-colors group"
                 >
-                  <SIcon className="w-10 h-10 text-accent mb-4" />
+                  <SIcon className="w-9 h-9 md:w-10 md:h-10 text-accent mb-4" />
                   <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">{s.tagline}</div>
-                  <h3 className="text-xl font-black text-primary mb-3 group-hover:text-accent transition-colors">{s.title}</h3>
+                  <h3 className="text-lg md:text-xl font-black text-primary mb-3 group-hover:text-accent transition-colors">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">{s.summary.substring(0, 100)}...</p>
                   <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold group-hover:gap-2 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
@@ -341,14 +341,14 @@ export function ServiceDetail() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4 text-center">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">Get Started</p>
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Get Started?</span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground mb-10">
+
+          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
             Book a free assessment, no commitment required
           </p>
           <Button to="/contact">{service.cta}</Button>

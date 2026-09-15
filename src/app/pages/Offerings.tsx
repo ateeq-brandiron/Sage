@@ -81,15 +81,15 @@ export function Offerings() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[50vh] flex items-center border-b border-border">
+      <section className="bg-white flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">AI Revenue Platforms</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Our Offerings</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Our Offerings</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
                 Four pre-integrated AI platforms, selected, configured, and managed by SAGE, so you get proven tools driving revenue from day one, not a build-it-yourself science project.
               </p>
@@ -99,12 +99,10 @@ export function Offerings() {
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Platform Coverage</p>
                 <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Quadrant grid */}
                   <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
                   <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
                   <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
                   <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  {/* Labels */}
                   <text x="99"  y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Bellwether Intel</text>
                   <text x="99"  y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
                   <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Expower AI 365</text>
@@ -113,24 +111,20 @@ export function Offerings() {
                   <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
                   <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
                   <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
-                  {/* Icon boxes */}
                   <rect x="74"  y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="289" y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  {/* Bellwether Intel — signal broadcast mark (demand generation) */}
                   <g transform="translate(87,69)">
                     <circle cx="12" cy="18" r="2.5" fill="#00C853"/>
                     <path d="M7 13 A7 7 0 0 1 17 13" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round"/>
                     <path d="M3.5 9.5 A11 11 0 0 1 20.5 9.5" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" fill="none" strokeLinecap="round"/>
                     <path d="M0.5 6 A14 14 0 0 1 23.5 6" stroke="#00C853" strokeOpacity="0.25" strokeWidth="2" fill="none" strokeLinecap="round"/>
                   </g>
-                  {/* Expower AI 365 — lightning in circle (always-on pipeline) */}
                   <g transform="translate(302,69)">
                     <circle cx="12" cy="12" r="10" stroke="#00C853" strokeWidth="2" fill="none"/>
                     <path d="M14 3 L7.5 13 L12 13 L10 21 L16.5 11 L12 11 Z" fill="#00C853"/>
                   </g>
-                  {/* Aio — connected node triangle (AI infrastructure) */}
                   <g transform="translate(87,207)">
                     <circle cx="12" cy="4"  r="2.5" fill="#00C853"/>
                     <circle cx="3"  cy="19" r="2.5" fill="#00C853"/>
@@ -140,14 +134,12 @@ export function Offerings() {
                     <line x1="3"  y1="19" x2="21" y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
                     <circle cx="12" cy="12" r="1.5" fill="#00C853" fillOpacity="0.6"/>
                   </g>
-                  {/* Boxsy — open box with upward arrow (revenue operations) */}
                   <g transform="translate(302,207)">
                     <path d="M3 11 L3 21 L21 21 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M3 11 L12 6 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M12 19 L12 13" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" strokeLinecap="round"/>
                     <path d="M9.5 15 L12 13 L14.5 15" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </g>
-                  {/* Connector dashes */}
                   <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="99"  y1="128" x2="99"  y2="138" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
@@ -160,8 +152,8 @@ export function Offerings() {
       </section>
 
       {/* Intro strip */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE] border-b border-border">
-        <div className="max-w-7xl mx-auto pl-4 text-center">
+      <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE] border-b border-border">
+        <div className="max-w-7xl mx-auto text-center">
           <p className="text-lg text-primary font-semibold max-w-3xl mx-auto">
             We evaluate the technology, build a showcase demo for your team, then deploy and manage it as part of your revenue system, not handed off as a DIY project.
           </p>
@@ -169,24 +161,24 @@ export function Offerings() {
       </section>
 
       {/* Offerings */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4 space-y-24">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {offerings.map((offering, index) => {
             const Icon = offering.icon;
             const isEven = index % 2 === 0;
             return (
-              <div key={offering.name} className={`grid lg:grid-cols-2 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
+              <div key={offering.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 {/* Text side */}
                 <div className={isEven ? '' : 'lg:col-start-2'}>
                   <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 mb-5 hover:bg-accent/20 transition-colors duration-200">
                     {offering.badge}
                   </span>
                   <div className="flex items-center gap-4 mb-4">
-                    <Icon className="w-10 h-10 text-accent" strokeWidth={1.5} />
-                    <h2 className="text-4xl font-black text-primary">{offering.name}</h2>
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-accent" strokeWidth={1.5} />
+                    <h2 className="text-3xl md:text-4xl font-black text-primary">{offering.name}</h2>
                   </div>
-                  <p className="text-xl font-semibold text-primary/70 mb-5 italic">{offering.tagline}</p>
-                  <p className="text-muted-foreground leading-relaxed mb-8">{offering.description}</p>
+                  <p className="text-lg font-semibold text-primary/70 mb-4 md:mb-5 italic">{offering.tagline}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-6 md:mb-8">{offering.description}</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {offering.capabilities.map((cap) => (
                       <div key={cap} className="flex items-start gap-3 group/item">
@@ -213,23 +205,23 @@ export function Offerings() {
         </div>
       </section>
 
-      {/* How we deploy — stats strip */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-12">
+      {/* How we deploy */}
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How It Works</p>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Every platform goes through a structured fit assessment before deployment, so you see exactly what it does for your business before it goes live.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-px bg-border">
+          <div className="grid sm:grid-cols-3 gap-px bg-border">
             {[
               { step: '01', title: 'RevenueStorm™ Assessment', desc: 'We map your current systems, goals, and gaps to identify which platforms will move the needle fastest.' },
               { step: '02', title: 'Showcase Demo', desc: 'We run a customised demo for your team, showing exactly how each platform performs in your context, not a generic sales pitch.' },
               { step: '03', title: 'Managed Deployment', desc: 'SAGE deploys, integrates, and manages the platform alongside your team. No DIY. No guesswork. No ramp-up time wasted.' },
             ].map((s) => (
-              <div key={s.step} className="bg-white p-8 group hover:shadow-md transition-all duration-300">
+              <div key={s.step} className="bg-white p-6 md:p-8 group hover:shadow-md transition-all duration-300">
                 <div className="text-5xl font-black text-primary/20 mb-4 group-hover:text-accent/60 transition-colors duration-300">{s.step}</div>
                 <h3 className="text-lg font-bold text-primary mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
@@ -241,7 +233,7 @@ export function Offerings() {
 
       {/* CTA */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8 relative"
+        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
           backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
@@ -258,10 +250,10 @@ export function Offerings() {
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             See What AI Can <span className="text-accent">Actually Do for Your Revenue</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-10">
+          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
             Book a complimentary AI ROI Assessment. We'll show you exactly which platforms fit your business and what results to expect.
           </p>
           <Button to="/contact">

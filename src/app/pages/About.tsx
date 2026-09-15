@@ -22,15 +22,15 @@ export function About() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[50vh] flex items-center border-b border-border">
+      <section className="bg-white flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">About SAGE</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">About SAGE</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI.</p>
             </div>
             {/* Right — growth chart */}
@@ -44,11 +44,9 @@ export function About() {
                       <stop offset="100%" stopColor="#00C853" stopOpacity="0.01"/>
                     </linearGradient>
                   </defs>
-                  {/* Grid lines */}
                   {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
                     <line key={y} x1="60" y1={y} x2="440" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
                   ))}
-                  {/* Y-axis labels */}
                   {[
                     { label: '$100M+', y: 20  },
                     { label: '$75M',   y: 75  },
@@ -57,11 +55,8 @@ export function About() {
                   ].map(({ label, y }) => (
                     <text key={label} x="56" y={y} textAnchor="end" fontSize="11" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
                   ))}
-                  {/* Area fill — matches polyline exactly */}
                   <polygon points="60,215 190,195 315,130 440,20 440,215" fill="url(#aboutAreaGrad)"/>
-                  {/* Line through all 4 points */}
                   <polyline points="60,215 190,195 315,130 440,20" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                  {/* Data points — all on the line */}
                   {[
                     { cx: 60,  cy: 215 },
                     { cx: 190, cy: 195 },
@@ -70,7 +65,6 @@ export function About() {
                   ].map(({ cx, cy }) => (
                     <circle key={cx} cx={cx} cy={cy} r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
                   ))}
-                  {/* X-axis labels */}
                   {[
                     { label: '1995', x: 60  },
                     { label: '2005', x: 190 },
@@ -87,8 +81,7 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
-        {/* Animated logo watermark */}
+      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
         <div
           className="animate-slow-pan absolute inset-0 opacity-[0.06]"
           style={{
@@ -100,16 +93,16 @@ export function About() {
         />
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-white/60 mb-4 font-semibold">Who We Are</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
               Our <span style={{ color: '#7ED9A8' }}>Purpose</span>
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
             {/* Mission */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 md:p-10">
               <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/30 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
@@ -120,7 +113,7 @@ export function About() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-10">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 md:p-10">
               <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/30 flex items-center justify-center mb-6">
                 <TrendingUp className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
@@ -134,28 +127,28 @@ export function About() {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               What Drives Us
             </p>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
-            
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
+
+            <p className="text-lg text-muted-foreground">
               Principles that guide every client engagement
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-px bg-border">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-border">
             {values.map((value) => {
               const Icon = value.icon;
               return (
-              <div key={value.title} className="group bg-white p-8 text-center hover:shadow-md transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-accent/10 group-hover:border-accent/50 group-hover:scale-105">
-                  <Icon className="w-8 h-8 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
+              <div key={value.title} className="group bg-white p-6 md:p-8 text-center hover:shadow-md transition-all duration-300">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center mx-auto mb-4 md:mb-5 transition-all duration-300 group-hover:bg-accent/10 group-hover:border-accent/50 group-hover:scale-105">
+                  <Icon className="w-7 h-7 md:w-8 md:h-8 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-black text-primary mb-3 transition-colors duration-300 group-hover:text-accent">{value.title}</h3>
+                <h3 className="text-lg md:text-xl font-black text-primary mb-2 md:mb-3 transition-colors duration-300 group-hover:text-accent">{value.title}</h3>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </div>
             );})}
@@ -164,23 +157,23 @@ export function About() {
       </section>
 
       {/* Leadership */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="text-center mb-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Our Team
             </p>
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
-            
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
+
+            <p className="text-lg text-muted-foreground">
               30+ years of enterprise revenue leadership
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {leaders.map((leader) => (
-              <div key={leader.name} className="group bg-white p-12 hover:shadow-md transition-all duration-300">
-                <div className="w-28 h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
+              <div key={leader.name} className="group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300">
+                <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
@@ -199,9 +192,9 @@ export function About() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               { icon: CalendarClock,    value: '30+',  label: 'Years of Trust' },
               { icon: Building2,        value: '200+', label: 'Businesses Served' },
@@ -209,11 +202,11 @@ export function About() {
               { icon: Award,            value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center group cursor-default">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <div className="text-5xl font-black text-accent mb-1 group-hover:text-accent transition-colors duration-300">{value}</div>
-                <div className="text-sm text-primary/70 font-semibold uppercase tracking-wide">{label}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-1">{value}</div>
+                <div className="text-xs sm:text-sm text-primary/70 font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>
@@ -222,7 +215,7 @@ export function About() {
 
       {/* CTA */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8 relative"
+        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
           backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
@@ -236,11 +229,11 @@ export function About() {
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Partner With Us
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             Let's Build Your <span className="text-accent">Revenue Engine</span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground mb-10">
+
+          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
             Work with a team that has 30+ years of proven experience
           </p>
           <Button to="/contact">

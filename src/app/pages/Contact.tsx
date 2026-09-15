@@ -3,16 +3,16 @@ import { Button } from '../components/Button';
 
 export function Contact() {
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[60vh] flex items-center border-b border-border">
+      <section className="bg-white flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left */}
-            <div className="flex flex-col justify-center py-24 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get In Touch</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Let's Build Your Revenue Engine</h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">Get a free RevenueStorm™ assessment, no commitment required</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Let's Build Your Revenue Engine</h1>
+              <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free RevenueStorm™ assessment, no commitment required</p>
             </div>
             {/* Right */}
             <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
@@ -34,17 +34,17 @@ export function Contact() {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Form */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-6 md:mb-8">
                 Book Your Assessment
               </h2>
 
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form className="space-y-5 md:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label className="block text-sm font-bold text-foreground mb-2">
                       First Name *
@@ -139,7 +139,7 @@ export function Contact() {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-12">
+            <div className="space-y-10 md:space-y-12">
               {/* What You Get */}
               <div>
                 <p className="text-xs uppercase tracking-wider text-accent mb-3 font-semibold">
@@ -147,7 +147,7 @@ export function Contact() {
                 </p>
                 <h3 className="text-2xl font-black text-primary mb-2">What You'll <span className="text-accent">Receive</span></h3>
                 <div className="w-24 h-1 bg-accent mb-6"></div>
-                <ul className="space-y-4">
+                <ul className="space-y-3 md:space-y-4">
                   {[
                     'Revenue Audit',
                     'Sales Process Assessment',
@@ -170,7 +170,7 @@ export function Contact() {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-6 pt-12 border-t border-border">
+              <div className="space-y-6 pt-8 md:pt-12 border-t border-border">
                 <div className="flex items-start gap-4">
                   <Mail className="w-6 h-6 text-accent flex-shrink-0" />
                   <div>
@@ -207,9 +207,9 @@ export function Contact() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-border">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               { value: '200+', label: 'Companies' },
               { value: '30+', label: 'Years' },
@@ -217,7 +217,7 @@ export function Contact() {
               { value: '8X', label: 'Avg ROI' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-4xl font-black text-accent mb-2">{stat.value}</div>
+                <div className="text-3xl sm:text-4xl font-black text-accent mb-2">{stat.value}</div>
                 <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}

@@ -40,15 +40,15 @@ export function Industries() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white min-h-[50vh] flex items-center border-b border-border">
+      <section className="bg-white flex items-center border-b border-border">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left — text */}
-            <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Industry Expertise</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Industries We Serve</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Industries We Serve</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
             </div>
             {/* Right — horizontal bar chart */}
@@ -77,27 +77,27 @@ export function Industries() {
       </section>
 
       {/* Industries */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto pl-4 space-y-24">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             const isEven = index % 2 === 0;
 
             return (
-              <div key={industry.name} className={`grid lg:grid-cols-2 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
+              <div key={industry.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 <div className={isEven ? '' : 'lg:col-start-2'}>
-                  <Icon className="w-16 h-16 text-accent mb-6" />
-                  <h2 className="text-4xl font-black text-primary mb-6">{industry.name}</h2>
+                  <Icon className="w-12 h-12 md:w-16 md:h-16 text-accent mb-5 md:mb-6" />
+                  <h2 className="text-3xl md:text-4xl font-black text-primary mb-4 md:mb-6">{industry.name}</h2>
 
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
                     {industry.sectors.map((sector) => (
-                      <span key={sector} className="px-4 py-2 bg-gray-100 text-sm font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
+                      <span key={sector} className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 text-sm font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
                         {sector}
                       </span>
                     ))}
                   </div>
 
-                  <div className="space-y-6">
+                  <div className="space-y-5 md:space-y-6">
                     <div>
                       <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-3">Challenge</h3>
                       <p className="text-muted-foreground leading-relaxed">{industry.challenge}</p>
@@ -126,9 +126,9 @@ export function Industries() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
-        <div className="max-w-7xl mx-auto pl-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
               { icon: Building2,        value: '200+', label: 'Businesses' },
               { icon: CalendarClock,    value: '30+',  label: 'Years' },
@@ -136,11 +136,11 @@ export function Industries() {
               { icon: BarChart3,        value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center group cursor-default">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
-                <div className="text-5xl font-black text-accent mb-2 group-hover:text-accent transition-colors duration-300">{value}</div>
-                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2">{value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export function Industries() {
 
       {/* CTA */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8 relative"
+        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
           backgroundImage: `url(${wavePattern})`,
           backgroundSize: 'cover',
@@ -163,11 +163,11 @@ export function Industries() {
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
             Ready to <span className="text-accent">Accelerate Growth?</span>
           </h2>
-          
-          <p className="text-xl text-muted-foreground mb-10">
+
+          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
             Schedule a Revenue Evaluation for your industry
           </p>
           <Button to="/contact">
