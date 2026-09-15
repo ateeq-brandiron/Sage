@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
+import { articles } from '../data/articles';
 
 export function Insights() {
   const categories = [
@@ -11,57 +12,6 @@ export function Insights() {
     { name: 'AI & Automation', icon: Brain },
     { name: 'Leadership', icon: Zap },
     { name: 'Analytics', icon: BarChart3 },
-  ];
-
-  const articles = [
-    {
-      category: 'Revenue Growth',
-      title: 'The Revenue System Problem: Why B2B Companies Struggle to Scale',
-      description: 'Most B2B companies hit a growth wall not because of product issues, but because their revenue operations are fundamentally broken. Learn how to identify and fix the systemic problems holding your growth back.',
-      date: 'March 15, 2026',
-      readTime: '8 min',
-      slug: 'revenue-system-problem-b2b-scale',
-    },
-    {
-      category: 'Sales Strategy',
-      title: 'Building Sales Playbooks That Actually Get Used',
-      description: 'Sales playbooks gather dust because they\'re built wrong. Discover the framework for creating playbooks that sales teams actually use, and that drive measurable revenue growth.',
-      date: 'March 10, 2026',
-      readTime: '6 min',
-      slug: 'building-sales-playbooks-that-get-used',
-    },
-    {
-      category: 'Marketing',
-      title: 'Account-Based Marketing for Complex B2B Sales',
-      description: 'Generic marketing doesn\'t work for complex B2B sales. Learn how to implement account-based marketing strategies that align with your sales process and drive qualified pipeline.',
-      date: 'March 5, 2026',
-      readTime: '10 min',
-      slug: 'account-based-marketing-complex-b2b',
-    },
-    {
-      category: 'AI & Automation',
-      title: 'AI in Revenue Operations: Hype vs Reality',
-      description: 'Cutting through the AI hype to show you what actually works in revenue operations today. Real use cases, measurable ROI, and what to avoid.',
-      date: 'February 28, 2026',
-      readTime: '7 min',
-      slug: 'ai-revenue-operations-hype-vs-reality',
-    },
-    {
-      category: 'Leadership',
-      title: 'The CRO\'s First 90 Days: A Strategic Framework',
-      description: 'A new Chief Revenue Officer has a narrow window to make an impact. This proven framework shows you exactly what to assess, fix, and build in your first 90 days.',
-      date: 'February 20, 2026',
-      readTime: '12 min',
-      slug: 'cro-first-90-days-framework',
-    },
-    {
-      category: 'Analytics',
-      title: 'Revenue Forecasting Beyond the Spreadsheet',
-      description: 'Stop relying on gut feel and spreadsheet gymnastics. Learn how leading revenue teams are building predictive forecasting systems that actually work.',
-      date: 'February 15, 2026',
-      readTime: '9 min',
-      slug: 'revenue-forecasting-beyond-spreadsheet',
-    },
   ];
 
   return (
@@ -158,9 +108,11 @@ export function Insights() {
                       <span className="text-xs font-bold text-accent uppercase tracking-wider">{article.category}</span>
                       <span className="text-xs text-muted-foreground">{article.readTime}</span>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-black text-primary group-hover:text-accent transition-colors mb-3">
-                      {article.title}
-                    </h3>
+                    <Link to={`/insights/${article.slug}`}>
+                      <h3 className="text-xl md:text-2xl font-black text-primary group-hover:text-accent transition-colors mb-3">
+                        {article.title}
+                      </h3>
+                    </Link>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       {article.description}
                     </p>
@@ -170,7 +122,7 @@ export function Insights() {
                         {article.date}
                       </div>
                       <Link
-                        to="/insights"
+                        to={`/insights/${article.slug}`}
                         className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all duration-300 group"
                       >
                         Read more

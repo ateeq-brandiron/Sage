@@ -7,6 +7,7 @@ import { ServiceDetail } from './pages/ServiceDetail';
 import { Industries } from './pages/Industries';
 import { CaseStudies } from './pages/CaseStudies';
 import { Insights } from './pages/Insights';
+import { InsightDetail } from './pages/InsightDetail';
 import { About } from './pages/About';
 import { Offerings } from './pages/Offerings';
 import { Contact } from './pages/Contact';
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/industries" element={<Industries />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/offerings" element={<Offerings />} />
             <Route path="/contact" element={<Contact />} />
