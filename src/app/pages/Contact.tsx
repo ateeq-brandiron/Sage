@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
 
@@ -15,20 +15,15 @@ export function Contact() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Let's Build Your Revenue Engine</h1>
               <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free <RevenueStorm /> assessment, no commitment required</p>
             </div>
-            {/* Right */}
-            <div className="hidden lg:flex items-center justify-center bg-[#E8F5EE] lg:min-h-[60vh]">
-              <div className="flex flex-col items-center justify-center gap-6">
-                {[
-                  { Icon: Mail, text: 'email@sage.com' },
-                  { Icon: Phone, text: '+1 (555) 000-0000' },
-                  { Icon: MapPin, text: 'North America' },
-                ].map(({ Icon, text }) => (
-                  <div key={text} className="flex items-center gap-3">
-                    <Icon className="w-5 h-5 text-accent" />
-                    <span className="text-muted-foreground">{text}</span>
-                  </div>
-                ))}
-              </div>
+            {/* Right — hero image */}
+            <div className="hidden lg:block relative lg:min-h-[60vh]">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
+                alt="SAGE team strategy session"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10" />
             </div>
           </div>
         </div>
