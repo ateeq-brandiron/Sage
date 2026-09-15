@@ -12,11 +12,13 @@ import { About } from './pages/About';
 import { Offerings } from './pages/Offerings';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
+        <ScrollToTop />
         <Header />
         <main className="flex-1">
           <Routes>
