@@ -53,7 +53,7 @@ export function Home() {
                   AI · GTM · Revenue · Performance
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">
                   Turn Your Go-To-Market Into a Revenue Engine.
                 </h1>
 
@@ -86,12 +86,12 @@ export function Home() {
             </div>
 
             {/* Right — chart */}
-            <div className="hidden lg:block relative bg-white">
+            <div className="hidden lg:block relative bg-white overflow-hidden">
               <img
                 src={heroChart}
-                alt="Wealth over time bar chart with five ascending bars"
-                className="absolute inset-0 w-full h-full object-contain object-top"
-                style={{ padding: '48px 4px 4px 0px' }}
+                alt="Revenue growth bar chart showing ascending pipeline stages"
+                className="absolute inset-0 w-full h-full object-contain object-top scale-[1.07] origin-top"
+                style={{ padding: '8px 0px 0px 0px' }}
               />
             </div>
 

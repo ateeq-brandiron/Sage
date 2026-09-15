@@ -30,11 +30,11 @@ export function About() {
             {/* Left — text */}
             <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">About SAGE</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">About SAGE</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI.</p>
             </div>
             {/* Right — growth chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
+            <div className="hidden lg:flex items-center justify-center bg-white px-4 py-4">
               <div className="w-full">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced: 30 Year Journey</p>
                 <svg viewBox="0 0 460 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">

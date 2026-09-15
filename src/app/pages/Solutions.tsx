@@ -69,7 +69,7 @@ export function Solutions() {
             {/* Left — text */}
             <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.1] sm:leading-[1.08]">Complete Revenue Solutions</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Complete Revenue Solutions</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-6 sm:mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
               <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
                 <Link
@@ -90,7 +90,7 @@ export function Solutions() {
             </div>
             {/* Right — inline SVG pipeline funnel chart */}
             <div className="hidden lg:flex items-stretch relative bg-white">
-              <div className="w-full flex flex-col justify-center px-8 py-12">
+              <div className="w-full flex flex-col justify-center px-4 py-6">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-4">Revenue Pipeline Conversion</p>
                 <svg viewBox="0 0 420 320" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
