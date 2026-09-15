@@ -50,11 +50,26 @@ export function InsightDetail() {
       <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="w-12 h-1 bg-accent mb-8 md:mb-10" />
-          <div className="space-y-6">
-            {article.body.map((paragraph, i) => (
-              <p key={i} className="text-lg text-foreground/80 leading-relaxed">
-                {paragraph}
-              </p>
+          <div className="space-y-10">
+            {article.body.map((section, i) => (
+              <div key={i} className="space-y-4">
+                {section.heading && (
+                  <h2 className="text-xl md:text-2xl font-black text-primary">{section.heading}</h2>
+                )}
+                {section.paragraphs?.map((p, j) => (
+                  <p key={j} className="text-lg text-foreground/80 leading-relaxed">{p}</p>
+                ))}
+                {section.list && (
+                  <ul className="space-y-2 pl-1">
+                    {section.list.map((item, k) => (
+                      <li key={k} className="flex items-start gap-3 text-foreground/80">
+                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                        <span className="text-lg leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
           </div>
         </div>
