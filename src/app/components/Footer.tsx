@@ -29,7 +29,7 @@ export function Footer() {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="SAGE on LinkedIn" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
                 <Linkedin className="w-5 h-5" strokeWidth={1.5} />
               </a>
-              <a href="mailto:hello@sageprosrvs.com" aria-label="Email SAGE" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
+              <a href="mailto:mitchell.chi@sageprosrvs.com" aria-label="Email SAGE" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
                 <Mail className="w-5 h-5" strokeWidth={1.5} />
               </a>
             </div>
