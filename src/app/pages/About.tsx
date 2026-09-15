@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import sageLogo from '../../assets/brand/sage-logo.png';
-import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, CircleDollarSign } from 'lucide-react';
+import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, PiggyBank } from 'lucide-react';
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
@@ -206,7 +206,7 @@ export function About() {
             {[
               { icon: CalendarClock,    value: '30+',  label: 'Years of Trust' },
               { icon: Building2,        value: '200+', label: 'Businesses Served' },
-              { icon: CircleDollarSign, value: '$1B+', label: 'Delivered' },
+              { icon: PiggyBank, value: '$1B+', label: 'Delivered' },
               { icon: Award,            value: '8X',   label: 'Avg ROI' },
             ].map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center group cursor-default">

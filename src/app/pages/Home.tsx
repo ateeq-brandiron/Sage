@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, CircleDollarSign, Brain, BarChart3, Users, Cpu } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, PiggyBank, Brain, BarChart3, Users, Cpu } from 'lucide-react';
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
@@ -106,7 +106,7 @@ export function Home() {
             {[
               { display: `${count200}+`,  label: 'Businesses Served',  icon: Building2        },
               { display: `${count30}+`,   label: 'Years of Trust',      icon: CalendarClock    },
-              { display: `$${count1}B+`,  label: 'Delivered',           icon: CircleDollarSign },
+              { display: `$${count1}B+`,  label: 'Delivered',           icon: PiggyBank },
             ].map(({ display, label, icon: Icon }) => (
               <div key={label} className="group flex flex-col items-center cursor-default">
                 <div className="flex items-center gap-3 mb-2">
@@ -180,7 +180,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Revenue System Graphic */}
             <div className="flex justify-center">
-              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-md" />
+              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-xl" />
             </div>
 
             {/* Why Points */}
