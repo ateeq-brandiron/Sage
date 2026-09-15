@@ -216,7 +216,7 @@ export function ServiceDetail() {
               <span className="text-white">{service.title}</span>
             </div>
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">{service.tagline}</p>
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6">{service.title}</h1>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-[1.08]">{service.title}</h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">{service.summary}</p>
           </div>
         </div>

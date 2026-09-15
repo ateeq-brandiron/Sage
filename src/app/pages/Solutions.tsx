@@ -11,7 +11,6 @@ const slugMap: Record<string, string> = {
   'Marketing Automation': 'marketing-automation',
   'Executive Advisory': 'executive-advisory',
 };
-import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 

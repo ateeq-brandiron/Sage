@@ -2,7 +2,6 @@ import { Link } from 'react-router';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import sageLogo from '../../assets/brand/sage-logo.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2, PiggyBank } from 'lucide-react';
-import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
@@ -141,7 +140,7 @@ export function About() {
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               What Drives Us
             </p>
-            <h2 className="text-4xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">Core <span className="text-accent">Values</span></h2>
             
             <p className="text-xl text-muted-foreground">
               Principles that guide every client engagement
@@ -171,7 +170,7 @@ export function About() {
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
               Our Team
             </p>
-            <h2 className="text-4xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">Leadership <span className="text-accent">Team</span></h2>
             
             <p className="text-xl text-muted-foreground">
               30+ years of enterprise revenue leadership

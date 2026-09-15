@@ -39,7 +39,7 @@ export function Contact() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
             <div>
-              <h2 className="text-3xl font-black text-primary mb-8">
+              <h2 className="text-4xl md:text-5xl font-black text-primary mb-8">
                 Book Your Assessment
               </h2>
 
@@ -211,7 +211,7 @@ export function Contact() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '500+', label: 'Companies' },
+              { value: '200+', label: 'Companies' },
               { value: '30+', label: 'Years' },
               { value: '37%', label: 'Avg Growth' },
               { value: '8X', label: 'Avg ROI' },

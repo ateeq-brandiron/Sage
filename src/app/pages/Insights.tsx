@@ -73,7 +73,7 @@ export function Insights() {
             {/* Left — text */}
             <div className="flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 pl-[calc(1rem+45px)] sm:pl-[calc(1.5rem+45px)] lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Knowledge & Expertise</p>
-              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-tight">Insights</h1>
+              <h1 className="text-5xl md:text-6xl font-black text-primary mb-6 leading-[1.08]">Insights</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
             </div>
             {/* Right — multi-line trend chart */}
@@ -198,7 +198,7 @@ export function Insights() {
           <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">
             Newsletter
           </p>
-          <h2 className="text-4xl font-black text-primary mb-3">
+          <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">
             Get Weekly <span className="text-accent">Insights</span>
           </h2>
           
@@ -212,7 +212,7 @@ export function Insights() {
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 border-2 border-border focus:outline-none focus:border-accent transition-all duration-300"
             />
-            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#00A344] to-[#00C853] text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:from-[#00C853] hover:to-[#00A344] hover:brightness-110 group">
+            <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:brightness-110 group">
               Subscribe
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>

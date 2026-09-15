@@ -218,7 +218,7 @@ export function Offerings() {
         <div className="max-w-7xl mx-auto pl-4">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-wider text-accent mb-4 font-semibold">How It Works</p>
-            <h2 className="text-3xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-primary mb-3">We Evaluate. We Deploy. We Manage.</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Every platform goes through a structured fit assessment before deployment, so you see exactly what it does for your business before it goes live.
             </p>

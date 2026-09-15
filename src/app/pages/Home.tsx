@@ -436,7 +436,7 @@ export function Home() {
       {/* Latest Insights */}
       <section
         aria-label="Latest Insights"
-        className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border"
+        className="py-24 px-4 sm:px-6 lg:px-8 border-t border-border"
 
       >
         <div className="max-w-7xl mx-auto">

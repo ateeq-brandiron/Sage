@@ -16,7 +16,7 @@ export function CaseStudies() {
         { metric: '$4.2M', label: 'New Pipeline' },
         { metric: '8X', label: 'ROI' },
       ],
-      testimonial: 'Sage built our entire North American revenue engine. Their expertise was invaluable.',
+      testimonial: 'SAGE built our entire North American revenue engine. Their expertise was invaluable.',
       author: 'VP Sales, North America',
     },
     {
@@ -44,7 +44,7 @@ export function CaseStudies() {
         { metric: '4X', label: 'Pipeline Velocity' },
         { metric: '3X', label: 'Revenue Growth' },
       ],
-      testimonial: 'Sage gave us the revenue infrastructure we needed to scale.',
+      testimonial: 'SAGE gave us the revenue infrastructure we needed to scale.',
       author: 'CEO & Founder',
     },
   ];
