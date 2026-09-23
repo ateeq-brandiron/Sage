@@ -21,7 +21,7 @@ export function About() {
       name: 'Mitchell Chi',
       photo: mitchellImg,
       role: 'CEO & Co-Founder',
-      bio: 'For 31 years Mitchell has engineered high-velocity revenue machines for Fortune 500 giants and high-growth AI/ML disruptors, amassing $1.2B+ in lifetime TCV/SOWs sold across ERP, SaaS, and Cloud. His career began founding the first Apple Federal VAR in 1984. Since 2018 he has translated enterprise-grade sales methodology into high-growth frameworks for agile SMBs ready to scale — consistently ranking in the top 1% of global sales organizations.',
+      bio: 'For 31 years Mitchell has engineered high-velocity revenue machines for Fortune 500 giants and high-growth AI/ML disruptors, amassing $1.2B+ in lifetime TCV/SOWs sold across ERP, SaaS, and Cloud. His career began founding the first Apple Federal VAR in 1984. Since 2018 he has translated enterprise-grade sales methodology into high-growth frameworks for agile SMBs ready to scale, consistently ranking in the top 1% of global sales organizations.',
       certifications: ['Certified Claude AI', 'Certified Grok AI', 'Certified Gemini AI'],
       expertise: ['GTM Strategy', 'SMB Scale-Up', 'Complex Deal Orchestration', 'ERP & SaaS Leadership', 'AI/ML Platform Scaling'],
     },
@@ -192,7 +192,7 @@ export function About() {
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
                 <p className="text-accent font-semibold mb-4">{leader.role}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{leader.bio}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5 text-justify">{leader.bio}</p>
                 {leader.certifications.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-5">
                     {leader.certifications.map((cert) => (
