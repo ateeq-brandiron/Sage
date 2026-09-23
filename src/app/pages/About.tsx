@@ -17,8 +17,22 @@ export function About() {
   ];
 
   const leaders = [
-    { name: 'Mitchell Chi',  photo: mitchellImg, role: 'CEO & Co-Founder', expertise: ['Revenue Strategy', 'Market Positioning', 'Enterprise Sales'] },
-    { name: 'Michael Doyle', photo: michaelImg,  role: 'CRO & Co-Founder', expertise: ['Sales Leadership', 'Pipeline Management', 'Revenue Operations'] },
+    {
+      name: 'Mitchell Chi',
+      photo: mitchellImg,
+      role: 'CEO & Co-Founder',
+      bio: 'For 31 years Mitchell has engineered high-velocity revenue machines for Fortune 500 giants and high-growth AI/ML disruptors, amassing $1.2B+ in lifetime TCV/SOWs sold across ERP, SaaS, and Cloud. His career began founding the first Apple Federal VAR in 1984. Since 2018 he has translated enterprise-grade sales methodology into high-growth frameworks for agile SMBs ready to scale — consistently ranking in the top 1% of global sales organizations.',
+      certifications: ['Certified Claude AI', 'Certified Grok AI', 'Certified Gemini AI'],
+      expertise: ['GTM Strategy', 'SMB Scale-Up', 'Complex Deal Orchestration', 'ERP & SaaS Leadership', 'AI/ML Platform Scaling'],
+    },
+    {
+      name: 'Michael Doyle',
+      photo: michaelImg,
+      role: 'CRO & Co-Founder',
+      bio: 'Michael built a Denver-based advertising agency into a multi-million dollar company and sold it to a national integrated services provider in 2000. With 25+ years of branding, marketing, and advertising experience, he has led 500+ signature BrandStorm sessions, helped companies raise more than $5B in capital, and supported 40+ acquisitions. He serves on the boards of Nuvana Resorts, The Dealmakers Conference, and Halen Technology, and facilitates several CEO peer groups.',
+      certifications: [],
+      expertise: ['Brand Strategy', 'Capital Raising', 'M&A Advisory', 'CEO Peer Groups', 'Revenue Leadership'],
+    },
   ];
 
   return (
@@ -177,7 +191,17 @@ export function About() {
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
-                <p className="text-accent font-semibold mb-6">{leader.role}</p>
+                <p className="text-accent font-semibold mb-4">{leader.role}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">{leader.bio}</p>
+                {leader.certifications.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {leader.certifications.map((cert) => (
+                      <span key={cert} className="px-3 py-1 bg-accent/10 rounded text-xs font-semibold text-accent">
+                        {cert}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-2">
                   {leader.expertise.map((area) => (
                     <span key={area} className="px-3 py-1 bg-gray-100 rounded text-xs font-semibold text-foreground hover:bg-accent/20 hover:text-accent transition-colors duration-200">
