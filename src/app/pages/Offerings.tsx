@@ -194,11 +194,11 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
+                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg bg-gray-50">
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
-                      className="w-full aspect-[4/3] object-cover"
+                      className="w-full aspect-[4/3] object-contain object-top"
                       loading="lazy"
                     />
                   </div>
