@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
@@ -24,7 +24,7 @@ export function Offerings() {
       ],
       image: bellwetherScreenshot,
       imageAlt: 'Bellwether Intel Opening Bell dashboard showing market signals, sentiment score, and immediate actions',
-      icon: BarChart3,
+      icon: Megaphone,
       badge: 'Demand Generation',
     },
     {
@@ -42,7 +42,7 @@ export function Offerings() {
       ],
       image: boxsyScreenshot,
       imageAlt: 'Boxsy Control Center operating dashboard showing revenue, ARR, cash on hand, and runway metrics',
-      icon: Zap,
+      icon: Briefcase,
       badge: 'Revenue Operations',
     },
     {
@@ -58,9 +58,9 @@ export function Offerings() {
         'CRM integration and hygiene',
         'Pipeline health dashboards',
       ],
-      image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=90',
-      imageAlt: 'AI-powered sales pipeline and outreach automation',
-      icon: Shield,
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=90',
+      imageAlt: 'Sales pipeline analytics and automated outreach dashboard',
+      icon: Workflow,
       badge: 'Pipeline Management',
     },
     {
@@ -76,9 +76,9 @@ export function Offerings() {
         'Workflow automation and optimization',
         'Ongoing performance tuning',
       ],
-      image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90',
-      imageAlt: 'AI system integration and workflow automation visualization',
-      icon: Package,
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=90',
+      imageAlt: 'AI system architecture and circuit-level integration infrastructure',
+      icon: Cpu,
       badge: 'AI Infrastructure',
     },
   ];
@@ -118,30 +118,34 @@ export function Offerings() {
                   <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="289" y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
+                  {/* Bellwether — Megaphone */}
                   <g transform="translate(87,69)">
-                    <circle cx="12" cy="18" r="2.5" fill="#00C853"/>
-                    <path d="M7 13 A7 7 0 0 1 17 13" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                    <path d="M3.5 9.5 A11 11 0 0 1 20.5 9.5" stroke="#00C853" strokeOpacity="0.5" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                    <path d="M0.5 6 A14 14 0 0 1 23.5 6" stroke="#00C853" strokeOpacity="0.25" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#00C853" fillOpacity="0.25" stroke="#00C853" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15.5 8.5 A5 5 0 0 1 15.5 15.5" stroke="#00C853" strokeOpacity="0.85" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+                    <path d="M18.5 5.5 A9 9 0 0 1 18.5 18.5" stroke="#00C853" strokeOpacity="0.4" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
                   </g>
+                  {/* Boxsy — Briefcase */}
                   <g transform="translate(302,69)">
-                    <circle cx="12" cy="12" r="10" stroke="#00C853" strokeWidth="2" fill="none"/>
-                    <path d="M14 3 L7.5 13 L12 13 L10 21 L16.5 11 L12 11 Z" fill="#00C853"/>
+                    <rect x="2" y="8" width="20" height="12" rx="2" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
+                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#00C853" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+                    <line x1="2" y1="14" x2="22" y2="14" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5"/>
                   </g>
+                  {/* Empower AI 365 — Workflow nodes */}
                   <g transform="translate(87,207)">
-                    <circle cx="12" cy="4"  r="2.5" fill="#00C853"/>
-                    <circle cx="3"  cy="19" r="2.5" fill="#00C853"/>
-                    <circle cx="21" cy="19" r="2.5" fill="#00C853"/>
-                    <line x1="12" y1="4"  x2="3"  y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
-                    <line x1="12" y1="4"  x2="21" y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
-                    <line x1="3"  y1="19" x2="21" y2="19" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5" strokeLinecap="round"/>
-                    <circle cx="12" cy="12" r="1.5" fill="#00C853" fillOpacity="0.6"/>
+                    <rect x="2" y="2" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
+                    <rect x="15" y="9" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
+                    <rect x="2" y="16" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
+                    <path d="M9 5.5h4c1.7 0 3 1.3 3 3V9" stroke="#00C853" strokeOpacity="0.6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M15 16v1c0 1.7-1.3 3-3 3H9" stroke="#00C853" strokeOpacity="0.6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                   </g>
+                  {/* AIO Advisors — CPU chip */}
                   <g transform="translate(302,207)">
-                    <path d="M3 11 L3 21 L21 21 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M3 11 L12 6 L21 11" stroke="#00C853" strokeOpacity="0.8" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 19 L12 13" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" strokeLinecap="round"/>
-                    <path d="M9.5 15 L12 13 L14.5 15" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    <rect x="6" y="6" width="12" height="12" rx="2" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
+                    <rect x="9" y="9" width="6" height="6" rx="1" fill="#00C853" fillOpacity="0.4" stroke="#00C853" strokeWidth="1"/>
+                    <path d="M9 6V3M12 6V3M15 6V3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M9 21v-3M12 21v-3M15 21v-3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M3 9h3M3 12h3M3 15h3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M18 9h3M18 12h3M18 15h3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
                   </g>
                   <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
                   <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
