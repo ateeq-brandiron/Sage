@@ -197,8 +197,8 @@ export function Offerings() {
                 </div>
 
                 {/* Image side */}
-                <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
+                <div className={`flex items-center ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
+                  <div className="w-full rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
