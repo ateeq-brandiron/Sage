@@ -1,15 +1,11 @@
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
 import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
-import bellwetherLogo from '../../assets/pages/offerings/bellwether/bellwether-logo-transparent.png';
-import boxsyLogo from '../../assets/pages/offerings/boxsy/boxsy-logo.svg';
-import empowerLogo from '../../assets/pages/offerings/empower-ai-365/empower-logo-transparent.png';
-import aioLogo from '../../assets/pages/offerings/aio/aio-logo-transparent.png';
 
 export function Offerings() {
   const offerings = [
@@ -28,7 +24,7 @@ export function Offerings() {
       ],
       image: bellwetherScreenshot,
       imageAlt: 'Bellwether Intel Opening Bell dashboard showing market signals, sentiment score, and immediate actions',
-      logo: bellwetherLogo,
+      icon: BarChart3,
       badge: 'Demand Generation',
     },
     {
@@ -46,7 +42,7 @@ export function Offerings() {
       ],
       image: boxsyScreenshot,
       imageAlt: 'Boxsy Control Center operating dashboard showing revenue, ARR, cash on hand, and runway metrics',
-      logo: boxsyLogo,
+      icon: Zap,
       badge: 'Revenue Operations',
     },
     {
@@ -64,7 +60,7 @@ export function Offerings() {
       ],
       image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=90',
       imageAlt: 'AI-powered sales pipeline and outreach automation',
-      logo: empowerLogo,
+      icon: Shield,
       badge: 'Pipeline Management',
     },
     {
@@ -82,7 +78,7 @@ export function Offerings() {
       ],
       image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90',
       imageAlt: 'AI system integration and workflow automation visualization',
-      logo: aioLogo,
+      icon: Package,
       badge: 'AI Infrastructure',
     },
   ];
@@ -172,6 +168,7 @@ export function Offerings() {
         <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {offerings.map((offering, index) => {
             const isEven = index % 2 === 0;
+            const Icon = offering.icon;
             return (
               <div key={offering.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 {/* Text side */}
@@ -179,12 +176,8 @@ export function Offerings() {
                   <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 mb-5 hover:bg-accent/20 transition-colors duration-200">
                     {offering.badge}
                   </span>
-                  <div className="flex items-center gap-3 mb-4">
-                    <img
-                      src={offering.logo}
-                      alt={`${offering.name} logo`}
-                      className="h-8 w-auto object-contain flex-shrink-0"
-                    />
+                  <div className="flex items-center gap-4 mb-4">
+                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-accent" strokeWidth={1.5} />
                     <h2 className="text-3xl md:text-4xl font-black text-primary">{offering.name}</h2>
                   </div>
                   <p className="text-lg font-semibold text-primary/70 mb-4 md:mb-5 italic">{offering.tagline}</p>
