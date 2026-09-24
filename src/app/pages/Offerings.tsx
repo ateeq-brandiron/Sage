@@ -6,8 +6,6 @@ import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
 import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
-import aioScreenshot from '../../assets/pages/offerings/aio/aio-proof-section.jpg';
-import empowerScreenshot from '../../assets/pages/offerings/empower-ai-365/empower-features-grid.jpg';
 import bellwetherLogo from '../../assets/pages/offerings/bellwether/bellwether-logo-horizontal.png';
 import boxsyLogo from '../../assets/pages/offerings/boxsy/boxsy-logo-purple.png';
 import empowerLogo from '../../assets/pages/offerings/empower-ai-365/empower-logo.jpg';
@@ -35,44 +33,6 @@ export function Offerings() {
       badge: 'Demand Generation',
     },
     {
-      name: 'Empower AI 365',
-      tagline: 'SMB funnel and pipeline management, running always-on.',
-      description:
-        'Empower AI 365 is an always-on revenue engine built specifically for established SMBs. It manages your full funnel and pipeline with AI automation, keeping leads moving, follow-ups consistent, and revenue opportunities from falling through the cracks, 365 days a year.',
-      capabilities: [
-        'Always-on lead nurturing and follow-up',
-        'AI-powered pipeline management',
-        'Automated outreach sequences',
-        'Deal scoring and prioritization',
-        'CRM integration and hygiene',
-        'Pipeline health dashboards',
-      ],
-      image: empowerScreenshot,
-      imageAlt: 'Empower AI 365 — AI-powered revenue tools including outbound agent, SDR, sales coach, and multi-channel outreach',
-      logo: empowerLogo,
-      logoBg: '#111111',
-      badge: 'Pipeline Management',
-    },
-    {
-      name: 'AIO Advisors',
-      tagline: 'AI integration, structure, guardrails, and provable ROI.',
-      description:
-        'AIO Advisors is the engine room behind AI that actually performs. It handles AI integration, system architecture, compliance guardrails, and ROI optimization, turning disconnected AI experiments into a structured, measurable revenue capability your leadership team can trust and your board can see.',
-      capabilities: [
-        'AI platform selection and integration',
-        'System architecture and data structure',
-        'Security, compliance, and governance guardrails',
-        'ROI measurement and attribution',
-        'Workflow automation and optimization',
-        'Ongoing performance tuning',
-      ],
-      image: aioScreenshot,
-      imageAlt: 'AIO Advisors — proof-of-pattern stats showing 480% revenue growth, 34% OPEX reduction, 10x efficiency, and 14x faster decisions',
-      logo: aioLogo,
-      logoBg: '#ffffff',
-      badge: 'AI Infrastructure',
-    },
-    {
       name: 'Boxsy',
       tagline: '"COO in a box": fundraising, outreach, and revenue in one platform.',
       description:
@@ -90,6 +50,44 @@ export function Offerings() {
       logo: boxsyLogo,
       logoBg: '#6c47ff',
       badge: 'Revenue Operations',
+    },
+    {
+      name: 'Empower AI 365',
+      tagline: 'SMB funnel and pipeline management, running always-on.',
+      description:
+        'Empower AI 365 is an always-on revenue engine built specifically for established SMBs. It manages your full funnel and pipeline with AI automation, keeping leads moving, follow-ups consistent, and revenue opportunities from falling through the cracks, 365 days a year.',
+      capabilities: [
+        'Always-on lead nurturing and follow-up',
+        'AI-powered pipeline management',
+        'Automated outreach sequences',
+        'Deal scoring and prioritization',
+        'CRM integration and hygiene',
+        'Pipeline health dashboards',
+      ],
+      image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=90',
+      imageAlt: 'AI-powered sales pipeline and outreach automation',
+      logo: empowerLogo,
+      logoBg: '#111111',
+      badge: 'Pipeline Management',
+    },
+    {
+      name: 'AIO Advisors',
+      tagline: 'AI integration, structure, guardrails, and provable ROI.',
+      description:
+        'AIO Advisors is the engine room behind AI that actually performs. It handles AI integration, system architecture, compliance guardrails, and ROI optimization, turning disconnected AI experiments into a structured, measurable revenue capability your leadership team can trust and your board can see.',
+      capabilities: [
+        'AI platform selection and integration',
+        'System architecture and data structure',
+        'Security, compliance, and governance guardrails',
+        'ROI measurement and attribution',
+        'Workflow automation and optimization',
+        'Ongoing performance tuning',
+      ],
+      image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90',
+      imageAlt: 'AI system integration and workflow automation visualization',
+      logo: aioLogo,
+      logoBg: '#ffffff',
+      badge: 'AI Infrastructure',
     },
   ];
 
@@ -118,12 +116,12 @@ export function Offerings() {
                   <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
                   <text x="99"  y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Bellwether Intel</text>
                   <text x="99"  y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
-                  <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Empower AI 365</text>
-                  <text x="314" y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
-                  <text x="99"  y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">AIO Advisors</text>
-                  <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
-                  <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
-                  <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
+                  <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
+                  <text x="314" y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
+                  <text x="99"  y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Empower AI 365</text>
+                  <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
+                  <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">AIO Advisors</text>
+                  <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
                   <rect x="74"  y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
                   <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
