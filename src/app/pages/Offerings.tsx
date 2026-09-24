@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle2, Zap, BarChart3, Shield, Package } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
@@ -17,7 +17,6 @@ export function Offerings() {
   const offerings = [
     {
       name: 'Bellwether Intel',
-      icon: BarChart3,
       tagline: 'Your top-of-funnel signal engine and content creator.',
       description:
         'Bellwether Intel drives market demand and builds brand awareness through AI-powered content generation, market intelligence, and always-on top-of-funnel activity, giving your brand the presence and signal it needs to pull buyers into your pipeline before competitors do.',
@@ -37,7 +36,6 @@ export function Offerings() {
     },
     {
       name: 'Empower AI 365',
-      icon: Zap,
       tagline: 'SMB funnel and pipeline management, running always-on.',
       description:
         'Empower AI 365 is an always-on revenue engine built specifically for established SMBs. It manages your full funnel and pipeline with AI automation, keeping leads moving, follow-ups consistent, and revenue opportunities from falling through the cracks, 365 days a year.',
@@ -57,7 +55,6 @@ export function Offerings() {
     },
     {
       name: 'AIO Advisors',
-      icon: Shield,
       tagline: 'AI integration, structure, guardrails, and provable ROI.',
       description:
         'AIO Advisors is the engine room behind AI that actually performs. It handles AI integration, system architecture, compliance guardrails, and ROI optimization, turning disconnected AI experiments into a structured, measurable revenue capability your leadership team can trust and your board can see.',
@@ -77,7 +74,6 @@ export function Offerings() {
     },
     {
       name: 'Boxsy',
-      icon: Package,
       tagline: '"COO in a box": fundraising, outreach, and revenue in one platform.',
       description:
         'Boxsy is a COO-in-a-box platform combining a fundraising CRM, investor and donor outreach system, and a revenue pipeline tool, built for owner-operators who need enterprise-grade capability without enterprise overhead. Manage relationships, track funding, and drive outreach from one place.',
@@ -181,7 +177,6 @@ export function Offerings() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
           {offerings.map((offering, index) => {
-            const Icon = offering.icon;
             const isEven = index % 2 === 0;
             return (
               <div key={offering.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
@@ -191,7 +186,16 @@ export function Offerings() {
                     {offering.badge}
                   </span>
                   <div className="flex items-center gap-4 mb-4">
-                    <Icon className="w-8 h-8 md:w-10 md:h-10 text-accent" strokeWidth={1.5} />
+                    <div
+                      className="h-10 px-3 rounded-lg flex items-center flex-shrink-0 shadow-sm"
+                      style={{ backgroundColor: offering.logoBg }}
+                    >
+                      <img
+                        src={offering.logo}
+                        alt={`${offering.name} logo`}
+                        className="h-5 w-auto object-contain"
+                      />
+                    </div>
                     <h2 className="text-3xl md:text-4xl font-black text-primary">{offering.name}</h2>
                   </div>
                   <p className="text-lg font-semibold text-primary/70 mb-4 md:mb-5 italic">{offering.tagline}</p>
@@ -208,25 +212,13 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg relative">
+                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
                       className="w-full aspect-video object-cover object-left-top"
                       loading="lazy"
                     />
-                    <div className="absolute bottom-3 left-3">
-                      <div
-                        className="h-8 px-3 rounded-lg flex items-center shadow-md"
-                        style={{ backgroundColor: offering.logoBg }}
-                      >
-                        <img
-                          src={offering.logo}
-                          alt={`${offering.name} logo`}
-                          className="h-4 w-auto object-contain"
-                        />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
