@@ -6,6 +6,8 @@ import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
 import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
+import aioScreenshot from '../../assets/pages/offerings/aio/aio-website.webp';
+import empowerScreenshot from '../../assets/pages/offerings/empower-ai-365/empower-website.webp';
 
 export function Offerings() {
   const offerings = [
@@ -41,8 +43,8 @@ export function Offerings() {
         'CRM integration and hygiene',
         'Pipeline health dashboards',
       ],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-      imageAlt: 'Sales pipeline and funnel analytics',
+      image: empowerScreenshot,
+      imageAlt: 'Empower AI 365 website — AI-powered revenue and pipeline automation platform',
       badge: 'Pipeline Management',
     },
     {
@@ -59,8 +61,8 @@ export function Offerings() {
         'Workflow automation and optimization',
         'Ongoing performance tuning',
       ],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
-      imageAlt: 'AI system architecture and technology integration',
+      image: aioScreenshot,
+      imageAlt: 'AIO Advisors website — AI integration and operating system for modern business',
       badge: 'AI Infrastructure',
     },
     {
@@ -194,11 +196,11 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg bg-gray-50">
+                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
-                      className="w-full aspect-[4/3] object-contain object-top"
+                      className="w-full aspect-video object-cover object-left-top"
                       loading="lazy"
                     />
                   </div>
