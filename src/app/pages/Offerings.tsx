@@ -4,6 +4,8 @@ import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
+import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
+import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
 
 export function Offerings() {
   const offerings = [
@@ -21,8 +23,8 @@ export function Offerings() {
         'Competitive intelligence and positioning',
         'Campaign performance analytics',
       ],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-      imageAlt: 'Data analytics dashboard showing market intelligence',
+      image: bellwetherScreenshot,
+      imageAlt: 'Bellwether Intel Opening Bell dashboard showing market signals, sentiment score, and immediate actions',
       badge: 'Demand Generation',
     },
     {
@@ -75,8 +77,8 @@ export function Offerings() {
         'Communication cadence management',
         'Reporting and visibility dashboards',
       ],
-      image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80',
-      imageAlt: 'Executive team reviewing revenue and operations dashboard',
+      image: boxsyScreenshot,
+      imageAlt: 'Boxsy Control Center operating dashboard showing revenue, ARR, cash on hand, and runway metrics',
       badge: 'Revenue Operations',
     },
   ];
