@@ -8,6 +8,10 @@ import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screen
 import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
 import aioScreenshot from '../../assets/pages/offerings/aio/aio-proof-section.jpg';
 import empowerScreenshot from '../../assets/pages/offerings/empower-ai-365/empower-features-grid.jpg';
+import bellwetherLogo from '../../assets/pages/offerings/bellwether/bellwether-logo-horizontal.png';
+import boxsyLogo from '../../assets/pages/offerings/boxsy/boxsy-logo-purple.png';
+import empowerLogo from '../../assets/pages/offerings/empower-ai-365/empower-logo.jpg';
+import aioLogo from '../../assets/pages/offerings/aio/aio-logo.png';
 
 export function Offerings() {
   const offerings = [
@@ -27,6 +31,8 @@ export function Offerings() {
       ],
       image: bellwetherScreenshot,
       imageAlt: 'Bellwether Intel Opening Bell dashboard showing market signals, sentiment score, and immediate actions',
+      logo: bellwetherLogo,
+      logoBg: '#3b0764',
       badge: 'Demand Generation',
     },
     {
@@ -45,6 +51,8 @@ export function Offerings() {
       ],
       image: empowerScreenshot,
       imageAlt: 'Empower AI 365 — AI-powered revenue tools including outbound agent, SDR, sales coach, and multi-channel outreach',
+      logo: empowerLogo,
+      logoBg: '#111111',
       badge: 'Pipeline Management',
     },
     {
@@ -63,6 +71,8 @@ export function Offerings() {
       ],
       image: aioScreenshot,
       imageAlt: 'AIO Advisors — proof-of-pattern stats showing 480% revenue growth, 34% OPEX reduction, 10x efficiency, and 14x faster decisions',
+      logo: aioLogo,
+      logoBg: '#ffffff',
       badge: 'AI Infrastructure',
     },
     {
@@ -81,6 +91,8 @@ export function Offerings() {
       ],
       image: boxsyScreenshot,
       imageAlt: 'Boxsy Control Center operating dashboard showing revenue, ARR, cash on hand, and runway metrics',
+      logo: boxsyLogo,
+      logoBg: '#6c47ff',
       badge: 'Revenue Operations',
     },
   ];
@@ -196,13 +208,25 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={isEven ? '' : 'lg:col-start-1 lg:row-start-1'}>
-                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
+                  <div className="rounded-2xl border-2 border-accent overflow-hidden shadow-lg relative">
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
                       className="w-full aspect-video object-cover object-left-top"
                       loading="lazy"
                     />
+                    <div className="absolute bottom-3 left-3">
+                      <div
+                        className="h-8 px-3 rounded-lg flex items-center shadow-md"
+                        style={{ backgroundColor: offering.logoBg }}
+                      >
+                        <img
+                          src={offering.logo}
+                          alt={`${offering.name} logo`}
+                          className="h-4 w-auto object-contain"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
