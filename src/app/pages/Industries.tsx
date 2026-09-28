@@ -86,7 +86,7 @@ export function Industries() {
             return (
               <div key={industry.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 <div className={isEven ? '' : 'lg:col-start-2'}>
-                  <Icon className="w-12 h-12 md:w-16 md:h-16 text-accent mb-5 md:mb-6" />
+                  <Icon className="w-12 h-12 md:w-16 md:h-16 text-accent mb-5 md:mb-6" strokeWidth={1.5} />
                   <h2 className="text-3xl md:text-4xl font-black text-primary mb-4 md:mb-6">{industry.name}</h2>
 
                   <div className="flex flex-wrap gap-2 mb-6 md:mb-8">

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
 
@@ -10,7 +10,7 @@ export function Contact() {
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
             {/* Left */}
-            <div className="flex flex-col justify-center py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get in Touch</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Let's Build Your Revenue Engine</h1>
               <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free <RevenueStorm /> assessment, no commitment required</p>
@@ -272,14 +272,17 @@ export function Contact() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
-              { value: '200+', label: 'Companies' },
-              { value: '30+', label: 'Years' },
-              { value: '37%', label: 'Avg Growth' },
-              { value: '8X', label: 'Avg ROI' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl sm:text-4xl font-black text-accent mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
+              { icon: Building2,     value: '200+', label: 'Companies' },
+              { icon: CalendarClock, value: '30+',  label: 'Years' },
+              { icon: TrendingUp,    value: '37%',  label: 'Avg Growth' },
+              { icon: Award,         value: '8X',   label: 'Avg ROI' },
+            ].map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex flex-col items-center group cursor-default">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2">{value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>

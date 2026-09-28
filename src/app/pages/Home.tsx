@@ -473,7 +473,7 @@ export function Home() {
               <Link
                 key={article.slug}
                 to="/insights"
-                className="group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col border-l-4 border-gray-200 hover:border-accent"
+                className="group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col border-l-4 border-accent"
                 aria-label={article.title}
               >
                 <div className="flex items-center gap-3 mb-4">

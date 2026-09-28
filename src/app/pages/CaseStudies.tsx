@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, TrendingUp, BarChart3, Users, Award } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
 
@@ -110,14 +110,17 @@ export function CaseStudies() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
             {[
-              { value: '300%', label: 'Avg Pipeline Growth' },
-              { value: '42%', label: 'Revenue Increase' },
-              { value: '2X', label: 'Sales Efficiency' },
-              { value: '8X', label: 'Average ROI' },
-            ].map((stat) => (
-              <div key={stat.label} className="group cursor-default">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wide">{stat.label}</div>
+              { icon: TrendingUp, value: '300%', label: 'Avg Pipeline Growth' },
+              { icon: BarChart3,  value: '42%',  label: 'Revenue Increase' },
+              { icon: Users,      value: '2X',   label: 'Sales Efficiency' },
+              { icon: Award,      value: '8X',   label: 'Average ROI' },
+            ].map(({ icon: Icon, value, label }) => (
+              <div key={label} className="flex flex-col items-center group cursor-default">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-accent mb-2">{value}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground font-semibold uppercase tracking-wide">{label}</div>
               </div>
             ))}
           </div>

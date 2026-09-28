@@ -51,8 +51,8 @@ export function Footer() {
             <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Offerings</h5>
             <ul className="space-y-3">
               <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Expower AI 365</Link></li>
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Aio</Link></li>
+              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Empower AI 365</Link></li>
+              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AIO Advisors</Link></li>
               <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Boxsy</Link></li>
             </ul>
           </div>

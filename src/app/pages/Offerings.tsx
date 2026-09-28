@@ -177,7 +177,7 @@ export function Offerings() {
               <div key={offering.name} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'}`}>
                 {/* Text side */}
                 <div className={isEven ? '' : 'lg:col-start-2'}>
-                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 mb-5 hover:bg-accent/20 transition-colors duration-200">
+                  <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded mb-5 hover:bg-accent/20 transition-colors duration-200">
                     {offering.badge}
                   </span>
                   <div className="flex items-center gap-4 mb-4">
