@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110">
+  <!-- Dark left leaf -->
+  <path d="M50 8 L12 72 L50 54 Z" fill="#4A8A6A"/>
+  <!-- Light right leaf -->
+  <path d="M50 8 L88 72 L50 54 Z" fill="#8CBFAA"/>
+  <!-- Dark left bottom petal -->
+  <path d="M50 54 L12 72 L38 100 Z" fill="#4A8A6A"/>
+  <!-- Light right bottom petal -->
+  <path d="M50 54 L88 72 L62 100 Z" fill="#8CBFAA"/>
+</svg>
