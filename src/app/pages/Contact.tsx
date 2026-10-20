@@ -236,8 +236,8 @@ export function Contact() {
                   <Mail className="w-6 h-6 text-accent flex-shrink-0" />
                   <div>
                     <div className="text-sm font-bold text-foreground mb-1">Email</div>
-                    <a href="mailto:mitchell.chi@sageprosrvs.com" className="text-muted-foreground hover:text-accent transition-colors">
-                      mitchell.chi@sageprosrvs.com
+                    <a href="mailto:mitchell.chi@1SagePros.AI" className="text-muted-foreground hover:text-accent transition-colors">
+                      mitchell.chi@1SagePros.AI
                     </a>
                   </div>
                 </div>
@@ -246,8 +246,8 @@ export function Contact() {
                   <Phone className="w-6 h-6 text-accent flex-shrink-0" />
                   <div>
                     <div className="text-sm font-bold text-foreground mb-1">Phone</div>
-                    <a href="tel:+14849991556" className="text-muted-foreground hover:text-accent transition-colors">
-                      (484) 999 1556
+                    <a href="tel:+14844592900" className="text-muted-foreground hover:text-accent transition-colors">
+                      +1 (484) 459 2900
                     </a>
                   </div>
                 </div>
