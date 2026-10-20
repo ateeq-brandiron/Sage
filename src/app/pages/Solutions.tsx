@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2 } from 'lucide-react';
+import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2, ShieldCheck, Layers, Brain, Package } from 'lucide-react';
 
 import { renderTM } from '../components/RevenueStorm';
 import leavesBackground from '../../assets/brand/leaves-bg.jpg';
@@ -191,6 +191,67 @@ export function Solutions() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Six Pillars */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">What We Deliver</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
+              Six pillars of <span className="text-accent">AI that pays off</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              It all starts with capacity. AI Embodiment™ by Engage3P reads it first, before a single tool goes live.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+            {[
+              {
+                icon: ShieldCheck,
+                title: 'Security & compliance',
+                desc: 'AI adopted the right way, without new legal or data exposure.',
+              },
+              {
+                icon: Zap,
+                title: 'Tactical solutions',
+                desc: 'Deployable systems, not a strategy deck that sits on a shelf.',
+              },
+              {
+                icon: Layers,
+                title: 'Pre-integrated tools',
+                desc: 'A vetted partner stack, not a build-it-yourself science project.',
+              },
+              {
+                icon: Package,
+                title: 'Affordable, turn-key',
+                desc: 'Built for the owner-operator to oversee, not to run day-to-day.',
+              },
+              {
+                icon: Brain,
+                title: 'Our AI Officer available to you',
+                desc: 'Fractional AI leadership. No internal AI team required.',
+                highlight: true,
+              },
+              {
+                icon: TrendingUp,
+                title: 'Proven ROI, fast',
+                desc: 'Results that are provable and legible. Never a black box.',
+              },
+            ].map(({ icon: Icon, title, desc, highlight }) => (
+              <div key={title} className={`group p-6 md:p-8 lg:p-10 hover:shadow-md transition-all duration-300 ${highlight ? 'bg-primary' : 'bg-white'}`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${highlight ? 'bg-accent/20 border border-accent/40' : 'bg-accent/10 border border-accent/20 group-hover:bg-accent/20 group-hover:border-accent/40 transition-colors duration-300'}`}>
+                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                </div>
+                <h3 className={`text-lg font-black mb-3 transition-colors duration-300 ${highlight ? 'text-white group-hover:text-accent' : 'text-primary group-hover:text-accent'}`}>{title}</h3>
+                <p className={`text-sm leading-relaxed ${highlight ? 'text-white/70' : 'text-muted-foreground'}`}>{desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-base font-semibold text-primary/70 mt-8 italic">
+            None of these pillars pay off unless the change is <span className="text-accent not-italic font-black">embodied, not just embedded.</span>
+          </p>
         </div>
       </section>
 

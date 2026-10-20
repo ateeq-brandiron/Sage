@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu, AlertTriangle, Unplug, Layers, Lightbulb } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu, AlertTriangle, Unplug, Layers, Lightbulb, ShieldCheck } from 'lucide-react';
 import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
@@ -194,6 +194,50 @@ export function Home() {
               <div key={card.metric} className="group bg-white p-8 md:p-10 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
                 <div className="text-4xl md:text-5xl font-black text-accent mb-4 transition-transform duration-300 group-hover:scale-105 origin-center">{card.metric}</div>
                 <p className="text-base text-muted-foreground leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* This isn't theory. It's execution. */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why 1SagePros.AI</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
+              This isn't theory. <span className="text-accent">It's execution.</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+            {[
+              {
+                icon: Brain,
+                title: 'AI Embodiment™',
+                desc: 'Senior GTM experts set the strategy. AI scales it. Your people live it every day. Lose one and it stalls.',
+              },
+              {
+                icon: Layers,
+                title: 'One system, not a stack',
+                desc: 'Marketing, sales and AI integrated into a single connected revenue engine — the 1SP.AI wheel.',
+              },
+              {
+                icon: BarChart3,
+                title: 'Outcomes over deliverables',
+                desc: 'We measure pipeline, win rates and revenue. Not reports, clicks or activity.',
+              },
+              {
+                icon: Users,
+                title: 'Senior expertise. No bench.',
+                desc: 'Seasoned CxOs work directly on your business, never handed to juniors after kickoff.',
+              },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="group bg-primary p-6 md:p-8 lg:p-10 hover:bg-white/5 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center mb-5">
+                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-lg font-black text-white mb-3 group-hover:text-accent transition-colors duration-300">{title}</h3>
+                <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
