@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import sageLogo from '../../assets/brand/sage-logo.png';
+import sageLogo from '../../assets/brand/logo-light-bg.png';
 
 export function Header() {
   const location = useLocation();

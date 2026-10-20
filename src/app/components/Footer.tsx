@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { Linkedin, Mail } from 'lucide-react';
-import sageLogo from '../../assets/brand/sage-logo.png';
+import sageLogo from '../../assets/brand/logo-dark-bg.png';
 import footerBg from '../../assets/brand/footer-bg.jpg';
 
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <div className="mb-4">
-              <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10 brightness-0 invert" />
+              <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
             <p className="text-sm text-white/80 mb-6 max-w-md">
               200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.
