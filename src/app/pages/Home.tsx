@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu } from 'lucide-react';
+import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu, AlertTriangle, Unplug, Layers, Lightbulb } from 'lucide-react';
 import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
@@ -40,7 +40,7 @@ export function Home() {
   }, []);
   const count200 = useCountUp(200, 1600, statsStarted);
   const count30  = useCountUp(30,  1200, statsStarted);
-  const count1   = useCountUp(1,   1000, statsStarted);
+  const count8   = useCountUp(8,   1000, statsStarted);
 
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
@@ -52,28 +52,28 @@ export function Home() {
             {/* Left — Text Content */}
             <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
                 <p className="text-xs uppercase tracking-widest text-accent mb-4 sm:mb-5 font-semibold">
-                  AI · GTM · Revenue · Performance
+                  AI Revenue Partner
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">
-                  Turn Your Go-To-Market Into a Revenue Engine.
+                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
+                  AI is easy to buy.<br />ROI is impossible to realize.
                 </h1>
 
-                <p className="text-base md:text-lg text-muted-foreground mb-4 sm:mb-5 leading-relaxed max-w-lg">
-                  Human expertise meets AI execution, built into one system designed to drive pipeline, scale performance, and deliver measurable growth.
+                <p className="text-xl sm:text-2xl font-bold text-accent mb-5 sm:mb-6">
+                  We do the impossible part.
                 </p>
 
-                <p className="text-sm text-accent font-semibold tracking-wide max-w-lg mb-6 sm:mb-8">
-                  3X pipeline growth. 60% less wasted effort. 100% revenue visibility.
+                <p className="text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">
+                  1SagePros.AI is a master Revenue Value Added Reseller focused solely on AI. We design, integrate and manage the AI that established businesses need to defend and grow their position — without hiring an internal AI team or expensive systems.
                 </p>
 
               <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
                 <Link
                   to="/contact"
-                  aria-label="Book Your AI Strategy Session"
+                  aria-label="Get Your Complimentary AI ROI Assessment"
                   className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
                 >
-                  Book Your AI Strategy Session
+                  Get Your Complimentary AI ROI Assessment
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
@@ -104,11 +104,12 @@ export function Home() {
       {/* Stats Bar */}
       <section ref={statsRef} className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 md:gap-12 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-6 md:gap-12 text-center">
             {[
-              { display: `${count200}+`,  label: 'Businesses Served',  icon: Building2,     custom: false },
-              { display: `${count30}+`,   label: 'Years of Trust',      icon: CalendarClock, custom: false },
-              { display: `$${count1}B+`,  label: 'Delivered',           icon: TrendingUp,    custom: false },
+              { display: `${count200}+`,  label: 'Businesses Served',  icon: Building2     },
+              { display: `${count30}`,    label: 'Years of Trust',      icon: CalendarClock },
+              { display: '$1.2B+',        label: 'TCV Delivered',       icon: TrendingUp    },
+              { display: `${count8}X`,    label: 'Average Client ROI',  icon: Award         },
             ].map(({ display, label, icon: Icon }) => (
               <div key={label} className="group flex flex-col items-center cursor-default">
                 <div className="flex items-center gap-3 mb-2">
@@ -134,22 +135,23 @@ export function Home() {
               The Problem
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
-              The Problem Isn't Your Team. <span className="text-accent">It's Your System.</span>
+              The problem isn't your team. <span className="text-accent">It's your system.</span>
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              You're running campaigns. You're deploying AI. You're hiring salespeople. But pipeline isn't growing because nothing is connected. AI layered on top of a broken system doesn't fix it. It scales the dysfunction.
+              Sales, marketing and RevOps each think they're doing their job. AI layered on top of a disconnected system doesn't fix it. It scales the dysfunction.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {[
-              { title: 'Disconnected Execution', desc: 'Marketing, sales, and strategy operating in separate orbits with no shared accountability.' },
-              { title: 'No Unified System', desc: 'Tools, tactics, and teams that don\'t talk to each other, generating noise instead of pipeline.' },
-              { title: 'AI Without Strategy', desc: 'AI pilots that look impressive in demos but never connect to revenue outcomes.' },
-              { title: 'Unpredictable Pipeline', desc: 'No visibility into what\'s working, what\'s wasted, or what to fix first.' },
+              { icon: Unplug,       title: 'Disconnected execution', desc: 'Marketing, sales and RevOps are in separate orbits, with no shared accountability.' },
+              { icon: Layers,       title: 'No unified system',      desc: 'Tools and teams that don\'t talk to each other generate noise, not pipeline.' },
+              { icon: Lightbulb,    title: 'AI without strategy',    desc: 'Pilots that impress in demos but never connect to revenue outcomes.' },
+              { icon: AlertTriangle,title: 'Unpredictable pipeline', desc: 'No visibility into what\'s working, what\'s wasted, or what to fix first.' },
             ].map((problem) => (
               <div key={problem.title} className="group bg-white p-6 md:p-8 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <problem.icon className="w-7 h-7 text-accent mb-3 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                 <h3 className="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">{problem.title}</h3>
                 <p className="text-muted-foreground">{problem.desc}</p>
               </div>
@@ -162,66 +164,38 @@ export function Home() {
         </div>
       </section>
 
-      {/* Why Sage */}
+      {/* Who We Serve */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
-              Why Choose Us
+              Who We Serve
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
-              This Isn't Theory. <span className="text-accent">It's Execution.</span>
+              Built for the owner-operator <span className="text-accent">defending a market position,</span> not the startup chasing one.
             </h2>
-
-            <p className="text-lg text-primary/70 max-w-3xl mx-auto">
-              200+ businesses. 30 years of trust. $1B+ delivered. SAGE doesn't sell campaigns or standalone AI pilots. We build the full revenue system: strategy, GTM, demand generation, sales enablement, and AI automation working together as one performance engine.
-            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Revenue System Graphic — fills its column, centered with breathing room */}
-            <div className="flex items-center justify-center lg:justify-end">
-              <img src={revenueSystemImg} alt="Revenue System" className="w-full max-w-[480px] lg:max-w-none lg:w-[90%]" />
-            </div>
-
-            {/* Why Points — fills right column, left-aligned */}
-            <div className="space-y-6 md:space-y-8 lg:pl-4">
-              {[
-                {
-                  icon: Target,
-                  title: 'Human Strategy. AI Execution.',
-                  desc: 'Senior GTM experts define the strategy. AI amplifies and scales the execution. Neither works without the other.',
-                },
-                {
-                  icon: Zap,
-                  title: 'One System. Not a Stack of Tools.',
-                  desc: 'The RevenueStorm™ process integrates marketing, sales, and AI into a single connected revenue engine, no more siloed sprints.',
-                },
-                {
-                  icon: TrendingUp,
-                  title: 'Outcomes Over Deliverables.',
-                  desc: 'We measure success in pipeline, win rates, and revenue. Not reports, clicks, or activity metrics.',
-                },
-                {
-                  icon: Award,
-                  title: 'Senior Expertise. No Bench Warm-Ups.',
-                  desc: 'Seasoned CxOs and GTM leaders working directly on your business, not handed off to juniors after the kickoff.',
-                },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="group flex items-start gap-4 md:gap-6">
-                    <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-2xl border-2 border-accent/20 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/10 group-hover:border-accent/50 group-hover:scale-105">
-                      <Icon className="w-7 h-7 md:w-8 md:h-8 text-accent transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
-                      <p className="text-base text-primary/70">{renderTM(item.desc)}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                metric: '$50M+',
+                desc: 'Established, legacy companies with real revenue to protect',
+              },
+              {
+                metric: 'Ceiling',
+                desc: 'Growth has flattened and the old playbook isn\'t moving the number',
+              },
+              {
+                metric: 'Pressure',
+                desc: 'AI-native startups and next-tier players are hunting your customers',
+              },
+            ].map((card) => (
+              <div key={card.metric} className="group bg-white p-8 md:p-10 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+                <div className="text-4xl md:text-5xl font-black text-accent mb-4 transition-transform duration-300 group-hover:scale-105 origin-center">{card.metric}</div>
+                <p className="text-base text-muted-foreground leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -237,7 +211,7 @@ export function Home() {
               <RevenueStorm /> <span className="text-accent">Process</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Seven steps from broken alignment to a compounding revenue engine
+              Seven steps, one connected revenue engine, built to move the number in 90 days.
             </p>
           </div>
 
@@ -246,38 +220,38 @@ export function Home() {
             {[
               {
                 step: '01',
-                title: 'RevenueStorm™ Strategic Planning Session',
-                desc: 'We define your desired outcomes before any AI recommendation is made. Goals, benchmarks, and success metrics are set at the start, not discovered after.',
+                title: 'RevenueStorm™ planning',
+                desc: 'Define desired outcomes before any AI is recommended.',
               },
               {
                 step: '02',
-                title: 'Current Systems & Process Review',
-                desc: 'A structured diagnostic of your existing revenue motion: technology, data, workflows, team structure, to identify what\'s working, what\'s broken, and what\'s missing.',
+                title: 'Systems & process review',
+                desc: 'Diagnose what\'s working, what\'s broken and what\'s missing.',
               },
               {
                 step: '03',
-                title: 'AI Optimization Plan',
-                desc: 'We map which AI capabilities apply to your specific gaps and goals. No generic recommendations, no tech for tech\'s sake. A precise plan built for your business.',
+                title: 'AI optimization plan',
+                desc: 'Map AI capabilities to your specific gaps and goals.',
               },
               {
                 step: '04',
-                title: 'Tool & Platform Selection',
-                desc: 'We evaluate and recommend the right vetted AI platforms for your stack, from our pre-integrated partner suite, so you don\'t spend months researching and testing.',
+                title: 'Tool & platform selection',
+                desc: 'Choose from our vetted, pre-integrated partner suite.',
               },
               {
                 step: '05',
-                title: 'Managed Execution',
-                desc: 'SAGE deploys and manages the implementation alongside your team: campaigns, sales plays, automation sequences, and AI tooling, all tied to pipeline outcomes.',
+                title: 'Managed execution',
+                desc: 'We deploy and run it alongside your team.',
               },
               {
                 step: '06',
-                title: 'Testing for Effectiveness',
-                desc: 'We run structured tests across channels, messages, and workflows, measuring what\'s converting and cutting what isn\'t before scaling anything.',
+                title: 'Testing for effectiveness',
+                desc: 'Measure what converts. Cut what doesn\'t.',
               },
               {
                 step: '07',
-                title: 'Implementation, Stabilizing & Optimization',
-                desc: 'Full rollout, system stabilization, and continuous performance tuning. The revenue engine runs, compounds, and improves, with SAGE monitoring every lever.',
+                title: 'Stabilize & optimize',
+                desc: 'Full rollout and continuous performance tuning.',
               },
             ].map((step, i) => (
               <div key={step.step} className={`group flex items-start gap-4 sm:gap-6 p-6 md:p-8 border-b border-border hover:bg-gray-50 transition-colors ${i === 6 ? 'md:col-span-2 md:max-w-xl md:mx-auto md:border-r-0 w-full' : i % 2 === 0 ? 'md:border-r' : ''}`}>
@@ -307,7 +281,7 @@ export function Home() {
                 AI Alone Isn't the Advantage. <span className="text-accent">How You Use It Is.</span>
               </h2>
               <p className="text-base sm:text-lg text-white/75 leading-relaxed mb-5 sm:mb-6">
-                Anyone can buy an AI tool. Very few know how to wire it into a revenue system that actually performs. SAGE's AI RevGen Advisory practice embeds AI where it moves the needle: demand generation, pipeline qualification, sales velocity, and forecasting accuracy.
+                Anyone can buy an AI tool. Very few know how to wire it into a revenue system that actually performs. 1SagePros.AI's AI RevGen Advisory practice embeds AI where it moves the needle: demand generation, pipeline qualification, sales velocity, and forecasting accuracy.
               </p>
               <p className="text-base sm:text-lg text-white/75 leading-relaxed mb-8 md:mb-10">
                 We don't run AI experiments. We build AI-powered GTM systems. Human expertise guiding the strategy. AI scaling the execution. Revenue as the metric that matters.
@@ -401,20 +375,20 @@ export function Home() {
               Proven Outcomes
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
-              When the System Works, <span className="text-accent">the Numbers Show It.</span>
+              When the system works, <span className="text-accent">the numbers show it.</span>
             </h2>
 
             <p className="text-lg text-muted-foreground">
-              Average client outcomes from SAGE-engineered revenue systems
+              Average client outcomes from 1SagePros.AI-engineered revenue systems.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { metric: '3X',   label: 'Pipeline Growth',               desc: 'More qualified opportunities from aligned ICP targeting and AI-powered demand generation' },
-              { metric: '60%',  label: 'Less Wasted Effort',            desc: 'Eliminating disconnected activity and replacing it with sequenced, accountable execution' },
-              { metric: '22%',  label: 'Shorter Sales Cycles',          desc: 'Through structured playbooks, buyer-stage enablement, and AI-assisted deal intelligence' },
-              { metric: '8X',   label: 'Average Client ROI',            desc: 'Measured across pipeline influenced, deals closed, and revenue retained' },
+              { metric: '3X',   label: 'Pipeline Growth',      desc: 'From aligned ICP targeting and AI-powered demand generation' },
+              { metric: '60%',  label: 'Less Wasted Effort',   desc: 'Disconnected activity replaced by sequenced, accountable execution' },
+              { metric: '22%',  label: 'Shorter Sales Cycles', desc: 'Structured playbooks and AI-assisted deal intelligence' },
+              { metric: '8X',   label: 'Average Client ROI',   desc: 'Across pipeline influenced, deals closed and revenue retained' },
             ].map((result) => (
               <div key={result.label} className="group bg-white p-6 md:p-8 border-l-4 border-accent hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                 <div className="text-5xl font-black text-accent mb-3 transition-transform duration-300 group-hover:scale-105 origin-left">{result.metric}</div>

@@ -80,7 +80,7 @@ export function Contact() {
                   <rect x="0" y="278" width="10" height="10" rx="2" fill="#0B1F35" fillOpacity="0.15"/>
                   <text x="14" y="287" fontSize="10" fill="#0B1F35" fillOpacity="0.45" fontWeight="600">Current State</text>
                   <circle cx="110" cy="283" r="5" fill="#00C853" stroke="white" strokeWidth="1.5"/>
-                  <text x="120" y="287" fontSize="10" fill="#0B1F35" fillOpacity="0.45" fontWeight="600">After SAGE</text>
+                  <text x="120" y="287" fontSize="10" fill="#0B1F35" fillOpacity="0.45" fontWeight="600">After 1SagePros.AI</text>
                 </svg>
               </div>
             </div>
@@ -189,7 +189,7 @@ export function Contact() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group"
                 >
-                  Get Free Assessment
+                  Get Your Complimentary AI ROI Assessment
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 

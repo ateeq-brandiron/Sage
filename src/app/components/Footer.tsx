@@ -20,16 +20,16 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <div className="mb-4">
-              <img src={sageLogo} alt="SAGE Professional Services" className="h-8 md:h-10 brightness-0 invert" />
+              <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10 brightness-0 invert" />
             </div>
             <p className="text-sm text-white/80 mb-6 max-w-md">
-              200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI, as your fractional AI Officer.
+              200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="SAGE on LinkedIn" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="1SagePros.AI on LinkedIn" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
                 <Linkedin className="w-5 h-5" strokeWidth={1.5} />
               </a>
-              <a href="mailto:mitchell.chi@sageprosrvs.com" aria-label="Email SAGE" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
+              <a href="mailto:mitchell.chi@sageprosrvs.com" aria-label="Email 1SagePros.AI" className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-200">
                 <Mail className="w-5 h-5" strokeWidth={1.5} />
               </a>
             </div>
@@ -83,7 +83,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/20 mt-10 md:mt-12 pt-6 md:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
           <p className="text-sm text-white/60">
-            © 2026 SAGE PRO.AI
+            © 2026 1SagePros.AI
           </p>
           <div className="flex items-center space-x-6">
             <Link to="/contact" className="text-sm text-white/60 hover:text-accent transition-colors">Privacy</Link>

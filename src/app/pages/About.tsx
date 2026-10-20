@@ -28,7 +28,7 @@ export function About() {
     {
       name: 'Michael Doyle',
       photo: michaelImg,
-      role: 'CRO & Co-Founder',
+      role: 'COO & Co-Founder',
       bio: 'Michael built a Denver-based advertising agency into a multi-million dollar company and sold it to a national integrated services provider in 2000. With 25+ years of branding, marketing, and advertising experience, he has led 500+ signature BrandStorm sessions, helped companies raise more than $5B in capital, and supported 40+ acquisitions. He serves on the boards of Nuvana Resorts, The Dealmakers Conference, and Halen Technology, and facilitates several CEO peer groups.',
       certifications: [],
       expertise: ['Brand Strategy', 'Capital Raising', 'M&A Advisory', 'CEO Peer Groups', 'Revenue Leadership'],
@@ -44,8 +44,8 @@ export function About() {
             {/* Left — text */}
             <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
               <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">About SAGE</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1B+ delivered. Now we bring that same discipline to AI.</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">About 1SagePros.AI</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.</p>
             </div>
             {/* Right — growth chart */}
             <div className="hidden lg:flex items-center justify-center bg-white px-4 py-4">
@@ -222,7 +222,7 @@ export function About() {
             {[
               { icon: CalendarClock, value: '30+',  label: 'Years of Trust',    custom: false },
               { icon: Building2,    value: '200+', label: 'Businesses Served', custom: false },
-              { icon: TrendingUp,   value: '$1B+', label: 'Delivered',         custom: false },
+              { icon: TrendingUp,   value: '$1.2B+', label: 'TCV Delivered',   custom: false },
               { icon: Award,        value: '8X',   label: 'Avg ROI',           custom: false },
             ].map(({ icon: Icon, value, label, custom: _custom }) => (
               <div key={label} className="flex flex-col items-center group cursor-default">

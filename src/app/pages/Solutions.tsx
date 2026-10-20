@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2 } from 'lucide-react';
+
 import { renderTM } from '../components/RevenueStorm';
 import leavesBackground from '../../assets/brand/leaves-bg.jpg';
 import wavePattern from '../../assets/brand/wave-bg.png';
@@ -77,7 +78,7 @@ export function Solutions() {
                   to="/contact"
                   className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
                 >
-                  Get a Free Assessment
+                  Get Your AI ROI Assessment
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 <Link
@@ -193,7 +194,7 @@ export function Solutions() {
         </div>
       </section>
 
-      {/* The Framework */}
+      {/* Three Ways to Engage */}
       <section
         className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
         style={{
@@ -205,32 +206,52 @@ export function Solutions() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Approach</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">How We Work Together</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
-              The <span className="text-accent">Framework</span>
+              Three Ways to <span className="text-accent">Engage</span>
             </h2>
-            <p className="text-lg text-white/70">Five phases to predictable revenue</p>
+            <p className="text-lg text-white/70">Every engagement begins with an AI Vibe Check. Then pick the way you want to work with us.</p>
           </div>
 
-          {/* Phase cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* Engagement tier cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { phase: '01', icon: Search,    title: 'RevenueStorm™ Assessment', desc: 'Analyze current state and identify opportunities' },
-              { phase: '02', icon: Target,    title: 'Market Positioning',        desc: 'Nail messaging and competitive positioning' },
-              { phase: '03', icon: Megaphone, title: 'Demand Generation',         desc: 'Build campaigns that fill pipeline' },
-              { phase: '04', icon: Zap,       title: 'Sales Acceleration',        desc: 'Equip teams with playbooks and tools' },
-              { phase: '05', icon: BarChart2, title: 'Revenue Intelligence',      desc: 'Deploy dashboards and analytics' },
-            ].map(({ phase, icon: Icon, title, desc }) => (
+              {
+                tier: 'Advisory',
+                pricing: 'Fixed Fee',
+                icon: Target,
+                items: ['RevenueStorm™', 'AI Embodiment™ by Engage3P', 'Product roadmap', 'Mergers & acquisitions', 'Exit strategy & brokerage'],
+              },
+              {
+                tier: 'Consulting',
+                pricing: 'Rack Rate $350/hr',
+                icon: Lightbulb,
+                items: ['GTM & ICP strategy', 'SEO, AEO & GEO', 'Brand development', 'Outbound campaigns', 'Demand generation', 'AI integration & workflow mapping'],
+              },
+              {
+                tier: 'Execution',
+                pricing: '100% Performance-Based',
+                icon: Zap,
+                items: ['Fractional CRO/CMO', 'Fractional Chief AI Officer', 'Sales Development Rep (SDR)', 'Enterprise AE', 'Managed AI stack'],
+              },
+            ].map(({ tier, pricing, icon: Icon, items }) => (
               <div
-                key={phase}
-                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 hover:bg-white/20 transition-all duration-300 group"
+                key={tier}
+                className="flex flex-col bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 hover:bg-white/20 transition-all duration-300 group"
               >
-                <div className="text-3xl font-black text-accent/60 mb-4 group-hover:text-accent/80 transition-colors duration-300">{phase}</div>
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-accent/25 border border-accent/40 flex items-center justify-center mb-4 md:mb-5">
                   <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-base font-bold text-white mb-3 leading-snug">{renderTM(title)}</h3>
-                <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
+                <h3 className="text-xl font-black text-white mb-1">{tier}</h3>
+                <p className="text-sm text-accent font-semibold mb-5">{pricing}</p>
+                <ul className="space-y-2 flex-1">
+                  {items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-white/80">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" strokeWidth={2} />
+                      <span>{renderTM(item)}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -249,10 +270,10 @@ export function Solutions() {
           </h2>
 
           <p className="text-lg mb-8 md:mb-10 text-primary/70">
-            Get a free assessment, no commitment required
+            Get started with an AI Vibe Check — no commitment required
           </p>
           <Button to="/contact">
-            Get Free Assessment
+            Get Your AI ROI Assessment
           </Button>
         </div>
       </section>

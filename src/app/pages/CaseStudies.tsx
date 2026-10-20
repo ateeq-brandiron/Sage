@@ -6,17 +6,17 @@ import { Button } from '../components/Button';
 export function CaseStudies() {
   const studies = [
     {
-      title: 'Supply Chain Technology Expansion',
-      client: 'Global RFID Solutions Provider',
-      challenge: 'Expanding into North America with zero brand awareness and no sales infrastructure',
-      solution: 'Full revenue system including positioning, demand generation, and sales team buildout',
+      title: 'Launched North America from Zero',
+      client: 'Global supply chain consultancy, Middle East-based. A 20-year-old consultancy and software VAR strong across EMEA, APAC and Australia, with no U.S. revenue, brand, demand generation or sales team.',
+      challenge: 'Co-Sell with AEs',
+      solution: 'Brand positioning — A RevenueStorm™ aligned messaging and co-branded assets to establish a U.S. presence. Demand engine — A multi-channel marketing platform to drive awareness and pipeline. Sales activation — Fractional sales executives with deep ERP and WMS expertise, co-selling with enterprise technology partner Infor.',
       results: [
-        { metric: '300%', label: 'Pipeline Growth' },
-        { metric: '42%', label: 'Revenue Increase' },
-        { metric: '$4.2M', label: 'New Pipeline' },
-        { metric: '8X', label: 'ROI' },
+        { metric: '15+', label: 'Net-New Clients (GM USA · Clarins · Timex · DHL · First Supply)' },
+        { metric: '62%', label: 'MQL-to-SQL Conversion' },
+        { metric: '37%', label: 'Increase in Pipeline Velocity' },
+        { metric: '#1', label: 'WMS Implementer in the Infor Ecosystem' },
       ],
-      testimonial: 'SAGE built our entire North American revenue engine. Their expertise was invaluable.',
+      testimonial: '38% P4-to-win ratio. The numbers speak for themselves.',
       author: 'VP Sales, North America',
     },
     {
@@ -30,7 +30,7 @@ export function CaseStudies() {
         { metric: '45%', label: 'Higher Win Rate' },
         { metric: '$2.1M', label: 'Incremental Revenue' },
       ],
-      testimonial: 'For the first time in years, we can accurately forecast revenue.',
+      testimonial: 'For the first time in years, we can accurately forecast revenue. 1SagePros.AI made it possible.',
       author: 'Chief Revenue Officer',
     },
     {
@@ -44,7 +44,7 @@ export function CaseStudies() {
         { metric: '4X', label: 'Pipeline Velocity' },
         { metric: '3X', label: 'Revenue Growth' },
       ],
-      testimonial: 'SAGE gave us the revenue infrastructure we needed to scale.',
+      testimonial: '1SagePros.AI gave us the revenue infrastructure we needed to scale.',
       author: 'CEO & Founder',
     },
   ];
