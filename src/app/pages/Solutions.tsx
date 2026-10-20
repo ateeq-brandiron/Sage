@@ -17,6 +17,24 @@ import vectorPattern from '../../assets/brand/vector-pattern.png';
 import { Button } from '../components/Button';
 
 export function Solutions() {
+  const cx0 = 220, cy0 = 220;
+  const wheelPartners = [
+    'Venture Capital', 'Empower AI 365', 'Engage3P', 'Brand Iron', 'Boxsy',
+    'Bellwether Intel', 'OutReep', 'AIO', 'Biz Konnect',
+  ].map((name, i) => {
+    const rad = ((-90 + i * 40) * Math.PI) / 180;
+    const [c, s] = [Math.cos(rad), Math.sin(rad)];
+    return {
+      name,
+      cx: cx0 + 135 * c, cy: cy0 + 135 * s,
+      sx: cx0 + 52 * c,  sy: cy0 + 52 * s,
+      ex: cx0 + 119 * c, ey: cy0 + 119 * s,
+      lx: cx0 + 162 * c, ly: cy0 + 162 * s,
+      anchor: (c > 0.15 ? 'start' : c < -0.15 ? 'end' : 'middle') as 'start' | 'end' | 'middle',
+      words: name.split(' '),
+    };
+  });
+
   const solutions = [
     {
       icon: Target,
@@ -252,6 +270,95 @@ export function Solutions() {
           <p className="text-center text-base font-semibold text-primary/70 mt-8 italic">
             None of these pillars pay off unless the change is <span className="text-accent not-italic font-black">embodied, not just embedded.</span>
           </p>
+        </div>
+      </section>
+
+      {/* AI Revenue Life Cycle */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Partner Ecosystem</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
+              The AI Revenue <span className="text-accent">Life Cycle</span>
+            </h2>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
+              A system, not tools or people: one wheel, nine partners, one road to revenue.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Wheel SVG — desktop only */}
+            <div className="hidden lg:block">
+              <svg viewBox="0 0 440 440" className="w-full max-w-md mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* orbit ring */}
+                <circle cx="220" cy="220" r="135" stroke="#00C853" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="4 4"/>
+                {/* spokes + dots + labels */}
+                {wheelPartners.map(({ name, cx, cy, sx, sy, ex, ey, lx, ly, anchor, words }) => (
+                  <g key={name}>
+                    <line x1={sx} y1={sy} x2={ex} y2={ey} stroke="#00C853" strokeOpacity="0.3" strokeWidth="1"/>
+                    <circle cx={cx} cy={cy} r="15" fill="#0B2A1C" stroke="#00C853" strokeOpacity="0.55" strokeWidth="1.5"/>
+                    <text textAnchor={anchor} fontSize="10" fill="white" fillOpacity="0.7" fontWeight="600">
+                      {words.length === 1 ? (
+                        <tspan x={lx} y={ly}>{words[0]}</tspan>
+                      ) : (
+                        <>
+                          <tspan x={lx} y={ly} dy="-6">{words.slice(0, Math.ceil(words.length / 2)).join(' ')}</tspan>
+                          <tspan x={lx} dy="14">{words.slice(Math.ceil(words.length / 2)).join(' ')}</tspan>
+                        </>
+                      )}
+                    </text>
+                  </g>
+                ))}
+                {/* center */}
+                <circle cx="220" cy="220" r="50" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.7" strokeWidth="2"/>
+                <text x="220" y="216" textAnchor="middle" fontSize="14" fontWeight="900" fill="#00C853">1SP</text>
+                <text x="220" y="232" textAnchor="middle" fontSize="14" fontWeight="900" fill="#00C853">.AI</text>
+              </svg>
+            </div>
+
+            {/* Right — stages + why */}
+            <div className="space-y-6 md:space-y-8">
+              {[
+                { stage: '1', label: 'Initial Traction', value: '$', desc: 'Aligned ICP targeting and AI-powered demand generation activate the first revenue signal.' },
+                { stage: '2', label: 'Increase Velocity', value: '$$ → $$$', desc: 'Demand generation and sales acceleration compound — pipeline grows faster than headcount.' },
+                { stage: '3', label: 'Sustainable Revenues', value: '$$$ → $$$$', desc: 'Full rollout, continuous performance tuning, and AI that keeps the engine running.' },
+              ].map(({ stage, label, value, desc }) => (
+                <div key={stage} className="flex gap-4 items-start">
+                  <div className="w-9 h-9 rounded-lg bg-accent/20 border border-accent/40 flex items-center justify-center shrink-0">
+                    <span className="text-sm font-black text-accent">{stage}</span>
+                  </div>
+                  <div>
+                    <div className="flex items-baseline gap-3 mb-1">
+                      <h3 className="text-lg font-black text-white">{label}</h3>
+                      <span className="text-accent font-black text-sm">{value}</span>
+                    </div>
+                    <p className="text-sm text-white/65 leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="border-t border-white/15 pt-6 md:pt-8">
+                <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why you should care</p>
+                <ul className="space-y-2">
+                  {['Time to market accelerates', 'Brand awareness increases', 'Competitive edge increases', 'Net-new logos come inbound'].map(item => (
+                    <li key={item} className="flex gap-3 text-sm text-white/75">
+                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" strokeWidth={2}/>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Mobile: partner chips */}
+              <div className="lg:hidden border-t border-white/15 pt-6">
+                <p className="text-xs uppercase tracking-widest text-white/50 mb-4 font-semibold">The Partner Wheel</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Venture Capital','Empower AI 365','Engage3P','Brand Iron','Boxsy','Bellwether Intel','OutReep','AIO','Biz Konnect'].map(p => (
+                    <span key={p} className="px-3 py-1.5 bg-white/10 border border-white/20 text-xs text-white/70 font-semibold">{p}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
