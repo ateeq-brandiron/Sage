@@ -94,6 +94,61 @@ export function About() {
         </div>
       </section>
 
+      {/* Our History */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our History</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
+              We've ridden technology waves before
+            </h2>
+            <p className="text-lg text-white/70">Mitchell Chi's first company, MicroSage Solutions (MSS), from $2,000 to $200M+.</p>
+          </div>
+
+          <div className="mb-8 border-l-4 border-accent pl-6">
+            <p className="text-accent font-black text-lg mb-1">Wave 1</p>
+            <p className="text-white/75 text-sm">1+ Trillion typewriters and WANG word processors replaced by microcomputers</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mb-8">
+            {[
+              { year: '1983', title: '', desc: 'MicroSage Solutions, a Businessland Franchise starts in Los Alamos, NM, with a $2k investment.' },
+              { year: '1984', title: '', desc: 'Won a 5-year Department of Energy contract for PC end-user training (4k engineers and scientists) and IBM, Apple hardware & Q Cleared Break Fix. Apple, IBM, Juniper, Novell and Banyan VAR' },
+              { year: '1987', title: 'Awarded', desc: '"Minority Subcontractor of the Year" by the DOE. Cellular One, Motorola, Nortel. HP and Compaq VAR' },
+              { year: '1991', title: 'Awarded', desc: '"Small Business of the Year, Region V" by the SBA. ARR ~$23m. MSS acquired by ENTEX/CDW' },
+            ].map(({ year, title, desc }) => (
+              <div key={year} className="bg-primary p-6">
+                <p className="text-accent font-black text-xl mb-1">{year}</p>
+                {title && <p className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">{title}</p>}
+                <p className="text-white/70 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
+            {[
+              { wave: 'Wave 2', year: '1993', items: ['Relational Databases', 'Networked Systems', 'Broadband and Fiber'] },
+              { wave: 'Wave 3', year: '1995', items: ['The Internet Changes Everything™', 'Oracle'] },
+              { wave: 'Wave 4', year: '2000', items: ['SAAS and Web Apps', 'E-Commerce'] },
+              { wave: 'Wave 5', year: '2005', items: ['Big Data/NN/ML', 'Supply Chain Visibility'] },
+              { wave: 'Wave 6', year: '2025', items: ['Agentic and LLM', 'Vibe Coding', 'Connected Worlds (GEO)'] },
+            ].map(({ wave, year, items }) => (
+              <div key={wave} className="bg-white/10 border border-white/20 p-4">
+                <p className="text-accent font-black text-sm">{wave} <span className="text-white/50 font-semibold">{year}</span></p>
+                <ul className="mt-2 space-y-1">
+                  {items.map(item => <li key={item} className="text-white/65 text-xs leading-snug">{item}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs text-white/40 border-t border-white/10 pt-4">
+            <span className="font-bold text-white/50 uppercase tracking-wider mr-2">Networking leaders of the era:</span>
+            Cisco Systems · Lucent Technologies · Nortel Networks · 3Com · Ericsson · Juniper Networks · Extreme Networks · Ciena
+          </p>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
         <div
@@ -211,6 +266,59 @@ export function About() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Extended Team */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Extended Team</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">
+              Seasoned CxOs, working directly on your business
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border mb-8">
+            {[
+              { name: 'Nick Bahr', role: 'CTO, CaiO', company: 'CEO, Aio Advisors Group' },
+              { name: 'Shera Haliczer', role: 'SVP Change Management', company: 'CEO, Engage3P' },
+              { name: 'Milind Prabhudesai', role: 'SVP AI Data Acquisition', company: 'CEO & Co-founder, BizKonnect' },
+              { name: 'Mark Sibelli', role: 'UX Design', company: '' },
+              { name: 'Ben Amiwero', role: 'SVP Outreach', company: 'CEO, Empower AI' },
+            ].map(({ name, role, company }) => (
+              <div key={name} className="bg-white p-6 md:p-8">
+                <div className="w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-black text-accent">{name[0]}</span>
+                </div>
+                <h3 className="text-lg font-black text-primary mb-1">{name}</h3>
+                <p className="text-accent text-sm font-semibold mb-1">{role}</p>
+                {company && <p className="text-xs text-muted-foreground">{company}</p>}
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white border border-border p-5 md:p-6 mb-8">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary/50 mb-3">Also on our team</p>
+            <p className="text-sm text-muted-foreground">
+              Paul Sievers · Corinne Wallace · Robert Shroll · Katrina Jumawid · Ateeq Asif · Shelly Barson
+            </p>
+          </div>
+
+          <div className="bg-accent/10 border border-accent/20 p-5 md:p-6">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Advisory Board</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              {[
+                { name: 'Ed Soohoo', title: 'CTO, Lenovo' },
+                { name: 'David Sokolof', title: 'CEO, Data Cortex' },
+                { name: 'James Harris', title: 'SVP, Snowflake' },
+                { name: 'Marci Kahn, Esq.', title: 'Blank Rome' },
+                { name: 'Steve L. Bolden, CPA', title: 'Meltzer & Assoc. LLP' },
+              ].map(({ name, title }) => (
+                <span key={name} className="text-foreground"><span className="font-bold">{name}</span>, {title}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

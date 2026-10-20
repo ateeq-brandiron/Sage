@@ -123,6 +123,67 @@ export function Home() {
         </div>
       </section>
 
+      {/* Origin Story */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-8 leading-tight">
+                30 years of conventional wins.<br /><span className="text-accent">Now AI in everything we do.</span>
+              </h2>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <span className="text-accent font-black text-2xl leading-none mt-1 shrink-0">$1.2B</span>
+                  <p className="text-white/75 leading-relaxed">in revenue (TCV) sold for 200+ clients over 30 years, utilizing conventional sales and marketing, fractional and full-time experts.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-accent font-black text-2xl leading-none mt-1 shrink-0">2025</span>
+                  <p className="text-white/75 leading-relaxed">We replaced "conventional" and infused AI into everything we do. Today <span className="text-white font-bold">1SagePros.AI</span> is an Authorized Value-Added Reseller of best-in-breed AI platforms such as Bellwether Intel, Empower AI, Engage3P and others.</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-accent/15 border border-accent/30 p-7 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-4">What We've Discovered About AI</p>
+              <p className="text-white/85 text-lg leading-relaxed">
+                Stakeholders want someone who has already made the tool-versus-outcome decision on their behalf, and who will stay in the room until the outcomes are realized.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why You Need Us */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why You Need Us</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3 max-w-4xl">
+              Picking an AI product is the easy part. Turning it into revenues is where most companies <span className="text-red-600">FAIL</span>.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-10">
+            {[
+              { num: '01', title: 'AI is moving faster than leadership teams can track.' },
+              { num: '02', title: "Anyone can select a tool now. That isn't an advantage." },
+              { num: '03', title: 'Proving cash value, fast, is where AI initiatives die.' },
+            ].map(({ num, title }) => (
+              <div key={num} className="border-t-4 border-accent pt-6">
+                <div className="text-5xl font-black text-primary/15 mb-3">{num}</div>
+                <h3 className="text-lg font-bold text-primary leading-snug">{title}</h3>
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-border pt-6 md:pt-8">
+            <p className="text-base text-muted-foreground mb-4">For 30 years we've delivered out-of-the-box revenue solutions that work. <span className="font-bold text-accent italic">Now we do it with AI.</span></p>
+            <p className="text-xs text-muted-foreground/70">
+              <span className="font-semibold text-foreground">A select sample of platforms we work within: </span>
+              Certified: Anthropic · Claude Opus 5 · Claude Sonnet 5 · DeepSeek · OpenAI · Chat GPT Astra · Meta MUSE · 8n8 · Perplexity AI · Grok xAI · Genspark · Gemini 3.1 Pro · Claude Workflow · Claude Design · Figma · Mythos 5
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* The Problem */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 opacity-20">

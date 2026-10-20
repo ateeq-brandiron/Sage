@@ -19,7 +19,7 @@ import { Button } from '../components/Button';
 export function Solutions() {
   const cx0 = 220, cy0 = 220;
   const wheelPartners = [
-    'Venture Capital', 'Empower AI 365', 'Engage3P', 'Brand Iron', 'Boxsy',
+    'Venture Capital', 'Empower AI 365', 'Engage3P', 'Brand Iron', 'Boxsy Fund Tracking',
     'Bellwether Intel', 'OutReep', 'AIO', 'Biz Konnect',
   ].map((name, i) => {
     const rad = ((-90 + i * 40) * Math.PI) / 180;
@@ -352,10 +352,124 @@ export function Solutions() {
               <div className="lg:hidden border-t border-white/15 pt-6">
                 <p className="text-xs uppercase tracking-widest text-white/50 mb-4 font-semibold">The Partner Wheel</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Venture Capital','Empower AI 365','Engage3P','Brand Iron','Boxsy','Bellwether Intel','OutReep','AIO','Biz Konnect'].map(p => (
+                  {['Venture Capital','Empower AI 365','Engage3P','Brand Iron','Boxsy Fund Tracking','Bellwether Intel','OutReep','AIO','Biz Konnect'].map(p => (
                     <span key={p} className="px-3 py-1.5 bg-white/10 border border-white/20 text-xs text-white/70 font-semibold">{p}</span>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The AI Stack */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">The AI Stack</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-5 leading-tight">
+                Built, integrated and managed for you.
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                You oversee the outcomes. We run the stack underneath them.
+              </p>
+            </div>
+            <div className="space-y-3">
+              {[
+                { label: 'TOP LAYER', title: 'Agentic AI & LLMs', desc: 'Agents and large language models that do the work.', bg: 'bg-primary', labelColor: 'text-accent', titleColor: 'text-white', descColor: 'text-white/70' },
+                { label: 'MIDDLE LAYER', title: '1SagePros.AI platform + services', desc: 'Pre-integrated partner tools, orchestration and managed services, as needed.', bg: 'bg-accent', labelColor: 'text-primary font-bold', titleColor: 'text-primary', descColor: 'text-primary/80' },
+                { label: 'FOUNDATION', title: 'Neural network, machine learning, and data utilization', desc: 'The models underneath, selected and governed for security and compliance.', bg: 'bg-primary/80', labelColor: 'text-accent', titleColor: 'text-white', descColor: 'text-white/70' },
+              ].map(({ label, title, desc, bg, labelColor, titleColor, descColor }) => (
+                <div key={label} className={`${bg} p-5 md:p-6`}>
+                  <p className={`text-xs font-bold uppercase tracking-widest ${labelColor} mb-1`}>{label}</p>
+                  <h3 className={`text-base font-black ${titleColor} mb-1`}>{title}</h3>
+                  <p className={`text-sm ${descColor}`}>{desc}</p>
+                </div>
+              ))}
+              <div className="bg-primary/90 p-4 text-center">
+                <p className="text-xs font-bold uppercase tracking-widest text-white/60">Intelligence and Data</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Spotlights */}
+      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-14">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Partner Spotlights</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-3">
+              The spokes on the wheel
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Each partner is a specialist in one spoke. Together, they form one connected revenue engine.
+            </p>
+          </div>
+
+          <div className="space-y-px bg-border">
+            {/* Engage3P */}
+            <div className="bg-white p-6 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Why Engage3P</p>
+              <h3 className="text-2xl md:text-3xl font-black text-primary mb-3">The tools go live. We make the work change.</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl">Every spoke on the wheel assumes your people will work differently once the AI is in. Most keep their old habits. Engage3P builds AI Embodiment™ into the rollout, so the results hold after go-live.</p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { num: '01', phase: 'Before the Tools', title: 'Read capacity first', desc: 'We read whether your team can absorb another change right now with MIA™, find the AI people already use, and pick the first use case worth the effort.' },
+                  { num: '02', phase: 'During Rollout', title: 'Weave it into the work', desc: 'One team, one use case, one tool. We redesign the workflow around the AI, coach the people leading it, and catch warning signs weeks before usage drops.' },
+                  { num: '03', phase: 'After Go-Live', title: "Prove it's lived", desc: "We validate behavior, not logins or seat counts, and tie it to the outcome you bought the AI for: Return on Intention™." },
+                ].map(({ num, phase, title, desc }) => (
+                  <div key={num} className="border-t-2 border-accent pt-5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-accent font-black text-sm">{num}</span>
+                      <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">{phase}</span>
+                    </div>
+                    <h4 className="font-black text-primary mb-2">{title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-base font-bold text-primary">AI that gets installed but never adopted is just <span className="text-accent italic">expensive theater.</span></p>
+            </div>
+
+            {/* Brand Iron */}
+            <div className="bg-white p-6 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Partner Spotlight · Brand Iron</p>
+              <h3 className="text-2xl md:text-3xl font-black text-primary mb-3">Forging brands. Driving revenue.</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl">Brand Iron makes companies discoverable, trusted and chosen in an AI-driven buying landscape. It's the brand and demand spoke on the 1SagePros.AI wheel.</p>
+              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                {['Brand strategy', 'AI visibility & discoverability', 'Go-to-market strategy', 'Capital raise support', 'Revenue engineering', 'Outbound growth', 'Website development', 'One connected growth system'].map(item => (
+                  <div key={item} className="bg-gray-50 border border-border px-4 py-3 text-sm font-semibold text-primary">{item}</div>
+                ))}
+              </div>
+              <div className="grid grid-cols-3 gap-6 mb-6">
+                {[{ metric: '50+', label: 'brands supported' }, { metric: '150K+', label: 'investor network' }, { metric: 'AI-first', label: 'growth strategies' }].map(({ metric, label }) => (
+                  <div key={label}>
+                    <div className="text-2xl md:text-3xl font-black text-accent mb-1">{metric}</div>
+                    <div className="text-xs text-muted-foreground font-semibold">{label}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-accent p-4">
+                <p className="text-sm font-bold text-primary">Free AI Visibility Audit · brandiron.net · 303-534-1901</p>
+              </div>
+            </div>
+
+            {/* Empower AI 365 */}
+            <div className="bg-white p-6 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Partner Spotlight · Empower AI 365</p>
+              <h3 className="text-2xl md:text-3xl font-black text-primary mb-3">Done For You Growth Engine</h3>
+              <p className="text-muted-foreground max-w-2xl">A complete client acquisition system built to generate qualified sales calls and support scalable growth. Empower the people.</p>
+            </div>
+
+            {/* Bellwether Intel */}
+            <div className="bg-white p-6 md:p-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">Partner Spotlight · Bellwether Intel</p>
+              <h3 className="text-2xl md:text-3xl font-black text-primary mb-3">There's a signal about you<br /><em>you might not see.</em></h3>
+              <p className="text-muted-foreground max-w-2xl">Get a real-time read on how your brand shows up and where your vibe is misaligned. The AI Vibe Check scans public signals to create your Vibe Score — and shows you exactly where to fix it first.</p>
+              <div className="mt-6">
+                <span className="inline-block bg-primary text-white text-xs font-bold uppercase tracking-wider px-4 py-2">Start Free · AI Vibe Check</span>
               </div>
             </div>
           </div>
