@@ -55,7 +55,7 @@ export function Home() {
                   AI Revenue Partner
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl font-black text-primary mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
                   AI is easy to buy.<br />ROI is impossible to realize.
                 </h1>
 
