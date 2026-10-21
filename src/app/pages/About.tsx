@@ -215,6 +215,65 @@ export function About() {
         </div>
       </section>
 
+      {/* Extended Team */}
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Extended Network</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Our <span className="text-accent">Team</span></h2>
+            <p className="text-lg text-muted-foreground">Specialists across every revenue discipline</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border mb-px">
+            {[
+              { name: 'Nick Bahr', role: 'CTO, CaiO · CEO, Aio Advisors Group' },
+              { name: 'Shera Haliczer', role: 'SVP Change Management · CEO, Engage3P' },
+              { name: 'Milind Prabhudesai', role: 'SVP AI Data Acquisition · CEO & Co-founder, BizKonnect' },
+              { name: 'Mark Sibelli', role: 'UX Design' },
+              { name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
+            ].map((member) => (
+              <div key={member.name} className="bg-white p-6 md:p-8">
+                <h3 className="text-lg font-black text-primary mb-1">{member.name}</h3>
+                <p className="text-sm text-accent font-semibold">{member.role}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white border border-border p-6 md:p-8">
+            <p className="text-xs uppercase tracking-widest text-primary/50 mb-4 font-semibold">Also on the team</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Paul Sievers &middot; Corinne Wallace &middot; Robert Shroll &middot; Katrina Jumawid &middot; Ateeq Asif &middot; Shelly Barson
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Advisory Board */}
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 md:mb-16">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Advisors</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Advisory <span className="text-accent">Board</span></h2>
+            <p className="text-lg text-muted-foreground">Enterprise expertise guiding every engagement</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+            {[
+              { name: 'Ed Soohoo', role: 'CTO, Lenovo' },
+              { name: 'David Sokolof', role: 'CEO, Data Cortex' },
+              { name: 'James Harris', role: 'SVP, Snowflake' },
+              { name: 'Marci Kahn Esq.', role: 'Blank Rome' },
+              { name: 'Steve L. Bolden CPA', role: 'Meltzer & Assoc. LLP' },
+            ].map((advisor) => (
+              <div key={advisor.name} className="bg-white p-6 md:p-8">
+                <h3 className="text-lg font-black text-primary mb-1">{advisor.name}</h3>
+                <p className="text-sm text-accent font-semibold">{advisor.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE]">
         <div className="max-w-7xl mx-auto">

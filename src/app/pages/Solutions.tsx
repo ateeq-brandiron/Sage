@@ -19,7 +19,7 @@ import { Button } from '../components/Button';
 export function Solutions() {
   const cx0 = 220, cy0 = 220;
   const wheelPartners = [
-    'Venture Capital', 'Empower AI 365', 'Engage3P', 'Brand Iron', 'Boxsy',
+    'Venture Capital', 'Empower AI 365', 'Engage3P', 'Brand Iron', 'Boxsy Fund Tracking',
     'Bellwether Intel', 'OutReep', 'AIO', 'Biz Konnect',
   ].map((name, i) => {
     const rad = ((-90 + i * 40) * Math.PI) / 180;
@@ -352,7 +352,7 @@ export function Solutions() {
               <div className="lg:hidden border-t border-white/15 pt-6">
                 <p className="text-xs uppercase tracking-widest text-white/50 mb-4 font-semibold">The Partner Wheel</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Venture Capital','Empower AI 365','Engage3P','Brand Iron','Boxsy','Bellwether Intel','OutReep','AIO','Biz Konnect'].map(p => (
+                  {['Venture Capital','Empower AI 365','Engage3P','Brand Iron','Boxsy Fund Tracking','Bellwether Intel','OutReep','AIO','Biz Konnect'].map(p => (
                     <span key={p} className="px-3 py-1.5 bg-white/10 border border-white/20 text-xs text-white/70 font-semibold">{p}</span>
                   ))}
                 </div>

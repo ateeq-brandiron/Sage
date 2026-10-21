@@ -444,83 +444,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Latest Insights */}
-      <section
-        aria-label="Latest Insights"
-        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-border"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 md:mb-12">
-            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
-              Knowledge Hub
-            </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
-              Latest <span className="text-accent">Insights</span>
-            </h2>
-
-            <p className="text-lg text-muted-foreground">
-              Strategic thinking on revenue growth
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6 mb-10 md:mb-12">
-            {[
-              {
-                category: 'Revenue Growth',
-                readTime: '8 min',
-                title: 'The Revenue System Problem: Why B2B Companies Struggle to Scale',
-                date: 'March 15, 2026',
-                slug: 'revenue-system-problem-b2b-scale',
-              },
-              {
-                category: 'Sales Strategy',
-                readTime: '6 min',
-                title: 'Building Sales Playbooks That Actually Get Used',
-                date: 'March 10, 2026',
-                slug: 'building-sales-playbooks-that-get-used',
-              },
-              {
-                category: 'AI & Automation',
-                readTime: '7 min',
-                title: 'AI in Revenue Operations: Hype vs Reality',
-                date: 'February 28, 2026',
-                slug: 'ai-revenue-operations-hype-vs-reality',
-              },
-            ].map((article) => (
-              <Link
-                key={article.slug}
-                to="/insights"
-                className="group flex-1 bg-white p-6 hover:shadow-md transition-all duration-300 flex flex-col border-l-4 border-accent"
-                aria-label={article.title}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                    {article.category}
-                  </span>
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-primary group-hover:text-accent transition-colors mb-4 leading-snug flex-1">
-                  {article.title}
-                </h3>
-
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <span>{article.date}</span>
-                  <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button to="/insights">
-              View All Insights
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
         <div className="absolute inset-0 bg-white/80" />
@@ -560,21 +483,31 @@ export function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
-            >
-              Book Your <RevenueStorm /> Assessment
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
-            >
-              Talk to a Revenue Engineer
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-6">
+            <div className="bg-white border-2 border-accent p-6 text-center">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Start Free</p>
+              <h3 className="text-lg font-black text-primary mb-2">AI Vibe Check</h3>
+              <p className="text-sm text-muted-foreground mb-5">Get a real-time read on how your brand shows up and where your AI signal is misaligned.</p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center w-full px-5 py-3 bg-accent text-white font-semibold transition-all duration-300 text-sm group hover:brightness-110"
+              >
+                Get Your Free AI Vibe Check
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+            <div className="bg-primary p-6 text-center">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Sales Assessment</p>
+              <h3 className="text-lg font-black text-white mb-2">AI ROI Assessment</h3>
+              <p className="text-sm text-white/70 mb-5">See what AI can actually do for your revenue — a complimentary assessment with Mitchell and the team.</p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center w-full px-5 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold transition-all duration-300 text-sm group hover:brightness-110"
+              >
+                Get Your AI ROI Assessment
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
