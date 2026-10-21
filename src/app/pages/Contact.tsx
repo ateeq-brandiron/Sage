@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
 
 export function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitted(true);
+  }
+
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
@@ -98,7 +106,14 @@ export function Contact() {
                 Book Your Assessment
               </h2>
 
-              <form className="space-y-5 md:space-y-6">
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <CheckCircle2 className="w-16 h-16 text-accent mb-6" strokeWidth={1.5} />
+                  <h3 className="text-2xl font-black text-primary mb-3">You're all set!</h3>
+                  <p className="text-muted-foreground max-w-sm">Thanks for reaching out. Mitchell and the team will be in touch within one business day.</p>
+                </div>
+              ) : (
+              <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="first-name" className="block text-sm font-bold text-foreground mb-2">
@@ -197,6 +212,7 @@ export function Contact() {
                   No spam, ever. Unsubscribe anytime.
                 </p>
               </form>
+              )}
             </div>
 
             {/* Sidebar */}

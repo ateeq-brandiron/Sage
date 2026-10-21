@@ -224,7 +224,7 @@ export function About() {
             <p className="text-lg text-muted-foreground">Specialists across every revenue discipline</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border mb-px">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border mb-px">
             {[
               { name: 'Nick Bahr', role: 'CTO, CaiO · CEO, Aio Advisors Group' },
               { name: 'Shera Haliczer', role: 'SVP Change Management · CEO, Engage3P' },

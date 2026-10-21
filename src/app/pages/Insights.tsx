@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
@@ -5,6 +6,8 @@ import { Button } from '../components/Button';
 import { articles } from '../data/articles';
 
 export function Insights() {
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
   const categories = [
     { name: 'Revenue Growth', icon: TrendingUp },
     { name: 'Sales Strategy', icon: Target },
@@ -82,13 +85,15 @@ export function Insights() {
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {categories.map((category) => {
               const Icon = category.icon;
+              const isActive = activeCategory === category.name;
               return (
                 <button
                   key={category.name}
-                  className="flex items-center gap-2 px-4 md:px-6 py-2.5 md:py-3 border-2 border-border hover:border-accent hover:bg-gray-50 transition-all duration-300 hover:scale-105 hover:shadow-md group"
+                  onClick={() => setActiveCategory(isActive ? null : category.name)}
+                  className={`flex items-center gap-2 px-4 md:px-6 py-2.5 md:py-3 border-2 transition-all duration-300 hover:scale-105 hover:shadow-md group ${isActive ? 'border-accent bg-accent/10' : 'border-border hover:border-accent hover:bg-gray-50'}`}
                 >
                   <Icon className="w-4 h-4 text-accent group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-sm font-bold text-foreground">{category.name}</span>
+                  <span className={`text-sm font-bold ${isActive ? 'text-accent' : 'text-foreground'}`}>{category.name}</span>
                 </button>
               );
             })}
@@ -100,7 +105,7 @@ export function Insights() {
       <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-px bg-border">
-            {articles.map((article) => (
+            {(activeCategory ? articles.filter(a => a.category === activeCategory) : articles).map((article) => (
               <article key={article.title} className="bg-white p-6 md:p-8 hover:bg-gray-50 transition-colors group">
                 <div className="flex items-start justify-between gap-6 md:gap-8">
                   <div className="flex-1 min-w-0">

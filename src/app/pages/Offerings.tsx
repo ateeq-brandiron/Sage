@@ -28,7 +28,7 @@ export function Offerings() {
       badge: 'Demand Generation',
     },
     {
-      name: 'Boxsy',
+      name: 'Boxsy Fund Tracking',
       tagline: '"COO in a box": fundraising, outreach, and revenue in one platform.',
       description:
         'Boxsy is a COO-in-a-box platform combining a fundraising CRM, investor and donor outreach system, and a revenue pipeline tool, built for owner-operators who need enterprise-grade capability without enterprise overhead. Manage relationships, track funding, and drive outreach from one place.',
