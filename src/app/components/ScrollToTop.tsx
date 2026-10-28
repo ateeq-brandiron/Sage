@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { useLocation } from 'react-router';
 
 // Prevent the browser from restoring scroll position on back/forward —
@@ -12,9 +12,11 @@ export function ScrollToTop() {
   // to the same pathname, ensuring this always fires.
   const { pathname, hash, key } = useLocation();
 
-  useEffect(() => {
-    // If the URL targets an anchor on the same page, scroll to that element
-    // instead of forcing the page to the top.
+  // useLayoutEffect fires synchronously after DOM mutations and BEFORE
+  // the browser paints — this prevents the old scroll position from
+  // ever being visible on the new page.
+  useLayoutEffect(() => {
+    // If the URL targets an anchor, scroll to that element instead of top.
     if (hash) {
       const el = document.querySelector(hash);
       if (el) {
@@ -22,9 +24,10 @@ export function ScrollToTop() {
         return;
       }
     }
-    // All other navigations: jump to top instantly.
-    // window.scrollTo is synchronous and universally reliable.
+    // Force both window and document element to top — covers all browsers.
     window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [pathname, hash, key]);
 
   return null;
