@@ -288,7 +288,7 @@ export function Solutions() {
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Wheel SVG — desktop only */}
             <div className="hidden lg:block">
-              <svg viewBox="0 0 440 440" className="w-full max-w-md mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 440 440" className="w-full mx-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* orbit ring */}
                 <circle cx="220" cy="220" r="135" stroke="#00C853" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="4 4"/>
                 {/* spokes + dots + labels */}
