@@ -79,16 +79,13 @@ export function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-              <a
-                href="https://calendly.com/1sagepros"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link to="/contact"
                 aria-label="Get Your Free AI ROI Assessment"
                 className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
               >
                 Get Your Free AI ROI Assessment
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              </Link>
               <Link
                 to="/solutions"
                 aria-label="See How We Work"
@@ -542,15 +539,12 @@ export function Home() {
               <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Book a Session</p>
               <h3 className="text-lg font-black text-white mb-2">AI ROI Assessment</h3>
               <p className="text-sm text-white/70 mb-5">See what AI can actually do for your revenue — a 30-minute strategy session with Mitchell and the team.</p>
-              <a
-                href="https://calendly.com/1sagepros"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link to="/contact"
                 className="inline-flex items-center justify-center w-full px-5 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold transition-all duration-300 text-sm group hover:brightness-110"
               >
                 Book Your AI ROI Assessment
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

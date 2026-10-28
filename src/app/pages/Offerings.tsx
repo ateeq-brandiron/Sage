@@ -196,15 +196,12 @@ export function Offerings() {
           <p className="text-lg text-white/70 mb-8 md:mb-10">
             Book a complimentary AI ROI Assessment. We'll show you exactly which platforms fit your business and what results to expect.
           </p>
-          <a
-            href="https://calendly.com/1sagepros"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link to="/contact"
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base hover:brightness-110 hover:shadow-lg group"
           >
             Book Your AI ROI Assessment
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

@@ -94,15 +94,12 @@ export function Solutions() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Complete Revenue Solutions</h1>
             <p className="text-lg text-white/80 leading-relaxed max-w-lg mb-6 sm:mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-              <a
-                href="https://calendly.com/1sagepros"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link to="/contact"
                 className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
               >
                 Book Your AI ROI Assessment
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              </Link>
               <Link
                 to="/case-studies"
                 className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-white/60 text-white rounded-lg hover:border-accent hover:text-accent transition-all duration-300 font-semibold text-base group"
@@ -387,15 +384,12 @@ export function Solutions() {
           <p className="text-lg mb-8 md:mb-10 text-primary/70">
             Get started with an AI Vibe Check — no commitment required
           </p>
-          <a
-            href="https://calendly.com/1sagepros"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link to="/contact"
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base hover:brightness-110 hover:shadow-lg group"
           >
             Book Your AI ROI Assessment
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
