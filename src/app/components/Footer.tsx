@@ -60,34 +60,34 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Company</h5>
-            <ul className="space-y-3">
-              <li><Link to="/case-studies" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Case Studies</Link></li>
-              <li><Link to="/insights" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Insights</Link></li>
-              <li><Link to="/about" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">About</Link></li>
-              <li><Link to="/contact" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div>
-            <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Connect</h5>
-            <ul className="space-y-3">
-              <li>
-                <a href="mailto:mitchell.chi@1SagePros.AI" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
-                  <Mail className="w-4 h-4 shrink-0" strokeWidth={1.5} />
-                  <span>mitchell.chi@1SagePros.AI</span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:+14849991556" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
-                  <Phone className="w-4 h-4 shrink-0" strokeWidth={1.5} />
-                  <span>(484) 999 1556</span>
-                </a>
-              </li>
-            </ul>
+          {/* Company + Connect — grouped tightly */}
+          <div className="lg:col-span-2 grid grid-cols-2 gap-3">
+            <div>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Company</h5>
+              <ul className="space-y-3">
+                <li><Link to="/case-studies" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Case Studies</Link></li>
+                <li><Link to="/insights" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Insights</Link></li>
+                <li><Link to="/about" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">About</Link></li>
+                <li><Link to="/contact" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Connect</h5>
+              <ul className="space-y-3">
+                <li>
+                  <a href="mailto:mitchell.chi@1SagePros.AI" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
+                    <Mail className="w-4 h-4 shrink-0" strokeWidth={1.5} />
+                    <span>mitchell.chi@1SagePros.AI</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+14849991556" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
+                    <Phone className="w-4 h-4 shrink-0" strokeWidth={1.5} />
+                    <span>(484) 999 1556</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
