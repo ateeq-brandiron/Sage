@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { Cpu, Factory, Briefcase, TrendingUp, CheckCircle2, ArrowRight, Building2, CalendarClock, CircleDollarSign, BarChart3 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import industriesBg from '../../assets/pages/industries-bg.png';
 import { Button } from '../components/Button';
 
 export function Industries() {
@@ -51,26 +52,13 @@ export function Industries() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Industries We Serve</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
             </div>
-            {/* Right — horizontal bar chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
-              <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Client Mix by Industry</p>
-                <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {[
-                    { label: 'Technology',            pct: 85, y: 16  },
-                    { label: 'Manufacturing',         pct: 60, y: 88  },
-                    { label: 'Professional Services', pct: 75, y: 160 },
-                    { label: 'Investors',             pct: 50, y: 232 },
-                  ].map(({ label, pct, y }) => (
-                    <g key={label}>
-                      <text x="0" y={y} fontSize="14" fill="#0B1F35" fillOpacity="0.65" fontWeight="700">{label}</text>
-                      <rect x="0" y={y + 10} width="420" height="22" rx="4" fill="#0B1F35" fillOpacity="0.07"/>
-                      <rect x="0" y={y + 10} width={420 * pct / 100} height="22" rx="4" fill="#00C853" fillOpacity="0.7"/>
-                      <text x={420 * pct / 100 + 8} y={y + 26} fontSize="13" fill="#0B1F35" fillOpacity="0.55" fontWeight="700">{pct}%</text>
-                    </g>
-                  ))}
-                </svg>
-              </div>
+            {/* Right — Futuristic Neon Data Dashboard */}
+            <div className="hidden lg:block relative overflow-hidden lg:min-h-[60vh]">
+              <img
+                src={industriesBg}
+                alt="Futuristic data dashboard"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>

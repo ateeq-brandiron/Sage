@@ -10,6 +10,7 @@ import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import heroHighway from '../../assets/pages/home/hero-highway.png';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import ctaWaveHorizon from '../../assets/brand/cta-wave-horizon.png';
 import { Button } from '../components/Button';
 
 function useCountUp(target: number, duration = 1800, started = false) {
@@ -491,14 +492,9 @@ export function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
-        <div className="absolute inset-0 bg-white/80" />
-        <div className="absolute top-0 left-0 w-64 h-64 opacity-5">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 opacity-5">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain transform rotate-180" />
-        </div>
+      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <img src={ctaWaveHorizon} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-white/70" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-10 md:mb-12">

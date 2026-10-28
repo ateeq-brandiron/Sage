@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
+import offeringsBg from '../../assets/pages/offerings-bg.png';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
@@ -240,28 +241,17 @@ export function Offerings() {
       </section>
 
       {/* CTA */}
-      <section
-        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
-        style={{
-          backgroundImage: `url(${wavePattern})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#ffffff',
-        }}
-      >
-        <div className="absolute inset-0 bg-white/80" />
-        <div className="absolute top-0 right-0 w-64 h-64 opacity-5">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
-        </div>
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <img src={offeringsBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-primary/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Get Started
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
             See What AI Can <span className="text-accent">Actually Do for Your Revenue</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
+          <p className="text-lg text-white/70 mb-8 md:mb-10">
             Book a complimentary AI ROI Assessment. We'll show you exactly which platforms fit your business and what results to expect.
           </p>
           <a

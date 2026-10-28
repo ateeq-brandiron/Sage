@@ -5,6 +5,7 @@ import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircl
 import { renderTM } from '../components/RevenueStorm';
 import leavesBackground from '../../assets/brand/leaves-bg.jpg';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import solutionsHero from '../../assets/pages/solutions-hero.png';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -111,62 +112,13 @@ export function Solutions() {
                 </Link>
               </div>
             </div>
-            {/* Right — inline SVG pipeline funnel chart */}
-            <div className="hidden lg:flex items-stretch relative bg-white">
-              <div className="w-full flex flex-col justify-center px-4 py-6">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/50 mb-4">Revenue Pipeline Conversion</p>
-                <svg viewBox="0 0 420 320" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="solAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.22"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.02"/>
-                    </linearGradient>
-                    <linearGradient id="solBarA" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.85"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.35"/>
-                    </linearGradient>
-                    <linearGradient id="solBarB" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#2D7A4F" stopOpacity="0.85"/>
-                      <stop offset="100%" stopColor="#2D7A4F" stopOpacity="0.35"/>
-                    </linearGradient>
-                  </defs>
-                  {[{ y: 20 }, { y: 80 }, { y: 140 }, { y: 200 }, { y: 260 }].map(({ y }) => (
-                    <line key={y} x1="50" y1={y} x2="410" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
-                  ))}
-                  {[
-                    { label: '100%', y: 20  },
-                    { label: '75%',  y: 80  },
-                    { label: '50%',  y: 140 },
-                    { label: '25%',  y: 200 },
-                    { label: '0%',   y: 260 },
-                  ].map(({ label, y }) => (
-                    <text key={label} x="44" y={y} textAnchor="end" fontSize="10" fill="#0B1F35" fillOpacity="0.38" dominantBaseline="middle">{label}</text>
-                  ))}
-                  {[
-                    { stage: 'Awareness',   pct: 30, x: 55,  grad: 'url(#solBarB)' },
-                    { stage: 'Engagement',  pct: 48, x: 120, grad: 'url(#solBarB)' },
-                    { stage: 'Pipeline',    pct: 62, x: 185, grad: 'url(#solBarA)' },
-                    { stage: 'Qualified',   pct: 78, x: 250, grad: 'url(#solBarA)' },
-                    { stage: 'Revenue',     pct: 95, x: 315, grad: 'url(#solBarA)' },
-                  ].map(({ stage, pct, x, grad }) => {
-                    const barH = (pct / 100) * 240;
-                    const topY = 260 - barH;
-                    return (
-                      <g key={stage}>
-                        <rect x={x} y={topY} width="58" height={barH} rx="4" fill={grad}/>
-                        <text x={x + 29} y={topY - 8} textAnchor="middle" fontSize="13" fontWeight="800" fill="#0B1F35" fillOpacity="0.72">{pct}%</text>
-                        <text x={x + 29} y="280" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">{stage}</text>
-                      </g>
-                    );
-                  })}
-                  <polyline points="84,200 149,175 214,157 279,138 344,109" stroke="#00C853" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="6 3" fill="none"/>
-                  {[84,149,214,279,344].map((x, i) => {
-                    const ys = [200,175,157,138,109];
-                    return <circle key={x} cx={x} cy={ys[i]} r="4" fill="#00C853" stroke="white" strokeWidth="2"/>;
-                  })}
-                  <line x1="50" y1="260" x2="410" y2="260" stroke="#0B1F35" strokeOpacity="0.15" strokeWidth="1.5"/>
-                </svg>
-              </div>
+            {/* Right — Neon Green Futuristic Data Highway */}
+            <div className="hidden lg:block relative overflow-hidden">
+              <img
+                src={solutionsHero}
+                alt="Neon data highway representing revenue pipeline"
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
             </div>
           </div>
         </div>

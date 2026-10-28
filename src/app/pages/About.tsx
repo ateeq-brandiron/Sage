@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import aboutBg from '../../assets/pages/about-bg.png';
 import sageLogo from '../../assets/brand/logo-green-bg.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2 } from 'lucide-react';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
@@ -297,31 +298,29 @@ export function About() {
       </section>
 
       {/* CTA */}
-      <section
-        className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
-        style={{
-          backgroundImage: `url(${wavePattern})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: '#ffffff',
-        }}
-      >
-        <div className="absolute inset-0 bg-white/80" />
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <img src={aboutBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-primary/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">
             Partner With Us
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
             Let's Build Your <span className="text-accent">Revenue Engine</span>
           </h2>
 
-          <p className="text-lg text-muted-foreground mb-8 md:mb-10">
+          <p className="text-lg text-white/70 mb-8 md:mb-10">
             Work with a team that has 30+ years of proven experience
           </p>
-          <Button to="/contact">
-            Get Free Assessment
-          </Button>
+          <a
+            href="https://calendly.com/1sagepros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base hover:brightness-110 hover:shadow-lg group"
+          >
+            Book Your AI ROI Assessment
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
         </div>
       </section>
     </div>
