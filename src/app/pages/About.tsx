@@ -257,7 +257,7 @@ export function About() {
             <p className="text-lg text-muted-foreground">Enterprise expertise guiding every engagement</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
             {[
               { name: 'Ed Soohoo', role: 'CTO, Lenovo' },
               { name: 'David Sokolof', role: 'CEO, Data Cortex' },
