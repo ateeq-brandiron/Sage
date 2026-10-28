@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu, AlertTriangle, Unplug, Layers, Lightbulb, ShieldCheck } from 'lucide-react';
 import { RevenueStorm, renderTM } from '../components/RevenueStorm';
+import { LightLineDivider } from '../components/LightLineDivider';
 
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
@@ -201,8 +202,17 @@ export function Home() {
       </section>
 
       {/* This isn't theory. It's execution. */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-7xl mx-auto">
+      <section
+        className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1492138786289-d35ea832da43?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why 1SagePros.AI</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
@@ -232,7 +242,7 @@ export function Home() {
                 desc: 'Seasoned CxOs work directly on your business, never handed to juniors after kickoff.',
               },
             ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="group bg-primary p-6 md:p-8 lg:p-10 hover:bg-white/5 transition-colors duration-300">
+              <div key={title} className="group bg-primary/90 p-6 md:p-8 lg:p-10 hover:bg-white/10 transition-colors duration-300">
                 <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
@@ -243,6 +253,8 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <LightLineDivider />
 
       {/* How It Works */}
       <section className="pt-12 md:pt-24 pb-8 md:pb-12 px-4 sm:px-6 lg:px-8 bg-white">
@@ -259,44 +271,84 @@ export function Home() {
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div className="grid md:grid-cols-2 gap-0 border-t border-border">
+          {/* Process Steps — hub-and-spokes on desktop, list on mobile */}
+          {/* Desktop hub-and-spokes */}
+          <div className="hidden lg:block mb-4">
+            <svg viewBox="0 0 900 520" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="spokeGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#00C853" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#00C853" stopOpacity="0.15"/>
+                </linearGradient>
+                <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#00C853" stopOpacity="0.15"/>
+                  <stop offset="100%" stopColor="#00C853" stopOpacity="0"/>
+                </radialGradient>
+                <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              {/* Hub glow */}
+              <circle cx="450" cy="260" r="90" fill="url(#hubGlow)"/>
+              {/* Orbit ring */}
+              <circle cx="450" cy="260" r="200" stroke="#00C853" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="5 5"/>
+
+              {/* Steps positioned around the hub */}
+              {[
+                { step: '01', title: 'RevenueStorm™ planning',    desc: 'Define desired outcomes first.',              angle: -90  },
+                { step: '02', title: 'Systems & process review',   desc: 'Diagnose gaps and broken links.',             angle: -38  },
+                { step: '03', title: 'AI optimization plan',       desc: 'Map AI to your specific goals.',              angle:  14  },
+                { step: '04', title: 'Tool & platform selection',  desc: 'Vetted, pre-integrated partners.',            angle:  66  },
+                { step: '05', title: 'Managed execution',          desc: 'We deploy alongside your team.',             angle: 118  },
+                { step: '06', title: 'Testing for effectiveness',  desc: 'Measure what converts.',                      angle: 170  },
+                { step: '07', title: 'Stabilize & optimize',       desc: 'Full rollout and continuous tuning.',         angle: 222  },
+              ].map(({ step, title, desc, angle }) => {
+                const rad = (angle * Math.PI) / 180;
+                const r = 200;
+                const nx = 450 + r * Math.cos(rad);
+                const ny = 260 + r * Math.sin(rad);
+                const sx = 450 + 62 * Math.cos(rad);
+                const sy = 260 + 62 * Math.sin(rad);
+                const ex = 450 + 178 * Math.cos(rad);
+                const ey = 260 + 178 * Math.sin(rad);
+                // label offset
+                const lx = 450 + (r + 44) * Math.cos(rad);
+                const ly = 260 + (r + 44) * Math.sin(rad);
+                const anchor = Math.cos(rad) > 0.2 ? 'start' : Math.cos(rad) < -0.2 ? 'end' : 'middle';
+                return (
+                  <g key={step}>
+                    {/* Spoke */}
+                    <line x1={sx} y1={sy} x2={ex} y2={ey} stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="4 3"/>
+                    {/* Node circle */}
+                    <circle cx={nx} cy={ny} r="18" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" filter="url(#nodeGlow)"/>
+                    <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="10" fontWeight="900" fill="#00C853">{step}</text>
+                    {/* Label */}
+                    <text x={lx} y={ly - 7} textAnchor={anchor} fontSize="11" fontWeight="800" fill="#0B1F35" fillOpacity="0.9">{title.replace('™', '')}{title.includes('™') ? '™' : ''}</text>
+                    <text x={lx} y={ly + 8} textAnchor={anchor} fontSize="10" fill="#64748b">{desc}</text>
+                  </g>
+                );
+              })}
+
+              {/* Hub center */}
+              <circle cx="450" cy="260" r="58" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.6" strokeWidth="2"/>
+              <text x="450" y="252" textAnchor="middle" fontSize="15" fontWeight="900" fill="#00C853">1SP</text>
+              <text x="450" y="268" textAnchor="middle" fontSize="15" fontWeight="900" fill="#00C853">.AI</text>
+              <text x="450" y="284" textAnchor="middle" fontSize="8.5" fill="#00C853" fillOpacity="0.6" letterSpacing="1">WHEEL</text>
+            </svg>
+          </div>
+
+          {/* Mobile list fallback */}
+          <div className="lg:hidden grid md:grid-cols-2 gap-0 border-t border-border">
             {[
-              {
-                step: '01',
-                title: 'RevenueStorm™ planning',
-                desc: 'Define desired outcomes before any AI is recommended.',
-              },
-              {
-                step: '02',
-                title: 'Systems & process review',
-                desc: 'Diagnose what\'s working, what\'s broken and what\'s missing.',
-              },
-              {
-                step: '03',
-                title: 'AI optimization plan',
-                desc: 'Map AI capabilities to your specific gaps and goals.',
-              },
-              {
-                step: '04',
-                title: 'Tool & platform selection',
-                desc: 'Choose from our vetted, pre-integrated partner suite.',
-              },
-              {
-                step: '05',
-                title: 'Managed execution',
-                desc: 'We deploy and run it alongside your team.',
-              },
-              {
-                step: '06',
-                title: 'Testing for effectiveness',
-                desc: 'Measure what converts. Cut what doesn\'t.',
-              },
-              {
-                step: '07',
-                title: 'Stabilize & optimize',
-                desc: 'Full rollout and continuous performance tuning.',
-              },
+              { step: '01', title: 'RevenueStorm™ planning',   desc: 'Define desired outcomes before any AI is recommended.' },
+              { step: '02', title: 'Systems & process review',  desc: 'Diagnose what\'s working, what\'s broken and what\'s missing.' },
+              { step: '03', title: 'AI optimization plan',      desc: 'Map AI capabilities to your specific gaps and goals.' },
+              { step: '04', title: 'Tool & platform selection', desc: 'Choose from our vetted, pre-integrated partner suite.' },
+              { step: '05', title: 'Managed execution',         desc: 'We deploy and run it alongside your team.' },
+              { step: '06', title: 'Testing for effectiveness', desc: 'Measure what converts. Cut what doesn\'t.' },
+              { step: '07', title: 'Stabilize & optimize',      desc: 'Full rollout and continuous performance tuning.' },
             ].map((step, i) => (
               <div key={step.step} className={`group flex items-start gap-4 sm:gap-6 p-6 md:p-8 border-b border-border hover:bg-gray-50 transition-colors ${i === 6 ? 'md:col-span-2 md:max-w-xl md:mx-auto md:border-r-0 w-full' : i % 2 === 0 ? 'md:border-r' : ''}`}>
                 <div className="text-4xl sm:text-5xl font-black text-primary/25 group-hover:text-accent/60 transition-colors leading-none pt-1 min-w-[2.5rem] sm:min-w-[3rem]">
@@ -313,8 +365,17 @@ export function Home() {
       </section>
 
       {/* AI RevGen Advisory */}
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-7xl mx-auto">
+      <section
+        className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1492138786289-d35ea832da43?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundAttachment: 'scroll',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/88" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left — Text */}
             <div>
@@ -410,6 +471,8 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <LightLineDivider />
 
       {/* Results */}
       <section className="pt-8 md:pt-12 pb-12 md:pb-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-border">

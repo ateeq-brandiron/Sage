@@ -274,8 +274,17 @@ export function Solutions() {
       </section>
 
       {/* AI Revenue Life Cycle */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-7xl mx-auto">
+      <section
+        className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1492138786289-d35ea832da43?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/87" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Partner Ecosystem</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">

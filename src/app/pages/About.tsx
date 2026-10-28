@@ -95,7 +95,17 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
+      <section
+        className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundColor: '#2D7A4F',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1492138786289-d35ea832da43?w=1600&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll',
+        }}
+      >
+        <div className="absolute inset-0 bg-[#2D7A4F]/82" />
         <div
           className="animate-slow-pan absolute inset-0 opacity-[0.06]"
           style={{
