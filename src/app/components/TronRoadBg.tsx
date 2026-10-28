@@ -72,18 +72,28 @@ function transverseLines() {
   });
 }
 
-// Glowing marker dots along road edges
-const markerTs = [0.10, 0.22, 0.36, 0.50, 0.63, 0.74, 0.84, 0.91];
-const markersLeft = markerTs.map((t) => {
-  const pt = lerpPt(RL_NEAR, t);
-  const size = 18 * (1 - t * 0.7);
-  return { x: pt.x, y: pt.y, r: size };
-});
-const markersRight = markerTs.map((t) => {
+// Dollar sign post markers along road edges
+const dollarTs = [0.12, 0.25, 0.38, 0.52, 0.64, 0.75, 0.84, 0.91];
+const dollarMarkersRight = dollarTs.map((t) => {
   const pt = lerpPt(RR_NEAR, t);
-  const size = 18 * (1 - t * 0.7);
-  return { x: pt.x, y: pt.y, r: size };
+  const postH = 38 * (1 - t * 0.75);
+  const headR = 9 * (1 - t * 0.65);
+  return { x: pt.x, y: pt.y, postH, headR };
 });
+const dollarMarkersLeft = dollarTs.map((t) => {
+  const pt = lerpPt(RL_NEAR, t);
+  const postH = 38 * (1 - t * 0.75);
+  const headR = 9 * (1 - t * 0.65);
+  return { x: pt.x, y: pt.y, postH, headR };
+});
+
+// Vehicle position — tron barrel/binocular shape at t=0.19 on road center
+const VT = 0.19;
+const vLeft  = lerpPt(RL_NEAR, VT);
+const vRight = lerpPt(RR_NEAR, VT);
+const VCX = (vLeft.x + vRight.x) / 2;
+const VCY = (vLeft.y + vRight.y) / 2;
+const VSCALE = 1 - VT * 0.5;
 
 // Road polygon
 const roadPoly = [
@@ -149,6 +159,17 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
             <feGaussianBlur stdDeviation="5" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
+          {/* Vehicle glow filter */}
+          <filter id="tron-vehicle-glow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="6" result="blur1" />
+            <feGaussianBlur stdDeviation="14" result="blur2" in="SourceGraphic" />
+            <feMerge>
+              <feMergeNode in="blur2" />
+              <feMergeNode in="blur1" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
@@ -228,31 +249,73 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
         <path d={roadEdgeL} stroke={edgeColor} strokeWidth="1.5" fill="none" opacity="0.95" />
         <path d={roadEdgeR} stroke={edgeColor} strokeWidth="1.5" fill="none" opacity="0.95" />
 
-        {/* 7. Glowing marker dots — left edge */}
-        {markersLeft.map((m, i) => (
-          <g key={`ml${i}`} filter="url(#tron-marker-glow)">
-            <circle cx={m.x} cy={m.y} r={m.r * 2.5} fill={gridColor} opacity="0.05" />
-            <circle cx={m.x} cy={m.y} r={m.r} fill={gridColor} opacity="0.15" />
-            <circle cx={m.x} cy={m.y} r={m.r * 0.45} fill={gridColor} opacity="0.7" />
-            <circle cx={m.x} cy={m.y} r={m.r * 0.18} fill="#CFFFEF" opacity="0.95" />
+        {/* 7. Dollar sign post markers — right edge */}
+        {dollarMarkersRight.map((m, i) => (
+          <g key={`dr${i}`} filter="url(#tron-marker-glow)" opacity={0.85 - i * 0.07}>
+            {/* post */}
+            <line x1={m.x} y1={m.y} x2={m.x} y2={m.y - m.postH} stroke={edgeColor} strokeWidth={Math.max(0.8, m.headR * 0.22)} />
+            {/* head circle */}
+            <circle cx={m.x} cy={m.y - m.postH} r={m.headR} fill="none" stroke={edgeColor} strokeWidth={Math.max(0.7, m.headR * 0.2)} />
+            {/* $ glyph */}
+            <text
+              x={m.x} y={m.y - m.postH + m.headR * 0.38}
+              textAnchor="middle"
+              fontSize={m.headR * 1.1}
+              fill={edgeColor}
+              fontWeight="bold"
+              fontFamily="monospace"
+              opacity="0.9"
+            >$</text>
           </g>
         ))}
-        {/* Glowing marker dots — right edge */}
-        {markersRight.map((m, i) => (
-          <g key={`mr${i}`} filter="url(#tron-marker-glow)">
-            <circle cx={m.x} cy={m.y} r={m.r * 2.5} fill={gridColor} opacity="0.05" />
-            <circle cx={m.x} cy={m.y} r={m.r} fill={gridColor} opacity="0.15" />
-            <circle cx={m.x} cy={m.y} r={m.r * 0.45} fill={gridColor} opacity="0.7" />
-            <circle cx={m.x} cy={m.y} r={m.r * 0.18} fill="#CFFFEF" opacity="0.95" />
+        {/* Dollar sign post markers — left edge */}
+        {dollarMarkersLeft.map((m, i) => (
+          <g key={`dl${i}`} filter="url(#tron-marker-glow)" opacity={0.85 - i * 0.07}>
+            <line x1={m.x} y1={m.y} x2={m.x} y2={m.y - m.postH} stroke={edgeColor} strokeWidth={Math.max(0.8, m.headR * 0.22)} />
+            <circle cx={m.x} cy={m.y - m.postH} r={m.headR} fill="none" stroke={edgeColor} strokeWidth={Math.max(0.7, m.headR * 0.2)} />
+            <text
+              x={m.x} y={m.y - m.postH + m.headR * 0.38}
+              textAnchor="middle"
+              fontSize={m.headR * 1.1}
+              fill={edgeColor}
+              fontWeight="bold"
+              fontFamily="monospace"
+              opacity="0.9"
+            >$</text>
           </g>
         ))}
 
-        {/* 8. Light streak along road left edge */}
-        <line
-          x1={RL_NEAR.x} y1={RL_NEAR.y}
-          x2={VP.x} y2={VP.y}
-          stroke="url(#tron-streak)" strokeWidth="6" opacity="0.25"
-        />
+        {/* 8. Tron vehicle — two connected glowing cyan barrels */}
+        {(() => {
+          const bw = 38 * VSCALE;   // barrel width
+          const bh = 18 * VSCALE;   // barrel height
+          const gap = 10 * VSCALE;  // gap between barrels
+          const cx1 = VCX - (bw / 2 + gap / 2);
+          const cx2 = VCX + (bw / 2 + gap / 2);
+          const cy  = VCY - 4 * VSCALE;
+          const bridgeY = cy - bh * 0.05;
+          return (
+            <g filter="url(#tron-vehicle-glow)">
+              {/* outer wide glow */}
+              <rect x={cx1 - bw / 2 - 4} y={cy - bh / 2 - 4} width={bw + 8} height={bh + 8} rx={bh / 2 + 4} fill="#00FFEE" opacity="0.06" />
+              <rect x={cx2 - bw / 2 - 4} y={cy - bh / 2 - 4} width={bw + 8} height={bh + 8} rx={bh / 2 + 4} fill="#00FFEE" opacity="0.06" />
+              {/* barrel bodies */}
+              <rect x={cx1 - bw / 2} y={cy - bh / 2} width={bw} height={bh} rx={bh / 2} fill="#001A14" stroke="#00FFEE" strokeWidth={1.5 * VSCALE} opacity="0.95" />
+              <rect x={cx2 - bw / 2} y={cy - bh / 2} width={bw} height={bh} rx={bh / 2} fill="#001A14" stroke="#00FFEE" strokeWidth={1.5 * VSCALE} opacity="0.95" />
+              {/* inner sheen */}
+              <rect x={cx1 - bw / 2 + 3 * VSCALE} y={cy - bh / 2 + 3 * VSCALE} width={bw - 6 * VSCALE} height={bh * 0.35} rx={bh / 2} fill="#00FFEE" opacity="0.12" />
+              <rect x={cx2 - bw / 2 + 3 * VSCALE} y={cy - bh / 2 + 3 * VSCALE} width={bw - 6 * VSCALE} height={bh * 0.35} rx={bh / 2} fill="#00FFEE" opacity="0.12" />
+              {/* bridge connecting the two barrels */}
+              <rect x={cx1 + bw / 2} y={bridgeY - 3 * VSCALE} width={gap} height={6 * VSCALE} fill="#00FFEE" opacity="0.55" rx={2} />
+              {/* end caps glow dots */}
+              <circle cx={cx1 - bw / 2} cy={cy} r={4 * VSCALE} fill="#00FFEE" opacity="0.6" />
+              <circle cx={cx2 + bw / 2} cy={cy} r={4 * VSCALE} fill="#00FFEE" opacity="0.6" />
+              {/* head light streak forward */}
+              <line x1={cx2 + bw / 2} y1={cy} x2={cx2 + bw / 2 + 60 * VSCALE} y2={cy - 2 * VSCALE} stroke="#00FFEE" strokeWidth={2 * VSCALE} opacity="0.35" />
+              <line x1={cx1 - bw / 2} y1={cy} x2={cx1 - bw / 2 - 28 * VSCALE} y2={cy + 1 * VSCALE} stroke="#00FFEE" strokeWidth={1.5 * VSCALE} opacity="0.2" />
+            </g>
+          );
+        })()}
 
         {/* 9. Vignette overlay */}
         <rect x="0" y="0" width="1440" height="620" fill="url(#tron-vignette)" />
