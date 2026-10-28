@@ -16,9 +16,9 @@ export function Footer() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 md:gap-10 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-2">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="mb-4">
               <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
