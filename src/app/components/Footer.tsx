@@ -33,10 +33,10 @@ export function Footer() {
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Solutions</h5>
               <ul className="space-y-3">
-                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Revenue Strategy</Link></li>
-                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Demand Generation</Link></li>
-                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Sales Enablement</Link></li>
-                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AI RevGen Advisory</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Revenue Strategy</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Demand Generation</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Sales Enablement</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">AI RevGen Advisory</Link></li>
               </ul>
             </div>
 
@@ -44,10 +44,10 @@ export function Footer() {
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Offerings</h5>
               <ul className="space-y-3">
-                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
-                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Empower AI 365</Link></li>
-                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AIO Advisors</Link></li>
-                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Boxsy</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Bellwether Intel</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Empower AI 365</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">AIO Advisors</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Boxsy</Link></li>
               </ul>
             </div>
 
@@ -55,10 +55,10 @@ export function Footer() {
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Industries</h5>
               <ul className="space-y-3">
-                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Technology</Link></li>
-                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Manufacturing</Link></li>
-                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Professional Services</Link></li>
-                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Investors</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Technology</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Manufacturing</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Professional Services</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Investors</Link></li>
               </ul>
             </div>
 
@@ -66,10 +66,10 @@ export function Footer() {
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Company</h5>
               <ul className="space-y-3">
-                <li><Link to="/case-studies" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Case Studies</Link></li>
-                <li><Link to="/insights" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Insights</Link></li>
-                <li><Link to="/about" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">About</Link></li>
-                <li><Link to="/contact" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Contact</Link></li>
+                <li><Link to="/case-studies" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Case Studies</Link></li>
+                <li><Link to="/insights" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Insights</Link></li>
+                <li><Link to="/about" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">About</Link></li>
+                <li><Link to="/contact" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block whitespace-nowrap">Contact</Link></li>
               </ul>
             </div>
 
