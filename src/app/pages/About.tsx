@@ -232,7 +232,7 @@ export function About() {
               { name: 'Mark Sibelli', role: 'UX Design' },
               { name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
             ].map((member) => (
-              <div key={member.name} className="bg-white p-6 md:p-8">
+              <div key={member.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
                 <h3 className="text-lg font-black text-primary mb-1">{member.name}</h3>
                 <p className="text-sm text-accent font-semibold">{member.role}</p>
               </div>
@@ -249,7 +249,7 @@ export function About() {
       </section>
 
       {/* Advisory Board */}
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Advisors</p>
@@ -265,7 +265,7 @@ export function About() {
               { name: 'Marci Kahn Esq.', role: 'Blank Rome' },
               { name: 'Steve L. Bolden CPA', role: 'Meltzer & Assoc. LLP' },
             ].map((advisor) => (
-              <div key={advisor.name} className="bg-white p-6 md:p-8">
+              <div key={advisor.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
                 <h3 className="text-lg font-black text-primary mb-1">{advisor.name}</h3>
                 <p className="text-sm text-accent font-semibold">{advisor.role}</p>
               </div>
