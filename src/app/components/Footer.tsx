@@ -16,7 +16,7 @@ export function Footer() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           {/* Brand */}
           <div className="shrink-0 lg:w-52">
             <div className="mb-4">
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           {/* Nav columns — equal spacing */}
-          <div className="flex flex-wrap lg:flex-nowrap gap-10 lg:gap-12 flex-1 lg:justify-between">
+          <div className="flex flex-wrap lg:flex-nowrap gap-6 flex-1 lg:justify-between">
             {/* Solutions */}
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Solutions</h5>
