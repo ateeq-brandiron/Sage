@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           {/* Company + Connect — grouped tightly */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-3">
+          <div className="lg:col-span-2 flex gap-8">
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Company</h5>
               <ul className="space-y-3">
