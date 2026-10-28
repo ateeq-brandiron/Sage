@@ -43,23 +43,14 @@ export function Industries() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left — text */}
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Industry Expertise</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Industries We Serve</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
-            </div>
-            {/* Right — Futuristic Neon Data Dashboard */}
-            <div className="hidden lg:block relative overflow-hidden lg:min-h-[60vh]">
-              <img
-                src={industriesBg}
-                alt="Futuristic data dashboard"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={industriesBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Industry Expertise</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Industries We Serve</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">Deep expertise in growth-focused B2B organizations across multiple sectors</p>
           </div>
         </div>
       </section>

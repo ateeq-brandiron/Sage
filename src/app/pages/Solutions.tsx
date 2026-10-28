@@ -85,40 +85,31 @@ export function Solutions() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left — text */}
-            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Complete Revenue Solutions</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-6 sm:mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <a
-                  href="https://calendly.com/1sagepros"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
-                >
-                  Book Your AI ROI Assessment
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
-                <Link
-                  to="/case-studies"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
-                >
-                  View Success Stories
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
-            </div>
-            {/* Right — Neon Green Futuristic Data Highway */}
-            <div className="hidden lg:block relative overflow-hidden">
-              <img
-                src={solutionsHero}
-                alt="Neon data highway representing revenue pipeline"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={solutionsHero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Revenue Solutions</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Complete Revenue Solutions</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg mb-6 sm:mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+              <a
+                href="https://calendly.com/1sagepros"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
+              >
+                Book Your AI ROI Assessment
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-white/60 text-white rounded-lg hover:border-accent hover:text-accent transition-all duration-300 font-semibold text-base group"
+              >
+                View Success Stories
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
             </div>
           </div>
         </div>
