@@ -46,60 +46,57 @@ export function Home() {
 
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
-      {/* Hero Section - Split Layout */}
-      <section className="bg-white flex items-center">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch min-h-[520px]">
+      {/* Hero Section - Full-width with image background */}
+      <section className="relative flex items-center min-h-[600px] md:min-h-[680px] overflow-hidden">
+        {/* Background image */}
+        <img
+          src={heroHighway}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          aria-hidden="true"
+        />
+        {/* Gradient overlay — strong on left for readability, fades right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
 
-            {/* Left — Text Content */}
-            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)] bg-primary">
-                <p className="text-xs uppercase tracking-widest text-accent mb-4 sm:mb-5 font-semibold">
-                  Revenue Growth Partner
-                </p>
+        {/* Content */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 sm:mb-5 font-semibold">
+              Revenue Growth Partner
+            </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
-                  AI is easy to buy.<br />Revenue is impossible to guarantee.
-                </h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
+              AI is easy to buy.<br />Revenue is impossible to guarantee.
+            </h1>
 
-                <p className="text-xl sm:text-2xl font-bold text-accent mb-5 sm:mb-6">
-                  We do the impossible part.
-                </p>
+            <p className="text-xl sm:text-2xl font-bold text-accent mb-5 sm:mb-6">
+              We do the impossible part.
+            </p>
 
-                <p className="text-base md:text-lg text-white/75 mb-6 sm:mb-8 leading-relaxed max-w-lg">
-                  1SagePros.AI brings elite GTM expertise and AI together into one revenue engine — purpose-built for established businesses that need to defend and grow their position. No internal AI team required. No experiments. Just outcomes.
-                </p>
+            <p className="text-base md:text-lg text-white/80 mb-6 sm:mb-8 leading-relaxed">
+              1SagePros.AI brings elite GTM expertise and AI together into one revenue engine — purpose-built for established businesses that need to defend and grow their position. No internal AI team required. No experiments. Just outcomes.
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <a
-                  href="https://calendly.com/1sagepros"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Get Your Free AI ROI Assessment"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
-                >
-                  Get Your Free AI ROI Assessment
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
-                <Link
-                  to="/solutions"
-                  aria-label="See How We Work"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
-                >
-                  See How We Work
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+              <a
+                href="https://calendly.com/1sagepros"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Your Free AI ROI Assessment"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
+              >
+                Get Your Free AI ROI Assessment
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+              <Link
+                to="/solutions"
+                aria-label="See How We Work"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-white/60 text-white rounded-lg hover:border-accent hover:text-accent transition-all duration-300 font-semibold text-base group"
+              >
+                See How We Work
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
             </div>
-
-            {/* Right — Shelly's hero highway image */}
-            <div className="hidden lg:block relative overflow-hidden">
-              <img
-                src={heroHighway}
-                alt="Neon AI highway representing revenue acceleration"
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
-            </div>
-
           </div>
         </div>
       </section>
