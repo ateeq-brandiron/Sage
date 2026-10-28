@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Target, Zap, TrendingUp, CheckCircle2, Award, Building2, CalendarClock, Brain, BarChart3, Users, Cpu, AlertTriangle, Unplug, Layers, Lightbulb, ShieldCheck } from 'lucide-react';
 import { RevenueStorm, renderTM } from '../components/RevenueStorm';
+import { TronRoadBg } from '../components/TronRoadBg';
 import { LightLineDivider } from '../components/LightLineDivider';
 
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
@@ -203,7 +204,8 @@ export function Home() {
 
       {/* This isn't theory. It's execution. */}
       <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <TronRoadBg />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Why 1SagePros.AI</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
@@ -233,7 +235,7 @@ export function Home() {
                 desc: 'Seasoned CxOs work directly on your business, never handed to juniors after kickoff.',
               },
             ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="group bg-primary/90 p-6 md:p-8 lg:p-10 hover:bg-white/10 transition-colors duration-300">
+              <div key={title} className="group bg-primary/70 backdrop-blur-sm p-6 md:p-8 lg:p-10 hover:bg-white/10 transition-colors duration-300">
                 <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center mb-5">
                   <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 </div>
@@ -356,8 +358,9 @@ export function Home() {
       </section>
 
       {/* AI RevGen Advisory */}
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden">
+        <TronRoadBg />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left — Text */}
             <div>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { TronRoadBg } from '../components/TronRoadBg';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2, ShieldCheck, Layers, Brain, Package } from 'lucide-react';
 
 import { renderTM } from '../components/RevenueStorm';
@@ -274,8 +275,9 @@ export function Solutions() {
       </section>
 
       {/* AI Revenue Life Cycle */}
-      <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-primary overflow-hidden">
+        <TronRoadBg />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Partner Ecosystem</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
