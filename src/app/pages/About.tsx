@@ -97,7 +97,16 @@ export function About() {
 
       {/* Mission & Vision */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
-        <div className="max-w-7xl mx-auto">
+        <div
+          className="animate-slow-pan absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: `url(${sageLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '120px',
+            filter: 'brightness(0) invert(1)',
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-white/60 mb-4 font-semibold">Who We Are</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
