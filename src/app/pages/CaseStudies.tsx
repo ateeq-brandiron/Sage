@@ -50,28 +50,6 @@ export function CaseStudies() {
       image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80',
       clients: null,
     },
-    {
-      badge: 'New Logo Attainment',
-      title: 'New Logo Engine for an Established ERP Reseller',
-      headline: { metric: '3X', label: 'License Revenue' },
-      client: 'U.S.-based Infor ERP reseller since 1988, expert in manufacturing and distribution. Relying on referrals with no repeatable outbound motion to land new logos.',
-      challenge: 'An established reseller with deep technical expertise but no structured outbound motion — no repeatable engine to land new logos.',
-      solution: [
-        { step: 'Sales activation', detail: 'A fractional sales executive co-selling with the ERP provider\'s representatives.' },
-        { step: 'Deal acceleration', detail: 'Multiple new opportunities secured under a partner model.' },
-        { step: 'GTM optimization', detail: 'Executive guidance to sharpen go-to-market, plus fractional content marketing.' },
-      ],
-      results: [
-        { metric: '3X', label: 'License Revenue' },
-        { metric: '3 Yrs', label: 'ARR Secured Forward' },
-        { metric: '#1', label: 'Reseller of the Quarter' },
-      ],
-      award: 'Awarded Reseller of the Quarter',
-      testimonial: 'The combination of fractional sales execution and GTM discipline opened doors we couldn\'t open alone.',
-      author: 'VP Sales, Infor ERP Reseller',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80',
-      clients: null,
-    },
   ];
 
   return (
