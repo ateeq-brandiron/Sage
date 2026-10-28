@@ -16,52 +16,53 @@ export function Footer() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-6">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-2">
+          <div className="shrink-0 lg:w-56">
             <div className="mb-4">
               <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
-            <p className="text-sm text-white/80 max-w-md">
+            <p className="text-sm text-white/80 max-w-xs">
               200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.
             </p>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Solutions</h5>
-            <ul className="space-y-3">
-              <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Revenue Strategy</Link></li>
-              <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Demand Generation</Link></li>
-              <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Sales Enablement</Link></li>
-              <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AI RevGen Advisory</Link></li>
-            </ul>
-          </div>
+          {/* Nav columns — equal spacing */}
+          <div className="flex flex-wrap lg:flex-nowrap gap-8 flex-1 lg:justify-between">
+            {/* Solutions */}
+            <div>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Solutions</h5>
+              <ul className="space-y-3">
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Revenue Strategy</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Demand Generation</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Sales Enablement</Link></li>
+                <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AI RevGen Advisory</Link></li>
+              </ul>
+            </div>
 
-          {/* Offerings */}
-          <div>
-            <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Offerings</h5>
-            <ul className="space-y-3">
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Empower AI 365</Link></li>
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AIO Advisors</Link></li>
-              <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Boxsy</Link></li>
-            </ul>
-          </div>
+            {/* Offerings */}
+            <div>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Offerings</h5>
+              <ul className="space-y-3">
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Empower AI 365</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">AIO Advisors</Link></li>
+                <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Boxsy</Link></li>
+              </ul>
+            </div>
 
-          {/* Industries */}
-          <div>
-            <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Industries</h5>
-            <ul className="space-y-3">
-              <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Technology</Link></li>
-              <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Manufacturing</Link></li>
-              <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Professional Services</Link></li>
-              <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Investors</Link></li>
-            </ul>
-          </div>
+            {/* Industries */}
+            <div>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Industries</h5>
+              <ul className="space-y-3">
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Technology</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Manufacturing</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Professional Services</Link></li>
+                <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Investors</Link></li>
+              </ul>
+            </div>
 
-          {/* Company + Connect — grouped tightly */}
-          <div className="lg:col-span-2 flex gap-8">
+            {/* Company */}
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Company</h5>
               <ul className="space-y-3">
@@ -71,6 +72,8 @@ export function Footer() {
                 <li><Link to="/contact" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Contact</Link></li>
               </ul>
             </div>
+
+            {/* Connect */}
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Connect</h5>
               <ul className="space-y-3">
