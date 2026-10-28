@@ -1,128 +1,100 @@
-// Tron-style road perspective background
-// Vanishing point positioned right-of-center for cinematic depth
-// VP = (1050, 200), road spans full bottom width
+// Tron road — matches reference image:
+// dot-grid floor, barrel vehicle, $ post markers, strong neon edge streaks
+// Vanishing point left-of-center to match perspective in reference
 
-const VP = { x: 1050, y: 200 };
+const VP = { x: 820, y: 210 };
 
-function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
 function lerpPt(near: { x: number; y: number }, t: number) {
-  return { x: lerp(near.x, VP.x, t), y: lerp(near.y, VP.y, t) };
+  return {
+    x: near.x + (VP.x - near.x) * t,
+    y: near.y + (VP.y - near.y) * t,
+  };
 }
 
-const RL_NEAR = { x: -100, y: 680 };
-const RR_NEAR = { x: 620, y: 680 };
+// Road edges — road runs from lower-left to upper-right VP
+const RL_NEAR = { x: 80,  y: 680 };
+const RR_NEAR = { x: 680, y: 680 };
 
-function roadWidth(t: number) {
-  const l = lerpPt(RL_NEAR, t);
-  const r = lerpPt(RR_NEAR, t);
-  return r.x - l.x;
+function roadCx(t: number) {
+  return (lerpPt(RL_NEAR, t).x + lerpPt(RR_NEAR, t).x) / 2;
 }
-function roadCenterX(t: number) {
-  const l = lerpPt(RL_NEAR, t);
-  const r = lerpPt(RR_NEAR, t);
-  return (l.x + r.x) / 2;
-}
-function roadCenterY(t: number) {
-  return lerpPt(RL_NEAR, t).y; // both sides same y by lerp
-}
+function roadCy(t: number) { return lerpPt(RL_NEAR, t).y; }
+function roadW(t: number)  { return lerpPt(RR_NEAR, t).x - lerpPt(RL_NEAR, t).x; }
 
 // Center dashes
-const DASH_TS = [0.06, 0.16, 0.27, 0.38, 0.50, 0.61, 0.71, 0.80, 0.87, 0.93, 0.97];
-const dashes = DASH_TS.map((t) => {
-  const t2 = Math.min(t + 0.04 * (1 - t), 0.99);
-  const hw1 = roadWidth(t) * 0.038;
-  const hw2 = roadWidth(t2) * 0.038;
-  const cx1 = roadCenterX(t); const cy1 = roadCenterY(t);
-  const cx2 = roadCenterX(t2); const cy2 = roadCenterY(t2);
-  return `M${cx1 - hw1},${cy1} L${cx1 + hw1},${cy1} L${cx2 + hw2},${cy2} L${cx2 - hw2},${cy2} Z`;
-});
-
-// Perspective grid — lateral lines converging to VP
-const gridLinesLeft = [
-  { x: -400, y: 680 }, { x: -250, y: 680 }, { x: -100, y: 680 },
-  { x: -550, y: 740 }, { x: -350, y: 740 }, { x: -150, y: 740 },
-].map(s => `M${s.x},${s.y} L${VP.x},${VP.y}`);
-
-const gridLinesRight = [
-  { x: 620, y: 680 }, { x: 800, y: 680 }, { x: 1000, y: 680 }, { x: 1200, y: 680 }, { x: 1440, y: 650 },
-  { x: 620, y: 740 }, { x: 870, y: 740 }, { x: 1120, y: 740 }, { x: 1370, y: 740 },
-].map(s => `M${s.x},${s.y} L${VP.x},${VP.y}`);
-
-// Transverse lines across full floor
-const transverseLines = [0.12, 0.25, 0.38, 0.52, 0.64, 0.75, 0.84, 0.91, 0.96].map(t => {
-  const lPt = lerpPt(RL_NEAR, t);
-  const rPt = lerpPt(RR_NEAR, t);
-  const ext = (rPt.x - lPt.x) * 0.9;
-  return `M${lPt.x - ext},${lPt.y} L${rPt.x + ext * 0.7},${rPt.y}`;
+const DASH_TS = [0.04, 0.13, 0.23, 0.34, 0.46, 0.57, 0.67, 0.76, 0.84, 0.90, 0.95, 0.98];
+const dashes = DASH_TS.map(t => {
+  const t2 = Math.min(t + 0.038 * (1 - t), 0.99);
+  const hw1 = roadW(t) * 0.036; const hw2 = roadW(t2) * 0.036;
+  const cx1 = roadCx(t); const cy1 = roadCy(t);
+  const cx2 = roadCx(t2); const cy2 = roadCy(t2);
+  return `M${cx1-hw1},${cy1} L${cx1+hw1},${cy1} L${cx2+hw2},${cy2} L${cx2-hw2},${cy2} Z`;
 });
 
 // Road polygon
 const roadPoly = [
   `${RL_NEAR.x},${RL_NEAR.y}`,
   `${RR_NEAR.x},${RR_NEAR.y}`,
-  `${VP.x + 3},${VP.y}`,
-  `${VP.x - 3},${VP.y}`,
+  `${VP.x+3},${VP.y}`,
+  `${VP.x-3},${VP.y}`,
 ].join(' ');
 
 const roadEdgeL = `M${RL_NEAR.x},${RL_NEAR.y} L${VP.x},${VP.y}`;
 const roadEdgeR = `M${RR_NEAR.x},${RR_NEAR.y} L${VP.x},${VP.y}`;
 
-// Dollar sign post markers — scale with depth
-const dollarTs = [0.10, 0.22, 0.35, 0.49, 0.62, 0.73, 0.83, 0.91];
+// Dot grid floor — rows of dots converging to VP
+function dotGrid() {
+  const dots: { x: number; y: number; r: number }[] = [];
+  // Rows at different depths
+  const rows = [
+    { y: 700, xs: [-400,-320,-240,-160,-80, 0, 80, 780, 880, 980, 1080, 1180, 1280, 1380], r: 2.8 },
+    { y: 660, xs: [-360,-270,-180,-90,  0, 90, 680, 770, 860, 950, 1040, 1130, 1220, 1310], r: 2.2 },
+    { y: 620, xs: [-310,-230,-150,-70,  0, 620, 700, 790, 880, 970, 1060, 1150], r: 1.7 },
+    { y: 580, xs: [-260,-190,-120,-50, 0,  560, 640, 720, 800, 880, 960, 1040], r: 1.3 },
+    { y: 545, xs: [-210,-150,-90,-30,  0,  510, 580, 650, 720, 800, 870], r: 1.0 },
+    { y: 515, xs: [-160,-110,-60,      0,  470, 530, 600, 665, 730], r: 0.8 },
+    { y: 488, xs: [-120,-80,-40,       0,  440, 495, 550, 610], r: 0.6 },
+    { y: 464, xs: [-90,-55,-22,        0,  410, 460, 510], r: 0.5 },
+    { y: 443, xs: [-65,-35,            0,  385, 428], r: 0.4 },
+    { y: 426, xs: [-45,-20,            0,  363], r: 0.32 },
+    { y: 410, xs: [-28,                0,  342], r: 0.25 },
+  ];
+  rows.forEach(row => {
+    row.xs.forEach(x => dots.push({ x, y: row.y, r: row.r }));
+  });
+  return dots;
+}
+const floorDots = dotGrid();
+
+// Dollar sign post markers along road edges
+const dollarTs = [0.06, 0.18, 0.31, 0.45, 0.58, 0.70, 0.80, 0.89];
 const dollarMarkersRight = dollarTs.map(t => {
   const pt = lerpPt(RR_NEAR, t);
-  return { x: pt.x, y: pt.y, postH: 55 * (1 - t * 0.78), r: 12 * (1 - t * 0.68), t };
+  return { x: pt.x, y: pt.y, postH: 62*(1-t*0.78), r: 14*(1-t*0.70), t };
 });
 const dollarMarkersLeft = dollarTs.map(t => {
   const pt = lerpPt(RL_NEAR, t);
-  return { x: pt.x, y: pt.y, postH: 55 * (1 - t * 0.78), r: 12 * (1 - t * 0.68), t };
+  return { x: pt.x, y: pt.y, postH: 62*(1-t*0.78), r: 14*(1-t*0.70), t };
 });
 
-// Vehicle — low-profile futuristic car at t=0.22 on road center
-const VT = 0.22;
-const VCX = roadCenterX(VT);
-const VCY = roadCenterY(VT);
-const VS = 1 - VT * 0.45; // perspective scale
-// car dims at natural scale
-const CAR_W = 130;
-const CAR_H = 28;
-const COCKPIT_H = 18;
+// Vehicle — two connected binocular barrels at t=0.18 on road center
+const VT = 0.18;
+const VCX = roadCx(VT);
+const VCY = roadCy(VT);
+const VS  = 1 - VT * 0.42;
 
 export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' }) {
-  const gridColor = '#00E87A';
-  const edgeColor = '#00FFB0';
-  const vehColor = '#00FFEE';
-  const bgMid   = variant === 'green' ? '#061A0D' : '#06101E';
-  const bgDark  = variant === 'green' ? '#020D06' : '#030810';
+  const neon    = '#00FF9A';
+  const neonBright = '#80FFCC';
+  const vehNeon = '#00FFEE';
 
-  // Scaled car dimensions
-  const cw = CAR_W * VS;
-  const ch = CAR_H * VS;
-  const cockH = COCKPIT_H * VS;
-  const cx = VCX;
-  const cy = VCY - ch * 0.5 - 2 * VS;
-
-  // Car body path — wedge shape, low at front (right), higher at rear (left)
-  const carBody = `
-    M${cx - cw * 0.5},${cy + ch}
-    L${cx + cw * 0.5},${cy + ch}
-    L${cx + cw * 0.45},${cy + ch * 0.25}
-    L${cx + cw * 0.1},${cy}
-    L${cx - cw * 0.3},${cy}
-    L${cx - cw * 0.5},${cy + ch * 0.4}
-    Z
-  `;
-  // Cockpit bubble on top
-  const cockpitPath = `
-    M${cx - cw * 0.28},${cy}
-    Q${cx - cw * 0.05},${cy - cockH} ${cx + cw * 0.08},${cy}
-    Z
-  `;
-  // Wheel shapes
-  const wheelR = ch * 0.38;
-  const wFrontX = cx + cw * 0.36;
-  const wRearX  = cx - cw * 0.35;
-  const wY      = cy + ch;
+  // Barrel vehicle dims
+  const bR  = 22 * VS;  // barrel radius (height/2)
+  const bW  = 48 * VS;  // barrel length
+  const gap = 12 * VS;  // gap between barrels
+  const bCY = VCY - bR - 6 * VS;
+  const bCX1 = VCX - gap / 2 - bW / 2; // left barrel cx
+  const bCX2 = VCX + gap / 2 + bW / 2; // right barrel cx
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -133,37 +105,30 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/* Sky / background */}
-          <radialGradient id="tron-bg" cx="72%" cy="30%" r="80%">
-            <stop offset="0%"   stopColor="#0D1F3A" />
-            <stop offset="50%"  stopColor={bgMid} />
-            <stop offset="100%" stopColor={bgDark} />
-          </radialGradient>
+          {/* Sky */}
+          <linearGradient id="tron-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stopColor="#020E1A" />
+            <stop offset="55%"  stopColor="#041420" />
+            <stop offset="100%" stopColor="#061C18" />
+          </linearGradient>
 
           {/* Horizon bloom */}
-          <radialGradient id="tron-horizon" cx="73%" cy="29%" r="28%">
-            <stop offset="0%"   stopColor="#00FFB0" stopOpacity="0.45" />
-            <stop offset="35%"  stopColor="#00C87A" stopOpacity="0.18" />
+          <radialGradient id="tron-horizon" cx={`${VP.x/1440*100}%`} cy={`${VP.y/680*100}%`} r="35%">
+            <stop offset="0%"   stopColor="#00FFB0" stopOpacity="0.55" />
+            <stop offset="30%"  stopColor="#00C87A" stopOpacity="0.20" />
             <stop offset="100%" stopColor="#00C853" stopOpacity="0" />
           </radialGradient>
 
-          {/* Road surface — dark asphalt with subtle teal tint */}
-          <linearGradient id="tron-road" x1="0" y1="1" x2="0.8" y2="0">
-            <stop offset="0%"   stopColor="#080F1C" />
-            <stop offset="60%"  stopColor="#06111A" />
-            <stop offset="100%" stopColor="#040C14" />
+          {/* Road asphalt */}
+          <linearGradient id="tron-road" x1="0.3" y1="1" x2="0.7" y2="0">
+            <stop offset="0%"   stopColor="#060E18" />
+            <stop offset="100%" stopColor="#040A12" />
           </linearGradient>
 
-          {/* Road centre streak */}
-          <linearGradient id="tron-centre-streak" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor={edgeColor} stopOpacity="0.08" />
-            <stop offset="100%" stopColor={edgeColor} stopOpacity="0.22" />
-          </linearGradient>
-
-          {/* Edge glow — multi-pass */}
-          <filter id="tron-edge-glow" x="-30%" y="-300%" width="160%" height="700%">
-            <feGaussianBlur stdDeviation="4" result="b1" />
-            <feGaussianBlur stdDeviation="10" result="b2" in="SourceGraphic" />
+          {/* Edge neon glow */}
+          <filter id="edge-glow" x="-40%" y="-400%" width="180%" height="900%">
+            <feGaussianBlur stdDeviation="5"  result="b1" />
+            <feGaussianBlur stdDeviation="14" result="b2" in="SourceGraphic" />
             <feMerge>
               <feMergeNode in="b2" />
               <feMergeNode in="b1" />
@@ -171,19 +136,10 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
             </feMerge>
           </filter>
 
-          {/* Grid line glow */}
-          <filter id="tron-grid-glow" x="-5%" y="-5%" width="110%" height="110%">
-            <feGaussianBlur stdDeviation="1.5" result="b" />
-            <feMerge>
-              <feMergeNode in="b" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-
-          {/* Marker / post glow */}
-          <filter id="tron-marker-glow" x="-120%" y="-120%" width="340%" height="340%">
-            <feGaussianBlur stdDeviation="4" result="b1" />
-            <feGaussianBlur stdDeviation="9" result="b2" in="SourceGraphic" />
+          {/* Post / marker glow */}
+          <filter id="post-glow" x="-150%" y="-150%" width="400%" height="400%">
+            <feGaussianBlur stdDeviation="5"  result="b1" />
+            <feGaussianBlur stdDeviation="12" result="b2" in="SourceGraphic" />
             <feMerge>
               <feMergeNode in="b2" />
               <feMergeNode in="b1" />
@@ -192,9 +148,9 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
           </filter>
 
           {/* Vehicle neon glow */}
-          <filter id="tron-veh-glow" x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="7"  result="b1" />
-            <feGaussianBlur stdDeviation="18" result="b2" in="SourceGraphic" />
+          <filter id="veh-glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="8"  result="b1" />
+            <feGaussianBlur stdDeviation="22" result="b2" in="SourceGraphic" />
             <feMerge>
               <feMergeNode in="b2" />
               <feMergeNode in="b1" />
@@ -202,201 +158,181 @@ export function TronRoadBg({ variant = 'dark' }: { variant?: 'dark' | 'green' })
             </feMerge>
           </filter>
 
+          {/* Dot glow */}
+          <filter id="dot-glow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="1.2" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+
           {/* Vignette */}
-          <radialGradient id="tron-vignette" cx="50%" cy="50%" r="68%">
-            <stop offset="45%" stopColor="transparent" />
-            <stop offset="100%" stopColor="#000" stopOpacity="0.65" />
+          <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+            <stop offset="40%" stopColor="transparent" />
+            <stop offset="100%" stopColor="#000" stopOpacity="0.70" />
           </radialGradient>
 
-          {/* Top fade for text readability */}
-          <linearGradient id="tron-topfade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor="#000" stopOpacity="0.60" />
-            <stop offset="40%"  stopColor="#000" stopOpacity="0.12" />
+          {/* Top text fade */}
+          <linearGradient id="top-fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stopColor="#000" stopOpacity="0.65" />
+            <stop offset="42%" stopColor="#000" stopOpacity="0.12" />
             <stop offset="100%" stopColor="#000" stopOpacity="0" />
           </linearGradient>
 
-          {/* Dash white gradient */}
-          <linearGradient id="tron-dash" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stopColor="#fff" stopOpacity="0.4" />
-            <stop offset="50%"  stopColor="#fff" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#fff" stopOpacity="0.4" />
+          {/* Dash gradient */}
+          <linearGradient id="dash-grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stopColor="#fff" stopOpacity="0.35" />
+            <stop offset="50%"  stopColor="#fff" stopOpacity="0.90" />
+            <stop offset="100%" stopColor="#fff" stopOpacity="0.35" />
           </linearGradient>
 
-          {/* Vehicle body gradient */}
-          <linearGradient id="tron-car-body" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor="#0A2020" />
-            <stop offset="100%" stopColor="#020E0E" />
-          </linearGradient>
-
-          {/* Light trail behind vehicle */}
-          <linearGradient id="tron-trail-l" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0%"   stopColor={vehColor} stopOpacity="0.5" />
-            <stop offset="100%" stopColor={vehColor} stopOpacity="0" />
-          </linearGradient>
-          <linearGradient id="tron-trail-r" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stopColor={vehColor} stopOpacity="0.5" />
-            <stop offset="100%" stopColor={vehColor} stopOpacity="0" />
-          </linearGradient>
+          {/* Vehicle barrel gradient (front-lit) */}
+          <radialGradient id="barrel-grad" cx="35%" cy="35%" r="65%">
+            <stop offset="0%"   stopColor="#004030" />
+            <stop offset="100%" stopColor="#000E08" />
+          </radialGradient>
         </defs>
 
-        {/* ── 1. Background sky ── */}
-        <rect x="0" y="0" width="1440" height="680" fill="url(#tron-bg)" />
+        {/* ── 1. Sky ── */}
+        <rect x="0" y="0" width="1440" height="680" fill="url(#tron-sky)" />
 
-        {/* ── 2. Horizon atmospheric bloom ── */}
-        <ellipse cx={VP.x} cy={VP.y} rx="500" ry="240" fill="url(#tron-horizon)" />
-        {/* Secondary tight bloom */}
-        <ellipse cx={VP.x} cy={VP.y} rx="140" ry="70" fill={edgeColor} opacity="0.06" />
+        {/* ── 2. Horizon glow ── */}
+        <ellipse cx={VP.x} cy={VP.y} rx="560" ry="280" fill="url(#tron-horizon)" />
+        <ellipse cx={VP.x} cy={VP.y} rx="120" ry="55"  fill={neon} opacity="0.08" />
 
-        {/* ── 3. Floor grid ── */}
-        <g filter="url(#tron-grid-glow)">
-          {/* Left lateral lines */}
-          <g opacity="0.22">
-            {gridLinesLeft.map((d, i) => (
-              <path key={`gl${i}`} d={d} stroke={gridColor} strokeWidth="0.8" fill="none" />
-            ))}
-          </g>
-          {/* Right lateral lines */}
-          <g opacity="0.22">
-            {gridLinesRight.map((d, i) => (
-              <path key={`gr${i}`} d={d} stroke={gridColor} strokeWidth="0.8" fill="none" />
-            ))}
-          </g>
-          {/* Transverse lines — brighter near horizon */}
-          {transverseLines.map((d, i) => (
-            <path key={`gt${i}`} d={d} stroke={gridColor} strokeWidth="0.6" fill="none"
-              opacity={0.10 + i * 0.025} />
+        {/* ── 3. Dot grid floor (left & right of road) ── */}
+        <g filter="url(#dot-glow)">
+          {floorDots.map((d, i) => (
+            <circle key={i} cx={d.x} cy={d.y} r={d.r} fill={neon} opacity="0.55" />
           ))}
         </g>
 
         {/* ── 4. Road surface ── */}
-        <polygon points={roadPoly} fill="url(#tron-road)" opacity="0.97" />
-
-        {/* Road centre subtle teal sheen */}
-        <polygon
-          points={[
-            `${roadCenterX(0) - roadWidth(0)*0.18},${roadCenterY(0)}`,
-            `${roadCenterX(0) + roadWidth(0)*0.18},${roadCenterY(0)}`,
-            `${VP.x + 1},${VP.y}`,
-            `${VP.x - 1},${VP.y}`,
-          ].join(' ')}
-          fill="url(#tron-centre-streak)"
-        />
+        <polygon points={roadPoly} fill="url(#tron-road)" />
 
         {/* ── 5. Center dashes ── */}
         {dashes.map((d, i) => (
-          <path key={`dash${i}`} d={d} fill="url(#tron-dash)" opacity={0.8 - i * 0.055} />
+          <path key={i} d={d} fill="url(#dash-grad)" opacity={0.85 - i * 0.055} />
         ))}
 
-        {/* ── 6. Road edge glow lines (3-pass: wide halo → mid glow → sharp core) ── */}
-        <path d={roadEdgeL} stroke={edgeColor} strokeWidth="18" fill="none" opacity="0.07" filter="url(#tron-edge-glow)" />
-        <path d={roadEdgeR} stroke={edgeColor} strokeWidth="18" fill="none" opacity="0.07" filter="url(#tron-edge-glow)" />
-        <path d={roadEdgeL} stroke={edgeColor} strokeWidth="5"  fill="none" opacity="0.40" filter="url(#tron-edge-glow)" />
-        <path d={roadEdgeR} stroke={edgeColor} strokeWidth="5"  fill="none" opacity="0.40" filter="url(#tron-edge-glow)" />
-        <path d={roadEdgeL} stroke={edgeColor} strokeWidth="1.8" fill="none" opacity="1" />
-        <path d={roadEdgeR} stroke={edgeColor} strokeWidth="1.8" fill="none" opacity="1" />
+        {/* ── 6. Road edge — thick neon streaks ── */}
+        {/* Wide outer halo */}
+        <path d={roadEdgeL} stroke={neon} strokeWidth="22" fill="none" opacity="0.10" filter="url(#edge-glow)" />
+        <path d={roadEdgeR} stroke={neon} strokeWidth="22" fill="none" opacity="0.10" filter="url(#edge-glow)" />
+        {/* Mid glow */}
+        <path d={roadEdgeL} stroke={neon} strokeWidth="7"  fill="none" opacity="0.50" filter="url(#edge-glow)" />
+        <path d={roadEdgeR} stroke={neon} strokeWidth="7"  fill="none" opacity="0.50" filter="url(#edge-glow)" />
+        {/* Bright core */}
+        <path d={roadEdgeL} stroke={neonBright} strokeWidth="2" fill="none" opacity="1" />
+        <path d={roadEdgeR} stroke={neonBright} strokeWidth="2" fill="none" opacity="1" />
 
         {/* ── 7. Dollar sign post markers ── */}
         {/* Right edge */}
         {dollarMarkersRight.map((m, i) => (
-          <g key={`dr${i}`} filter="url(#tron-marker-glow)" opacity={0.9 - i * 0.08}>
-            {/* Glowing base disc on road */}
-            <ellipse cx={m.x} cy={m.y} rx={m.r * 1.4} ry={m.r * 0.35} fill={edgeColor} opacity="0.18" />
-            {/* Post */}
+          <g key={`dr${i}`} filter="url(#post-glow)" opacity={Math.max(0.25, 1 - i * 0.09)}>
+            {/* Glow disc on road surface */}
+            <ellipse cx={m.x} cy={m.y} rx={m.r * 2} ry={m.r * 0.5} fill={neon} opacity="0.22" />
+            {/* Vertical post */}
             <line x1={m.x} y1={m.y} x2={m.x} y2={m.y - m.postH}
-              stroke={edgeColor} strokeWidth={Math.max(1, m.r * 0.25)} />
+              stroke={neon} strokeWidth={Math.max(1.2, m.r * 0.28)} />
             {/* Head ring */}
             <circle cx={m.x} cy={m.y - m.postH} r={m.r}
-              fill="#001816" stroke={edgeColor} strokeWidth={Math.max(0.8, m.r * 0.22)} />
-            {/* Dollar sign */}
+              fill="#001410" stroke={neon} strokeWidth={Math.max(1, m.r * 0.25)} />
+            {/* $ glyph */}
             <text x={m.x} y={m.y - m.postH + m.r * 0.42}
-              textAnchor="middle"
-              fontSize={m.r * 1.15}
-              fill={edgeColor}
-              fontWeight="900"
-              fontFamily="monospace"
-            >$</text>
+              textAnchor="middle" fontSize={m.r * 1.2}
+              fill={neonBright} fontWeight="900" fontFamily="monospace">$</text>
           </g>
         ))}
         {/* Left edge */}
         {dollarMarkersLeft.map((m, i) => (
-          <g key={`dl${i}`} filter="url(#tron-marker-glow)" opacity={0.9 - i * 0.08}>
-            <ellipse cx={m.x} cy={m.y} rx={m.r * 1.4} ry={m.r * 0.35} fill={edgeColor} opacity="0.18" />
+          <g key={`dl${i}`} filter="url(#post-glow)" opacity={Math.max(0.25, 1 - i * 0.09)}>
+            <ellipse cx={m.x} cy={m.y} rx={m.r * 2} ry={m.r * 0.5} fill={neon} opacity="0.22" />
             <line x1={m.x} y1={m.y} x2={m.x} y2={m.y - m.postH}
-              stroke={edgeColor} strokeWidth={Math.max(1, m.r * 0.25)} />
+              stroke={neon} strokeWidth={Math.max(1.2, m.r * 0.28)} />
             <circle cx={m.x} cy={m.y - m.postH} r={m.r}
-              fill="#001816" stroke={edgeColor} strokeWidth={Math.max(0.8, m.r * 0.22)} />
+              fill="#001410" stroke={neon} strokeWidth={Math.max(1, m.r * 0.25)} />
             <text x={m.x} y={m.y - m.postH + m.r * 0.42}
-              textAnchor="middle"
-              fontSize={m.r * 1.15}
-              fill={edgeColor}
-              fontWeight="900"
-              fontFamily="monospace"
-            >$</text>
+              textAnchor="middle" fontSize={m.r * 1.2}
+              fill={neonBright} fontWeight="900" fontFamily="monospace">$</text>
           </g>
         ))}
 
-        {/* ── 8. Futuristic vehicle ── */}
-        <g filter="url(#tron-veh-glow)">
-          {/* Light trail lines stretching back (left) from vehicle */}
-          <line x1={cx - cw * 0.5} y1={cy + ch * 0.6}
-            x2={cx - cw * 0.5 - 220 * VS} y2={cy + ch * 0.65}
-            stroke="url(#tron-trail-l)" strokeWidth={3 * VS} />
-          <line x1={cx - cw * 0.5} y1={cy + ch * 0.75}
-            x2={cx - cw * 0.5 - 140 * VS} y2={cy + ch * 0.78}
-            stroke="url(#tron-trail-l)" strokeWidth={2 * VS} />
-
-          {/* Rear under-glow on road */}
-          <ellipse cx={cx - cw * 0.15} cy={cy + ch + 2 * VS}
-            rx={cw * 0.55} ry={ch * 0.35}
-            fill={vehColor} opacity="0.12" />
-
-          {/* Wheels */}
-          <ellipse cx={wFrontX} cy={wY} rx={wheelR * 0.55} ry={wheelR}
-            fill="#010C0C" stroke={vehColor} strokeWidth={1.5 * VS} />
-          <ellipse cx={wRearX}  cy={wY} rx={wheelR * 0.55} ry={wheelR}
-            fill="#010C0C" stroke={vehColor} strokeWidth={1.5 * VS} />
-          {/* Wheel highlight */}
-          <ellipse cx={wFrontX} cy={wY - wheelR * 0.3} rx={wheelR * 0.25} ry={wheelR * 0.2}
-            fill={vehColor} opacity="0.25" />
-          <ellipse cx={wRearX}  cy={wY - wheelR * 0.3} rx={wheelR * 0.25} ry={wheelR * 0.2}
-            fill={vehColor} opacity="0.25" />
-
-          {/* Car body */}
-          <path d={carBody} fill="url(#tron-car-body)" />
-          {/* Body outline — neon edge */}
-          <path d={carBody} fill="none" stroke={vehColor} strokeWidth={1.8 * VS} strokeLinejoin="round" />
-
-          {/* Cockpit */}
-          <path d={cockpitPath} fill="#00150F" />
-          <path d={cockpitPath} fill="none" stroke={vehColor} strokeWidth={1.4 * VS} />
-          {/* Cockpit glass tint */}
-          <path d={cockpitPath} fill={vehColor} opacity="0.08" />
-
-          {/* Side panel accent line */}
-          <line
-            x1={cx - cw * 0.48} y1={cy + ch * 0.55}
-            x2={cx + cw * 0.44} y2={cy + ch * 0.4}
-            stroke={vehColor} strokeWidth={1.2 * VS} opacity="0.6"
+        {/* ── 8. Vehicle — binocular barrel shape ── */}
+        <g filter="url(#veh-glow)">
+          {/* Light trail streaming behind (to the left) */}
+          <rect
+            x={bCX1 - bW/2 - 180*VS} y={bCY - 3*VS}
+            width={180*VS} height={6*VS}
+            fill="none"
+            style={{ background: 'none' }}
           />
-          {/* Rear brake glow */}
-          <rect x={cx - cw * 0.5} y={cy + ch * 0.25} width={3 * VS} height={ch * 0.45}
-            fill={vehColor} rx={1} />
-          {/* Front headlight */}
-          <rect x={cx + cw * 0.47} y={cy + ch * 0.3} width={3 * VS} height={ch * 0.35}
-            fill={vehColor} rx={1} />
-          {/* Headlight beam */}
-          <line
-            x1={cx + cw * 0.5} y1={cy + ch * 0.45}
-            x2={cx + cw * 0.5 + 90 * VS} y2={cy + ch * 0.42}
-            stroke={vehColor} strokeWidth={2.5 * VS} opacity="0.3"
-          />
+          <line x1={bCX1 - bW/2} y1={bCY}
+            x2={bCX1 - bW/2 - 200*VS} y2={bCY + 2*VS}
+            stroke={vehNeon} strokeWidth={4*VS} opacity="0.5"
+            strokeLinecap="round" />
+          <line x1={bCX1 - bW/2} y1={bCY - bR*0.3}
+            x2={bCX1 - bW/2 - 130*VS} y2={bCY - bR*0.25}
+            stroke={vehNeon} strokeWidth={2*VS} opacity="0.3"
+            strokeLinecap="round" />
+          <line x1={bCX1 - bW/2} y1={bCY + bR*0.3}
+            x2={bCX1 - bW/2 - 130*VS} y2={bCY + bR*0.35}
+            stroke={vehNeon} strokeWidth={2*VS} opacity="0.3"
+            strokeLinecap="round" />
+
+          {/* Under-glow on road */}
+          <ellipse cx={VCX} cy={VCY} rx={bW*1.1} ry={bR*0.55}
+            fill={vehNeon} opacity="0.18" />
+
+          {/* Left barrel */}
+          <rect x={bCX1-bW/2} y={bCY-bR} width={bW} height={bR*2}
+            rx={bR} fill="url(#barrel-grad)" />
+          <rect x={bCX1-bW/2} y={bCY-bR} width={bW} height={bR*2}
+            rx={bR} fill="none" stroke={vehNeon} strokeWidth={2*VS} />
+          {/* Left barrel inner highlight */}
+          <rect x={bCX1-bW/2+4*VS} y={bCY-bR+4*VS} width={bW-8*VS} height={bR*0.5}
+            rx={bR*0.5} fill={vehNeon} opacity="0.18" />
+          {/* Left barrel front lens */}
+          <circle cx={bCX1+bW/2-4*VS} cy={bCY} r={bR*0.45}
+            fill={vehNeon} opacity="0.35" />
+          <circle cx={bCX1+bW/2-4*VS} cy={bCY} r={bR*0.22}
+            fill={vehNeon} opacity="0.85" />
+
+          {/* Right barrel */}
+          <rect x={bCX2-bW/2} y={bCY-bR} width={bW} height={bR*2}
+            rx={bR} fill="url(#barrel-grad)" />
+          <rect x={bCX2-bW/2} y={bCY-bR} width={bW} height={bR*2}
+            rx={bR} fill="none" stroke={vehNeon} strokeWidth={2*VS} />
+          {/* Right barrel inner highlight */}
+          <rect x={bCX2-bW/2+4*VS} y={bCY-bR+4*VS} width={bW-8*VS} height={bR*0.5}
+            rx={bR*0.5} fill={vehNeon} opacity="0.18" />
+          {/* Right barrel front lens */}
+          <circle cx={bCX2+bW/2-4*VS} cy={bCY} r={bR*0.45}
+            fill={vehNeon} opacity="0.35" />
+          <circle cx={bCX2+bW/2-4*VS} cy={bCY} r={bR*0.22}
+            fill={vehNeon} opacity="0.85" />
+
+          {/* Bridge connecting two barrels */}
+          <rect x={bCX1+bW/2} y={bCY-bR*0.28} width={gap} height={bR*0.56}
+            fill={vehNeon} opacity="0.7" rx={2} />
+
+          {/* Headlight beam forward */}
+          <line x1={bCX2+bW/2} y1={bCY}
+            x2={bCX2+bW/2+80*VS} y2={bCY-3*VS}
+            stroke={vehNeon} strokeWidth={3*VS} opacity="0.4"
+            strokeLinecap="round" />
+          <line x1={bCX2+bW/2} y1={bCY}
+            x2={bCX2+bW/2+120*VS} y2={bCY-5*VS}
+            stroke={vehNeon} strokeWidth={1.5*VS} opacity="0.2"
+            strokeLinecap="round" />
         </g>
 
         {/* ── 9. Vignette ── */}
-        <rect x="0" y="0" width="1440" height="680" fill="url(#tron-vignette)" />
+        <rect x="0" y="0" width="1440" height="680" fill="url(#vignette)" />
 
-        {/* ── 10. Top fade for text legibility ── */}
-        <rect x="0" y="0" width="1440" height="320" fill="url(#tron-topfade)" />
+        {/* ── 10. Top fade ── */}
+        <rect x="0" y="0" width="1440" height="320" fill="url(#top-fade)" />
       </svg>
     </div>
   );
