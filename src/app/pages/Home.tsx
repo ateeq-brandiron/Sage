@@ -8,7 +8,7 @@ import { LightLineDivider } from '../components/LightLineDivider';
 import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
 import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
-import heroChart from '../../assets/pages/home/hero-chart.svg';
+import heroHighway from '../../assets/pages/home/hero-highway.png';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import { Button } from '../components/Button';
 
@@ -49,39 +49,41 @@ export function Home() {
       {/* Hero Section - Split Layout */}
       <section className="bg-white flex items-center">
         <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
+          <div className="grid lg:grid-cols-2 items-stretch min-h-[520px]">
 
             {/* Left — Text Content */}
-            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
+            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)] bg-primary">
                 <p className="text-xs uppercase tracking-widest text-accent mb-4 sm:mb-5 font-semibold">
-                  AI Revenue Partner
+                  Revenue Growth Partner
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
-                  AI is easy to buy.<br />ROI is impossible to realize.
+                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
+                  AI is easy to buy.<br />Revenue is impossible to guarantee.
                 </h1>
 
                 <p className="text-xl sm:text-2xl font-bold text-accent mb-5 sm:mb-6">
                   We do the impossible part.
                 </p>
 
-                <p className="text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">
-                  1SagePros.AI is a master Revenue Value Added Reseller focused solely on AI. We design, integrate and manage the AI that established businesses need to defend and grow their position — without hiring an internal AI team or expensive systems.
+                <p className="text-base md:text-lg text-white/75 mb-6 sm:mb-8 leading-relaxed max-w-lg">
+                  1SagePros.AI brings elite GTM expertise and AI together into one revenue engine — purpose-built for established businesses that need to defend and grow their position. No internal AI team required. No experiments. Just outcomes.
                 </p>
 
               <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <Link
-                  to="/contact"
-                  aria-label="Get Your Complimentary AI ROI Assessment"
+                <a
+                  href="https://calendly.com/1sagepros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get Your Free AI ROI Assessment"
                   className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
                 >
-                  Get Your Complimentary AI ROI Assessment
+                  Get Your Free AI ROI Assessment
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                </a>
                 <Link
                   to="/solutions"
                   aria-label="See How We Work"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
+                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
                 >
                   See How We Work
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -89,13 +91,12 @@ export function Home() {
               </div>
             </div>
 
-            {/* Right — chart */}
-            <div className="hidden lg:block relative bg-white overflow-hidden">
+            {/* Right — Shelly's hero highway image */}
+            <div className="hidden lg:block relative overflow-hidden">
               <img
-                src={heroChart}
-                alt="Revenue growth bar chart showing ascending pipeline stages"
-                className="absolute inset-0 w-full h-full object-contain object-top scale-[1.07] origin-top"
-                style={{ padding: '8px 0px 0px 0px' }}
+                src={heroHighway}
+                alt="Neon AI highway representing revenue acceleration"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
             </div>
 
@@ -545,16 +546,18 @@ export function Home() {
               </Link>
             </div>
             <div className="bg-primary p-6 text-center">
-              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Sales Assessment</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-accent mb-2">Book a Session</p>
               <h3 className="text-lg font-black text-white mb-2">AI ROI Assessment</h3>
-              <p className="text-sm text-white/70 mb-5">See what AI can actually do for your revenue — a complimentary assessment with Mitchell and the team.</p>
-              <Link
-                to="/contact"
+              <p className="text-sm text-white/70 mb-5">See what AI can actually do for your revenue — a 30-minute strategy session with Mitchell and the team.</p>
+              <a
+                href="https://calendly.com/1sagepros"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full px-5 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold transition-all duration-300 text-sm group hover:brightness-110"
               >
-                Get Your AI ROI Assessment
+                Book Your AI ROI Assessment
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

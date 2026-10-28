@@ -93,13 +93,15 @@ export function Solutions() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Complete Revenue Solutions</h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mb-6 sm:mb-8">Integrated revenue operations that deliver predictable, scalable growth.</p>
               <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://calendly.com/1sagepros"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
                 >
-                  Get Your AI ROI Assessment
+                  Book Your AI ROI Assessment
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                </a>
                 <Link
                   to="/case-studies"
                   className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
@@ -442,9 +444,15 @@ export function Solutions() {
           <p className="text-lg mb-8 md:mb-10 text-primary/70">
             Get started with an AI Vibe Check — no commitment required
           </p>
-          <Button to="/contact">
-            Get Your AI ROI Assessment
-          </Button>
+          <a
+            href="https://calendly.com/1sagepros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base hover:brightness-110 hover:shadow-lg group"
+          >
+            Book Your AI ROI Assessment
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
         </div>
       </section>
     </div>

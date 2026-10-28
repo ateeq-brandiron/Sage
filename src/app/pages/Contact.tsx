@@ -204,7 +204,7 @@ export function Contact() {
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group"
                 >
-                  Get Your Complimentary AI ROI Assessment
+                  Book Your AI ROI Assessment
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 
