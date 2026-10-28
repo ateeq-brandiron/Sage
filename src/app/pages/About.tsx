@@ -40,58 +40,14 @@ export function About() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left — text */}
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">About 1SagePros.AI</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.</p>
-            </div>
-            {/* Right — growth chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white px-4 py-4">
-              <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Revenue Influenced: 30 Year Journey</p>
-                <svg viewBox="0 0 460 260" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="aboutAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.22"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.01"/>
-                    </linearGradient>
-                  </defs>
-                  {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
-                    <line key={y} x1="60" y1={y} x2="440" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
-                  ))}
-                  {[
-                    { label: '$100M+', y: 20  },
-                    { label: '$75M',   y: 75  },
-                    { label: '$50M',   y: 130 },
-                    { label: '$25M',   y: 185 },
-                  ].map(({ label, y }) => (
-                    <text key={label} x="56" y={y} textAnchor="end" fontSize="11" fill="#0B1F35" fillOpacity="0.42" dominantBaseline="middle">{label}</text>
-                  ))}
-                  <polygon points="60,215 190,195 315,130 440,20 440,215" fill="url(#aboutAreaGrad)"/>
-                  <polyline points="60,215 190,195 315,130 440,20" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                  {[
-                    { cx: 60,  cy: 215 },
-                    { cx: 190, cy: 195 },
-                    { cx: 315, cy: 130 },
-                    { cx: 440, cy: 20  },
-                  ].map(({ cx, cy }) => (
-                    <circle key={cx} cx={cx} cy={cy} r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
-                  ))}
-                  {[
-                    { label: '1995', x: 60  },
-                    { label: '2005', x: 190 },
-                    { label: '2015', x: 315 },
-                    { label: '2025', x: 440 },
-                  ].map(({ label, x }) => (
-                    <text key={label} x={x} y="240" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.42">{label}</text>
-                  ))}
-                </svg>
-              </div>
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={aboutBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Our Story</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">About 1SagePros.AI</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">200+ businesses. 30 years of trust. $1.2B+ delivered. The revenue growth partner for established businesses.</p>
           </div>
         </div>
       </section>

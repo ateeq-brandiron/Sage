@@ -87,74 +87,16 @@ export function Offerings() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left — text */}
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">AI Revenue Platforms</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Our Offerings</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Four pre-integrated AI platforms, selected, configured, and managed by SAGE, so you get proven tools driving revenue from day one, not a build-it-yourself science project.
-              </p>
-            </div>
-            {/* Right — platform quadrant chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white px-4 py-4">
-              <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Platform Coverage</p>
-                <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0"   y="0"   width="198" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="208" y="0"   width="212" height="128" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="0"   y="138" width="198" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <rect x="208" y="138" width="212" height="130" rx="6" fill="#00C853" fillOpacity="0.06" stroke="#00C853" strokeOpacity="0.2"  strokeWidth="1"/>
-                  <text x="99"  y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Bellwether Intel</text>
-                  <text x="99"  y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Demand Generation</text>
-                  <text x="314" y="26"  textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Boxsy</text>
-                  <text x="314" y="42"  textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Revenue Operations</text>
-                  <text x="99"  y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">Empower AI 365</text>
-                  <text x="99"  y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">Pipeline Management</text>
-                  <text x="314" y="164" textAnchor="middle" fontSize="12" fontWeight="700" fill="#00C853">AIO Advisors</text>
-                  <text x="314" y="180" textAnchor="middle" fontSize="10" fill="#0B1F35" fillOpacity="0.45">AI Infrastructure</text>
-                  <rect x="74"  y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="289" y="56"  width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="74"  y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  <rect x="289" y="194" width="50" height="50" rx="10" fill="#00C853" fillOpacity="0.18"/>
-                  {/* Bellwether — Megaphone */}
-                  <g transform="translate(87,69)">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#00C853" fillOpacity="0.25" stroke="#00C853" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M15.5 8.5 A5 5 0 0 1 15.5 15.5" stroke="#00C853" strokeOpacity="0.85" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                    <path d="M18.5 5.5 A9 9 0 0 1 18.5 18.5" stroke="#00C853" strokeOpacity="0.4" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                  </g>
-                  {/* Boxsy — Briefcase */}
-                  <g transform="translate(302,69)">
-                    <rect x="2" y="8" width="20" height="12" rx="2" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
-                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#00C853" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-                    <line x1="2" y1="14" x2="22" y2="14" stroke="#00C853" strokeOpacity="0.5" strokeWidth="1.5"/>
-                  </g>
-                  {/* Empower AI 365 — Workflow nodes */}
-                  <g transform="translate(87,207)">
-                    <rect x="2" y="2" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
-                    <rect x="15" y="9" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
-                    <rect x="2" y="16" width="7" height="7" rx="1" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
-                    <path d="M9 5.5h4c1.7 0 3 1.3 3 3V9" stroke="#00C853" strokeOpacity="0.6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M15 16v1c0 1.7-1.3 3-3 3H9" stroke="#00C853" strokeOpacity="0.6" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </g>
-                  {/* AIO Advisors — CPU chip */}
-                  <g transform="translate(302,207)">
-                    <rect x="6" y="6" width="12" height="12" rx="2" fill="#00C853" fillOpacity="0.2" stroke="#00C853" strokeWidth="1.5"/>
-                    <rect x="9" y="9" width="6" height="6" rx="1" fill="#00C853" fillOpacity="0.4" stroke="#00C853" strokeWidth="1"/>
-                    <path d="M9 6V3M12 6V3M15 6V3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M9 21v-3M12 21v-3M15 21v-3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M3 9h3M3 12h3M3 15h3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M18 9h3M18 12h3M18 15h3" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round"/>
-                  </g>
-                  <line x1="198" y1="64"  x2="208" y2="64"  stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="198" y1="202" x2="208" y2="202" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="99"  y1="128" x2="99"  y2="138" stroke="#0B1F35" strokeOpacity="0.12" strokeWidth="1.5" strokeDasharray="3 2"/>
-                  <line x1="314" y1="128" x2="314" y2="138" stroke="#00C853" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="3 2"/>
-                </svg>
-              </div>
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={offeringsBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">AI Revenue Platforms</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Our Offerings</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">
+              Four pre-integrated AI platforms, selected, configured, and managed by SAGE, so you get proven tools driving revenue from day one, not a build-it-yourself science project.
+            </p>
           </div>
         </div>
       </section>
