@@ -6,7 +6,7 @@ import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
 import { Button } from '../components/Button';
-import { TronRoadBg } from '../components/TronRoadBg';
+
 
 export function About() {
   const values = [
@@ -96,9 +96,8 @@ export function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#1A4A2E' }}>
-        <TronRoadBg variant="green" />
-        <div className="relative z-10 max-w-7xl mx-auto">
+      <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#2D7A4F' }}>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-white/60 mb-4 font-semibold">Who We Are</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-3">
