@@ -16,22 +16,22 @@ export function Footer() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-primary/40" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
-          {/* Brand */}
-          <div className="shrink-0 lg:w-52">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
+          {/* Brand — left */}
+          <div className="shrink-0 lg:max-w-xs">
             <div className="mb-4">
               <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
-            <p className="text-sm text-white/80 max-w-xs">
+            <p className="text-sm text-white/80">
               200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.
             </p>
           </div>
 
-          {/* Nav columns — equal spacing */}
-          <div className="flex flex-wrap lg:flex-nowrap gap-6 flex-1 lg:justify-between">
+          {/* Nav columns — right-aligned group */}
+          <div className="flex flex-wrap gap-x-10 gap-y-8 lg:flex-nowrap lg:gap-x-12">
             {/* Solutions */}
             <div>
-              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Solutions</h5>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Solutions</h5>
               <ul className="space-y-3">
                 <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Revenue Strategy</Link></li>
                 <li><Link to="/solutions" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Demand Generation</Link></li>
@@ -42,7 +42,7 @@ export function Footer() {
 
             {/* Offerings */}
             <div>
-              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Offerings</h5>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Offerings</h5>
               <ul className="space-y-3">
                 <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Bellwether Intel</Link></li>
                 <li><Link to="/offerings" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Empower AI 365</Link></li>
@@ -53,7 +53,7 @@ export function Footer() {
 
             {/* Industries */}
             <div>
-              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Industries</h5>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Industries</h5>
               <ul className="space-y-3">
                 <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Technology</Link></li>
                 <li><Link to="/industries" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Manufacturing</Link></li>
@@ -64,7 +64,7 @@ export function Footer() {
 
             {/* Company */}
             <div>
-              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Company</h5>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Company</h5>
               <ul className="space-y-3">
                 <li><Link to="/case-studies" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Case Studies</Link></li>
                 <li><Link to="/insights" className="text-sm text-white/70 hover:text-accent hover:translate-x-1 transition-all duration-200 inline-block">Insights</Link></li>
@@ -75,7 +75,7 @@ export function Footer() {
 
             {/* Connect */}
             <div>
-              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm">Connect</h5>
+              <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Connect</h5>
               <ul className="space-y-3">
                 <li>
                   <a href="mailto:mitchell.chi@1SagePros.AI" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
