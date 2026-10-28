@@ -28,7 +28,7 @@ export function About() {
     {
       name: 'Michael Doyle',
       photo: michaelImg,
-      role: 'COO & Co-Founder',
+      role: 'CRO & Co-Founder',
       bio: 'Michael built a Denver-based advertising agency into a multi-million dollar company and sold it to a national integrated services provider in 2000. With 25+ years of branding, marketing, and advertising experience, he has led 500+ signature BrandStorm sessions, helped companies raise more than $5B in capital, and supported 40+ acquisitions. He serves on the boards of Nuvana Resorts, The Dealmakers Conference, and Halen Technology, and facilitates several CEO peer groups.',
       certifications: [],
       expertise: ['Brand Strategy', 'Capital Raising', 'M&A Advisory', 'CEO Peer Groups', 'Revenue Leadership'],
@@ -229,7 +229,7 @@ export function About() {
               { name: 'Nick Bahr', role: 'CTO, CaiO · CEO, Aio Advisors Group' },
               { name: 'Shera Haliczer', role: 'SVP Change Management · CEO, Engage3P' },
               { name: 'Milind Prabhudesai', role: 'SVP AI Data Acquisition · CEO & Co-founder, BizKonnect' },
-              { name: 'Mark Sibelli', role: 'UX Design' },
+              { name: 'Mark Scibelli', role: 'UX Design' },
               { name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
             ].map((member) => (
               <div key={member.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
@@ -260,9 +260,9 @@ export function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { name: 'Ed Soohoo', role: 'CTO, Lenovo' },
-              { name: 'David Sokolof', role: 'CEO, Data Cortex' },
+              { name: 'David Sockolof', role: 'CEO, RQM+' },
               { name: 'James Harris', role: 'SVP, Snowflake' },
-              { name: 'Marci Kahn Esq.', role: 'Blank Rome' },
+              { name: 'Marci Kahn Esq.', role: 'Sterling & Price LLP' },
               { name: 'Steve L. Bolden CPA', role: 'Meltzer & Assoc. LLP' },
             ].map((advisor) => (
               <div key={advisor.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
