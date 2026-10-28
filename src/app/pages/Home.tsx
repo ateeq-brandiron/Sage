@@ -333,8 +333,8 @@ export function Home() {
 
               {/* Hub center */}
               <circle cx="450" cy="260" r="58" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.6" strokeWidth="2"/>
-              <text x="450" y="252" textAnchor="middle" fontSize="15" fontWeight="900" fill="#00C853">1SP</text>
-              <text x="450" y="268" textAnchor="middle" fontSize="15" fontWeight="900" fill="#00C853">.AI</text>
+              <text x="450" y="248" textAnchor="middle" fontSize="10" fontWeight="900" fill="#00C853">1SagePros</text>
+              <text x="450" y="264" textAnchor="middle" fontSize="10" fontWeight="900" fill="#00C853">.AI</text>
               <text x="450" y="284" textAnchor="middle" fontSize="8.5" fill="#00C853" fillOpacity="0.6" letterSpacing="1">WHEEL</text>
             </svg>
           </div>

@@ -319,8 +319,8 @@ export function Solutions() {
                 ))}
                 {/* center */}
                 <circle cx="220" cy="220" r="50" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.7" strokeWidth="2"/>
-                <text x="220" y="216" textAnchor="middle" fontSize="14" fontWeight="900" fill="#00C853">1SP</text>
-                <text x="220" y="232" textAnchor="middle" fontSize="14" fontWeight="900" fill="#00C853">.AI</text>
+                <text x="220" y="212" textAnchor="middle" fontSize="9" fontWeight="900" fill="#00C853">1SagePros</text>
+                <text x="220" y="228" textAnchor="middle" fontSize="9" fontWeight="900" fill="#00C853">.AI</text>
               </svg>
             </div>
 
