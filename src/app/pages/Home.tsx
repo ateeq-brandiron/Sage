@@ -51,13 +51,16 @@ export function Home() {
         <div className="w-full">
           <div className="grid lg:grid-cols-2 items-stretch">
 
-            {/* Left — Text Content */}
-            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
+            {/* Left — Text Content — dark brand panel */}
+            <div className="flex flex-col justify-center pt-10 pb-10 md:pt-12 md:pb-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)] bg-primary relative overflow-hidden">
+              {/* Subtle teal grid accent */}
+              <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(0deg,#00C853 0,#00C853 1px,transparent 1px,transparent 48px),repeating-linear-gradient(90deg,#00C853 0,#00C853 1px,transparent 1px,transparent 48px)' }} />
+              <div className="relative z-10">
                 <p className="text-xs uppercase tracking-widest text-accent mb-4 sm:mb-5 font-semibold">
                   AI Revenue Partner
                 </p>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-primary mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black text-white mb-3 sm:mb-4 leading-[1.05] sm:leading-[1.0]">
                   AI is easy to buy.<br />ROI is impossible to realize.
                 </h1>
 
@@ -65,27 +68,28 @@ export function Home() {
                   We do the impossible part.
                 </p>
 
-                <p className="text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">
+                <p className="text-base md:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-lg">
                   1SagePros.AI is a master Revenue Value Added Reseller focused solely on AI. We design, integrate and manage the AI that established businesses need to defend and grow their position — without hiring an internal AI team or expensive systems.
                 </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <Link
-                  to="/contact"
-                  aria-label="Get Your Complimentary AI ROI Assessment"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
-                >
-                  Get Your Complimentary AI ROI Assessment
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-                <Link
-                  to="/solutions"
-                  aria-label="See How We Work"
-                  className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
-                >
-                  See How We Work
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+                  <Link
+                    to="/contact"
+                    aria-label="Get Your Complimentary AI ROI Assessment"
+                    className="inline-flex items-center justify-center px-6 sm:px-7 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 text-base group hover:brightness-110 hover:shadow-lg"
+                  >
+                    Get Your Complimentary AI ROI Assessment
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                  <Link
+                    to="/solutions"
+                    aria-label="See How We Work"
+                    className="inline-flex items-center justify-center px-6 sm:px-7 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-all duration-300 font-semibold text-base hover:shadow-lg group"
+                  >
+                    See How We Work
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -264,71 +268,92 @@ export function Home() {
             </p>
           </div>
 
-          {/* Process Steps — hub-and-spokes on desktop, list on mobile */}
-          {/* Desktop hub-and-spokes */}
+          {/* Process Steps — horizontal step flow on desktop, list on mobile */}
+          {/* Desktop step flow */}
           <div className="hidden lg:block mb-4">
-            <svg viewBox="0 0 900 520" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="relative">
+              {/* Connector line */}
+              <div className="absolute top-10 left-[calc(100%/14)] right-[calc(100%/14)] h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+              <div className="grid grid-cols-7 gap-2">
+                {[
+                  { step: '01', title: 'RevenueStorm™\nPlanning',       desc: 'Define desired outcomes first.' },
+                  { step: '02', title: 'Systems &\nProcess Review',      desc: 'Diagnose gaps and broken links.' },
+                  { step: '03', title: 'AI\nOptimization Plan',          desc: 'Map AI to your specific goals.' },
+                  { step: '04', title: 'Tool & Platform\nSelection',     desc: 'Vetted, pre-integrated partners.' },
+                  { step: '05', title: 'Managed\nExecution',             desc: 'We deploy alongside your team.' },
+                  { step: '06', title: 'Testing for\nEffectiveness',     desc: 'Measure what converts.' },
+                  { step: '07', title: 'Stabilize\n& Optimize',          desc: 'Full rollout and continuous tuning.' },
+                ].map(({ step, title, desc }) => (
+                  <div key={step} className="flex flex-col items-center text-center group">
+                    {/* Step circle */}
+                    <div className="relative z-10 w-20 h-20 rounded-full bg-primary border-2 border-accent/60 flex flex-col items-center justify-center mb-4 group-hover:border-accent group-hover:shadow-[0_0_18px_rgba(0,200,83,0.35)] transition-all duration-300">
+                      <span className="text-[10px] text-accent/60 font-bold tracking-widest leading-none">{step}</span>
+                      <Zap className="w-5 h-5 text-accent mt-0.5" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-xs font-black text-primary mb-1 leading-snug whitespace-pre-line">{title}</h3>
+                    <p className="text-[10px] text-muted-foreground leading-tight">{desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Partner solutions hub — desktop */}
+          <div className="hidden lg:block mt-8 mb-4">
+            <p className="text-center text-xs uppercase tracking-widest text-accent mb-6 font-semibold">Partner Solutions Ecosystem</p>
+            <svg viewBox="0 0 900 480" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="spokeGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#00C853" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#00C853" stopOpacity="0.15"/>
-                </linearGradient>
-                <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#00C853" stopOpacity="0.15"/>
+                <radialGradient id="hubGlow2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#00C853" stopOpacity="0.18"/>
                   <stop offset="100%" stopColor="#00C853" stopOpacity="0"/>
                 </radialGradient>
-                <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <filter id="nodeGlow2" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="2.5" result="blur"/>
                   <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                 </filter>
               </defs>
 
-              {/* Hub glow */}
-              <circle cx="450" cy="260" r="90" fill="url(#hubGlow)"/>
-              {/* Orbit ring */}
-              <circle cx="450" cy="260" r="200" stroke="#00C853" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="5 5"/>
+              <circle cx="450" cy="240" r="100" fill="url(#hubGlow2)"/>
+              <circle cx="450" cy="240" r="185" stroke="#00C853" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="5 5"/>
 
-              {/* Steps positioned around the hub */}
               {[
-                { step: '01', title: 'RevenueStorm™ planning',    desc: 'Define desired outcomes first.',              angle: -90  },
-                { step: '02', title: 'Systems & process review',   desc: 'Diagnose gaps and broken links.',             angle: -38  },
-                { step: '03', title: 'AI optimization plan',       desc: 'Map AI to your specific goals.',              angle:  14  },
-                { step: '04', title: 'Tool & platform selection',  desc: 'Vetted, pre-integrated partners.',            angle:  66  },
-                { step: '05', title: 'Managed execution',          desc: 'We deploy alongside your team.',             angle: 118  },
-                { step: '06', title: 'Testing for effectiveness',  desc: 'Measure what converts.',                      angle: 170  },
-                { step: '07', title: 'Stabilize & optimize',       desc: 'Full rollout and continuous tuning.',         angle: 222  },
-              ].map(({ step, title, desc, angle }) => {
+                { name: 'Bellwether Intel',     desc: 'Market intelligence',     angle: -90  },
+                { name: 'Empower AI 365',       desc: 'AI-powered productivity', angle: -39  },
+                { name: 'Engage3P',             desc: 'Third-party engagement',  angle:  12  },
+                { name: 'Brand Iron',           desc: 'Brand positioning',       angle:  63  },
+                { name: 'Boxsy',                desc: 'Fund tracking',           angle: 114  },
+                { name: 'AIO Advisors',         desc: 'AI operations',           angle: 165  },
+                { name: 'OutReep',              desc: 'Outbound automation',     angle: 216  },
+                { name: 'Biz Konnect',          desc: 'Business development',    angle: 267  },
+                { name: 'Venture Capital',      desc: 'Strategic investment',    angle: 318  },
+              ].map(({ name, desc, angle }) => {
                 const rad = (angle * Math.PI) / 180;
-                const r = 200;
+                const r = 185;
                 const nx = 450 + r * Math.cos(rad);
-                const ny = 260 + r * Math.sin(rad);
+                const ny = 240 + r * Math.sin(rad);
                 const sx = 450 + 62 * Math.cos(rad);
-                const sy = 260 + 62 * Math.sin(rad);
-                const ex = 450 + 178 * Math.cos(rad);
-                const ey = 260 + 178 * Math.sin(rad);
-                // label offset
-                const lx = 450 + (r + 44) * Math.cos(rad);
-                const ly = 260 + (r + 44) * Math.sin(rad);
+                const sy = 240 + 62 * Math.sin(rad);
+                const ex = 450 + 163 * Math.cos(rad);
+                const ey = 240 + 163 * Math.sin(rad);
+                const lx = 450 + (r + 40) * Math.cos(rad);
+                const ly = 240 + (r + 40) * Math.sin(rad);
                 const anchor = Math.cos(rad) > 0.2 ? 'start' : Math.cos(rad) < -0.2 ? 'end' : 'middle';
                 return (
-                  <g key={step}>
-                    {/* Spoke */}
-                    <line x1={sx} y1={sy} x2={ex} y2={ey} stroke="#00C853" strokeOpacity="0.3" strokeWidth="1.5" strokeDasharray="4 3"/>
-                    {/* Node circle */}
-                    <circle cx={nx} cy={ny} r="18" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.7" strokeWidth="1.5" filter="url(#nodeGlow)"/>
-                    <text x={nx} y={ny} textAnchor="middle" dominantBaseline="middle" fontSize="10" fontWeight="900" fill="#00C853">{step}</text>
-                    {/* Label */}
-                    <text x={lx} y={ly - 7} textAnchor={anchor} fontSize="11" fontWeight="800" fill="#0B1F35" fillOpacity="0.9">{title.replace('™', '')}{title.includes('™') ? '™' : ''}</text>
-                    <text x={lx} y={ly + 8} textAnchor={anchor} fontSize="10" fill="#64748b">{desc}</text>
+                  <g key={name}>
+                    <line x1={sx} y1={sy} x2={ex} y2={ey} stroke="#00C853" strokeOpacity="0.25" strokeWidth="1.5" strokeDasharray="4 3"/>
+                    <circle cx={nx} cy={ny} r="16" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.65" strokeWidth="1.5" filter="url(#nodeGlow2)"/>
+                    <circle cx={nx} cy={ny} r="5" fill="#00C853" opacity="0.7"/>
+                    <text x={lx} y={ly - 7} textAnchor={anchor} fontSize="11" fontWeight="800" fill="#0B1F35" fillOpacity="0.92">{name}</text>
+                    <text x={lx} y={ly + 7} textAnchor={anchor} fontSize="9.5" fill="#64748b">{desc}</text>
                   </g>
                 );
               })}
 
-              {/* Hub center */}
-              <circle cx="450" cy="260" r="58" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.6" strokeWidth="2"/>
-              <text x="450" y="248" textAnchor="middle" fontSize="10" fontWeight="900" fill="#00C853">1SagePros</text>
-              <text x="450" y="264" textAnchor="middle" fontSize="10" fontWeight="900" fill="#00C853">.AI</text>
-              <text x="450" y="284" textAnchor="middle" fontSize="8.5" fill="#00C853" fillOpacity="0.6" letterSpacing="1">WHEEL</text>
+              {/* Hub center — Sage AI */}
+              <circle cx="450" cy="240" r="58" fill="#0B1F35" stroke="#00C853" strokeOpacity="0.7" strokeWidth="2"/>
+              <text x="450" y="232" textAnchor="middle" fontSize="16" fontWeight="900" fill="#00C853">Sage</text>
+              <text x="450" y="252" textAnchor="middle" fontSize="16" fontWeight="900" fill="#00C853">AI</text>
+              <text x="450" y="270" textAnchor="middle" fontSize="8" fill="#00C853" fillOpacity="0.55" letterSpacing="2">ECOSYSTEM</text>
             </svg>
           </div>
 
