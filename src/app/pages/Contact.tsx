@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
+import contactBg from '../../assets/pages/contact/hero-bg.webp';
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -29,84 +30,14 @@ export function Contact() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left */}
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get in Touch</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Let's Build Your Revenue Engine</h1>
-              <p className="text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">Get a free <RevenueStorm /> assessment, no commitment required</p>
-            </div>
-            {/* Right — revenue health visual */}
-            <div className="hidden lg:flex items-center justify-center bg-white px-6 py-8">
-              <div className="w-full max-w-sm">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-5">Revenue Health Assessment</p>
-                <svg viewBox="0 0 360 300" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#1B6B3A"/>
-                      <stop offset="100%" stopColor="#00C853"/>
-                    </linearGradient>
-                    <linearGradient id="barMid" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#1B6B3A" stopOpacity="0.6"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.6"/>
-                    </linearGradient>
-                    <linearGradient id="barLow" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#1B6B3A" stopOpacity="0.3"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.3"/>
-                    </linearGradient>
-                  </defs>
-
-                  {/* Rows */}
-                  {[
-                    { label: 'Revenue Strategy',   pct: 38, score: '38%', color: 'url(#barLow)' },
-                    { label: 'Sales Enablement',   pct: 52, score: '52%', color: 'url(#barMid)' },
-                    { label: 'Demand Generation',  pct: 44, score: '44%', color: 'url(#barLow)' },
-                    { label: 'Marketing Alignment',pct: 61, score: '61%', color: 'url(#barMid)' },
-                    { label: 'Revenue Ops & Data', pct: 29, score: '29%', color: 'url(#barLow)' },
-                  ].map(({ label, pct, score, color }, i) => {
-                    const y = 20 + i * 48;
-                    const barW = (pct / 100) * 220;
-                    return (
-                      <g key={label}>
-                        <text x="0" y={y} fontSize="11" fontWeight="600" fill="#0B1F35" fillOpacity="0.65">{label}</text>
-                        {/* Track */}
-                        <rect x="0" y={y + 8} width="220" height="14" rx="7" fill="#0B1F35" fillOpacity="0.06"/>
-                        {/* Fill */}
-                        <rect x="0" y={y + 8} width={barW} height="14" rx="7" fill={color}/>
-                        {/* Score */}
-                        <text x="228" y={y + 19} fontSize="12" fontWeight="800" fill="#0B1F35" fillOpacity="0.5">{score}</text>
-                      </g>
-                    );
-                  })}
-
-                  {/* Divider */}
-                  <line x1="0" y1="268" x2="290" y2="268" stroke="#0B1F35" strokeOpacity="0.08" strokeWidth="1"/>
-
-                  {/* After SAGE row */}
-                  {[
-                    { label: 'Revenue Strategy',    pct: 91 },
-                    { label: 'Sales Enablement',    pct: 88 },
-                    { label: 'Demand Generation',   pct: 85 },
-                    { label: 'Marketing Alignment', pct: 93 },
-                    { label: 'Revenue Ops & Data',  pct: 87 },
-                  ].map(({ label, pct }, i) => {
-                    const dotX = (pct / 100) * 220;
-                    const dotY = 20 + i * 48 + 15;
-                    return (
-                      <circle key={label + '-dot'} cx={dotX} cy={dotY} r="5" fill="#00C853" stroke="white" strokeWidth="2" opacity="0.9"/>
-                    );
-                  })}
-
-                  {/* Legend */}
-                  <rect x="0" y="278" width="10" height="10" rx="2" fill="#0B1F35" fillOpacity="0.15"/>
-                  <text x="14" y="287" fontSize="10" fill="#0B1F35" fillOpacity="0.45" fontWeight="600">Current State</text>
-                  <circle cx="110" cy="283" r="5" fill="#00C853" stroke="white" strokeWidth="1.5"/>
-                  <text x="120" y="287" fontSize="10" fill="#0B1F35" fillOpacity="0.45" fontWeight="600">After 1SagePros.AI</text>
-                </svg>
-              </div>
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={contactBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Get in Touch</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Let's Build Your Revenue Engine</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">Get a free <RevenueStorm /> assessment, no commitment required</p>
           </div>
         </div>
       </section>
