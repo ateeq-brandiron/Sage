@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import { Mail, Phone, Linkedin, CalendarCheck } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -98,6 +98,12 @@ export function Footer() {
                   <a href="https://www.linkedin.com/in/mitchellchi/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
                     <Linkedin className="w-4 h-4 shrink-0" strokeWidth={1.5} />
                     <span>LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://calendly.com/mitchell-chi-sageprosrvs/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
+                    <CalendarCheck className="w-4 h-4 shrink-0" strokeWidth={1.5} />
+                    <span>Book a Meeting</span>
                   </a>
                 </li>
               </ul>

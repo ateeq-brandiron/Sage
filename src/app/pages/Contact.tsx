@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award, CalendarCheck } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
 
@@ -61,6 +61,15 @@ export function Contact() {
                   >
                     <Mail className="w-4 h-4" />
                     mitchell.chi@1SagePros.AI
+                  </a>
+                  <a
+                    href="https://calendly.com/mitchell-chi-sageprosrvs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition-all duration-300"
+                  >
+                    <CalendarCheck className="w-4 h-4" />
+                    Book a Meeting
                   </a>
                 </div>
               ) : (
@@ -227,6 +236,16 @@ export function Contact() {
                     <p className="text-muted-foreground">
                       North America
                     </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <CalendarCheck className="w-6 h-6 text-accent flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-bold text-foreground mb-1">Schedule a Call</div>
+                    <a href="https://calendly.com/mitchell-chi-sageprosrvs/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">
+                      Book a time with Mitchell
+                    </a>
                   </div>
                 </div>
               </div>
