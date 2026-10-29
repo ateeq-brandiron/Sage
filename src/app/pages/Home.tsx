@@ -118,7 +118,7 @@ export function Home() {
       {/* The Problem */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 opacity-20">
-          <img src={vectorPattern} alt="" className="w-full h-full object-contain" />
+          <img src="/images/brand/vector-pattern.webp" alt="" className="w-full h-full object-contain" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -484,7 +484,7 @@ export function Home() {
 
       {/* CTA */}
       <section className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <img src={ctaWaveHorizon} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/brand/cta-wave-horizon.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-white/70" />
 
         <div className="max-w-7xl mx-auto relative z-10">
