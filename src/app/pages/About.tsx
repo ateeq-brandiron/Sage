@@ -168,7 +168,7 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-px bg-border">
+          <div className="grid md:grid-cols-2 gap-6">
             {leaders.map((leader) => (
               <div key={leader.name} className="group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300">
                 <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
