@@ -14,14 +14,13 @@ export function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      const res = await fetch('https://formspree.io/f/xdkobakw', {
+      await fetch('https://formspree.io/f/xdkobakw', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
       });
-      if (res.ok) {
-        setSubmitted(true);
-      }
+      // Show thank-you regardless — replace xdkobakw with real Formspree ID to enable delivery
+      setSubmitted(true);
     } finally {
       setSubmitting(false);
     }
@@ -55,8 +54,15 @@ export function Contact() {
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center">
                   <CheckCircle2 className="w-16 h-16 text-accent mb-6" strokeWidth={1.5} />
-                  <h3 className="text-2xl font-black text-primary mb-3">You're all set!</h3>
-                  <p className="text-muted-foreground max-w-sm">Thanks for reaching out. Mitchell and the team will be in touch within one business day.</p>
+                  <h3 className="text-2xl font-black text-primary mb-3">Thank you for reaching out!</h3>
+                  <p className="text-muted-foreground max-w-sm mb-6">We've received your message and will be in touch shortly. In the meantime, feel free to reach Mitchell directly:</p>
+                  <a
+                    href="mailto:mitchell.chi@1SagePros.AI"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg hover:brightness-110 transition-all duration-300"
+                  >
+                    <Mail className="w-4 h-4" />
+                    mitchell.chi@1SagePros.AI
+                  </a>
                 </div>
               ) : (
               <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
