@@ -5,10 +5,25 @@ import { RevenueStorm } from '../components/RevenueStorm';
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      const res = await fetch('https://formspree.io/f/xdkobakw', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      }
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -202,10 +217,11 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group"
+                  disabled={submitting}
+                  className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1B6B3A] to-[#00A344] text-white font-semibold rounded-lg transition-all duration-300 hover:brightness-110 hover:shadow-lg group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Book Your AI ROI Assessment
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  {submitting ? 'Sending…' : 'Book Your AI ROI Assessment'}
+                  {!submitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />}
                 </button>
 
                 <p className="text-sm text-center text-muted-foreground">

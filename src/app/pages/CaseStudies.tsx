@@ -1,5 +1,6 @@
 import { TrendingUp, BarChart3, Users, Award } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import caseStudiesBg from '../../assets/pages/industries-bg.png';
 import { Button } from '../components/Button';
 
 export function CaseStudies() {
@@ -55,53 +56,14 @@ export function CaseStudies() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Client Success</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Success Stories</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Real revenue transformation results from B2B companies that chose execution over strategy decks.</p>
-            </div>
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
-              <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Average Client Results</p>
-                <svg viewBox="0 0 420 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="barGrad1" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0.4"/>
-                    </linearGradient>
-                    <linearGradient id="barGrad2" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#2D7A4F" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="#2D7A4F" stopOpacity="0.4"/>
-                    </linearGradient>
-                  </defs>
-                  {[{ y: 10 }, { y: 65 }, { y: 120 }, { y: 175 }].map(({ y }) => (
-                    <line key={y} x1="0" y1={y} x2="420" y2={y} stroke="#0B1F35" strokeOpacity="0.06" strokeWidth="1"/>
-                  ))}
-                  {[
-                    { label: 'Shorter\nCycles',  metric: '22%', barH: 70,  x: 10,  grad: 'url(#barGrad2)' },
-                    { label: 'More\nOpps',        metric: '37%', barH: 112, x: 115, grad: 'url(#barGrad2)' },
-                    { label: 'Pipeline\nGrowth',  metric: '3X',  barH: 158, x: 220, grad: 'url(#barGrad1)' },
-                    { label: 'Avg\nROI',          metric: '8X',  barH: 200, x: 325, grad: 'url(#barGrad1)' },
-                  ].map(({ label, metric, barH, x, grad }) => {
-                    const baseY = 225;
-                    const topY = baseY - barH;
-                    return (
-                      <g key={label}>
-                        <rect x={x} y={topY} width="80" height={barH} rx="5" fill={grad}/>
-                        <text x={x + 40} y={topY - 10} textAnchor="middle" fontSize="16" fontWeight="800" fill="#0B1F35" fillOpacity="0.75">{metric}</text>
-                        {label.split('\n').map((line, li) => (
-                          <text key={li} x={x + 40} y={baseY + 18 + li * 16} textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.5">{line}</text>
-                        ))}
-                      </g>
-                    );
-                  })}
-                  <line x1="0" y1="225" x2="420" y2="225" stroke="#0B1F35" strokeOpacity="0.15" strokeWidth="1.5"/>
-                </svg>
-              </div>
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={caseStudiesBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Client Success</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Success Stories</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">Real revenue transformation results from B2B companies that chose execution over strategy decks.</p>
           </div>
         </div>
       </section>

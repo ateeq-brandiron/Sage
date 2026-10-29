@@ -24,7 +24,7 @@ export function Footer() {
               <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
             <p className="text-sm text-white/80">
-              200+ businesses. 30 years of trust. $1.2B+ delivered. Your master Revenue Value Added Reseller focused solely on AI.
+              200+ businesses. 30 years of trust. $1.2B+ delivered. Your AI revenue growth partner.
             </p>
           </div>
 

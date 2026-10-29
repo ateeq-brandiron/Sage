@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
+import insightsBg from '../../assets/pages/about-bg.png';
 import { Button } from '../components/Button';
 import { articles } from '../data/articles';
 
@@ -20,61 +21,14 @@ export function Insights() {
   return (
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
-      <section className="bg-white flex items-center border-b border-border">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 items-stretch">
-            {/* Left — text */}
-            <div className="flex flex-col justify-center py-10 md:py-12 px-4 sm:px-6 lg:pl-[calc(2rem+45px)]">
-              <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Knowledge & Expertise</p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Insights</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
-            </div>
-            {/* Right — multi-line trend chart */}
-            <div className="hidden lg:flex items-center justify-center bg-white lg:min-h-[60vh] px-8 py-8">
-              <div className="w-full">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-3">Trending Topics: Readership Growth</p>
-                <svg viewBox="0 0 420 270" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="trendGrad1" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#00C853" stopOpacity="0.2"/>
-                      <stop offset="100%" stopColor="#00C853" stopOpacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  {[{ y: 20 }, { y: 75 }, { y: 130 }, { y: 185 }].map(({ y }) => (
-                    <line key={y} x1="0" y1={y} x2="415" y2={y} stroke="#0B1F35" strokeOpacity="0.07" strokeWidth="1"/>
-                  ))}
-                  {[
-                    { label: 'Jan', x: 14  },
-                    { label: 'Mar', x: 97  },
-                    { label: 'May', x: 180 },
-                    { label: 'Jul', x: 263 },
-                    { label: 'Sep', x: 332 },
-                    { label: 'Now', x: 408 },
-                  ].map(({ label, x }) => (
-                    <text key={label} x={x} y="255" textAnchor="middle" fontSize="12" fill="#0B1F35" fillOpacity="0.38">{label}</text>
-                  ))}
-                  <path d="M14,200 L97,182 L180,152 L263,118 L332,90 L408,50 L408,215 L14,215 Z" fill="url(#trendGrad1)"/>
-                  <polyline points="14,200 97,182 180,152 263,118 332,90 408,50" stroke="#00C853" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                  <polyline points="14,192 97,176 180,160 263,144 332,130 408,112" stroke="#2D7A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="7 4" fill="none"/>
-                  <polyline points="14,210 97,202 180,186 263,148 332,102 408,38" stroke="#0B1F35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.35" fill="none"/>
-                  <circle cx="408" cy="50"  r="5.5" fill="#00C853" stroke="white" strokeWidth="2.5"/>
-                  <circle cx="408" cy="112" r="5"   fill="#2D7A4F" stroke="white" strokeWidth="2.5"/>
-                  <circle cx="408" cy="38"  r="5"   fill="#0B1F35" fillOpacity="0.4" stroke="white" strokeWidth="2.5"/>
-                </svg>
-                <div className="flex gap-6 mt-3">
-                  {[
-                    { color: 'bg-accent',    label: 'Revenue Growth'  },
-                    { color: 'bg-[#2D7A4F]', label: 'Sales Strategy'  },
-                    { color: 'bg-primary/30', label: 'AI & Automation' },
-                  ].map(({ color, label }) => (
-                    <div key={label} className="flex items-center gap-2">
-                      <span className={`w-4 h-2 rounded-full ${color}`}/>
-                      <span className="text-[10px] text-primary/50 font-semibold uppercase tracking-wide">{label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+      <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
+        <img src={insightsBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Knowledge & Expertise</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Insights</h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-lg">Strategic insights on revenue growth from 30+ years of experience</p>
           </div>
         </div>
       </section>
