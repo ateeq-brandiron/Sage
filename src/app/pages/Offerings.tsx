@@ -1,12 +1,12 @@
 import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
-import wavePattern from '../../assets/brand/wave-bg.png';
-import vectorPattern from '../../assets/brand/vector-pattern.png';
-import offeringsBg from '../../assets/pages/offerings/hero-bg.png';
+import wavePattern from '../../assets/brand/wave-bg.webp';
+import vectorPattern from '../../assets/brand/vector-pattern.webp';
+import offeringsBg from '../../assets/pages/offerings/hero-bg.webp';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
-import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';
-import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.png';
+import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.webp';
+import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.webp';
 
 export function Offerings() {
   const offerings = [

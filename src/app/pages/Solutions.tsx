@@ -3,9 +3,9 @@ import { TronRoadBg } from '../components/TronRoadBg';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2, ShieldCheck, Layers, Brain, Package } from 'lucide-react';
 
 import { renderTM } from '../components/RevenueStorm';
-import leavesBackground from '../../assets/brand/leaves-bg.jpg';
-import wavePattern from '../../assets/brand/wave-bg.png';
-import solutionsHero from '../../assets/pages/solutions/hero-bg.png';
+import leavesBackground from '../../assets/brand/leaves-bg.webp';
+import wavePattern from '../../assets/brand/wave-bg.webp';
+import solutionsHero from '../../assets/pages/solutions/hero-bg.webp';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -15,7 +15,7 @@ const slugMap: Record<string, string> = {
   'Marketing Automation': 'marketing-automation',
   'Executive Advisory': 'executive-advisory',
 };
-import vectorPattern from '../../assets/brand/vector-pattern.png';
+import vectorPattern from '../../assets/brand/vector-pattern.webp';
 import { Button } from '../components/Button';
 
 export function Solutions() {

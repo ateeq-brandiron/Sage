@@ -5,10 +5,10 @@ import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 import { TronRoadBg } from '../components/TronRoadBg';
 import { LightLineDivider } from '../components/LightLineDivider';
 
-import vectorPattern from '../../assets/brand/vector-pattern.png';
-import heroHighway from '../../assets/pages/home/hero-highway.png';
-import wavePattern from '../../assets/brand/wave-bg.png';
-import ctaWaveHorizon from '../../assets/brand/cta-wave-horizon.png';
+import vectorPattern from '../../assets/brand/vector-pattern.webp';
+import heroHighway from '../../assets/pages/home/hero-highway.webp';
+import wavePattern from '../../assets/brand/wave-bg.webp';
+import ctaWaveHorizon from '../../assets/brand/cta-wave-horizon.webp';
 import { Button } from '../components/Button';
 
 function useCountUp(target: number, duration = 1800, started = false) {

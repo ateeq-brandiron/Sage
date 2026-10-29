@@ -2,7 +2,7 @@ import { Link, useParams, Navigate } from 'react-router';
 import { Calendar, Clock, ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
 import { articles } from '../data/articles';
 import { Button } from '../components/Button';
-import wavePattern from '../../assets/brand/wave-bg.png';
+import wavePattern from '../../assets/brand/wave-bg.webp';
 
 export function InsightDetail() {
   const { slug } = useParams<{ slug: string }>();

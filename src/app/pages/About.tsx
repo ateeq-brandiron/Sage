@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
-import wavePattern from '../../assets/brand/wave-bg.png';
-import aboutBg from '../../assets/pages/about/hero-bg.png';
+import wavePattern from '../../assets/brand/wave-bg.webp';
+import aboutBg from '../../assets/pages/about/hero-bg.webp';
 import sageLogo from '../../assets/brand/logo-green-bg.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2 } from 'lucide-react';
-import vectorPattern from '../../assets/brand/vector-pattern.png';
+import vectorPattern from '../../assets/brand/vector-pattern.webp';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
 import nickImg from '../../assets/team/nick-bahr.jpg';

@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Mail, Phone, Linkedin } from 'lucide-react';
 import sageLogo from '../../assets/brand/logo-dark-bg.png';
-import footerBg from '../../assets/brand/footer-bg.jpg';
+import footerBg from '../../assets/brand/footer-bg.webp';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 
 export function Footer() {

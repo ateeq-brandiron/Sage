@@ -1,4 +1,4 @@
-import tronRoadBg from '../../assets/brand/tron-road-bg.png';
+import tronRoadBg from '../../assets/brand/tron-road-bg.webp';
 
 export function TronRoadBg({ variant: _variant = 'dark' }: { variant?: 'dark' | 'green' }) {
   return (
