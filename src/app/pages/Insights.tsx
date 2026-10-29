@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
-import insightsBg from '../../assets/pages/about-bg.png';
+import insightsBg from '../../assets/brand/leaves-bg.jpg';
 import { Button } from '../components/Button';
 import { articles } from '../data/articles';
 

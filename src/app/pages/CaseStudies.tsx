@@ -1,6 +1,6 @@
 import { TrendingUp, BarChart3, Users, Award } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
-import caseStudiesBg from '../../assets/pages/industries-bg.png';
+import caseStudiesBg from '../../assets/brand/cta-wave-horizon.png';
 import { Button } from '../components/Button';
 
 export function CaseStudies() {
