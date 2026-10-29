@@ -6,6 +6,9 @@ import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, 
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import mitchellImg from '../../assets/team/mitchell-chi.svg';
 import michaelImg from '../../assets/team/michael-doyle.png';
+import nickImg from '../../assets/team/nick-bahr.jpg';
+import sheraImg from '../../assets/team/shera-haliczer.jpg';
+import benImg from '../../assets/team/ben-amiwero.jpg';
 import { Button } from '../components/Button';
 
 
@@ -34,6 +37,30 @@ export function About() {
       bio: 'Michael built a Denver-based advertising agency into a multi-million dollar company and sold it to a national integrated services provider in 2000. With 25+ years of branding, marketing, and advertising experience, he has led 500+ signature BrandStorm sessions, helped companies raise more than $5B in capital, and supported 40+ acquisitions. He serves on the boards of Nuvana Resorts, The Dealmakers Conference, and Halen Technology, and facilitates several CEO peer groups.',
       certifications: [],
       expertise: ['Brand Strategy', 'Capital Raising', 'M&A Advisory', 'CEO Peer Groups', 'Revenue Leadership'],
+    },
+    {
+      name: 'Nick Bahr',
+      photo: nickImg,
+      role: 'CTO, CaiO · CEO, AIO Advisors Group',
+      bio: 'Nick leads AI infrastructure strategy and integration for 1SagePros.AI, ensuring every platform in the stack is selected, governed, and optimized for measurable revenue outcomes.',
+      certifications: [],
+      expertise: ['AI Integration', 'System Architecture', 'Compliance & Governance', 'ROI Measurement', 'Workflow Automation'],
+    },
+    {
+      name: 'Shera Haliczer',
+      photo: sheraImg,
+      role: 'SVP Change Management · CEO, Engage3P',
+      bio: 'Shera drives AI Embodiment™ — the human side of AI adoption. She ensures organizations don\'t just install AI tools but actually change how they work, validating behavior and tying adoption to Return on Intention™.',
+      certifications: [],
+      expertise: ['Change Management', 'AI Adoption', 'Organizational Design', 'Executive Coaching', 'AI Embodiment™'],
+    },
+    {
+      name: 'Ben Amiwero',
+      photo: benImg,
+      role: 'SVP Outreach · CEO, Empower AI',
+      bio: 'Ben runs the outreach and pipeline engine for 1SagePros.AI clients, deploying always-on lead nurturing, outbound sequences, and pipeline management through Empower AI 365.',
+      certifications: [],
+      expertise: ['Outbound Campaigns', 'Lead Nurturing', 'Pipeline Management', 'CRM Integration', 'Revenue Automation'],
     },
   ];
 
@@ -179,19 +206,6 @@ export function About() {
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Extended Network</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary mb-3">Our <span className="text-accent">Team</span></h2>
             <p className="text-lg text-muted-foreground">Specialists across every revenue discipline</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            {[
-              { name: 'Nick Bahr', role: 'CTO, CaiO · CEO, Aio Advisors Group' },
-              { name: 'Shera Haliczer', role: 'SVP Change Management · CEO, Engage3P' },
-{ name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
-            ].map((member) => (
-              <div key={member.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
-                <h3 className="text-lg font-black text-primary mb-1">{member.name}</h3>
-                <p className="text-sm text-accent font-semibold">{member.role}</p>
-              </div>
-            ))}
           </div>
 
           <div className="bg-white border border-border p-6 md:p-8">
