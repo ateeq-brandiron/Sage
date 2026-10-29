@@ -168,9 +168,9 @@ export function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {leaders.map((leader) => (
-              <div key={leader.name} className="group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300">
+          <div className="grid md:grid-cols-2 gap-px bg-border">
+            {leaders.map((leader, index) => (
+              <div key={leader.name} className={`group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300${index === leaders.length - 1 && leaders.length % 2 !== 0 ? ' md:col-span-2' : ''}`}>
                 <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
