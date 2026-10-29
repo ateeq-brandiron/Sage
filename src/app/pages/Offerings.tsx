@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
 import wavePattern from '../../assets/brand/wave-bg.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
-import offeringsBg from '../../assets/pages/offerings-bg.png';
+import offeringsBg from '../../assets/pages/offerings/hero-bg.png';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.jpg';

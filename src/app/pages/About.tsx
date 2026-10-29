@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import wavePattern from '../../assets/brand/wave-bg.png';
-import aboutBg from '../../assets/pages/about-bg.png';
+import aboutBg from '../../assets/pages/about/hero-bg.png';
 import sageLogo from '../../assets/brand/logo-green-bg.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2 } from 'lucide-react';
 import vectorPattern from '../../assets/brand/vector-pattern.png';

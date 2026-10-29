@@ -5,8 +5,6 @@ import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 import { TronRoadBg } from '../components/TronRoadBg';
 import { LightLineDivider } from '../components/LightLineDivider';
 
-import revenueSystemImg from '../../assets/pages/home/revenue-system.png';
-import revenueStormImg from '../../assets/pages/home/revenue-storm.png';
 import vectorPattern from '../../assets/brand/vector-pattern.png';
 import heroHighway from '../../assets/pages/home/hero-highway.png';
 import wavePattern from '../../assets/brand/wave-bg.png';

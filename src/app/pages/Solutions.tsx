@@ -5,7 +5,7 @@ import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircl
 import { renderTM } from '../components/RevenueStorm';
 import leavesBackground from '../../assets/brand/leaves-bg.jpg';
 import wavePattern from '../../assets/brand/wave-bg.png';
-import solutionsHero from '../../assets/pages/solutions-hero.png';
+import solutionsHero from '../../assets/pages/solutions/hero-bg.png';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
