@@ -200,7 +200,7 @@ export function About() {
       </section>
 
       {/* Extended Team */}
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-y border-border">
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">Extended Network</p>
