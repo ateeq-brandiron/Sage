@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { Calendar, ArrowRight, TrendingUp, Target, Users, Brain, Zap, BarChart3 } from 'lucide-react';
-import wavePattern from '../../assets/brand/wave-bg.webp';
-import insightsBg from '../../assets/brand/leaves-bg.webp';
 import { Button } from '../components/Button';
 import { articles } from '../data/articles';
 
@@ -22,7 +20,7 @@ export function Insights() {
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
-        <img src={insightsBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/brand/leaves-bg.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
           <div className="max-w-2xl">
@@ -132,7 +130,7 @@ export function Insights() {
       <section
         className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
-          backgroundImage: `url(${wavePattern})`,
+          backgroundImage: "url('/images/brand/wave-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

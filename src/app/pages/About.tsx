@@ -1,14 +1,5 @@
 import { Link } from 'react-router';
-import wavePattern from '../../assets/brand/wave-bg.webp';
-import aboutBg from '../../assets/pages/about/hero-bg.webp';
-import sageLogo from '../../assets/brand/logo-green-bg.png';
 import { Target, CheckCircle2, TrendingUp, Users, Award, ArrowRight, BarChart3, Handshake, Lightbulb, ShieldCheck, CalendarClock, Building2 } from 'lucide-react';
-import vectorPattern from '../../assets/brand/vector-pattern.webp';
-import mitchellImg from '../../assets/team/mitchell-chi.svg';
-import michaelImg from '../../assets/team/michael-doyle.png';
-import nickImg from '../../assets/team/nick-bahr.jpg';
-import sheraImg from '../../assets/team/shera-haliczer.jpg';
-import benImg from '../../assets/team/ben-amiwero.jpg';
 import { Button } from '../components/Button';
 
 
@@ -24,7 +15,7 @@ export function About() {
   const leaders = [
     {
       name: 'Mitchell Chi',
-      photo: mitchellImg,
+      photo: "/images/team/mitchell-chi.svg",
       role: 'CEO & Co-Founder',
       bio: 'For 31 years Mitchell has engineered high-velocity revenue machines for Fortune 500 giants and high-growth AI/ML disruptors, amassing $1.2B+ in lifetime TCV/SOWs sold across ERP, SaaS, and Cloud. His career began founding the first Apple Federal VAR in 1984. Since 2018 he has translated enterprise-grade sales methodology into high-growth frameworks for agile SMBs ready to scale, consistently ranking in the top 1% of global sales organizations.',
       certifications: ['Certified Claude AI', 'Certified Grok AI', 'Certified Gemini AI'],
@@ -32,7 +23,7 @@ export function About() {
     },
     {
       name: 'Michael Doyle',
-      photo: michaelImg,
+      photo: "/images/team/michael-doyle.png",
       role: 'CRO & Co-Founder',
       bio: 'Michael built a Denver-based advertising agency into a multi-million dollar company and sold it to a national integrated services provider in 2000. With 25+ years of branding, marketing, and advertising experience, he has led 500+ signature BrandStorm sessions, helped companies raise more than $5B in capital, and supported 40+ acquisitions. He serves on the boards of Nuvana Resorts, The Dealmakers Conference, and Halen Technology, and facilitates several CEO peer groups.',
       certifications: [],
@@ -40,7 +31,7 @@ export function About() {
     },
     {
       name: 'Nick Bahr',
-      photo: nickImg,
+      photo: "/images/team/nick-bahr.jpg",
       role: 'CTO, CaiO · CEO, AIO Advisors Group',
       bio: 'Nick leads AI infrastructure strategy and integration for 1SagePros.AI, ensuring every platform in the stack is selected, governed, and optimized for measurable revenue outcomes.',
       certifications: [],
@@ -48,7 +39,7 @@ export function About() {
     },
     {
       name: 'Shera Haliczer',
-      photo: sheraImg,
+      photo: "/images/team/shera-haliczer.jpg",
       role: 'SVP Change Management · CEO, Engage3P',
       bio: 'Shera drives AI Embodiment™ — the human side of AI adoption. She ensures organizations don\'t just install AI tools but actually change how they work, validating behavior and tying adoption to Return on Intention™.',
       certifications: [],
@@ -56,7 +47,7 @@ export function About() {
     },
     {
       name: 'Ben Amiwero',
-      photo: benImg,
+      photo: "/images/team/ben-amiwero.jpg",
       role: 'SVP Outreach · CEO, Empower AI',
       bio: 'Ben runs the outreach and pipeline engine for 1SagePros.AI clients, deploying always-on lead nurturing, outbound sequences, and pipeline management through Empower AI 365.',
       certifications: [],
@@ -68,7 +59,7 @@ export function About() {
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
-        <img src={aboutBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/pages/about/hero-bg.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
           <div className="max-w-2xl">
@@ -84,7 +75,7 @@ export function About() {
         <div
           className="animate-slow-pan absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `url(${sageLogo})`,
+            backgroundImage: "url('/images/brand/logo-green-bg.png')",
             backgroundRepeat: 'repeat',
             backgroundSize: '120px',
             filter: 'brightness(0) invert(1)',
@@ -268,7 +259,7 @@ export function About() {
       {/* CTA */}
       <section
         className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
-        style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#ffffff' }}
+        style={{ backgroundImage: "url('/images/brand/wave-bg.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#ffffff' }}
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">

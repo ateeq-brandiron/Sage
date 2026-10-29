@@ -1,15 +1,12 @@
 import { Link } from 'react-router';
 import { Mail, Phone, Linkedin } from 'lucide-react';
-import sageLogo from '../../assets/brand/logo-dark-bg.png';
-import footerBg from '../../assets/brand/footer-bg.webp';
-import mitchellImg from '../../assets/team/mitchell-chi.svg';
 
 export function Footer() {
   return (
     <footer
       className="relative text-white border-t-4 border-accent overflow-hidden"
       style={{
-        backgroundImage: `url(${footerBg})`,
+        backgroundImage: "url('/images/brand/footer-bg.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'bottom center',
       }}
@@ -21,7 +18,7 @@ export function Footer() {
           {/* Brand — left */}
           <div className="shrink-0 lg:max-w-xs">
             <div className="mb-4">
-              <img src={sageLogo} alt="1SagePros.AI" className="h-8 md:h-10" />
+              <img src="/images/brand/logo-dark-bg.png" alt="1SagePros.AI" className="h-8 md:h-10" />
             </div>
             <p className="text-sm text-white/80">
               200+ businesses. 30 years of trust. $1.2B+ delivered. Your AI revenue growth partner.
@@ -78,7 +75,7 @@ export function Footer() {
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Connect</h5>
               <div className="flex items-center gap-3 mb-4">
-                <img src={mitchellImg} alt="Mitchell Chi" className="w-10 h-10 rounded-full object-cover object-top" />
+                <img src="/images/team/mitchell-chi.svg" alt="Mitchell Chi" className="w-10 h-10 rounded-full object-cover object-top" />
                 <div>
                   <p className="text-sm font-bold text-white leading-tight">Mitchell Chi</p>
                   <p className="text-xs text-white/60 leading-tight">CEO & Co-Founder</p>

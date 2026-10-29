@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
-import contactBg from '../../assets/pages/contact/hero-bg.webp';
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -30,7 +29,7 @@ export function Contact() {
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
-        <img src={contactBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/pages/contact/hero-bg.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
           <div className="max-w-2xl">

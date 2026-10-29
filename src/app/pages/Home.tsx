@@ -5,10 +5,6 @@ import { RevenueStorm, renderTM } from '../components/RevenueStorm';
 import { TronRoadBg } from '../components/TronRoadBg';
 import { LightLineDivider } from '../components/LightLineDivider';
 
-import vectorPattern from '../../assets/brand/vector-pattern.webp';
-import heroHighway from '../../assets/pages/home/hero-highway.webp';
-import wavePattern from '../../assets/brand/wave-bg.webp';
-import ctaWaveHorizon from '../../assets/brand/cta-wave-horizon.webp';
 import { Button } from '../components/Button';
 
 function useCountUp(target: number, duration = 1800, started = false) {
@@ -49,7 +45,7 @@ export function Home() {
       <section className="relative flex items-center min-h-[600px] md:min-h-[680px] overflow-hidden">
         {/* Background image */}
         <img
-          src={heroHighway}
+          src="/images/pages/home/hero-highway.webp"
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           aria-hidden="true"

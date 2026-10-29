@@ -3,9 +3,6 @@ import { TronRoadBg } from '../components/TronRoadBg';
 import { Target, TrendingUp, Users, BarChart3, Lightbulb, Headphones, CheckCircle2, ArrowRight, Search, Megaphone, Zap, BarChart2, ShieldCheck, Layers, Brain, Package } from 'lucide-react';
 
 import { renderTM } from '../components/RevenueStorm';
-import leavesBackground from '../../assets/brand/leaves-bg.webp';
-import wavePattern from '../../assets/brand/wave-bg.webp';
-import solutionsHero from '../../assets/pages/solutions/hero-bg.webp';
 
 const slugMap: Record<string, string> = {
   'Revenue Strategy': 'revenue-strategy',
@@ -15,7 +12,6 @@ const slugMap: Record<string, string> = {
   'Marketing Automation': 'marketing-automation',
   'Executive Advisory': 'executive-advisory',
 };
-import vectorPattern from '../../assets/brand/vector-pattern.webp';
 import { Button } from '../components/Button';
 
 export function Solutions() {
@@ -86,7 +82,7 @@ export function Solutions() {
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
-        <img src={solutionsHero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/pages/solutions/hero-bg.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
           <div className="max-w-2xl">
@@ -310,7 +306,7 @@ export function Solutions() {
       <section
         className="relative py-12 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          backgroundImage: `url(${leavesBackground})`,
+          backgroundImage: "url('/images/brand/leaves-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -371,7 +367,7 @@ export function Solutions() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
+      <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundImage: "url('/images/brand/wave-bg.webp')", backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundColor: "#ffffff" }}>
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">

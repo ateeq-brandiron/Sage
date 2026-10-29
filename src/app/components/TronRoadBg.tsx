@@ -1,10 +1,8 @@
-import tronRoadBg from '../../assets/brand/tron-road-bg.webp';
-
 export function TronRoadBg({ variant: _variant = 'dark' }: { variant?: 'dark' | 'green' }) {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
       <img
-        src={tronRoadBg}
+        src="/images/brand/tron-road-bg.webp"
         alt=""
         className="w-full h-full object-cover object-center"
       />

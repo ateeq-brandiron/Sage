@@ -1,12 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
-import wavePattern from '../../assets/brand/wave-bg.webp';
-import vectorPattern from '../../assets/brand/vector-pattern.webp';
-import offeringsBg from '../../assets/pages/offerings/hero/hero-bg.webp';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
-import bellwetherScreenshot from '../../assets/pages/offerings/bellwether/screenshot-1.webp';
-import boxsyScreenshot from '../../assets/pages/offerings/boxsy/screenshot-control-center.webp';
 
 export function Offerings() {
   const offerings = [
@@ -88,7 +83,7 @@ export function Offerings() {
     <div className="min-h-screen pt-16 sm:pt-20 bg-white">
       {/* Hero */}
       <section className="relative flex items-center min-h-[500px] md:min-h-[580px] overflow-hidden">
-        <img src={offeringsBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src="/images/pages/offerings/hero/hero-bg.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/30" />
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-[calc(2rem+45px)] py-16 md:py-20">
           <div className="max-w-2xl">
@@ -185,7 +180,7 @@ export function Offerings() {
       {/* CTA */}
       <section
         className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
-        style={{ backgroundImage: `url(${wavePattern})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#ffffff' }}
+        style={{ backgroundImage: "url('/images/brand/wave-bg.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#ffffff' }}
       >
         <div className="absolute inset-0 bg-white/80" />
         <div className="max-w-7xl mx-auto text-center relative z-10">

@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import sageLogo from '../../assets/brand/logo-light-bg.png';
 
 export function Header() {
   const location = useLocation();
@@ -42,7 +41,7 @@ export function Header() {
         <div className="flex items-center h-16 sm:h-20 gap-4 sm:gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
-            <img src={sageLogo} alt="1SagePros.AI" className="h-8 sm:h-10" />
+            <img src="/images/brand/logo-light-bg.png" alt="1SagePros.AI" className="h-8 sm:h-10" />
           </Link>
 
           {/* Desktop Navigation */}

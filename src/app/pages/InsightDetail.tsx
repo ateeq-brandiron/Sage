@@ -2,7 +2,6 @@ import { Link, useParams, Navigate } from 'react-router';
 import { Calendar, Clock, ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
 import { articles } from '../data/articles';
 import { Button } from '../components/Button';
-import wavePattern from '../../assets/brand/wave-bg.webp';
 
 export function InsightDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -123,7 +122,7 @@ export function InsightDetail() {
       <section
         className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative"
         style={{
-          backgroundImage: `url(${wavePattern})`,
+          backgroundImage: "url('/images/brand/wave-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
