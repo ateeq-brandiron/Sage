@@ -171,7 +171,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-6">
             {leaders.map((leader) => (
               <div key={leader.name} className="group bg-white p-6 md:p-8 lg:p-12 hover:shadow-md transition-all duration-300">
-                <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-24 h-24 md:w-28 md:h-28 overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
                   <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
                 <h3 className="text-2xl font-black text-primary mb-1">{leader.name}</h3>
