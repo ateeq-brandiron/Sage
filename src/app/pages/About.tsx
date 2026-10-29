@@ -185,9 +185,7 @@ export function About() {
             {[
               { name: 'Nick Bahr', role: 'CTO, CaiO · CEO, Aio Advisors Group' },
               { name: 'Shera Haliczer', role: 'SVP Change Management · CEO, Engage3P' },
-              { name: 'Milind Prabhudesai', role: 'SVP AI Data Acquisition · CEO & Co-founder, BizKonnect' },
-              { name: 'Mark Scibelli', role: 'UX Design' },
-              { name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
+{ name: 'Ben Amiwero', role: 'SVP Outreach · CEO, Empower AI' },
             ].map((member) => (
               <div key={member.name} className="bg-white border border-border p-6 md:p-8 hover:shadow-sm transition-shadow duration-200">
                 <h3 className="text-lg font-black text-primary mb-1">{member.name}</h3>
