@@ -74,13 +74,6 @@ export function Footer() {
             {/* Connect */}
             <div>
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Connect</h5>
-              <div className="flex items-center gap-3 mb-4">
-                <img src="/images/team/mitchell-chi.svg" alt="Mitchell Chi" className="w-10 h-10 rounded-full object-cover object-top" />
-                <div>
-                  <p className="text-sm font-bold text-white leading-tight">Mitchell Chi</p>
-                  <p className="text-xs text-white/60 leading-tight">CEO & Co-Founder</p>
-                </div>
-              </div>
               <ul className="space-y-3">
                 <li>
                   <a href="mailto:mitchell.chi@1SagePros.AI" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
