@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, ArrowRight, Building2, CalendarClock, TrendingUp, Award, CalendarCheck } from 'lucide-react';
 import { Button } from '../components/Button';
 import { RevenueStorm } from '../components/RevenueStorm';
@@ -6,6 +6,7 @@ import { RevenueStorm } from '../components/RevenueStorm';
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const formTopRef = useRef<HTMLDivElement>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -20,6 +21,7 @@ export function Contact() {
       });
       // Show thank-you regardless — replace xdkobakw with real Formspree ID to enable delivery
       setSubmitted(true);
+      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } finally {
       setSubmitting(false);
     }
@@ -45,7 +47,7 @@ export function Contact() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Form */}
-            <div>
+            <div ref={formTopRef}>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-6 md:mb-8">
                 Book Your Assessment
               </h2>
