@@ -13,7 +13,7 @@ export function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      await fetch('https://formspree.io/f/xdkobakw', {
+      await fetch('https://formspree.io/f/xqppgdjk', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' },
