@@ -65,6 +65,7 @@ export function Contact() {
                     </label>
                     <input
                       id="first-name"
+                      name="first-name"
                       type="text"
                       required
                       className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
@@ -76,6 +77,7 @@ export function Contact() {
                     </label>
                     <input
                       id="last-name"
+                      name="last-name"
                       type="text"
                       required
                       className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
@@ -89,6 +91,7 @@ export function Contact() {
                   </label>
                   <input
                     id="work-email"
+                    name="email"
                     type="email"
                     required
                     className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
@@ -101,6 +104,7 @@ export function Contact() {
                   </label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
@@ -112,6 +116,7 @@ export function Contact() {
                   </label>
                   <input
                     id="company"
+                    name="company"
                     type="text"
                     required
                     className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
@@ -122,7 +127,7 @@ export function Contact() {
                   <label htmlFor="annual-revenue" className="block text-sm font-bold text-foreground mb-2">
                     Annual Revenue
                   </label>
-                  <select id="annual-revenue" className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors">
+                  <select id="annual-revenue" name="annual-revenue" className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors">
                     <option>Select range</option>
                     <option>Under $1M</option>
                     <option>$1M - $5M</option>
@@ -139,6 +144,7 @@ export function Contact() {
                   </label>
                   <textarea
                     id="challenge"
+                    name="challenge"
                     rows={4}
                     className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors resize-none"
                   />
