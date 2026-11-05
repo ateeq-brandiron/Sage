@@ -130,13 +130,13 @@ export function Contact() {
                     Annual Revenue
                   </label>
                   <select id="annual-revenue" name="annual-revenue" className="w-full px-4 py-3 border-2 border-border focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors">
-                    <option>Select range</option>
-                    <option>Under $1M</option>
-                    <option>$1M - $5M</option>
-                    <option>$5M - $10M</option>
-                    <option>$10M - $25M</option>
-                    <option>$25M - $50M</option>
-                    <option>$50M+</option>
+                    <option value="">Select range</option>
+                    <option value="Under 1M">Under $1M</option>
+                    <option value="1M to 5M">$1M - $5M</option>
+                    <option value="5M to 10M">$5M - $10M</option>
+                    <option value="10M to 25M">$10M - $25M</option>
+                    <option value="25M to 50M">$25M - $50M</option>
+                    <option value="50M plus">$50M+</option>
                   </select>
                 </div>
 
