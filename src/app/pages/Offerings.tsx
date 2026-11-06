@@ -90,10 +90,11 @@ export function Offerings() {
         'Adoption validated during and after launch',
         'Return on Intention™ validated at close',
       ],
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=90',
-      imageAlt: 'Team collaborating on AI adoption and change management',
+      image: '/images/pages/offerings/engage3p/logo-light.webp',
+      imageAlt: 'Engage3P logo — People, Process, Platform',
       icon: Users,
       badge: 'AI Adoption',
+      logoOnly: true,
     },
   ];
 
@@ -154,11 +155,11 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={`flex items-center ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
-                  <div className="w-full rounded-2xl border-2 border-accent overflow-hidden shadow-lg">
+                  <div className={`w-full rounded-2xl border-2 border-accent overflow-hidden shadow-lg ${offering.logoOnly ? 'bg-gray-50' : ''}`}>
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
-                      className="w-full aspect-video object-cover object-left-top"
+                      className={`w-full aspect-video ${offering.logoOnly ? 'object-contain p-8' : 'object-cover object-left-top'}`}
                       loading="lazy"
                     />
                   </div>
