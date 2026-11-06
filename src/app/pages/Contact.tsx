@@ -205,8 +205,8 @@ export function Contact() {
                   <Mail className="w-6 h-6 text-accent flex-shrink-0" />
                   <div>
                     <div className="text-sm font-bold text-foreground mb-1">Email</div>
-                    <a href="mailto:mitchell.chi@1SagePros.AI" className="text-muted-foreground hover:text-accent transition-colors">
-                      mitchell.chi@1SagePros.AI
+                    <a href="mailto:mitchell.chi@sageprosvrs.com" className="text-muted-foreground hover:text-accent transition-colors">
+                      mitchell.chi@sageprosvrs.com
                     </a>
                   </div>
                 </div>
