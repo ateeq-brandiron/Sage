@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Megaphone, Briefcase, Workflow, Cpu, Users } from 'lucide-react';
 import { Button } from '../components/Button';
 import { renderTM } from '../components/RevenueStorm';
 
@@ -77,6 +77,24 @@ export function Offerings() {
       icon: Cpu,
       badge: 'AI Infrastructure',
     },
+    {
+      name: 'AI Embodiment™ by Engage3P',
+      tagline: 'When your people embody AI, it delivers Return on Intention™.',
+      description:
+        'AI Embodiment™ by Engage3P makes sure the platforms 1SagePros.AI deploys become how your people actually work, instead of another tool people quietly avoid. Before a single tool goes live, Engage3P assesses whether your organization has the capacity to embody the change, then paces the rollout to match and validates that it delivered the value you intended. Built for established companies that have paid for AI before and are still waiting on the return.',
+      capabilities: [
+        'MIA™ capacity assessment before go-live',
+        'Rollout paced to what people can absorb',
+        'Leaders and managers aligned on the new way of working',
+        'Friction diagnosed across people, process and platform',
+        'Adoption validated during and after launch',
+        'Return on Intention™ validated at close',
+      ],
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=90',
+      imageAlt: 'Team collaborating on AI adoption and change management',
+      icon: Users,
+      badge: 'AI Adoption',
+    },
   ];
 
   return (
@@ -90,7 +108,7 @@ export function Offerings() {
             <p className="text-xs uppercase tracking-widest text-accent mb-4 font-semibold">AI Revenue Platforms</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 sm:mb-6 leading-[1.05] sm:leading-[1.0]">Our Offerings</h1>
             <p className="text-lg text-white/80 leading-relaxed max-w-lg">
-              Four pre-integrated AI platforms, selected, configured, and managed by SAGE, so you get proven tools driving revenue from day one, not a build-it-yourself science project.
+              Four pre-integrated AI platforms plus AI Embodiment™ by Engage3P — selected, configured, and managed by SAGE so you get proven tools driving revenue from day one, not a build-it-yourself science project.
             </p>
           </div>
         </div>
@@ -100,7 +118,7 @@ export function Offerings() {
       <section className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-[#E8F5EE] border-b border-border">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-lg text-primary font-semibold max-w-3xl mx-auto">
-            We evaluate the technology, build a showcase demo for your team, then deploy and manage it as part of your revenue system, not handed off as a DIY project.
+            Four pre-integrated AI platforms, selected, configured and managed by 1SagePros.AI, plus AI Embodiment™ by Engage3P to make sure your people actually use them.
           </p>
         </div>
       </section>

@@ -206,7 +206,7 @@ export function Home() {
             {[
               {
                 icon: Brain,
-                title: 'AI Embodiment™',
+                title: 'AI Embodiment™ by Engage3P',
                 desc: 'Senior GTM experts set the strategy. AI scales it. Your people live it every day. Lose one and it stalls.',
               },
               {
