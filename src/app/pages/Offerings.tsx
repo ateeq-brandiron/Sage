@@ -90,8 +90,8 @@ export function Offerings() {
         'Adoption validated during and after launch',
         'Return on Intention™ validated at close',
       ],
-      image: '/images/pages/offerings/engage3p/diagram.webp',
-      imageAlt: 'Engage3P diagram — People, Process, Platform',
+      image: '/images/pages/offerings/engage3p/logo-light.webp',
+      imageAlt: 'Engage3P logo — People, Process, Platform',
       icon: Users,
       badge: 'AI Adoption',
       logoOnly: true,
@@ -155,7 +155,7 @@ export function Offerings() {
 
                 {/* Image side */}
                 <div className={`flex items-center ${isEven ? '' : 'lg:col-start-1 lg:row-start-1'}`}>
-                  <div className={`w-full rounded-2xl border-2 border-accent overflow-hidden shadow-lg ${offering.logoOnly ? 'bg-gray-50' : ''}`}>
+                  <div className={`w-full rounded-2xl border-2 border-accent overflow-hidden shadow-lg ${offering.logoOnly ? 'bg-white' : ''}`}>
                     <img
                       src={offering.image}
                       alt={offering.imageAlt}
