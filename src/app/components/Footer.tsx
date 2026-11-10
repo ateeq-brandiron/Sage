@@ -76,9 +76,9 @@ export function Footer() {
               <h5 className="mb-4 text-white uppercase tracking-wider text-xs sm:text-sm font-semibold">Connect</h5>
               <ul className="space-y-3">
                 <li>
-                  <a href="mailto:mitchell.chi@sageprosvrs.com" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
+                  <a href="mailto:mitchell.chi@sageprosrvs.com" className="flex items-center gap-2 text-sm text-white/70 hover:text-accent transition-colors duration-200">
                     <Mail className="w-4 h-4 shrink-0" strokeWidth={1.5} />
-                    <span>mitchell.chi@sageprosvrs.com</span>
+                    <span>mitchell.chi@sageprosrvs.com</span>
                   </a>
                 </li>
                 <li>
